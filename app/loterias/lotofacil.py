@@ -2,7 +2,7 @@ from app.core.downloader import baixar_arquivo_por_url
 from app.core.config import LOTERIAS
 
 def baixar():
-    config = LOTERIAS["mega_sena"]
+    config = LOTERIAS["lotofacil"]
     url = config["url_download"]
     pasta = config["pasta_destino"]
     nome_arquivo = config["nome_arquivo_base"] + config["extensao_arquivo"]
