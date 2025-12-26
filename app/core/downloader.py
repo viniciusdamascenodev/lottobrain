@@ -4,6 +4,8 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -28,7 +30,7 @@ def baixar_arquivo_por_url(url, pasta_destino, nome_arquivo):
         return None
     
 
-def baixar_html_tabela_usamega_completa(url_page_resultados, nome_arquivo, pasta_destino, tempo_espera=1.5):
+def baixar_html_tabela_usamega_completa(url_page_resultados, nome_arquivo, pasta_destino, tempo_espera=2.5):
     print(f"📄 Carregando página 1 -> {url_page_resultados}")
     response = pegar_html_usamega_com_selenium(url_page_resultados)
     if not response:
@@ -96,6 +98,7 @@ def baixar_html_tabela_usamega_completa(url_page_resultados, nome_arquivo, pasta
     for tr in todos_os_tr:
         tbody_principal.append(tr)
 
+    os.makedirs(pasta_destino, exist_ok=True)
     caminho_arquivo = f"{pasta_destino}/{nome_arquivo}"
     with open(caminho_arquivo, "w", encoding="utf-8") as f:
         f.write(str(tabela_completa))
@@ -105,36 +108,47 @@ def baixar_html_tabela_usamega_completa(url_page_resultados, nome_arquivo, pasta
     return caminho_arquivo
 
 
-def pegar_html_usamega_com_selenium(url, timeout=10):
-    print("🚗 Abrindo navegador headless com Selenium...")
+def pegar_html_usamega_com_selenium(url, timeout=2.5):
+    print("🚗 Abrindo Google Chrome headless (Codespaces)...")
+
     options = Options()
-    options.add_argument("--headless")
+    options.binary_location = "/usr/bin/google-chrome"
+
+    options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) "
-                         "Chrome/114.0.0.0 Safari/537.36")
 
-    driver = webdriver.Chrome(options=options)
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option("useAutomationExtension", False)
+
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    )
+
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
+
     try:
         driver.get(url)
 
-        # Aguarda até a tabela com classe "results" aparecer
         WebDriverWait(driver, timeout).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "results"))
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "table.results tbody tr")
+            )
         )
 
-        time.sleep(2)
+        time.sleep(1)
+        return driver.page_source
 
-        html = driver.page_source
-
-        return html
     except Exception as e:
         print(f"❌ Erro ao carregar {url}: {e}")
         return None
+
     finally:
-        if driver:
-            driver.quit()
-            print("🧹 Encerrando e limpando o navegador Selenium...")
-            time.sleep(5)
+        driver.quit()
+        print("🧹 Selenium finalizado.")
