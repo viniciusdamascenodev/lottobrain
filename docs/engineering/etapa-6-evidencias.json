@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-29",
+  "status": "implementation_validated_locally_pending_ci_and_supabase",
+  "specification": "SPEC-0033 persistence scope / etapa-6-persistencia.md",
+  "acceptance": {
+    "E6-01": "passed_local_operational_bootstrap",
+    "E6-02": "passed_local_six_lotteries_and_twenty_rules",
+    "E6-03": "passed_local_idempotency_quarantine_revision_rollback_concurrency",
+    "E6-04": "passed_local_approved_immutable_manifests_and_optimistic_activation",
+    "E6-05": "passed_local_separate_database_roles",
+    "E6-06": "pending_full_github_actions_regression",
+    "E6-07": "pending_supabase_project_and_safe_connection_configuration",
+    "E6-08": "documented_pending_final_acceptance"
+  },
+  "localTests": {
+    "pythonPassed": 413,
+    "pythonSeconds": 74.37,
+    "cliBoundaryPassedAfterFinalComposition": 12,
+    "newPostgresqlPassed": 25,
+    "newPostgresqlSeconds": 93.116,
+    "boundaryVectors": 45,
+    "ruleVersions": 20,
+    "sqlClusterStopped": true,
+    "measurementNote": "Final frozen implementation including manifest_version, policy/catalog binding, reuse and separate-role CLI.",
+    "sqlWarnings": 0
+  },
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed_existing_four_source_file_scope",
+    "basicCredentialCheck": "passed"
+  },
+  "managedDatabase": {
+    "provider": "Supabase",
+    "projectAvailable": false,
+    "migrationsApplied": false,
+    "persistenceVerified": false,
+    "reason": "User stated project not created; dashboard URL and safe credentials not yet available."
+  },
+  "github": {
+    "branch": "codex/etapa-6-persistencia-seis-loterias",
+    "pullRequestUrl": null,
+    "actionsRunUrl": null,
+    "headSha": null,
+    "merged": false
+  },
+  "preservation": {
+    "baselineFiles": 391,
+    "protectedFiles": 149,
+    "protectedFilesChanged": [],
+    "modifiedExistingFiles": [
+      "README.md",
+      "app/application/persistence.py",
+      "app/infrastructure/postgres/content_reader.py",
+      "app/infrastructure/postgres/draws.py",
+      "app/infrastructure/postgres/uow.py",
+      "app/infrastructure/raw_storage.py",
+      "docs/architecture/roadmap.md",
+      "docs/database/contrato-persistencia.md",
+      "docs/database/migrations-ingestao.md",
+      "docs/database/modelo-logico.md",
+      "docs/engineering/learnings.md",
+      "docs/engineering/plano-entrega-quatro-dias.md",
+      "docs/specs/SPEC-0033-primeiro-fluxo-online-mega-sena.md",
+      "scripts/database/roles.sql",
+      "scripts/engineering/check.py",
+      "tests/database/persistence_support.py",
+      "tests/database/test_baseline_activation.py",
+      "tests/database/test_baseline_activation_smoke.py",
+      "tests/database/test_integrity.py",
+      "tests/database/test_sync_batches_smoke.py"
+    ]
+  },
+  "scope": {
+    "fullHistoricalLoadPerformed": false,
+    "externalLotteryRequestsPerformed": false,
+    "newCollectorsImplemented": false,
+    "authenticationImplemented": false,
+    "frontendChanged": false,
+    "schedulerImplemented": false,
+    "nextStageStarted": false,
+    "productionDeploymentPerformed": false,
+    "rawObjectAdapterVerified": "dedicated_local_storage; Supabase Storage not configured"
+  },
+  "implementationHashes": {
+    "app/application/persistence.py": "9ccb7b3f717585db836469fe2e5dcb49b1438f252905da07e9f725d4f417d9eb",
+    "app/application/datasets.py": "a646922a9be2d0aa3e98b58bbced5b4875ede27d1e877ef638ac593b6660c182",
+    "app/application/result_persistence.py": "c995a4487e787d37115d94e8ae2054b5156135a04ce2f71f20b10a9243efff58",
+    "app/infrastructure/postgres/content_reader.py": "8f196d716491da541c9030c60ffc924c5ae4e41ed851be1a22447e3064d2eed3",
+    "app/infrastructure/postgres/draws.py": "ede9e6cd68b505a3fcde837df92f1a66aac8886ed22eb68765a4288230015c15",
+    "app/infrastructure/postgres/uow.py": "b6d2eee2b21a3e41a970aef037c508835cd7fcf4efe6d6d0964a27a9cb9cc96b",
+    "app/infrastructure/postgres/profile_catalog.py": "e7654b858af3851d73cc7c0fb3e0e5c76195e6cf4ec4c427bf09139047094108",
+    "app/infrastructure/postgres/relational_content.py": "544cb3d5c324face64cffd89d05ecf7870e626262289bcbaab200b1a5f86c41e",
+    "app/infrastructure/postgres/results.py": "9e02f5bf663d0c73c03fff16d9ea5e2a8c2fd87bf6eb305cc6709273d873552a",
+    "app/infrastructure/postgres/datasets.py": "b650cb3845e0b438f07e0c144538914ba958d2a8429faa816fb866035c452b7d",
+    "app/infrastructure/raw_storage.py": "a5a21320f37b7f7379ba568d6d50087e073503c621938a9d65cc824214ef0751",
+    "app/infrastructure/persistence_samples.py": "cdbbb8dc6d335f546fd57bb85d63ffd3456685dab893e04d7549350af18b6802",
+    "app/interfaces/persistence.py": "8a256da3323d5796adc9e268e4762a42e61587a9bd1acb85ba061a97ae5fa4cc",
+    "migrations/versions/0033_01_approved_datasets.py": "08df848fb3fac790e869574f9ee97439d24a0c0df00c075751e0f61112c9f939",
+    "migrations/sql/0033_01_approved_datasets.sql": "a9e44e8861294edbb45cd20835b70890f9a1b8774bb5c35879d7ae37f07efa06",
+    "scripts/database/roles.sql": "ec7291a3a42b380824c05f09e85f6f4268eaf1123405e7ceda6bebb399e332e6",
+    "scripts/engineering/check.py": "dfc667ef750f0c5823ac56d8e17adef4b43d2084325dc799ed1f50354ba48926"
+  },
+  "implementationHashBasis": "git_blob_of_implementation_files; GitHub validation head recorded after CI"
+}

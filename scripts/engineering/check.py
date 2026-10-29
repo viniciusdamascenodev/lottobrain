@@ -15,6 +15,15 @@ NEW_PYTHON = [
     "scripts/engineering/check.py",
     "tests/test_platform_foundation.py",
     "tests/conftest.py",
+    "app/application/datasets.py",
+    "app/application/result_persistence.py",
+    "app/infrastructure/persistence_samples.py",
+    "app/infrastructure/postgres/profile_catalog.py",
+    "app/infrastructure/postgres/relational_content.py",
+    "app/infrastructure/postgres/results.py",
+    "app/infrastructure/postgres/datasets.py",
+    "app/interfaces/persistence.py",
+    "tests/test_persistence_commands.py",
 ]
 TEXT_EXTENSIONS = {
     ".py",

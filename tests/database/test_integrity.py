@@ -94,7 +94,7 @@ class PostgreSQLIntegrityTests(unittest.TestCase):
         insert(self.db,"sync_step",checkpoint_id=cp,sequence_no=sequence,observation_id=g.observation,lease_token=token,completed_at=NOW)
 
     def test_01_migrations_version_and_non_superuser_owner(self):
-        self.assertEqual("0031_01",self.db.execute("SELECT version_num FROM alembic_version").fetchone()[0])
+        self.assertEqual("0033_01",self.db.execute("SELECT version_num FROM alembic_version").fetchone()[0])
         self.assertEqual(6,self.db.execute("SELECT count(*) FROM lb.lottery").fetchone()[0])
         self.assertEqual(20,self.db.execute("SELECT count(*) FROM lb.rule_version").fetchone()[0])
         self.assertEqual((False,False,False),self.db.execute("SELECT rolsuper,rolcreatedb,rolcreaterole FROM pg_roles WHERE rolname=current_user").fetchone())
@@ -418,7 +418,7 @@ class PostgreSQLIntegrityTests(unittest.TestCase):
         with psycopg.connect(**kwargs) as db:
             self.assertEqual(1,db.execute("SELECT count(*) FROM lb.draw_revision").fetchone()[0])
             self.assertEqual(1,db.execute("SELECT count(*) FROM lb.capture_receipt").fetchone()[0])
-            self.assertEqual("0031_01",db.execute("SELECT version_num FROM alembic_version").fetchone()[0])
+            self.assertEqual("0033_01",db.execute("SELECT version_num FROM alembic_version").fetchone()[0])
             self.assertIsNotNone(db.execute("SELECT to_regclass('lb.sync_checkpoint')").fetchone()[0])
         migrate(url)
 

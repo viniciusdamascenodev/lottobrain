@@ -47,6 +47,12 @@ class Source:
 
 class IsolatedPersistenceCase(unittest.TestCase):
     @classmethod
+    def prepare_catalog(cls, db):
+        catalog = seed_catalog(db)
+        seed_tiers(db, catalog)
+        return catalog
+
+    @classmethod
     def setUpClass(cls):
         url = os.environ.get("LOTTOBRAIN_DATABASE_URL")
         expected = os.environ.get("LOTTOBRAIN_TEST_ISOLATED")
@@ -62,7 +68,7 @@ class IsolatedPersistenceCase(unittest.TestCase):
             admin.execute(sql.SQL("CREATE DATABASE {} OWNER lb_migrator").format(sql.Identifier(cls.template)))
         migrate(parsed.set(database=cls.template).render_as_string(hide_password=False))
         with psycopg.connect(**cls.owner,dbname=cls.template) as db:
-            cls.catalog = seed_catalog(db); seed_tiers(db,cls.catalog)
+            cls.catalog = cls.prepare_catalog(db)
         with psycopg.connect(os.environ["LOTTOBRAIN_TEST_ADMIN_DSN"],autocommit=True) as admin:
             if not admin.execute("SELECT 1 FROM pg_roles WHERE rolname='lb_test_ingestor'").fetchone():
                 admin.execute(sql.SQL("CREATE ROLE lb_test_ingestor LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE PASSWORD {}")

@@ -1846,6 +1846,30 @@ Compor uma entrada manual opt-in de sincronização SQL com conexão/checkpoint 
 
 **Ação futura:** executar a suíte real em ambas as plataformas quando bootstrap for alterado; manter diagnóstico limitado ao cluster recém-criado e remover credenciais. Para ajustes apenas de inicialização, usar smoke local dirigido e bateria completa no CI. Verificar blobs publicados além dos arquivos locais quando existir evidência hashada; preservar byte a byte raws e artefatos anteriores.
 
+### L-206 — Limites HTTP e arquivos históricos têm consumidores diferentes
+
+**Evidência:** o armazenamento raw existente limitava bytes a 256 KiB, adequado ao JSON individual. Quatro arquivos históricos qualificados excediam esse limite. A etapa 6 manteve o default e introduziu limite offline explícito de até 8 MiB, reutilizando a mesma escrita por hash. O parser lê snapshot temporário dos bytes arquivados.
+
+**Impacto:** aumentar globalmente o limite mudaria o coletor anterior; interpretar o caminho original depois de calcular seu hash poderia ligar uma revisão a bytes diferentes caso o arquivo mudasse.
+
+**Ação futura:** limites por consumidor, leitura limitada e interpretação do mesmo snapshot preservado. Não rebaixar a prova de proveniência para apenas conferir nomes de arquivos.
+
+### L-207 — Idempotência de comando e reutilização de conjunto são garantias distintas
+
+**Evidência:** a revisão da etapa 6 acrescentou deduplicação por política/manifesto mesmo com chaves de comando diferentes. O manifesto vincula concurso, revisão e observação de suporte; a política fixa fontes, regras e hash do catálogo/perfis. SQL reconstrói o manifesto e exige a decisão administrativa no commit.
+
+**Impacto:** somente uma chave idempotente não impediria copiar membros de conjuntos iguais. Um manifesto limitado ao conteúdo não identificaria a evidência exata aprovada. Política sem catálogo fixado poderia ampliar silenciosamente os contratos aceitos.
+
+**Ação futura:** reutilizar conjuntos equivalentes, registrar a reutilização sem fabricar nova aprovação e exigir política nova quando o catálogo autorizado mudar. Paginação conserva o UUID do conjunto, mesmo após ativação concorrente.
+
+### L-208 — Rejeição diferida no commit também precisa fechar a conexão
+
+**Evidência:** um teste SQL negativo revelou que o context manager do driver instalado chama commit antes de fechar a conexão; uma rejeição diferida pode impedir o close. A unidade de trabalho da aplicação já tinha finally explícito. O teste direto passou a usar closing e verificar a conexão fechada.
+
+**Impacto:** testes de integridade que provocam falha no commit podem deixar recursos abertos sem invalidar as asserções de dados.
+
+**Ação futura:** conservar o finally da unidade de trabalho e garantir fechamento também nos testes e comandos administrativos que esperam rejeição transacional.
+
 ## Próximo aprendizado esperado no plano de quatro dias
 
 Comprovar o primeiro fluxo online reutilizando o núcleo existente, medir o custo de integrar os perfis restantes e registrar quais decisões/fixtures reduziram retrabalho sem enfraquecer as invariantes. Estado atual e sequência vigente: [roadmap](../architecture/roadmap.md).

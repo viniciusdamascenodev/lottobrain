@@ -125,7 +125,7 @@ class BaselineActivationTests(BaselineCase):
         url = make_url(os.environ["LOTTOBRAIN_DATABASE_URL"]).set(database=self.database)
         with self.assertRaisesRegex(Exception,"Rollback bloqueado"):
             migrate(url.render_as_string(hide_password=False),"0024_03",down=True)
-        self.assertEqual([("0031_01",)],self.query("SELECT version_num FROM alembic_version"))
+        self.assertEqual([("0033_01",)],self.query("SELECT version_num FROM alembic_version"))
 
         lease = transact(self.factory,lambda u:u.sync.claim_lease(checkpoint,u.catalog.qualify(),300))
         intent = Advance(checkpoint,2954,lease.token)

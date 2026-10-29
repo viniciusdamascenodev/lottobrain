@@ -135,3 +135,7 @@ Em cada checkpoint de execução informar capacidade demonstrável, critérios r
 No final de cada dia, usar os critérios da SPEC como decisão de passagem. Verificações frequentes e curtas substituem dias sem demonstração. Dia 4 recebe reserva para correções e teste integrado; não concentra toda a segurança, implantação ou preparação de CI.
 
 Permanecem após a primeira versão: laboratório amplo de modelos e busca automática de parâmetros, treinamento pesado distribuído, cadastro com geração automática de adaptadores arbitrários, notificações multicanal, personalização avançada, relatórios sofisticados e otimizações sem demanda medida. O objetivo de previsão permanece; ampliar técnicas exige comparação temporal reproduzível. Microsserviços, Kubernetes, broker e GPU permanente continuam sem justificativa atual.
+
+## Execução do recorte de persistência — etapa 6
+
+A [etapa 6](etapa-6-persistencia.md) reutiliza as entregas anteriores e acrescenta os caminhos comuns SQL das seis, conjuntos aprovados e operação limitada por CLI. Instalação Supabase e regressão CI têm aceite próprio; dados de teste não são apresentados como banco operacional. A criação do projeto foi solicitada ao usuário, que informou ainda não o ter criado. Este recorte não inicia carga integral, autenticação, atualização ou análises e não reinicia as metas originais do plano.

@@ -30,7 +30,7 @@ class BaselineActivationSmokeTests(BaselineCase):
         self.assertEqual((0,0,0),(self.count("ingestion_baseline"),self.count("baseline_activation"),self.count("sync_checkpoint")))
 
     def test_01_migration_and_separate_roles(self):
-        self.assertEqual([("0031_01",)],self.query("SELECT version_num FROM alembic_version"))
+        self.assertEqual([("0033_01",)],self.query("SELECT version_num FROM alembic_version"))
         with psycopg.connect(**dict(self.owner_args,user="lb_test_ingestor")) as db:
             self.assertEqual((False,False,False),db.execute("""SELECT
                 has_table_privilege(current_user,'lb.ingestion_baseline','INSERT'),

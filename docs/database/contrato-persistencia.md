@@ -176,3 +176,7 @@ Datasets futuros guardarão IDs exatos de revisões e decisões de publicação 
 4. Qualificar publicação e servir consultas por contratos de API.
 
 RLS por locatário, tabelas de usuário, pagamentos/apostas, particionamento, event sourcing integral, broker externo e modelos físicos de ML estão adiados. O banco é relacional com eventos de decisão/auditoria, não um event store universal.
+
+## Evolução para as seis loterias — etapa 6
+
+O [contrato comum](persistencia-seis-loterias.md) estende a aplicação dos perfis históricos da SPEC-0026 ao PostgreSQL, reutilizando o núcleo de revisões, conteúdo, transações e armazenamento. O fluxo Mega-Sena anterior conserva seu contrato e a ponte histórica/JSON. Conjuntos aprovados são o caminho privado de leitura, sem remover o bloqueio de publicação individual. Estado e critérios de aceite: [etapa 6](../engineering/etapa-6-persistencia.md).
