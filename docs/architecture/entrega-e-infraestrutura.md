@@ -59,7 +59,7 @@ Fronteira confirmada, última disponibilidade observada, instante de verificaç�
 
 ## Pipeline de CI
 
-A fundação implementada na etapa 5 e suas provas locais/remotas estão em [desenvolvimento e CI](../engineering/etapa-5-desenvolvimento-ci.md). O workflow foi publicado e aprovado no GitHub; `main` exige PR atualizado com Quality gate do GitHub Actions, inclusive para administrador, e bloqueia force push/exclusão. A entrega permanece em PR de revisão, sem merge ou deploy. Os contratos de CD/operação abaixo continuam exigindo implementação e prova nas entregas funcionais.
+A fundação implementada na etapa 5 e suas provas locais/remotas estão em [desenvolvimento e CI](../engineering/etapa-5-desenvolvimento-ci.md). O workflow foi publicado e aprovado no GitHub; `main` exige PR atualizado com Quality gate do GitHub Actions, inclusive para administrador, e bloqueia force push/exclusão. A [PR #1](https://github.com/viniciusdamascenodev/lottobrain/pull/1) foi integrada à `main` em 29/10/2026, commit `fd2088e`, com [CI pós-merge aprovado](https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40964245312) e fechamento documental concluído. Nenhum deploy foi realizado. Os contratos de CD/operação abaixo continuam exigindo implementação e prova nas entregas funcionais.
 
 ```text
 checkout

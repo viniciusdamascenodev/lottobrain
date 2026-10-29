@@ -1836,7 +1836,7 @@ Compor uma entrada manual opt-in de sincronização SQL com conexão/checkpoint 
 
 **Impacto:** criar um workflow local não autoriza anunciar uma execução no GitHub, proteção de branch ou deploy. Uma confirmação de que o usuário pode conectar a conta também não demonstra que a conexão já mudou.
 
-**Ação futura:** verificar identidade/permissões, publicar numa branch de trabalho somente quando autorizado e disponível, registrar SHA/run/resultado e tratar a proteção da branch explicitamente. Não pedir senhas/tokens no chat, ampliar permissões por suposição ou recriar o repositório.
+**Ação futura:** verificar identidade/permissões, publicar numa branch de trabalho somente quando autorizado e disponível, registrar SHA/run/resultado e tratar a proteção da branch explicitamente. Após o merge, sincronizar o estado de fechamento no relatório, nas evidências e no roadmap; preservar a medição anterior à integração e acrescentar o CI da `main` com seu próprio commit, horário e resultado. Não pedir senhas/tokens no chat, ampliar permissões por suposição ou recriar o repositório.
 
 ### L-205 — Portabilidade inclui o bootstrap do banco e os bytes da evidência
 

@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-28",
-  "status": "completed_in_review_branch",
+  "date": "2026-10-29",
+  "status": "completed_in_main",
   "acceptance": {
     "E5-01": "passed",
     "E5-02": "passed",
@@ -9,7 +9,7 @@
     "E5-05": "passed_runtime_audit_and_basic_secret_check",
     "E5-06": "passed",
     "E5-07": "passed_real_github_actions_and_main_protection_verified",
-    "E5-08": "documented_with_local_and_remote_evidence"
+    "E5-08": "documented_with_merge_and_post_merge_ci_evidence"
   },
   "runtimes": {
     "pythonLocal": "3.12.0",
@@ -89,6 +89,21 @@
       "frontendConfigurationPassed": 3,
       "frontendCleanInstallLintTypecheckBuild": "passed",
       "audits": "passed",
+      "qualityGate": "success",
+      "runUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40806839794"
+    },
+    "postMerge": {
+      "runUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40964245312",
+      "commit": "fd2088e49d3a32a86b83195bbd502021d9742802",
+      "os": "ubuntu-24.04",
+      "pythonPassed": 401,
+      "pythonSeconds": 46.89,
+      "postgresqlPassed": 137,
+      "postgresqlSeconds": 331.251,
+      "postgresqlClusterStopped": true,
+      "frontendConfigurationPassed": 3,
+      "frontendCleanInstallLintTypecheckBuild": "passed",
+      "audits": "passed",
       "qualityGate": "success"
     }
   },
@@ -145,13 +160,19 @@
     "rawAndEvidenceGitAttribute": "-text",
     "unchangedExistingFiles": 351,
     "committedProtectedFilesChanged": [],
-    "verifiedAtCommit": "7c9b84175e377551a1078b52860b23ca7f53b538"
+    "verifiedAtCommit": "7c9b84175e377551a1078b52860b23ca7f53b538",
+    "postMergeVerification": {
+      "commit": "fd2088e49d3a32a86b83195bbd502021d9742802",
+      "protectedFiles": 149,
+      "workingTreeChanges": [],
+      "committedChanges": []
+    }
   },
   "github": {
     "repository": "viniciusdamascenodev/lottobrain",
     "writePermissionVerified": true,
     "workflowFile": ".github/workflows/ci.yml",
-    "actionsRunUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40806839794",
+    "actionsRunUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40964245312",
     "branchProtectionChangedByThisTask": true,
     "existingBranchProtection": "not_enabled_at_start",
     "workflowUploaded": true,
@@ -163,8 +184,8 @@
     "actionsEnabled": true,
     "defaultWorkflowPermission": "read",
     "pullRequestUrl": "https://github.com/viniciusdamascenodev/lottobrain/pull/1",
-    "validationHeadSha": "7c9b84175e377551a1078b52860b23ca7f53b538",
-    "mainUnchanged": true,
+    "validationHeadSha": "fd2088e49d3a32a86b83195bbd502021d9742802",
+    "mainUnchanged": false,
     "requiredStatusChecks": [
       {
         "context": "Quality gate",
@@ -179,35 +200,76 @@
     "allowForcePushes": false,
     "allowDeletions": false,
     "conclusion": "success",
-    "mergePerformed": false,
-    "reviewIntegrationPending": true,
-    "remoteRunCompletedAtUTC": "2026-10-29T02:38:17Z",
+    "mergePerformed": true,
+    "reviewIntegrationPending": false,
+    "remoteRunCompletedAtUTC": "2026-10-29T22:21:10Z",
     "remoteJobs": [
       {
-        "jobId": 123227710504,
+        "jobId": 123764542120,
+        "name": "Frontend — tipos, testes, build e dependências",
         "result": "success",
-        "startedAtUTC": "2026-10-29T02:31:19Z",
-        "completedAtUTC": "2026-10-29T02:31:49Z"
+        "startedAtUTC": "2026-10-29T22:13:59Z",
+        "completedAtUTC": "2026-10-29T22:14:30Z"
       },
       {
-        "jobId": 123227710748,
+        "jobId": 123764542521,
+        "name": "Python — qualidade, testes e dependências",
         "result": "success",
-        "startedAtUTC": "2026-10-29T02:31:19Z",
-        "completedAtUTC": "2026-10-29T02:38:12Z"
+        "startedAtUTC": "2026-10-29T22:13:58Z",
+        "completedAtUTC": "2026-10-29T22:15:02Z"
       },
       {
-        "jobId": 123227710833,
+        "jobId": 123764542576,
+        "name": "PostgreSQL 17 — migrations e integridade",
         "result": "success",
-        "startedAtUTC": "2026-10-29T02:31:18Z",
-        "completedAtUTC": "2026-10-29T02:32:19Z"
+        "startedAtUTC": "2026-10-29T22:13:59Z",
+        "completedAtUTC": "2026-10-29T22:20:03Z"
       },
       {
-        "jobId": 123229911426,
+        "jobId": 123767292009,
+        "name": "Quality gate",
         "result": "success",
-        "startedAtUTC": "2026-10-29T02:38:13Z",
-        "completedAtUTC": "2026-10-29T02:38:16Z"
+        "startedAtUTC": "2026-10-29T22:21:06Z",
+        "completedAtUTC": "2026-10-29T22:21:10Z"
       }
-    ]
+    ],
+    "preMergeValidation": {
+      "actionsRunUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40806839794",
+      "validationHeadSha": "7c9b84175e377551a1078b52860b23ca7f53b538",
+      "remoteRunCompletedAtUTC": "2026-10-29T02:38:17Z",
+      "remoteJobs": [
+        {
+          "jobId": 123227710504,
+          "result": "success",
+          "startedAtUTC": "2026-10-29T02:31:19Z",
+          "completedAtUTC": "2026-10-29T02:31:49Z"
+        },
+        {
+          "jobId": 123227710748,
+          "result": "success",
+          "startedAtUTC": "2026-10-29T02:31:19Z",
+          "completedAtUTC": "2026-10-29T02:38:12Z"
+        },
+        {
+          "jobId": 123227710833,
+          "result": "success",
+          "startedAtUTC": "2026-10-29T02:31:18Z",
+          "completedAtUTC": "2026-10-29T02:32:19Z"
+        },
+        {
+          "jobId": 123229911426,
+          "result": "success",
+          "startedAtUTC": "2026-10-29T02:38:13Z",
+          "completedAtUTC": "2026-10-29T02:38:16Z"
+        }
+      ]
+    },
+    "pullRequestState": "MERGED",
+    "reviewHeadSha": "ff1330ec46d515cf49e379542b6e5a9fbec7f873",
+    "mergeCommitSha": "fd2088e49d3a32a86b83195bbd502021d9742802",
+    "mergedAtUTC": "2026-10-29T22:13:52Z",
+    "mergedAtLocal": "2026-10-29T19:13:52-03:00",
+    "postMergeCiRunId": 40964245312
   },
   "operationalServicesProvisioned": false,
   "productionCredentialsCreated": false,
@@ -237,5 +299,13 @@
     "Serviços de preview/staging/produção, OAuth e produto privado continuam na SPEC-0033.",
     "Scanner básico de credenciais e auditorias cobrem os recortes descritos; não equivalem a auditoria integral de segurança."
   ],
-  "implementationHashBasis": "git_blob_at_github.validationHeadSha"
+  "implementationHashBasis": "git_blob_at_github.validationHeadSha",
+  "initialValidationDate": "2026-10-28",
+  "documentationClosure": {
+    "date": "2026-10-29",
+    "scope": "documentation_only",
+    "stage5Criteria": "E5-01 through E5-08 satisfied",
+    "nextStageStarted": false,
+    "productionDeploymentPerformed": false
+  }
 }
