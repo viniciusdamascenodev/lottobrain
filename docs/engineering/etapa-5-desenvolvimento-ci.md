@@ -115,7 +115,7 @@ A auditoria Python exporta os perfis API/jobs resolvidos do lock e consulta pip-
 
 ## GitHub Actions
 
-O [workflow](../../.github/workflows/ci.yml) executa em push, pull request e acionamento manual. Jobs:
+O [workflow](../../.github/workflows/ci.yml) executa em push na `main`, pull requests e acionamento manual. Branches de trabalho usam o evento do PR, evitando duplicar a mesma bateria em push e PR. Jobs:
 
 1. **Python:** ambiente resolvido, Ruff, mypy, scanner básico, pytest e auditoria API/jobs.
 2. **PostgreSQL:** instala binários 17 no runner Ubuntu descartável e reutiliza o executor de integração completo.
