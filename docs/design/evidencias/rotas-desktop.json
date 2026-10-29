@@ -1,0 +1,146 @@
+[
+  {
+    "lottery": "Mega-Sena",
+    "overflow": false,
+    "panel": true,
+    "section": "Resumo"
+  },
+  {
+    "lottery": "Mega-Sena",
+    "overflow": false,
+    "panel": true,
+    "section": "Concursos"
+  },
+  {
+    "lottery": "Mega-Sena",
+    "overflow": false,
+    "panel": true,
+    "section": "Estatísticas"
+  },
+  {
+    "lottery": "Mega-Sena",
+    "overflow": false,
+    "panel": true,
+    "section": "Previsões"
+  },
+  {
+    "lottery": "Lotofácil",
+    "overflow": false,
+    "panel": true,
+    "section": "Resumo"
+  },
+  {
+    "lottery": "Lotofácil",
+    "overflow": false,
+    "panel": true,
+    "section": "Concursos"
+  },
+  {
+    "lottery": "Lotofácil",
+    "overflow": false,
+    "panel": true,
+    "section": "Estatísticas"
+  },
+  {
+    "lottery": "Lotofácil",
+    "overflow": false,
+    "panel": true,
+    "section": "Previsões"
+  },
+  {
+    "lottery": "+Milionária",
+    "overflow": false,
+    "panel": true,
+    "section": "Resumo"
+  },
+  {
+    "lottery": "+Milionária",
+    "overflow": false,
+    "panel": true,
+    "section": "Concursos"
+  },
+  {
+    "lottery": "+Milionária",
+    "overflow": false,
+    "panel": true,
+    "section": "Estatísticas"
+  },
+  {
+    "lottery": "+Milionária",
+    "overflow": false,
+    "panel": true,
+    "section": "Previsões"
+  },
+  {
+    "lottery": "Powerball",
+    "overflow": false,
+    "panel": true,
+    "section": "Resumo"
+  },
+  {
+    "lottery": "Powerball",
+    "overflow": false,
+    "panel": true,
+    "section": "Concursos"
+  },
+  {
+    "lottery": "Powerball",
+    "overflow": false,
+    "panel": true,
+    "section": "Estatísticas"
+  },
+  {
+    "lottery": "Powerball",
+    "overflow": false,
+    "panel": true,
+    "section": "Previsões"
+  },
+  {
+    "lottery": "Mega Millions",
+    "overflow": false,
+    "panel": true,
+    "section": "Resumo"
+  },
+  {
+    "lottery": "Mega Millions",
+    "overflow": false,
+    "panel": true,
+    "section": "Concursos"
+  },
+  {
+    "lottery": "Mega Millions",
+    "overflow": false,
+    "panel": true,
+    "section": "Estatísticas"
+  },
+  {
+    "lottery": "Mega Millions",
+    "overflow": false,
+    "panel": true,
+    "section": "Previsões"
+  },
+  {
+    "lottery": "EuroMillions",
+    "overflow": false,
+    "panel": true,
+    "section": "Resumo"
+  },
+  {
+    "lottery": "EuroMillions",
+    "overflow": false,
+    "panel": true,
+    "section": "Concursos"
+  },
+  {
+    "lottery": "EuroMillions",
+    "overflow": false,
+    "panel": true,
+    "section": "Estatísticas"
+  },
+  {
+    "lottery": "EuroMillions",
+    "overflow": false,
+    "panel": true,
+    "section": "Previsões"
+  }
+]

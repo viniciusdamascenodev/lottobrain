@@ -1,0 +1,101 @@
+[
+  {
+    "check": "Identificador duplicado",
+    "evidence": "Esse identificador já está cadastrado. Escolha outro."
+  },
+  {
+    "check": "Quantidade maior que limite",
+    "evidence": "A quantidade principal deve ser inteira e ficar entre 1 e o limite, de no máximo 100."
+  },
+  {
+    "check": "Cadastro e confirmação local",
+    "evidence": "Rascunho demonstrativo\nrascunho_ux · BRL\n\t6/60\tA qualificar\t\nAtivação simulada\tRevisar ativação"
+  },
+  {
+    "check": "Execução local",
+    "evidence": "INTENÇÃO\tMODALIDADE\tESTADO\tAÇÃO\nAtualização limitada\nExecução demonstrativa 1\n\tEuroMillions\t\nConcluída (simulação)\tAmostra preservada"
+  },
+  {
+    "check": "Revisão local por modalidade",
+    "evidence": "Demonstração revisada"
+  },
+  {
+    "check": "MFA demonstrativo libera somente a jornada",
+    "evidence": "Revisão de dados"
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Carregando resultados… cenário demonstrativo.\n\nEncerrar demonstração de carregamento",
+    "notice": ""
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Nenhum sorteio neste recorte\n\nO período escolhido não encontra registros na amostra. Isso não significa que não houve sorteios fora dela.\n\nRestaurar período da amostra",
+    "notice": ""
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Não foi possível carregar este conteúdo\n\nA última consulta não foi concluída. Seus filtros foram mantidos. Este é um cenário de falha demonstrativo.\n\nTentar novamente",
+    "notice": ""
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Sorteios na janela\n30\nAmostra, não o histórico inteiro\nMais frequente\n07\n6 ocorrências · empates por número\nMédia da soma\n131,7\nSomente números principais\nMédia de pares\n2,5\nEntre os 5 números principais\nÚltimo",
+    "notice": "Atualização atrasada · cenário demonstrativo\n\nO último resultado confirmado continua disponível. A próxima tentativa segue a política +1h/D+1."
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Sorteios na janela\n30\nAmostra, não o histórico inteiro\nMais frequente\n07\n6 ocorrências · empates por número\nMédia da soma\n131,7\nSomente números principais\nMédia de pares\n2,5\nEntre os 5 números principais\nÚltimo",
+    "notice": "Dados sob revisão · cenário demonstrativo\n\nA amostra anterior permanece consultável. Novas previsões e promoções afetadas aguardam decisão."
+  },
+  {
+    "check": "Bloqueio de previsão: review",
+    "disabled": true
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Novas previsões suspensas neste cenário\n\nA demonstração preserva os dados anteriores e informa por que não se deve gerar uma previsão nova.\n\nFrequência histórica\n\nReferência baseada nas ocorrências anteriores, ",
+    "notice": "Conjunto superado · cenário demonstrativo\n\nVocê está consultando uma versão anterior, mantida como referência histórica."
+  },
+  {
+    "check": "Bloqueio de previsão: superseded",
+    "disabled": true
+  },
+  {
+    "check": "Cenário EuroMillions",
+    "evidence": "Novas previsões suspensas neste cenário\n\nA demonstração preserva os dados anteriores e informa por que não se deve gerar uma previsão nova.\n\nFrequência histórica\n\nReferência baseada nas ocorrências anteriores, ",
+    "notice": "Fonte indisponível · cenário demonstrativo\n\nOs dados de referência permanecem acessíveis. Não foi realizada uma consulta à fonte."
+  },
+  {
+    "check": "Bloqueio de previsão: blocked",
+    "disabled": true
+  },
+  {
+    "check": "Visitante",
+    "evidence": "Entre no seu espaço\n\nAcesso privado aos dados, análises e experimentos das seis loterias.\n\nG\nEntrar com Google\n1\nConfirme sua identidade\n\nAutenticação gerenciada pelo provedor.\n\n2\nAguarde a aprovação\n\nO administrador autoriza o acesso.\n\n3\nExplore com privacidade\n\nResultados e análises ficam restritos.\n\nDemonstração local: o botão não abre o Google nem envia dados. Use “Cenários e jornadas” para explorar cada estado.\nComo recuperar meu acesso?",
+    "privatePanelCount": 0
+  },
+  {
+    "check": "Cadastro pendente após entrada simulada",
+    "evidence": "Solicitação enviada",
+    "privatePanelCount": 0
+  },
+  {
+    "check": "Revogado",
+    "evidence": "Seu acesso foi revogado",
+    "privatePanelCount": 0
+  },
+  {
+    "check": "Sessão expirada",
+    "evidence": "Sua sessão expirou",
+    "privatePanelCount": 0
+  },
+  {
+    "check": "Aprovação local",
+    "evidence": "SOLICITAÇÃO\tESTADO\tACESSO\tAÇÕES\nSolicitação demonstrativa 01\nIdentidade omitida · cenário demonstrativo\n\t\nAprovado\tUsuário · seis loterias\t\nRevogar"
+  },
+  {
+    "check": "Revogação local",
+    "evidence": "SOLICITAÇÃO\tESTADO\tACESSO\tAÇÕES\nSolicitação demonstrativa 01\nIdentidade omitida · cenário demonstrativo\n\t\nRevogado\tConteúdo indisponível\t\nAprovar"
+  }
+]

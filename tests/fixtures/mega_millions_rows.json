@@ -1,0 +1,32 @@
+[
+  {
+    "drawing_href": "/mega-millions/drawing/2025/12/23",
+    "visible_date": "Tue, December, 23, 2025",
+    "main_values": ["15", "37", "38", "41", "64"],
+    "mega_ball_values": ["21"],
+    "multiplier_values": [],
+    "jackpot_text": "$100 Million",
+    "unknown_result_items": [],
+    "unknown_result_blocks": 0
+  },
+  {
+    "drawing_href": "/mega-millions/drawing/2025/4/4",
+    "visible_date": "Fri, April, 4, 2025",
+    "main_values": ["11", "28", "35", "37", "69"],
+    "mega_ball_values": ["25"],
+    "multiplier_values": ["2x"],
+    "jackpot_text": "$43 Million",
+    "unknown_result_items": [],
+    "unknown_result_blocks": 0
+  },
+  {
+    "drawing_href": "/mega-millions/drawing/1996/9/6",
+    "visible_date": "Fri, September, 6, 1996",
+    "main_values": ["5", "11", "29", "47", "50"],
+    "mega_ball_values": ["17"],
+    "multiplier_values": [],
+    "jackpot_text": "$5 Million",
+    "unknown_result_items": [],
+    "unknown_result_blocks": 0
+  }
+]

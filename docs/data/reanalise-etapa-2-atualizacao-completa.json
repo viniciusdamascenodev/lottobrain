@@ -1,0 +1,1617 @@
+{
+  "report_version": "lottobrain.stage2-reassessment.v1",
+  "date": "2026-10-27",
+  "timezone": "America/Sao_Paulo",
+  "purpose": "verify configured links and recommend complete data recovery; no operational import or source activation",
+  "production_code_changed": false,
+  "samples": [
+    {
+      "name": "ny_pb_metadata",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_powerball_metadados.json",
+      "sha256": "5d7226e45582f53cae64d4caee6251b379eb9916ecd373ee049452144633ec78",
+      "byte_count": 11850,
+      "url": "https://data.ny.gov/api/views/d6yy-54nr.json",
+      "observed_at_utc": "2026-10-27T22:22:41.1259895Z",
+      "saved_representation": "response content reencoded as UTF-8"
+    },
+    {
+      "name": "ny_mm_metadata",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_mega_millions_metadados.json",
+      "sha256": "8c9c20fa9f4e4162d2b43b27ddc7623e3a75eb64863bf15a6d08a1e6e2d35006",
+      "byte_count": 11671,
+      "url": "https://data.ny.gov/api/views/5xaw-6ayf.json",
+      "observed_at_utc": "2026-10-27T22:22:44.1099041Z",
+      "saved_representation": "response content reencoded as UTF-8"
+    },
+    {
+      "name": "ny_pb_recent_summary",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_powerball_resumo.json",
+      "sha256": "b16ef7c2dd7b4f2a79bc08557c4c94010a20d39272a9af995cc17156d374b415",
+      "byte_count": 102,
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24select=count(*)%2Cmin(draw_date)%2Cmax(draw_date)&%24where=draw_date%3E%272025-12-24T23%3A59%3A59%27",
+      "observed_at_utc": "2026-10-27T22:22:37.6143681Z",
+      "saved_representation": "response content reencoded as UTF-8"
+    },
+    {
+      "name": "ny_mm_recent_summary",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_mega_millions_resumo.json",
+      "sha256": "981f264bd7a9f6ed43dc1fa411ed2438791deb25906d47c2ae674052756f0f8a",
+      "byte_count": 101,
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24select=count(*)%2Cmin(draw_date)%2Cmax(draw_date)&%24where=draw_date%3E%272025-12-23T23%3A59%3A59%27",
+      "observed_at_utc": "2026-10-27T22:22:34.4460930Z",
+      "saved_representation": "response content reencoded as UTF-8"
+    },
+    {
+      "name": "ny_pb_recent_rows",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_powerball_recentes.json",
+      "sha256": "05934e917ae1a4d27a1d3a86268f3c72a293b68587c484b5cd12d8e1bf837346",
+      "byte_count": 15730,
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24where=draw_date%3E%272025-12-24T23%3A59%3A59%27%20AND%20draw_date%3C%3D%272026-10-26T23%3A59%3A59%27&%24order=draw_date&%24limit=200",
+      "observed_at_utc": "2026-10-27T22:23:53.9422776Z",
+      "saved_representation": "response content reencoded as UTF-8"
+    },
+    {
+      "name": "ny_mm_recent_rows",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_mega_millions_recentes.json",
+      "sha256": "0b96399ada39b95c9826279e0449e823e7e15ad89ce0032522d154d4c1aa5138",
+      "byte_count": 8092,
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24where=draw_date%3E%272025-12-23T23%3A59%3A59%27%20AND%20draw_date%3C%3D%272026-10-23T23%3A59%3A59%27&%24order=draw_date&%24limit=200",
+      "observed_at_utc": "2026-10-27T22:23:58.5288105Z",
+      "saved_representation": "response content reencoded as UTF-8"
+    },
+    {
+      "name": "colorado_pb_xlsx",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/colorado_powerball_14_dias.xlsx",
+      "sha256": "f8263464950650d853b1b3503bf5886e3f56d721246753440b339002a913eb64",
+      "byte_count": 11047,
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=powerball&timeframe=14&queried_at=2026-10-27T22%3A19%3A43%2B00%3A00&xlsx=1",
+      "observed_at_utc": "2026-10-27T22:21:57.342012+00:00",
+      "saved_representation": "HTTP response body bytes"
+    },
+    {
+      "name": "colorado_mm_xlsx",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/colorado_mega_millions_14_dias.xlsx",
+      "sha256": "28e735b07e420ce25eff0a6e81e8f6d6e6b0c73e222b4447ce70e0164dee4701",
+      "byte_count": 11172,
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=megamillions&timeframe=14&queried_at=2026-10-27T22%3A19%3A45%2B00%3A00&xlsx=1",
+      "observed_at_utc": "2026-10-27T22:21:59.904617+00:00",
+      "saved_representation": "HTTP response body bytes"
+    },
+    {
+      "name": "austria_2026",
+      "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/austria_euromillions_2026.csv",
+      "sha256": "6900cf5e3d04e90b87fffa53f53804b6b9f698fbb5c0d1d760cb0a0c3432643e",
+      "byte_count": 64989,
+      "url": "https://statics.win2day.at/media/NN_W2D_STAT_EUML_2026.csv",
+      "observed_at_utc": "2026-10-27T22:24:05.553056+00:00",
+      "saved_representation": "HTTP response body bytes"
+    }
+  ],
+  "sample_bytes": 134754,
+  "direct_probes": [
+    {
+      "name": "austria_2026",
+      "method": "GET",
+      "url": "https://statics.win2day.at/media/NN_W2D_STAT_EUML_2026.csv",
+      "observed_at_utc": "2026-10-27T22:24:05.553056+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/csv",
+        "Content-Length": "64989",
+        "ETag": "\"fddd-65ed92cf9429d\"",
+        "Last-Modified": "Tue, 27 Oct 2026 21:31:55 GMT",
+        "Date": "Tue, 27 Oct 2026 22:24:07 GMT"
+      },
+      "byte_count": 64989,
+      "sha256": "6900cf5e3d04e90b87fffa53f53804b6b9f698fbb5c0d1d760cb0a0c3432643e",
+      "within_limit": true
+    },
+    {
+      "name": "belgium_page",
+      "method": "GET",
+      "url": "https://www.loterie-nationale.be/nos-jeux/euromillions/resultats-tirage/statistiques",
+      "observed_at_utc": "2026-10-27T22:19:39.591264+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 405,
+      "headers": {
+        "Content-Type": "text/html",
+        "Content-Length": "4873",
+        "Date": "Tue, 27 Oct 2026 22:19:40 GMT"
+      },
+      "byte_count": 4873,
+      "sha256": "96dc52fe3647d70c18229fe51ab3fe03cfac94d0c25b525f1a93a0b70b5a41ac",
+      "within_limit": true
+    },
+    {
+      "name": "caixa_loto_get",
+      "method": "GET",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Lotof%C3%A1cil",
+      "observed_at_utc": "2026-10-27T22:20:22.550352+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 403,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:20:23 GMT"
+      },
+      "byte_count": 10486,
+      "sha256": "4e8d774979b1b17164f608d8c3111c547ad0e065d83ecfa7937a0e9d1737ad8a",
+      "within_limit": true
+    },
+    {
+      "name": "caixa_loto_head",
+      "method": "HEAD",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Lotof%C3%A1cil",
+      "observed_at_utc": "2026-10-27T22:19:35.284145+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 403,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:19:36 GMT"
+      },
+      "byte_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "within_limit": true
+    },
+    {
+      "name": "caixa_mega_get",
+      "method": "GET",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Mega-Sena",
+      "observed_at_utc": "2026-10-27T22:20:20.342427+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 403,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:20:21 GMT"
+      },
+      "byte_count": 10476,
+      "sha256": "3e58cb1bd9c57e12c9fce4334fb275a5de93b5eef730eae1df353c248ba4bbc9",
+      "within_limit": true
+    },
+    {
+      "name": "caixa_mega_head",
+      "method": "HEAD",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Mega-Sena",
+      "observed_at_utc": "2026-10-27T22:19:33.088358+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 403,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:19:33 GMT"
+      },
+      "byte_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "within_limit": true
+    },
+    {
+      "name": "caixa_mili_get",
+      "method": "GET",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=%2BMilion%C3%A1ria",
+      "observed_at_utc": "2026-10-27T22:20:24.668444+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 403,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:20:25 GMT"
+      },
+      "byte_count": 10494,
+      "sha256": "e0040f5b34582697ad1af4cf2c51e1f26dce65313eab16bab3fe6db2d2f04011",
+      "within_limit": true
+    },
+    {
+      "name": "caixa_mili_head",
+      "method": "HEAD",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=%2BMilion%C3%A1ria",
+      "observed_at_utc": "2026-10-27T22:19:37.474538+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 403,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:19:38 GMT"
+      },
+      "byte_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "within_limit": true
+    },
+    {
+      "name": "colorado_mm",
+      "method": "GET",
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=megamillions&timeframe=14",
+      "observed_at_utc": "2026-10-27T22:19:44.711371+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "85536",
+        "Date": "Tue, 27 Oct 2026 22:19:45 GMT"
+      },
+      "byte_count": 85536,
+      "sha256": "8f1f772ba01bed7172f3069be6d7baf0d9d8bc30d5854686eb2d1e2c4eac2c26",
+      "within_limit": true
+    },
+    {
+      "name": "colorado_mm_xlsx",
+      "method": "GET",
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=megamillions&timeframe=14&queried_at=2026-10-27T22%3A19%3A45%2B00%3A00&xlsx=1",
+      "observed_at_utc": "2026-10-27T22:21:59.904617+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Length": "11172",
+        "Content-Disposition": "attachment; filename=\"MEGAMILLIONS-from_2026-10-13_to_2026-10-27.xlsx\"",
+        "Date": "Tue, 27 Oct 2026 22:22:00 GMT"
+      },
+      "byte_count": 11172,
+      "sha256": "28e735b07e420ce25eff0a6e81e8f6d6e6b0c73e222b4447ce70e0164dee4701",
+      "within_limit": true
+    },
+    {
+      "name": "colorado_pb",
+      "method": "GET",
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=powerball&timeframe=14",
+      "observed_at_utc": "2026-10-27T22:19:41.845181+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "86138",
+        "Date": "Tue, 27 Oct 2026 22:19:43 GMT"
+      },
+      "byte_count": 86138,
+      "sha256": "504b82ff4848d4ecc90fad4c951c5a7d7cc858a7c7b7d1d4b81a5a36e5cdde5f",
+      "within_limit": true
+    },
+    {
+      "name": "colorado_pb_xlsx",
+      "method": "GET",
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=powerball&timeframe=14&queried_at=2026-10-27T22%3A19%3A43%2B00%3A00&xlsx=1",
+      "observed_at_utc": "2026-10-27T22:21:57.342012+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Length": "11047",
+        "Content-Disposition": "attachment; filename=\"POWERBALL-from_2026-10-13_to_2026-10-27.xlsx\"",
+        "Date": "Tue, 27 Oct 2026 22:21:58 GMT"
+      },
+      "byte_count": 11047,
+      "sha256": "f8263464950650d853b1b3503bf5886e3f56d721246753440b339002a913eb64",
+      "within_limit": true
+    },
+    {
+      "name": "fdj_history",
+      "method": "GET",
+      "url": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/historique",
+      "observed_at_utc": "2026-10-27T22:19:47.481285+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 22:19:48 GMT"
+      },
+      "byte_count": 764548,
+      "sha256": "f80197f503155dc1da0cf128d5495aae8addc5eadfff55e4c9dcfad7c60cd26b",
+      "within_limit": true
+    },
+    {
+      "name": "ny_mm",
+      "method": "GET",
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:19:53.362217+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "transport_error": "URLError",
+      "reason_type": "SSLCertVerificationError",
+      "certificate_verify_code": 20
+    },
+    {
+      "http_status": 200,
+      "saved_representation": "response content reencoded as UTF-8",
+      "byte_count": 11671,
+      "name": "ny_mm_metadata",
+      "sha256": "8c9c20fa9f4e4162d2b43b27ddc7623e3a75eb64863bf15a6d08a1e6e2d35006",
+      "tls_verified": true,
+      "url": "https://data.ny.gov/api/views/5xaw-6ayf.json",
+      "observed_at_utc": "2026-10-27T22:22:44.1099041Z",
+      "content_type": "application/json; charset=utf-8",
+      "automatic_retries": 0,
+      "within_limit": true,
+      "client": "PowerShell native certificate validation"
+    },
+    {
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24where=draw_date%3E%272025-12-23T23%3A59%3A59%27%20AND%20draw_date%3C%3D%272026-10-23T23%3A59%3A59%27&%24order=draw_date&%24limit=200",
+      "observed_at_utc": "2026-10-27T22:23:58.5288105Z",
+      "sha256": "0b96399ada39b95c9826279e0449e823e7e15ad89ce0032522d154d4c1aa5138",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "saved_representation": "response content reencoded as UTF-8",
+      "client": "PowerShell native certificate validation",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "byte_count": 8092,
+      "within_limit": true,
+      "name": "ny_mm_recent_rows"
+    },
+    {
+      "http_status": 200,
+      "saved_representation": "response content reencoded as UTF-8",
+      "byte_count": 101,
+      "name": "ny_mm_recent_summary",
+      "sha256": "981f264bd7a9f6ed43dc1fa411ed2438791deb25906d47c2ae674052756f0f8a",
+      "tls_verified": true,
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24select=count(*)%2Cmin(draw_date)%2Cmax(draw_date)&%24where=draw_date%3E%272025-12-23T23%3A59%3A59%27",
+      "observed_at_utc": "2026-10-27T22:22:34.4460930Z",
+      "content_type": "application/json; charset=utf-8",
+      "automatic_retries": 0,
+      "within_limit": true,
+      "client": "PowerShell native certificate validation"
+    },
+    {
+      "sha256": "033a5a499f7e72514648ea08ea7ea0131ecd370aa04730fd7a5b7da4dbd89d98",
+      "client": "PowerShell native certificate validation",
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24order=draw_date%20DESC&%24limit=3",
+      "name": "ny_mm_windows",
+      "within_limit": true,
+      "http_status": 200,
+      "automatic_retries": 0,
+      "observed_at_utc": "2026-10-27T22:21:33.4929140Z",
+      "content_type": "application/json; charset=utf-8",
+      "tls_verified": true,
+      "byte_count": 280
+    },
+    {
+      "name": "ny_pb",
+      "method": "GET",
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:19:50.884150+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "transport_error": "URLError",
+      "reason_type": "SSLCertVerificationError",
+      "certificate_verify_code": 20
+    },
+    {
+      "http_status": 200,
+      "saved_representation": "response content reencoded as UTF-8",
+      "byte_count": 11850,
+      "name": "ny_pb_metadata",
+      "sha256": "5d7226e45582f53cae64d4caee6251b379eb9916ecd373ee049452144633ec78",
+      "tls_verified": true,
+      "url": "https://data.ny.gov/api/views/d6yy-54nr.json",
+      "observed_at_utc": "2026-10-27T22:22:41.1259895Z",
+      "content_type": "application/json; charset=utf-8",
+      "automatic_retries": 0,
+      "within_limit": true,
+      "client": "PowerShell native certificate validation"
+    },
+    {
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24where=draw_date%3E%272025-12-24T23%3A59%3A59%27%20AND%20draw_date%3C%3D%272026-10-26T23%3A59%3A59%27&%24order=draw_date&%24limit=200",
+      "observed_at_utc": "2026-10-27T22:23:53.9422776Z",
+      "sha256": "05934e917ae1a4d27a1d3a86268f3c72a293b68587c484b5cd12d8e1bf837346",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "saved_representation": "response content reencoded as UTF-8",
+      "client": "PowerShell native certificate validation",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "byte_count": 15730,
+      "within_limit": true,
+      "name": "ny_pb_recent_rows"
+    },
+    {
+      "http_status": 200,
+      "saved_representation": "response content reencoded as UTF-8",
+      "byte_count": 102,
+      "name": "ny_pb_recent_summary",
+      "sha256": "b16ef7c2dd7b4f2a79bc08557c4c94010a20d39272a9af995cc17156d374b415",
+      "tls_verified": true,
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24select=count(*)%2Cmin(draw_date)%2Cmax(draw_date)&%24where=draw_date%3E%272025-12-24T23%3A59%3A59%27",
+      "observed_at_utc": "2026-10-27T22:22:37.6143681Z",
+      "content_type": "application/json; charset=utf-8",
+      "automatic_retries": 0,
+      "within_limit": true,
+      "client": "PowerShell native certificate validation"
+    },
+    {
+      "sha256": "1c4d53026b2c730ab97e4420f339af57cd990cc39061184eb8efca9961bb060c",
+      "client": "PowerShell native certificate validation",
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24order=draw_date%20DESC&%24limit=3",
+      "name": "ny_pb_windows",
+      "within_limit": true,
+      "http_status": 200,
+      "automatic_retries": 0,
+      "observed_at_utc": "2026-10-27T22:21:29.6143695Z",
+      "content_type": "application/json; charset=utf-8",
+      "tls_verified": true,
+      "byte_count": 439
+    }
+  ],
+  "caixa_links": {
+    "configuration_correct": true,
+    "catalog_consistent": true,
+    "plus_encoded_as_literal_plus": true,
+    "current_automated_HEAD_status": [
+      403,
+      403,
+      403
+    ],
+    "current_automated_GET_status": [
+      403,
+      403,
+      403
+    ],
+    "response_page": "Azion default error; Forbidden",
+    "previous_valid_xlsx_evidence": "docs/data/fechamento-etapa-2.json",
+    "actual_cause_not_established": true
+  },
+  "new_york": {
+    "pb": {
+      "dataset_id": "d6yy-54nr",
+      "name": "Lottery Powerball Winning Numbers: Beginning 2010",
+      "licenseId": null,
+      "license": null,
+      "attribution": "New York State Gaming Commission",
+      "attributionLink": "http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresults_powerball",
+      "rowsUpdatedAt": 1793086729,
+      "metadata": {
+        "rdfSubject": "0",
+        "jsonQuery": {
+          "order": [
+            {
+              "columnFieldName": "draw_date",
+              "ascending": false
+            }
+          ]
+        },
+        "attachments": [
+          {
+            "filename": "NYSGAM_Powerball_Overview.pdf",
+            "assetId": "8462fb9d-a7c8-4e07-9f53-db81e06433c7",
+            "name": "NYSGAM_Powerball_Overview.pdf"
+          },
+          {
+            "filename": "NYSGAM_Powerball_DataDictionary.pdf",
+            "assetId": "cbb55ce2-bf93-4f82-bcff-ea46053ef47e",
+            "name": "NYSGAM_Powerball_DataDictionary.pdf"
+          }
+        ],
+        "custom_fields": {
+          "Dataset Summary": {
+            "Posting Frequency": "Three times weekly",
+            "Organization": "The New York Lottery",
+            "Time Period": "02/03/2010 to present",
+            "Coverage": "Statewide",
+            "Granularity": "Draw Date",
+            "Dataset Owner": "New York State Gaming Commission"
+          },
+          "Additional Resources": {
+            "See Also ": "http://www.powerball.com/pb_home.asp",
+            "See Also": "http://www.gaming.ny.gov/"
+          },
+          "Notes": {
+            "Notes": "The information contained on these pages is believed to be accurate. In the event of a discrepancy between the information displayed on this Web site concerning winning numbers and payouts and the information contained in the official and certified files maintained by the New York Lottery's Drawing Unit, those maintained by the Drawing Unit shall prevail."
+          },
+          "Dataset Information": {
+            "Agency": "Gaming Commission, New York State"
+          }
+        },
+        "rowIdentifier": 634672453,
+        "availableDisplayTypes": [
+          "table",
+          "fatrow",
+          "page"
+        ],
+        "renderTypeConfig": {
+          "visible": {
+            "table": true
+          }
+        }
+      },
+      "fields": [
+        {
+          "field": "draw_date",
+          "type": "calendar_date",
+          "description": "Draw date"
+        },
+        {
+          "field": "winning_numbers",
+          "type": "text",
+          "description": "Winning numbers"
+        },
+        {
+          "field": "multiplier",
+          "type": "number",
+          "description": "Multiplier"
+        },
+        {
+          "field": "double_play_winning_numbers",
+          "type": "text",
+          "description": "Double Play winning numbers (Six numbers, each two digits, separated by a space: xx xx xx xx xx xx)"
+        }
+      ],
+      "recent_sample": [
+        {
+          "draw_date": "2026-10-26T00:00:00.000",
+          "winning_numbers": "18 26 49 50 54 01",
+          "multiplier": "3",
+          "double_play_winning_numbers": "05 11 14 24 59 08"
+        },
+        {
+          "draw_date": "2026-10-24T00:00:00.000",
+          "winning_numbers": "04 05 15 19 55 19",
+          "multiplier": "2",
+          "double_play_winning_numbers": "03 30 44 50 56 23"
+        },
+        {
+          "draw_date": "2026-10-21T00:00:00.000",
+          "winning_numbers": "01 21 44 50 57 05",
+          "multiplier": "2",
+          "double_play_winning_numbers": "07 23 31 45 59 08"
+        }
+      ],
+      "recent_aggregate": [
+        {
+          "count": "131",
+          "min_draw_date": "2025-12-27T00:00:00.000",
+          "max_draw_date": "2026-10-26T00:00:00.000"
+        }
+      ]
+    },
+    "mm": {
+      "dataset_id": "5xaw-6ayf",
+      "name": "Lottery Mega Millions Winning Numbers: Beginning 2002",
+      "licenseId": null,
+      "license": null,
+      "attribution": "New York State Gaming Commission",
+      "attributionLink": "http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresultsmega",
+      "rowsUpdatedAt": 1792827178,
+      "metadata": {
+        "rdfSubject": "0",
+        "jsonQuery": {
+          "order": [
+            {
+              "columnFieldName": "draw_date",
+              "ascending": false
+            }
+          ]
+        },
+        "attachments": [
+          {
+            "filename": "NYSGAM_MegaWinningNumbers_Overview.pdf",
+            "assetId": "77100176-fe6e-479a-b57c-e35d0fb4613d",
+            "name": "NYSGAM_MegaWinningNumbers_Overview.pdf"
+          },
+          {
+            "filename": "NYSGAM_MegaWinningNumbers_DataDictionary.pdf",
+            "assetId": "b6122f91-6e6d-4753-a2eb-594bbb4fb04e",
+            "name": "NYSGAM_MegaWinningNumbers_DataDictionary.pdf"
+          }
+        ],
+        "custom_fields": {
+          "Dataset Summary": {
+            "Posting Frequency": "Twice weekly",
+            "Organization": "The New York Lottery",
+            "Time Period": "05/17/2002 to present",
+            "Coverage": "Statewide",
+            "Granularity": "Draw Date",
+            "Units": "Drawings Unit",
+            "Dataset Owner": "New York State Gaming Commission"
+          },
+          "Additional Resources": {
+            "See Also ": "http://www.megamillions.com/",
+            "See Also": "http://www.gaming.ny.gov/"
+          },
+          "Notes": {
+            "Notes": "The information contained on these pages is believed to be accurate. In the event of a discrepancy between the information displayed on this Web site concerning winning numbers and payouts and the information contained in the official and certified files maintained by the New York Lottery's Drawing Unit, those maintained by the Drawing Unit shall prevail."
+          },
+          "Dataset Information": {
+            "Agency": "Gaming Commission, New York State"
+          }
+        },
+        "rowIdentifier": 538448114,
+        "availableDisplayTypes": [
+          "table",
+          "fatrow",
+          "page"
+        ],
+        "renderTypeConfig": {
+          "visible": {
+            "table": true
+          }
+        }
+      },
+      "fields": [
+        {
+          "field": "draw_date",
+          "type": "calendar_date",
+          "description": "Draw Date\n"
+        },
+        {
+          "field": "winning_numbers",
+          "type": "text",
+          "description": "Winning Numbers"
+        },
+        {
+          "field": "mega_ball",
+          "type": "text",
+          "description": "Mega Ball"
+        },
+        {
+          "field": "multiplier",
+          "type": "text",
+          "description": "Multiplier (started 1/18/2011)"
+        }
+      ],
+      "recent_sample": [
+        {
+          "draw_date": "2026-10-23T00:00:00.000",
+          "winning_numbers": "03 07 46 49 51",
+          "mega_ball": "05"
+        },
+        {
+          "draw_date": "2026-10-20T00:00:00.000",
+          "winning_numbers": "13 28 33 35 48",
+          "mega_ball": "03"
+        },
+        {
+          "draw_date": "2026-10-16T00:00:00.000",
+          "winning_numbers": "02 15 31 41 68",
+          "mega_ball": "11"
+        }
+      ],
+      "recent_aggregate": [
+        {
+          "count": "87",
+          "min_draw_date": "2025-12-26T00:00:00.000",
+          "max_draw_date": "2026-10-23T00:00:00.000"
+        }
+      ]
+    }
+  },
+  "new_york_comparison": {
+    "pb": {
+      "records": 131,
+      "first_date": "2025-12-27",
+      "last_date": "2026-10-26",
+      "unique_dates": 131,
+      "mismatches_against_texas": [],
+      "double_play_records_with_valid_shape": 63,
+      "missing_double_play_dates": [
+        "2025-12-27",
+        "2025-12-29",
+        "2025-12-31",
+        "2026-01-03",
+        "2026-01-05",
+        "2026-01-07",
+        "2026-01-10",
+        "2026-01-12",
+        "2026-01-14",
+        "2026-01-17",
+        "2026-01-19",
+        "2026-01-21",
+        "2026-01-24",
+        "2026-01-26",
+        "2026-01-28",
+        "2026-01-31",
+        "2026-02-02",
+        "2026-02-04",
+        "2026-02-07",
+        "2026-02-09",
+        "2026-02-11",
+        "2026-02-14",
+        "2026-02-16",
+        "2026-02-18",
+        "2026-02-21",
+        "2026-02-23",
+        "2026-02-25",
+        "2026-02-28",
+        "2026-03-02",
+        "2026-03-04",
+        "2026-03-07",
+        "2026-03-09",
+        "2026-03-11",
+        "2026-03-14",
+        "2026-03-16",
+        "2026-03-18",
+        "2026-03-21",
+        "2026-03-23",
+        "2026-03-25",
+        "2026-03-28",
+        "2026-03-30",
+        "2026-04-01",
+        "2026-04-04",
+        "2026-04-06",
+        "2026-04-08",
+        "2026-04-11",
+        "2026-04-13",
+        "2026-04-15",
+        "2026-04-18",
+        "2026-04-20",
+        "2026-04-22",
+        "2026-04-25",
+        "2026-04-27",
+        "2026-04-29",
+        "2026-05-02",
+        "2026-05-04",
+        "2026-05-06",
+        "2026-05-09",
+        "2026-05-11",
+        "2026-05-13",
+        "2026-05-16",
+        "2026-05-18",
+        "2026-05-20",
+        "2026-05-23",
+        "2026-05-25",
+        "2026-05-27",
+        "2026-05-30",
+        "2026-06-01"
+      ],
+      "first_double_play_date_observed": "2026-06-03",
+      "scope": "recent_window_only; all retained old primary histories untouched; not database import"
+    },
+    "mm": {
+      "records": 87,
+      "first_date": "2025-12-26",
+      "last_date": "2026-10-23",
+      "unique_dates": 87,
+      "mismatches_against_texas": [],
+      "double_play_records_with_valid_shape": 0,
+      "missing_double_play_dates": [],
+      "first_double_play_date_observed": null,
+      "scope": "recent_window_only; all retained old primary histories untouched; not database import"
+    }
+  },
+  "colorado": {
+    "pb": [
+      {
+        "name": "Drawing History",
+        "rows": 7,
+        "first_rows": [
+          [
+            "Draw date",
+            "Last Day To Claim",
+            "Winning Numbers",
+            "Powerball",
+            "Power Play",
+            "Jackpot",
+            "Jackpot Cash Value",
+            "Jackpot Winners",
+            "Jackpot CO Winners",
+            "Match 5 Prize",
+            "Match 5 CO Winners",
+            "Match 5 Prize (with Power Play)",
+            "Match 5 CO Winners (with Power Play)",
+            "Match 4 + Powerball Prize",
+            "Match 4 + Powerball CO Winners",
+            "Match 4 + Powerball Prize (with Power Play)",
+            "Match 4 + Powerball CO Winners (with Power Play)",
+            "Match 4 Prize",
+            "Match 4 CO Winners",
+            "Match 4 Prize (with Power Play)",
+            "Match 4 CO Winners (with Power Play)",
+            "Match 3 + Powerball Prize",
+            "Match 3 + Powerball CO Winners",
+            "Match 3 + Powerball Prize (with Power Play)",
+            "Match 3 + Powerball CO Winners (with Power Play)",
+            "Match 3 Prize",
+            "Match 3 CO Winners",
+            "Match 3 Prize (with Power Play)",
+            "Match 3 CO Winners (with Power Play)",
+            "Match 2 + Powerball Prize",
+            "Match 2 + Powerball CO Winners",
+            "Match 2 + Powerball Prize (with Power Play)",
+            "Match 2 + Powerball CO Winners (with Power Play)",
+            "Match 1 + Powerball Prize",
+            "Match 1 + Powerball CO Winners",
+            "Match 1 + Powerball Prize (with Power Play)",
+            "Match 1 + Powerball CO Winners (with Power Play)",
+            "Match 0 + Powerball Prize",
+            "Match 0 + Powerball CO Winners",
+            "Match 0 + Powerball Prize (with Power Play)",
+            "Match 0 + Powerball CO Winners (with Power Play)",
+            "Double Play Winning Numbers",
+            "Double Play Powerball",
+            "Double Play Jackpot",
+            "Double Play Jackpot Winners",
+            "Double Play Match 5 Prize",
+            "Double Play Match 5 Winners",
+            "Double Play Match 4 + Powerball Prize",
+            "Double Play Match 4 + Powerball Winners",
+            "Double Play Match 4 Prize",
+            "Double Play Match 4 Winners",
+            "Double Play Match 3 + Powerball Prize",
+            "Double Play Match 3 + Powerball Winners",
+            "Double Play Match 3 Prize",
+            "Double Play Match 3 Winners",
+            "Double Play Match 2 + Powerball Prize",
+            "Double Play Match 2 + Powerball Winners",
+            "Double Play Match 1 + Powerball Prize",
+            "Double Play Match 1 + Powerball Winners",
+            "Double Play Match 0 + Powerball Prize",
+            "Double Play Match 0 + Powerball Winners"
+          ],
+          [
+            "Monday, 10/26/26",
+            "2027-04-24 00:00:00",
+            "18 - 26 - 49 - 50 - 54",
+            1,
+            3,
+            687000000,
+            294700000,
+            0,
+            0,
+            1000000,
+            0,
+            2000000,
+            0,
+            50000,
+            0,
+            150000,
+            0,
+            100,
+            1,
+            300,
+            2,
+            100,
+            8,
+            300,
+            7,
+            7,
+            230,
+            21,
+            157,
+            7,
+            164,
+            21,
+            134,
+            4,
+            1383,
+            12,
+            940,
+            4,
+            3433,
+            12,
+            2408,
+            "5 - 11 - 14 - 24 - 59",
+            8,
+            10000000,
+            0,
+            500000,
+            0,
+            50000,
+            0,
+            500,
+            2,
+            500,
+            4,
+            20,
+            112,
+            20,
+            98,
+            10,
+            748,
+            7,
+            1685
+          ],
+          [
+            "Saturday, 10/24/26",
+            "2027-04-22 00:00:00",
+            "4 - 5 - 15 - 19 - 55",
+            19,
+            2,
+            674000000,
+            283900000,
+            0,
+            0,
+            1000000,
+            0,
+            2000000,
+            0,
+            50000,
+            0,
+            100000,
+            0,
+            100,
+            7,
+            200,
+            4,
+            100,
+            10,
+            200,
+            14,
+            7,
+            396,
+            14,
+            340,
+            7,
+            340,
+            14,
+            228,
+            4,
+            2061,
+            8,
+            1628,
+            4,
+            5104,
+            8,
+            3758,
+            "3 - 30 - 44 - 50 - 56",
+            23,
+            10000000,
+            0,
+            500000,
+            0,
+            50000,
+            1,
+            500,
+            2,
+            500,
+            5,
+            20,
+            142,
+            20,
+            120,
+            10,
+            997,
+            7,
+            2291
+          ]
+        ]
+      }
+    ],
+    "mm": [
+      {
+        "name": "Drawing History",
+        "rows": 5,
+        "first_rows": [
+          [
+            "Draw date",
+            "Last Day To Claim",
+            "Winning Numbers",
+            "Megaball",
+            "Jackpot",
+            "Jackpot Cash Value",
+            "Jackpot Winners",
+            "Jackpot CO Winners",
+            "2x Match 5 CO Winners",
+            "2x Match 5 Prize",
+            "2x Match 4 + Megaball CO Winners",
+            "2x Match 4 + Megabill Prize",
+            "2x Match 4 CO Winners",
+            "2x Match 4 Prize",
+            "2x Match 3 + Megaball CO Winners",
+            "2x Match 3 + Megaball Prize",
+            "2x Match 3 CO Winners",
+            "2x Match 3 Prize",
+            "2x Match 2 + Megaball CO Winners",
+            "2x Match 2 + Megaball Prize",
+            "2x Match 1 + Megaball CO Winners",
+            "2x Match 1 + Megaball Prize",
+            "2x Match 0 + Megaball CO Winners",
+            "2x Match 0 + Megaball Prize",
+            "3x Match 5 CO Winners",
+            "3x Match 5 Prize",
+            "3x Match 4 + Megaball CO Winners",
+            "3x Match 4 + Megabill Prize",
+            "3x Match 4 CO Winners",
+            "3x Match 4 Prize",
+            "3x Match 3 + Megaball CO Winners",
+            "3x Match 3 + Megaball Prize",
+            "3x Match 3 CO Winners",
+            "3x Match 3 Prize",
+            "3x Match 2 + Megaball CO Winners",
+            "3x Match 2 + Megaball Prize",
+            "3x Match 1 + Megaball CO Winners",
+            "3x Match 1 + Megaball Prize",
+            "3x Match 0 + Megaball CO Winners",
+            "3x Match 0 + Megaball Prize",
+            "4x Match 5 CO Winners",
+            "4x Match 5 Prize",
+            "4x Match 4 + Megaball CO Winners",
+            "4x Match 4 + Megabill Prize",
+            "4x Match 4 CO Winners",
+            "4x Match 4 Prize",
+            "4x Match 3 + Megaball CO Winners",
+            "4x Match 3 + Megaball Prize",
+            "4x Match 3 CO Winners",
+            "4x Match 3 Prize",
+            "4x Match 2 + Megaball CO Winners",
+            "4x Match 2 + Megaball Prize",
+            "4x Match 1 + Megaball CO Winners",
+            "4x Match 1 + Megaball Prize",
+            "4x Match 0 + Megaball CO Winners",
+            "4x Match 0 + Megaball Prize",
+            "5x Match 5 CO Winners",
+            "5x Match 5 Prize",
+            "5x Match 4 + Megaball CO Winners",
+            "5x Match 4 + Megabill Prize",
+            "5x Match 4 CO Winners",
+            "5x Match 4 Prize",
+            "5x Match 3 + Megaball CO Winners",
+            "5x Match 3 + Megaball Prize",
+            "5x Match 3 CO Winners",
+            "5x Match 3 Prize",
+            "5x Match 2 + Megaball CO Winners",
+            "5x Match 2 + Megaball Prize",
+            "5x Match 1 + Megaball CO Winners",
+            "5x Match 1 + Megaball Prize",
+            "5x Match 0 + Megaball CO Winners",
+            "5x Match 0 + Megaball Prize",
+            "10x Match 5 CO Winners",
+            "10x Match 5 Prize",
+            "10x Match 4 + Megaball CO Winners",
+            "10x Match 4 + Megabill Prize",
+            "10x Match 4 CO Winners",
+            "10x Match 4 Prize",
+            "10x Match 3 + Megaball CO Winners",
+            "10x Match 3 + Megaball Prize",
+            "10x Match 3 CO Winners",
+            "10x Match 3 Prize",
+            "10x Match 2 + Megaball CO Winners",
+            "10x Match 2 + Megaball Prize",
+            "10x Match 1 + Megaball CO Winners",
+            "10x Match 1 + Megaball Prize",
+            "10x Match 0 + Megaball CO Winners",
+            "10x Match 0 + Megaball Prize"
+          ],
+          [
+            "Friday, 10/23/26",
+            "2027-04-21 00:00:00",
+            "3 - 7 - 46 - 49 - 51",
+            5,
+            433000000,
+            178600000,
+            0,
+            0,
+            0,
+            2000000,
+            0,
+            20000,
+            1,
+            1000,
+            1,
+            400,
+            68,
+            20,
+            56,
+            20,
+            432,
+            14,
+            1088,
+            10,
+            0,
+            3000000,
+            0,
+            30000,
+            1,
+            1500,
+            1,
+            600,
+            24,
+            30,
+            47,
+            30,
+            271,
+            21,
+            748,
+            15,
+            0,
+            4000000,
+            0,
+            40000,
+            0,
+            2000,
+            1,
+            800,
+            15,
+            40,
+            26,
+            40,
+            118,
+            28,
+            309,
+            20,
+            0,
+            5000000,
+            0,
+            50000,
+            0,
+            2500,
+            0,
+            1000,
+            12,
+            50,
+            8,
+            50,
+            63,
+            35,
+            122,
+            25,
+            0,
+            10000000,
+            0,
+            100000,
+            0,
+            5000,
+            0,
+            2000,
+            4,
+            100,
+            4,
+            100,
+            35,
+            70,
+            86,
+            50
+          ],
+          [
+            "Tuesday, 10/20/26",
+            "2027-04-18 00:00:00",
+            "13 - 28 - 33 - 35 - 48",
+            3,
+            413000000,
+            170300000,
+            0,
+            0,
+            0,
+            2000000,
+            0,
+            20000,
+            1,
+            1000,
+            3,
+            400,
+            60,
+            20,
+            75,
+            20,
+            482,
+            14,
+            1103,
+            10,
+            0,
+            3000000,
+            0,
+            30000,
+            2,
+            1500,
+            0,
+            600,
+            46,
+            30,
+            38,
+            30,
+            322,
+            21,
+            730,
+            15,
+            0,
+            4000000,
+            0,
+            40000,
+            0,
+            2000,
+            0,
+            800,
+            17,
+            40,
+            13,
+            40,
+            116,
+            28,
+            290,
+            20,
+            0,
+            5000000,
+            0,
+            50000,
+            0,
+            2500,
+            1,
+            1000,
+            13,
+            50,
+            13,
+            50,
+            47,
+            35,
+            150,
+            25,
+            0,
+            10000000,
+            0,
+            100000,
+            0,
+            5000,
+            0,
+            2000,
+            5,
+            100,
+            4,
+            100,
+            30,
+            70,
+            76,
+            50
+          ]
+        ]
+      }
+    ]
+  },
+  "austria": {
+    "header": [
+      "Ziehungstag",
+      "Zahl1",
+      "Zahl2",
+      "Zahl3",
+      "Zahl4",
+      "Zahl5",
+      "Stern1",
+      "Stern2",
+      "Rang",
+      "Zahlen",
+      "Sterne",
+      "Europa",
+      "Österreich",
+      "Quoten",
+      ""
+    ],
+    "csv_physical_rows": 1119,
+    "draws": 86,
+    "first_date": "2026-01-02",
+    "last_date": "2026-10-27",
+    "distinct_dates": 86,
+    "tier_counts": [
+      13
+    ],
+    "date_or_number_differences_against_fdj": [],
+    "first_example": {
+      "date": "2026-01-02",
+      "numbers": [
+        8,
+        27,
+        42,
+        44,
+        46
+      ],
+      "stars": [
+        1,
+        10
+      ],
+      "tiers": [
+        {
+          "rank": "1",
+          "matched_numbers": "5",
+          "matched_stars": "2",
+          "winners_europe_text": "JP",
+          "winners_austria_text": "JP",
+          "quota_text": "30.879.489,20"
+        },
+        {
+          "rank": "2",
+          "matched_numbers": "5",
+          "matched_stars": "1",
+          "winners_europe_text": "4",
+          "winners_austria_text": "0",
+          "quota_text": "181.127,30"
+        },
+        {
+          "rank": "3",
+          "matched_numbers": "5",
+          "matched_stars": "0",
+          "winners_europe_text": "9",
+          "winners_austria_text": "1",
+          "quota_text": "18.814,40"
+        },
+        {
+          "rank": "4",
+          "matched_numbers": "4",
+          "matched_stars": "2",
+          "winners_europe_text": "37",
+          "winners_austria_text": "2",
+          "quota_text": "1.425,40"
+        },
+        {
+          "rank": "5",
+          "matched_numbers": "4",
+          "matched_stars": "1",
+          "winners_europe_text": "619",
+          "winners_austria_text": "24",
+          "quota_text": "156,90"
+        },
+        {
+          "rank": "6",
+          "matched_numbers": "3",
+          "matched_stars": "2",
+          "winners_europe_text": "1.344",
+          "winners_austria_text": "58",
+          "quota_text": "76,40"
+        },
+        {
+          "rank": "7",
+          "matched_numbers": "4",
+          "matched_stars": "0",
+          "winners_europe_text": "1.563",
+          "winners_austria_text": "65",
+          "quota_text": "46,10"
+        },
+        {
+          "rank": "8",
+          "matched_numbers": "2",
+          "matched_stars": "2",
+          "winners_europe_text": "19.962",
+          "winners_austria_text": "857",
+          "quota_text": "18,00"
+        },
+        {
+          "rank": "9",
+          "matched_numbers": "3",
+          "matched_stars": "1",
+          "winners_europe_text": "29.286",
+          "winners_austria_text": "1.227",
+          "quota_text": "13,70"
+        },
+        {
+          "rank": "10",
+          "matched_numbers": "3",
+          "matched_stars": "0",
+          "winners_europe_text": "76.932",
+          "winners_austria_text": "3.073",
+          "quota_text": "9,70"
+        },
+        {
+          "rank": "11",
+          "matched_numbers": "1",
+          "matched_stars": "2",
+          "winners_europe_text": "107.521",
+          "winners_austria_text": "4.642",
+          "quota_text": "8,40"
+        },
+        {
+          "rank": "12",
+          "matched_numbers": "2",
+          "matched_stars": "1",
+          "winners_europe_text": "435.736",
+          "winners_austria_text": "17.717",
+          "quota_text": "6,50"
+        },
+        {
+          "rank": "13",
+          "matched_numbers": "2",
+          "matched_stars": "0",
+          "winners_europe_text": "1.161.243",
+          "winners_austria_text": "43.836",
+          "quota_text": "3,90"
+        }
+      ],
+      "row": 2
+    },
+    "last_example": {
+      "date": "2026-10-27",
+      "numbers": [
+        21,
+        30,
+        32,
+        42,
+        48
+      ],
+      "stars": [
+        3,
+        6
+      ],
+      "tiers": [
+        {
+          "rank": "1",
+          "matched_numbers": "5",
+          "matched_stars": "2",
+          "winners_europe_text": "JP",
+          "winners_austria_text": "JP",
+          "quota_text": "78.415.028,30"
+        },
+        {
+          "rank": "2",
+          "matched_numbers": "5",
+          "matched_stars": "1",
+          "winners_europe_text": "0",
+          "winners_austria_text": "0",
+          "quota_text": "wird dem Rang 5+0 zugeschlagen"
+        },
+        {
+          "rank": "3",
+          "matched_numbers": "5",
+          "matched_stars": "0",
+          "winners_europe_text": "1",
+          "winners_austria_text": "0",
+          "quota_text": "630.456,60"
+        },
+        {
+          "rank": "4",
+          "matched_numbers": "4",
+          "matched_stars": "2",
+          "winners_europe_text": "19",
+          "winners_austria_text": "1",
+          "quota_text": "1.957,90"
+        },
+        {
+          "rank": "5",
+          "matched_numbers": "4",
+          "matched_stars": "1",
+          "winners_europe_text": "465",
+          "winners_austria_text": "22",
+          "quota_text": "147,30"
+        },
+        {
+          "rank": "6",
+          "matched_numbers": "3",
+          "matched_stars": "2",
+          "winners_europe_text": "1.251",
+          "winners_austria_text": "47",
+          "quota_text": "57,90"
+        },
+        {
+          "rank": "7",
+          "matched_numbers": "4",
+          "matched_stars": "0",
+          "winners_europe_text": "1.025",
+          "winners_austria_text": "56",
+          "quota_text": "49,60"
+        },
+        {
+          "rank": "8",
+          "matched_numbers": "2",
+          "matched_stars": "2",
+          "winners_europe_text": "20.610",
+          "winners_austria_text": "836",
+          "quota_text": "12,30"
+        },
+        {
+          "rank": "9",
+          "matched_numbers": "3",
+          "matched_stars": "1",
+          "winners_europe_text": "22.105",
+          "winners_austria_text": "1.083",
+          "quota_text": "12,80"
+        },
+        {
+          "rank": "10",
+          "matched_numbers": "3",
+          "matched_stars": "0",
+          "winners_europe_text": "46.187",
+          "winners_austria_text": "2.411",
+          "quota_text": "11,40"
+        },
+        {
+          "rank": "11",
+          "matched_numbers": "1",
+          "matched_stars": "2",
+          "winners_europe_text": "105.322",
+          "winners_austria_text": "4.710",
+          "quota_text": "6,00"
+        },
+        {
+          "rank": "12",
+          "matched_numbers": "2",
+          "matched_stars": "1",
+          "winners_europe_text": "349.527",
+          "winners_austria_text": "16.063",
+          "quota_text": "5,70"
+        },
+        {
+          "rank": "13",
+          "matched_numbers": "2",
+          "matched_stars": "0",
+          "winners_europe_text": "708.977",
+          "winners_austria_text": "35.025",
+          "quota_text": "4,50"
+        }
+      ],
+      "row": 1107
+    },
+    "raw_utf8_valid": false,
+    "tested_encoding": "cp1252; compatible not uniquely established",
+    "interpretation": "one date block and 13 tier rows; JP is jackpot marker, not numeric zero; no sales column observed"
+  },
+  "fdj_archives_discovered": [
+    {
+      "name": "euromillions_202002",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afe6"
+    },
+    {
+      "name": "euromillions_201902",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afd6"
+    },
+    {
+      "name": "euromillions_4",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afc6"
+    },
+    {
+      "name": "euromillions_3",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afb6"
+    },
+    {
+      "name": "euromillions_2",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afa9"
+    },
+    {
+      "name": "euromillions",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afa8"
+    }
+  ],
+  "limits": {
+    "new_york_python_tls_code": 20,
+    "windows_tls_validation_succeeded": true,
+    "certificate_verification_disabled": false,
+    "new_york_metadata_license_field": null,
+    "new_york_no_token_sent": true,
+    "all_financial_values_reconciled": false,
+    "pb_jackpot_comparison": {
+      "date": "2026-10-26",
+      "colorado_annuity_usd": "687000000",
+      "previous_central_page_observation_usd": "691000000",
+      "status": "different_observations; no automatic financial merge"
+    },
+    "belgium_csv_qualified": false,
+    "belgium_direct_page_status": 405,
+    "unknown_europe_wide_sales_source": true,
+    "historical_us_primary_coverage_before_state_participation_not_replaced": true,
+    "sql_catalog_existing_rows_not_updated": true,
+    "legacy_downloader_still_overwrites_named_raw_and_has_no_timeout": true
+  },
+  "validation": {
+    "existing_tests_passed": 50,
+    "existing_tests_failed": 0,
+    "existing_test_seconds": 4.85,
+    "new_tests": {
+      "command": ".venv/Scripts/python -m pytest tests/test_source_enrichment_samples.py -q",
+      "passed": 15,
+      "failed": 0,
+      "duration_seconds": 1.18,
+      "network_used_by_tests": false
+    },
+    "distinct_tests_passed_in_two_runs": 65,
+    "preservation": {
+      "baseline_files": 303,
+      "unchanged_files": 300,
+      "intentionally_changed_docs": [
+        "README.md",
+        "docs/engineering/learnings.md",
+        "docs/specs/SPEC-0034-seis-loterias-atualizadas-e-agendamento.md"
+      ],
+      "unexpected_changes": [],
+      "all_original_raw_unchanged": true,
+      "all_previous_reports_unchanged": true,
+      "production_code_and_migrations_unchanged": true
+    },
+    "markdown_files_checked": 4,
+    "broken_links_or_whitespace": []
+  }
+}

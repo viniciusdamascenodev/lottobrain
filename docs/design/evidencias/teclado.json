@@ -1,0 +1,31 @@
+[
+  {
+    "check": "Seta move foco sem ativar",
+    "focused": "Previsões",
+    "selected": "Estatísticas"
+  },
+  {
+    "check": "Enter ativa e conserva foco",
+    "focused": "tab-previsoes",
+    "selected": "Previsões"
+  },
+  {
+    "check": "Home move à primeira aba",
+    "focused": "tab-resumo"
+  },
+  {
+    "check": "Diálogo recebe foco",
+    "focused": "dialog-title",
+    "open": true
+  },
+  {
+    "check": "Escape devolve foco",
+    "focused": "Entender a frequência dos números",
+    "open": false
+  },
+  {
+    "check": "Atalho não altera rota",
+    "focused": "main",
+    "url": "#/loterias/euro_millions/resumo?from=2026-07-17&to=2026-10-27&limit=30"
+  }
+]

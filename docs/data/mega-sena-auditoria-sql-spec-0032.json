@@ -1,0 +1,197 @@
+{
+  "evidence_version": "lottobrain.spec-0032-evidence.v1",
+  "spec": "SPEC-0032",
+  "verified_on": "2026-10-26",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed",
+  "scope": {
+    "environment": "disposable_postgresql_only",
+    "read_only_audit": true,
+    "operational_database_created": false,
+    "external_lottery_requests": 0,
+    "scheduling_enabled": false,
+    "publication_enabled": false,
+    "auto_repair_enabled": false,
+    "migration_head_unchanged": "0031_01",
+    "historical_full_reaudit_by_auditor": false
+  },
+  "verification": {
+    "common": {
+      "passed": 292,
+      "seconds": 137.9,
+      "exit_code": 0,
+      "log": ".local-postgres/spec0032-comum-20261026.log"
+    },
+    "pure_feature": {
+      "passed": 35,
+      "seconds": 1.98,
+      "already_counted_in_common": true
+    },
+    "reader_lifecycle_doubles": {
+      "passed": 6,
+      "seconds": 0.007,
+      "exit_code": 0,
+      "command": ".venv\\Scripts\\python -m unittest discover -s tests/database -p test_sync_audit_reader.py -v"
+    },
+    "real_postgresql_smoke": {
+      "passed": 3,
+      "seconds": 12.73,
+      "exit_code": 0,
+      "log": ".local-postgres/spec0032-smoke-20261026.log",
+      "cluster": ".local-postgres/runs/10a34d4d789d4284af726bdc46576d0c",
+      "shutdown_confirmed": true,
+      "postmaster_pid_absent": true
+    },
+    "initial_feature_run": {
+      "tests": 10,
+      "passed": 9,
+      "failures": 1,
+      "seconds": 843.755,
+      "exit_code": 1,
+      "counted_as_success": false,
+      "log": ".local-postgres/spec0032-integracao-20261026.log",
+      "cluster": ".local-postgres/runs/4704e1c12c1d4cb6ba5efcbe8eafe08f",
+      "shutdown_confirmed": true,
+      "postmaster_pid_absent": true,
+      "cause": "The storage spy in the concurrent snapshot test also intercepted the legitimate writer's read while the auditor snapshot was open. The test now injects an independent audit storage reader; no application change was needed to fix that failure."
+    },
+    "initial_provisioning_failure": {
+      "cluster": ".local-postgres/runs/4d13fe1cbc744bd1b70f9e598210bd5c",
+      "control_log": ".local-postgres/runs/4d13fe1cbc744bd1b70f9e598210bd5c/control.log",
+      "reason": "pg_ctl restricted token creation failed (87); server never started. Retried using the authorized isolated runner.",
+      "postmaster_pid_absent": true,
+      "counted_as_success": false
+    },
+    "previous_full_writer_suite_rerun": false,
+    "regression_scope": "Complete common suite, new real PostgreSQL audit feature/smoke cases and lifecycle doubles. Existing writer, migrations, grants and ingestion pipeline were not changed.",
+    "distinct_tests_passed_this_stage": 311,
+    "final_real_postgresql_feature": {
+      "passed": 10,
+      "seconds": 727.194,
+      "exit_code": 0,
+      "log": ".local-postgres/spec0032-integracao-final-20261026.log",
+      "cluster": ".local-postgres/runs/8fe9276072b04b80aff861dba0cab050",
+      "shutdown_confirmed": true,
+      "shutdown_log_local": "2026-10-26 21:49:01.391 -03",
+      "postmaster_pid_absent": true,
+      "final_implementation_verified": true,
+      "fixture": "Imported, audited and approved 2954 real historical records; cloned consistent SQL baseline between isolated cases.",
+      "concurrent_snapshot_verified": true,
+      "all_application_table_fingerprints_unchanged": true,
+      "all_test_object_bytes_unchanged_in_positive_audit": true
+    }
+  },
+  "preservation": {
+    "checked_existing_files": 79,
+    "all_unchanged": true,
+    "categories": {
+      "raw_files": 6,
+      "previous_data_documents": 32,
+      "previous_migration_sources": 14,
+      "existing_fixtures": 11,
+      "existing_mega_sena_collection_files": 16
+    },
+    "previous_file_audit": {
+      "status": "healthy",
+      "equals_previous_saved_report": true,
+      "reference": "docs/data/mega-sena-auditoria-ingestao.json"
+    },
+    "preexisting_postgresql_services_unchanged": [
+      "postgresql-x64-12",
+      "postgresql-x64-13"
+    ]
+  },
+  "implementation_sources": [
+    {
+      "path": "app/application/audit_sync_postgres.py",
+      "sha256": "ceade8fa5504e0889efb9c2355d1f9ef4239ab04ae7b8dc159e2dd81e51b4b77"
+    },
+    {
+      "path": "app/infrastructure/postgres/sync_audit.py",
+      "sha256": "c77c5f68ac8709a903a5d477c87c02044d9088df4ce908d12ddf870165a88cc0"
+    },
+    {
+      "path": "app/interfaces/audit_sync_postgres.py",
+      "sha256": "0b54351bfa43b83e25319b42f1c64e7a86fff26b79a8e6145aecbe4923dea5b1"
+    }
+  ],
+  "proof_limits": {
+    "baseline": "Real import, relational coverage audit and approval of 2954 historical records prepared the SQL fixture. The new auditor verifies the approval reference, links and bytes, not every historical relational record again.",
+    "transport": "Existing archived real payloads 2955/3071 supplied through transport doubles; no external GET.",
+    "negative_evidence": "Tampering confined to in-memory metadata or temporary test storage, not repository raws.",
+    "clock": "Lease/cooldown situation is relative to the SQL snapshot time and does not prove worker liveness.",
+    "selection": "Explicit checkpoint, bounded batches/steps/attempts; truncation prevents healthy.",
+    "object_snapshot": "Bytes checked after SQL closes; no distributed snapshot or orphan enumeration."
+  },
+  "next_task": {
+    "spec": "SPEC-0033",
+    "title": "Comando manual seguro para sincronização PostgreSQL Mega-Sena",
+    "executed": false
+  },
+  "positive_audit_report": {
+    "artifacts": [
+      {
+        "artifact_id": "a03416fb-d615-4e8f-9dca-314065ab4ce8",
+        "byte_count": 2392,
+        "sha256": "06529163206f05fcaecdc6dc589eee5026ab2183f4c072bd072d7079e43b0c6d",
+        "verified": true
+      },
+      {
+        "artifact_id": "e6938bbf-f1ff-4263-ad27-ea57b126bac0",
+        "byte_count": 221261,
+        "sha256": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+        "verified": true
+      }
+    ],
+    "batches": [
+      {
+        "batch_id": "a5d20a15-5b8c-49b3-b874-522a1e521250",
+        "cursor_start": 2954,
+        "cursor_verified_at_end": 2955,
+        "operations": [
+          {
+            "capture_state": "receipt_committed",
+            "contest": null,
+            "observation_id": "ecb619e1-d94f-4c5c-ac2c-2eefde57511a",
+            "operation_id": "f485d0fc-678d-4fa5-b7c7-6fd308fc419c",
+            "ordinal": 1,
+            "phase": "discovery",
+            "receipt_id": "6848434a-d4cf-4558-b8a4-77688c2fb5a1",
+            "state": "confirmed"
+          },
+          {
+            "capture_state": "reused_discovery",
+            "contest": 2955,
+            "observation_id": "ecb619e1-d94f-4c5c-ac2c-2eefde57511a",
+            "operation_id": "df045a08-2c20-4ca5-bdba-ad342f15db18",
+            "ordinal": 2,
+            "phase": "forward",
+            "receipt_id": "6848434a-d4cf-4558-b8a4-77688c2fb5a1",
+            "state": "confirmed"
+          }
+        ],
+        "request_slots_used": 1,
+        "situation": "completed",
+        "status": "completed"
+      }
+    ],
+    "checkpoint_id": "11778423-2cd4-48d7-a8fd-732bc1785103",
+    "collection_authorized": false,
+    "current_provider_coverage_claimed": false,
+    "cursor_claimed": 2955,
+    "issue_counts": {},
+    "issues": [],
+    "limits": {
+      "max_batches": 100,
+      "max_steps": 5000
+    },
+    "read_only": true,
+    "recommendations": [],
+    "report_version": "mega-sena-sql-sync-audit-v1",
+    "scope": "approved_baseline_reference_and_incremental_sync",
+    "snapshot_at": "2026-10-26T21:47:01.623052-03:00",
+    "status": "healthy",
+    "steps_checked": 1,
+    "truncated": []
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "evidence_version": "lottobrain.spec-0029-evidence.v1",
+  "spec": "SPEC-0029",
+  "verified_on": "2026-10-25",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed",
+  "scope": {
+    "mode": "controlled_disposable_postgresql",
+    "operational_database_created": false,
+    "external_lottery_requests": 0,
+    "baseline_promoted": false,
+    "publication_enabled": false,
+    "coverage_snapshot": "before_simulated_post_import_correction_and_catalog_changes"
+  },
+  "execution": {
+    "postgresql_version": "17.11",
+    "cluster_directory": ".local-postgres/runs/3fa44c4a11f4482dbae1d617e2fd0fe1",
+    "integration_log": ".local-postgres/spec0029-fechamento-20261025-reexecucao.log",
+    "runner_exit_code": 0,
+    "cluster_shutdown_confirmed": true,
+    "postmaster_pid_absent": true,
+    "installed_postgresql_services_used_as_test_target": false,
+    "prior_failed_attempt": {
+      "cluster_directory": ".local-postgres/runs/7f955c81e5a24134ab41d71eea4d8ca8",
+      "integration_log": ".local-postgres/spec0029-fechamento-20261025.log",
+      "tests_run": 90,
+      "passed": 89,
+      "errors": 1,
+      "cause": "Test setup used fetchall after UPDATE without RETURNING; corrected in the test, not in the historical data.",
+      "cluster_shutdown_confirmed": true,
+      "counted_as_success": false
+    }
+  },
+  "verification": {
+    "common": {
+      "passed": 219,
+      "seconds": 105.54,
+      "command": ".venv\\Scripts\\python -m pytest tests --ignore=tests/database -q"
+    },
+    "isolated_runner": {
+      "passed": 90,
+      "real_postgresql_tests": 85,
+      "uow_double_tests": 5,
+      "seconds": 1012.14
+    },
+    "terminal_lifecycle_doubles": {
+      "passed": 3,
+      "seconds": 0.004,
+      "command": ".venv\\Scripts\\python -m unittest discover -s tests/database -p test_historical_import_lifecycle.py -v",
+      "note": "Separated from the common suite during execution and verified independently; future full runner discovery includes these three tests."
+    },
+    "distinct_tests_passed": 312,
+    "interruption": {
+      "committed_records": 100,
+      "verified_records": 100,
+      "missing_records": 2854,
+      "qualified": false
+    },
+    "resume_replay_and_finished_at_preservation": true,
+    "json_overlap_and_later_correction": true,
+    "historical_audit_survives_catalog_approval_policy_change_and_block": true,
+    "new_writes_still_require_current_catalog": true,
+    "incomplete_finish_preserves_stopped": true,
+    "coverage_reports_equal_across_two_clusters": true
+  },
+  "preservation": {
+    "checked_existing_files": 69,
+    "all_unchanged": true,
+    "categories": {
+      "raw_files": 6,
+      "existing_data_documents": 29,
+      "migration_sources": 9,
+      "fixed_fixtures": 9,
+      "local_collection_files": 16
+    },
+    "raw_files": [
+      {
+        "path": "data/raw/euro_millions/euro_millions_resultados.json",
+        "sha256": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914"
+      },
+      {
+        "path": "data/raw/lotofacil/lotofacil_resultados.xlsx",
+        "sha256": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e"
+      },
+      {
+        "path": "data/raw/mais_milionaria/mais_milionaria_resultados.xlsx",
+        "sha256": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa"
+      },
+      {
+        "path": "data/raw/mega_millions/mega_millions_resultados.html",
+        "sha256": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c"
+      },
+      {
+        "path": "data/raw/mega_sena/mega_sena_resultados.xlsx",
+        "sha256": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686"
+      },
+      {
+        "path": "data/raw/powerball/powerball_resultados.html",
+        "sha256": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238"
+      }
+    ],
+    "previous_file_audit": {
+      "status": "healthy",
+      "matches_previous_report": true
+    }
+  },
+  "coverage": {
+    "continuity": {
+      "ingestion_baseline": 0,
+      "sync_checkpoint": 0,
+      "sync_step": 0
+    },
+    "duplicates": [],
+    "expected_records": 2954,
+    "expected_records_manifest_sha256": "9c963b7f327ea52482a83d86433ad2e48c990838be1f1ebee6ffa1e175c298e5",
+    "first_contest": 1,
+    "first_date": "1996-03-11",
+    "head_contracts": {
+      "lottobrain.historical.result.v1": 2953,
+      "lottobrain.mega_sena.result.v1": 1
+    },
+    "last_contest": 2954,
+    "last_date": "2025-12-20",
+    "missing": [],
+    "mode": "controlled_import_no_publication",
+    "observed_records": 2954,
+    "observed_records_manifest_sha256": "9c963b7f327ea52482a83d86433ad2e48c990838be1f1ebee6ffa1e175c298e5",
+    "outcome_counts": {
+      "new": 2953,
+      "unchanged": 1
+    },
+    "plan_hash": "f9e8eda3f302f647acbedd3cf0361c867ac98625bb1e6568cf7b93bf3fa0ada6",
+    "problems": [],
+    "qualified": true,
+    "quarantined_records": 0,
+    "raw_sha256": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+    "report_version": "mega-sena-historical-coverage-v1",
+    "run_status": "completed",
+    "supported_contracts": {
+      "lottobrain.historical.result.v1": 2953,
+      "lottobrain.mega_sena.result.v1": 1
+    },
+    "unexpected": [],
+    "unexpected_commands": [],
+    "verified_records": 2954
+  },
+  "next_task": {
+    "id": "SPEC-0030",
+    "title": "Registro de baseline auditada e inicialização segura da sincronização Mega-Sena",
+    "executed": false
+  }
+}

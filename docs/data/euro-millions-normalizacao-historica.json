@@ -1,0 +1,52 @@
+{
+  "baseline_comparisons": [
+    {"expected": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914", "field": "source_sha256", "matches": true, "observed": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914"},
+    {"expected": 1906, "field": "total_rows", "matches": true, "observed": 1906},
+    {"expected": null, "field": "first_contest", "matches": true, "observed": null},
+    {"expected": null, "field": "last_contest", "matches": true, "observed": null},
+    {"expected": "2004-02-13", "field": "first_date", "matches": true, "observed": "2004-02-13"},
+    {"expected": "2025-12-26", "field": "last_date", "matches": true, "observed": "2025-12-26"},
+    {"expected": 1906, "field": "missing_winner_locations", "matches": true, "observed": 1906},
+    {"expected": 1906, "field": "missing_observations", "matches": true, "observed": 1906}
+  ],
+  "baseline_matches": true,
+  "canonical_content_sha256": "2b1048a885a12d704be8b6768c1ff9ea4bc6fbe0762785508fe847c0e358358d",
+  "duplicate_keys": {},
+  "external_reference_diagnostics": {
+    "draw_id": {"count": 1906, "unique": 1906},
+    "source_id": {"count": 1906, "gaps_between_min_and_max": 2152, "max": 4058, "min": 1}
+  },
+  "issue_counts": {},
+  "issues": [],
+  "jackpot_winner_flag_counts": {"false": 1466, "true": 440},
+  "lottery_slug": "euro_millions",
+  "money_counts": {"top_tier_prize_per_winner": {"known": 1897, "unknown": 9}},
+  "normalizer_version": "spec-0016",
+  "report_version": "1",
+  "rule_version_counts": {"em_2004_50x9": 378, "em_2011_50x11": 562, "em_2016_50x12": 966},
+  "source_sha256_after": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914",
+  "source_sha256_before": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914",
+  "source_unchanged": true,
+  "special_components": {"stars": {"max": 12, "min": 1, "values_count": 3812}},
+  "summary": {
+    "candidate_rows": 1906,
+    "duplicate_key_rows": 0,
+    "first_contest": null,
+    "first_date": "2004-02-13",
+    "invalid_rows": 0,
+    "last_contest": null,
+    "last_date": "2025-12-26",
+    "main_max": 50,
+    "main_min": 1,
+    "main_values_count": 9530,
+    "missing_contests": [],
+    "missing_identity_rows": 0,
+    "missing_observations": 1906,
+    "missing_winner_locations": 1906,
+    "total_rows": 1906,
+    "unique_keys": 1906,
+    "valid_rows": 1906
+  },
+  "unknown_zero_top_tier_prize_rows": 9,
+  "winner_totals": {}
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "date": "Fri, 13 Feb 2004 00:00:00 GMT",
+    "draw_id": 12004,
+    "has_winner": true,
+    "id": 1,
+    "numbers": ["16", "29", "32", "36", "41"],
+    "prize": 15000000.0,
+    "stars": ["7", "9"]
+  },
+  {
+    "date": "Tue, 19 Nov 2024 00:00:00 GMT",
+    "draw_id": 932024,
+    "has_winner": false,
+    "id": 3943,
+    "numbers": ["4", "13", "20", "28", "49"],
+    "prize": 167885088.0,
+    "stars": ["7", "12"]
+  },
+  {
+    "date": "Fri, 26 Dec 2025 00:00:00 GMT",
+    "draw_id": 1032025,
+    "has_winner": true,
+    "id": 4058,
+    "numbers": ["12", "22", "32", "36", "48"],
+    "prize": 54026007.0,
+    "stars": ["3", "4"]
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "evidence_version": "lottobrain.spec-0030-evidence.v1",
+  "spec": "SPEC-0030",
+  "verified_on": "2026-10-25",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed",
+  "scope": {
+    "environment": "disposable_postgresql_only",
+    "operational_baseline_or_database_created": false,
+    "external_lottery_requests": 0,
+    "scheduling_enabled": false,
+    "publication_enabled": false,
+    "historical_source": "caixa_mega_sena_xlsx",
+    "incremental_source": "caixa_mega_sena_json"
+  },
+  "verification": {
+    "distinct_tests_passed": 334,
+    "common": {
+      "passed": 235,
+      "seconds": 202.79
+    },
+    "full_isolated_runner": {
+      "passed": 99,
+      "real_postgresql_tests": 91,
+      "double_tests": 8,
+      "seconds": 2080.574,
+      "exit_code": 0,
+      "log": ".local-postgres/spec0030-integracao-20261025.log",
+      "cluster": ".local-postgres/runs/883b1ebac360425cb013c13d3e26a462",
+      "shutdown_confirmed": true,
+      "started_before_final_schema_hardening": true
+    },
+    "final_feature_reexecution": {
+      "passed": 6,
+      "seconds": 1110.716,
+      "exit_code": 0,
+      "already_counted_in_full_suite": true,
+      "log": ".local-postgres/spec0030-ativacao-final-20261025.log",
+      "cluster": ".local-postgres/runs/7cc4e8e0f83d4ce0a75fbe7a1e1190f0",
+      "shutdown_confirmed": true,
+      "final_schema_hardening_reverified": true
+    },
+    "preliminary_smoke": {
+      "passed": 4,
+      "seconds": 53.218,
+      "exit_code": 0,
+      "log": ".local-postgres/spec0030-smoke-reexecucao-20261025.log",
+      "cluster": ".local-postgres/runs/21b937d4729848bdadda8c185bfea0a0",
+      "shutdown_confirmed": true,
+      "note": "The fifth upgrade case was added afterwards and passed in both full and final feature suites."
+    },
+    "initial_smoke": {
+      "passed": 3,
+      "errors": 1,
+      "counted_as_success": false,
+      "log": ".local-postgres/spec0030-smoke-20261025.log",
+      "cluster": ".local-postgres/runs/de64806d2bfc4d36a285ef5b3c2e6585",
+      "shutdown_confirmed": true,
+      "cause": "The test expected RaiseException, while the existing immutable trigger correctly raised CheckViolation; the assertion was corrected."
+    }
+  },
+  "preservation": {
+    "checked_existing_files": 70,
+    "all_unchanged": true,
+    "categories": {
+      "raw_files": 6,
+      "existing_data_documents": 30,
+      "migration_sources": 9,
+      "fixed_fixtures": 9,
+      "local_collection_files": 16
+    },
+    "previous_file_audit": {
+      "status": "healthy",
+      "matches_previous_report": true
+    },
+    "installed_postgresql_12_and_13_services_untouched": true
+  },
+  "migration": {
+    "head": "0030_01",
+    "prior_migrations_unchanged": true,
+    "files": [
+      {
+        "path": "migrations/sql/0030_01_baseline_activation.sql",
+        "sha256": "f276ea4124ac7d8e21b99274544d2981b686d20c592090f4a3b9d59256d8e6d4"
+      },
+      {
+        "path": "migrations/sql/0030_01_down.sql",
+        "sha256": "6e2e34e0d769b38a209204b40291f000baaf7697b28c8e3274261094fd779f0b"
+      },
+      {
+        "path": "migrations/versions/0030_01_baseline_activation.py",
+        "sha256": "e1b7c96c0543bbdcdfc772c7ad359074d08301513f6aba0f1d433968757c0c4d"
+      }
+    ]
+  },
+  "sql_verification": {
+    "activation": {
+      "activation_id": "89de78ee-73f4-467e-a536-45a7095b24ef",
+      "baseline_id": "30547fcd-1024-447d-bdc0-432dfee3ab6e",
+      "checkpoint_id": "81e03b3e-df1d-4a2f-b978-8eca3751f346",
+      "coverage_hash": "6406a246210b3b55116dfcb30a343359969eac59f9d978bef21708304dd0efa9",
+      "initial_cursor": 2954,
+      "next_contest": 2955,
+      "plan_hash": "f9e8eda3f302f647acbedd3cf0361c867ac98625bb1e6568cf7b93bf3fa0ada6"
+    },
+    "activations": 1,
+    "approval_actor": "lb_test_bootstrap",
+    "baselines": 2,
+    "checkpoint_not_reset_by_replay": true,
+    "checkpoints": 1,
+    "concurrent_initialization_and_ambiguous_commit_recovered": true,
+    "cross_source_origin_preserved": true,
+    "current_source_block_does_not_reauthorize_past_activation": true,
+    "cursor_after": 2955,
+    "draws": 2956,
+    "existing_reference_preserved": true,
+    "historical_coverage": {
+      "continuity": {
+        "ingestion_baseline": 1,
+        "sync_checkpoint": 0,
+        "sync_step": 0
+      },
+      "duplicates": [],
+      "expected_records": 2954,
+      "expected_records_manifest_sha256": "9c963b7f327ea52482a83d86433ad2e48c990838be1f1ebee6ffa1e175c298e5",
+      "first_contest": 1,
+      "first_date": "1996-03-11",
+      "head_contracts": {
+        "lottobrain.historical.result.v1": 2954
+      },
+      "last_contest": 2954,
+      "last_date": "2025-12-20",
+      "missing": [],
+      "mode": "controlled_import_no_publication",
+      "observed_records": 2954,
+      "observed_records_manifest_sha256": "9c963b7f327ea52482a83d86433ad2e48c990838be1f1ebee6ffa1e175c298e5",
+      "outcome_counts": {
+        "new": 2954
+      },
+      "plan_hash": "f9e8eda3f302f647acbedd3cf0361c867ac98625bb1e6568cf7b93bf3fa0ada6",
+      "problems": [],
+      "qualified": true,
+      "quarantined_records": 0,
+      "raw_sha256": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+      "report_version": "mega-sena-historical-coverage-v1",
+      "run_status": "completed",
+      "supported_contracts": {
+        "lottobrain.historical.result.v1": 2954
+      },
+      "unexpected": [],
+      "unexpected_commands": [],
+      "verified_records": 2954
+    },
+    "historical_source": "caixa_mega_sena_xlsx",
+    "initial_cursor": 2954,
+    "local_json_sha256": {
+      "2955": "06529163206f05fcaecdc6dc589eee5026ab2183f4c072bd072d7079e43b0c6d",
+      "3071": "7a4d0c4e3decee29a652b5d9a417c97b10c88daebd975b00db056ca0bec701e8"
+    },
+    "materialization_status": "loaded",
+    "mode": "controlled_no_external_requests",
+    "new_publications": 0,
+    "report_version": "mega-sena-baseline-verification-v1",
+    "rollback_after_each_insert": true,
+    "steps": 1,
+    "target_source": "caixa_mega_sena_json"
+  },
+  "next_task": {
+    "id": "SPEC-0031",
+    "title": "Orquestração PostgreSQL da sincronização limitada Mega-Sena",
+    "executed": false
+  }
+}

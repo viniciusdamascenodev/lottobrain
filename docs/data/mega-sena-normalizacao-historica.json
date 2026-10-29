@@ -1,0 +1,114 @@
+{
+  "baseline_comparisons": [
+    {
+      "expected": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+      "field": "source_sha256",
+      "matches": true,
+      "observed": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686"
+    },
+    {
+      "expected": 2954,
+      "field": "total_rows",
+      "matches": true,
+      "observed": 2954
+    },
+    {
+      "expected": 1,
+      "field": "first_contest",
+      "matches": true,
+      "observed": 1
+    },
+    {
+      "expected": 2954,
+      "field": "last_contest",
+      "matches": true,
+      "observed": 2954
+    },
+    {
+      "expected": "1996-03-11",
+      "field": "first_date",
+      "matches": true,
+      "observed": "1996-03-11"
+    },
+    {
+      "expected": "2025-12-20",
+      "field": "last_date",
+      "matches": true,
+      "observed": "2025-12-20"
+    },
+    {
+      "expected": 2331,
+      "field": "missing_winner_locations",
+      "matches": true,
+      "observed": 2331
+    },
+    {
+      "expected": 2059,
+      "field": "missing_observations",
+      "matches": true,
+      "observed": 2059
+    }
+  ],
+  "baseline_matches": true,
+  "canonical_content_sha256": "5fc87bbcb2fe9f8747fd41e2c0135a84ad04ce85e9e2bb572205413b40a12e4b",
+  "duplicate_keys": {},
+  "issue_counts": {},
+  "issues": [],
+  "money_counts": {
+    "next_estimated_jackpot": {
+      "known": 2954,
+      "zero": 860
+    },
+    "prize_per_winner.quadra": {
+      "known": 2954
+    },
+    "prize_per_winner.quina": {
+      "known": 2954
+    },
+    "prize_per_winner.sena": {
+      "known": 2954,
+      "zero": 2308
+    },
+    "rollover_amount": {
+      "known": 2954,
+      "zero": 625
+    },
+    "sales_total": {
+      "known": 2954,
+      "zero": 1069
+    },
+    "special_draw_rollover": {
+      "known": 2954,
+      "zero": 1009
+    }
+  },
+  "normalizer_version": "spec-0004",
+  "report_version": "1",
+  "source_sha256_after": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+  "source_sha256_before": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+  "source_unchanged": true,
+  "summary": {
+    "candidate_rows": 2954,
+    "duplicate_key_rows": 0,
+    "first_contest": 1,
+    "first_date": "1996-03-11",
+    "invalid_rows": 0,
+    "last_contest": 2954,
+    "last_date": "2025-12-20",
+    "main_max": 60,
+    "main_min": 1,
+    "main_values_count": 17724,
+    "missing_contests": [],
+    "missing_identity_rows": 0,
+    "missing_observations": 2059,
+    "missing_winner_locations": 2331,
+    "total_rows": 2954,
+    "unique_keys": 2954,
+    "valid_rows": 2954
+  },
+  "winner_totals": {
+    "quadra": 20959319,
+    "quina": 325645,
+    "sena": 973
+  }
+}

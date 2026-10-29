@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-28",
+  "scope": "Verificações locais do protótipo; não certifica backend, fonte ao vivo ou conformidade WCAG integral",
+  "realDraws": 180,
+  "checks": [
+    {
+      "check": "mega_sena: 30 identidades, datas e matrizes válidas",
+      "result": "passed"
+    },
+    {
+      "check": "mega_sena: frequências, intervalos, somas e pares conferidos independentemente",
+      "result": "passed"
+    },
+    {
+      "check": "mega_sena: filtro temporal de dez e vazio sem média inventada",
+      "result": "passed"
+    },
+    {
+      "check": "lotofacil: 30 identidades, datas e matrizes válidas",
+      "result": "passed"
+    },
+    {
+      "check": "lotofacil: frequências, intervalos, somas e pares conferidos independentemente",
+      "result": "passed"
+    },
+    {
+      "check": "lotofacil: filtro temporal de dez e vazio sem média inventada",
+      "result": "passed"
+    },
+    {
+      "check": "mais_milionaria: 30 identidades, datas e matrizes válidas",
+      "result": "passed"
+    },
+    {
+      "check": "mais_milionaria: frequências, intervalos, somas e pares conferidos independentemente",
+      "result": "passed"
+    },
+    {
+      "check": "mais_milionaria: filtro temporal de dez e vazio sem média inventada",
+      "result": "passed"
+    },
+    {
+      "check": "powerball: 30 identidades, datas e matrizes válidas",
+      "result": "passed"
+    },
+    {
+      "check": "powerball: frequências, intervalos, somas e pares conferidos independentemente",
+      "result": "passed"
+    },
+    {
+      "check": "powerball: filtro temporal de dez e vazio sem média inventada",
+      "result": "passed"
+    },
+    {
+      "check": "mega_millions: 30 identidades, datas e matrizes válidas",
+      "result": "passed"
+    },
+    {
+      "check": "mega_millions: frequências, intervalos, somas e pares conferidos independentemente",
+      "result": "passed"
+    },
+    {
+      "check": "mega_millions: filtro temporal de dez e vazio sem média inventada",
+      "result": "passed"
+    },
+    {
+      "check": "euro_millions: 30 identidades, datas e matrizes válidas",
+      "result": "passed"
+    },
+    {
+      "check": "euro_millions: frequências, intervalos, somas e pares conferidos independentemente",
+      "result": "passed"
+    },
+    {
+      "check": "euro_millions: filtro temporal de dez e vazio sem média inventada",
+      "result": "passed"
+    },
+    {
+      "check": "Datas inexistentes e texto de atributo rejeitados",
+      "result": "passed"
+    },
+    {
+      "check": "Cadastro: duplicidade, contagens, especiais e configuração válida",
+      "result": "passed"
+    },
+    {
+      "check": "Seis arquivos de origem intactos por SHA-256 e tamanho",
+      "result": "passed"
+    },
+    {
+      "check": "Contraste dos pares principais de texto >= 4,5:1",
+      "result": "passed"
+    }
+  ],
+  "contrast": [
+    {
+      "label": "texto",
+      "foreground": "#18253e",
+      "background": "#ffffff",
+      "ratio": 15.29
+    },
+    {
+      "label": "secundário",
+      "foreground": "#5d6c83",
+      "background": "#f5f7fb",
+      "ratio": 4.97
+    },
+    {
+      "label": "botão principal",
+      "foreground": "#ffffff",
+      "background": "#2454c6",
+      "ratio": 6.65
+    },
+    {
+      "label": "Mega-Sena",
+      "foreground": "#ffffff",
+      "background": "#146b4a",
+      "ratio": 6.5
+    },
+    {
+      "label": "Lotofácil",
+      "foreground": "#ffffff",
+      "background": "#793a91",
+      "ratio": 7.43
+    },
+    {
+      "label": "+Milionária",
+      "foreground": "#ffffff",
+      "background": "#234c98",
+      "ratio": 8.21
+    },
+    {
+      "label": "Powerball",
+      "foreground": "#ffffff",
+      "background": "#a73a47",
+      "ratio": 6.29
+    },
+    {
+      "label": "Mega Millions",
+      "foreground": "#ffffff",
+      "background": "#9a5c0c",
+      "ratio": 5.37
+    },
+    {
+      "label": "EuroMillions",
+      "foreground": "#ffffff",
+      "background": "#155e83",
+      "ratio": 7.09
+    },
+    {
+      "label": "especiais",
+      "foreground": "#875908",
+      "background": "#fff6e6",
+      "ratio": 5.65
+    },
+    {
+      "label": "estado aprovado",
+      "foreground": "#146b4a",
+      "background": "#e9f5ef",
+      "ratio": 5.81
+    },
+    {
+      "label": "aviso",
+      "foreground": "#795018",
+      "background": "#fff7e8",
+      "ratio": 6.63
+    },
+    {
+      "label": "erro",
+      "foreground": "#9a3449",
+      "background": "#fff1f4",
+      "ratio": 6.46
+    },
+    {
+      "label": "texto de gráfico",
+      "foreground": "#627087",
+      "background": "#ffffff",
+      "ratio": 5.02
+    }
+  ]
+}

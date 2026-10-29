@@ -1,0 +1,116 @@
+{
+  "baseline_comparisons": [
+    {
+      "expected": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+      "field": "source_sha256",
+      "matches": true,
+      "observed": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c"
+    },
+    {
+      "expected": 2984,
+      "field": "total_rows",
+      "matches": true,
+      "observed": 2984
+    },
+    {
+      "expected": null,
+      "field": "first_contest",
+      "matches": true,
+      "observed": null
+    },
+    {
+      "expected": null,
+      "field": "last_contest",
+      "matches": true,
+      "observed": null
+    },
+    {
+      "expected": "1996-09-06",
+      "field": "first_date",
+      "matches": true,
+      "observed": "1996-09-06"
+    },
+    {
+      "expected": "2025-12-23",
+      "field": "last_date",
+      "matches": true,
+      "observed": "2025-12-23"
+    },
+    {
+      "expected": 2984,
+      "field": "missing_winner_locations",
+      "matches": true,
+      "observed": 2984
+    },
+    {
+      "expected": 2984,
+      "field": "missing_observations",
+      "matches": true,
+      "observed": 2984
+    }
+  ],
+  "baseline_matches": true,
+  "canonical_content_sha256": "8a22355224a6e54461cbfa267735c57ea3a5dabab7b24fb3cda6e32e8817644c",
+  "duplicate_keys": {},
+  "issue_counts": {},
+  "issues": [],
+  "lottery_slug": "mega_millions",
+  "megaplier_counts": {
+    "2": 446,
+    "3": 745,
+    "4": 838,
+    "5": 198
+  },
+  "money_counts": {
+    "advertised_jackpot": {
+      "known": 2984
+    }
+  },
+  "multiplier_state_counts": {
+    "drawn_optional_megaplier": 2227,
+    "not_applicable": 682,
+    "ticket_assigned_multiplier": 75
+  },
+  "normalizer_version": "spec-0013",
+  "report_version": "1",
+  "rule_version_counts": {
+    "mm_1996_50x25": 172,
+    "mm_1999_50x36": 348,
+    "mm_2002_52x52": 324,
+    "mm_2005_56x46": 869,
+    "mm_2013_75x15": 420,
+    "mm_2017_70x25": 776,
+    "mm_2025_70x24": 75
+  },
+  "source_sha256_after": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+  "source_sha256_before": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+  "source_unchanged": true,
+  "special_components": {
+    "mega_ball": {
+      "max": 52,
+      "min": 1,
+      "values_count": 2984
+    }
+  },
+  "summary": {
+    "candidate_rows": 2984,
+    "duplicate_key_rows": 0,
+    "first_contest": null,
+    "first_date": "1996-09-06",
+    "invalid_rows": 0,
+    "last_contest": null,
+    "last_date": "2025-12-23",
+    "main_max": 75,
+    "main_min": 1,
+    "main_values_count": 14920,
+    "missing_contests": [],
+    "missing_identity_rows": 0,
+    "missing_observations": 2984,
+    "missing_winner_locations": 2984,
+    "total_rows": 2984,
+    "unique_keys": 2984,
+    "valid_rows": 2984
+  },
+  "winner_totals": {}
+}
+

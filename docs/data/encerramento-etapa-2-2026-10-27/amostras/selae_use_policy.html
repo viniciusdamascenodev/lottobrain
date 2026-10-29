@@ -1,0 +1,1822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link rel="shortcut icon" href="/f/loterias/favicon.ico" type="image/x-icon">
+				
+		<script type='text/javascript'>
+	var timeToGetJsonpSaga = "180000";
+	var hostReferrerSaga = "juegos.loteriasyapuestas.es";
+</script>
+<title>Loter&iacute;as y Apuestas del Estado - {1}</title>
+	<meta name="description" content="Loter&iacute;as y Apuestas del Estado - {1}">
+<meta name="copyright" content="2019 SELAE, Loter&iacute;as y Apuestas del Estado" />
+<link href="/f/loterias/estaticos/css/loterias.css?version=8.8.00" type="text/css" rel="stylesheet">
+<link href="/f/loterias/estaticos/css/loterias-rwd.css?version=8.8.00" type="text/css" rel="stylesheet">
+<link href="/f/loterias/estaticos/css/paginasLibresLoterias.css" type="text/css" rel="stylesheet">
+<link href="/f/loterias/estaticos/css/promociones.css" type="text/css" rel="stylesheet">
+<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.min.3.6.0.js"></script>
+<script src="/f/loterias/estaticos/js/cookie.js" type="text/javascript"></script>
+		
+		<script>loadStaticFiles= false</script>
+<script src="/f/loterias/estaticos/js/utils-json-lnac.js" type="text/javascript"></script>
+		<script>var urlPathPrefix="/f";</script>
+		<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.jsonp.min.2.4.0.js" type="text/javascript"></script>
+<script src="/f/loterias/estaticos/js/functionsfront.js" type="text/javascript"></script>
+		<script src="/f/loterias/estaticos/js/cabecera.js" type="text/javascript"></script>
+		<script src="/f/loterias/estaticos/js/owl.carousel.js" type="text/javascript"></script>
+		<script src="/f/loterias/estaticos/js/footer.js" type="text/javascript"></script>
+		<script async src="https://cds.loteriasyapuestas.es/push/sdk.min.js"></script>
+		<script async src="https://cds.loteriasyapuestas.es/push/hmac-sha256.js"></script>
+		<script async src="https://cds.loteriasyapuestas.es/push/saga_push.js"></script>
+		<script src="/f/loterias/estaticos/js/snippet.js" type="text/javascript"></script>
+		</head>
+	<body id="subhome">
+		<div class="contenedorGlobal subhome">
+			<!-- Cabecera -->
+			<!--Start Header-Horz Area -->
+<!-- CDN -->
+<link href="/f/loterias/estaticos/css/sass/loterias_sass.css?version=8.8.00" type="text/css" rel="stylesheet">
+
+<link href="/f/loterias/estaticos/css/sass/loterias_eurodream_sass.css?version=8.8.00" type="text/css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cds.loteriasyapuestas.es/cms/css/fontawesome.all.5.0.13.css" type="text/css">
+<link href="/f/loterias/estaticos/css/promociones.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+	if(typeof jQuery == 'undefined'){ document.write('<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.min.3.6.0.js"></'+'script>'); }
+</script>
+
+<script src="https://cds.loteriasyapuestas.es/cms/js/masonry.pkgd.min.4.2.2.js"></script>
+<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.jsonp.min.2.4.0.js" type="text/javascript"></script>
+<script src="https://cds.loteriasyapuestas.es/cms/js/mustache.min.3.1.0.js"></script>
+<script src="https://cds.loteriasyapuestas.es/cms/js/handlebars.4.7.7.js" type="text/javascript"></script>
+
+<script id='header-template-topaz-EMIL' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--euromillones' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz  c-cabecera-juego__imagen-euromillones esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EuromillonesAJ_topaz.png' alt='Euromillones'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EuromillonesAJ_mobile_topaz.png' alt='Euromillones'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--euromillones c-cabecera-juego__bote--euromillones'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--euromillones'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--euromillones'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-LAPR' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--primitiva' title='{{betTitle}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_PrimitivaAJ_topaz.png' alt='primitiva'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_PrimitivaAJ_mobile_topaz.png' alt='primitiva'>     		
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--primitiva'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--primitiva'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--primitiva'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-BONO' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--bonoloto' title='{{betTitle}}'>
+  		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_BonolotoAJ_topaz.png' alt='bonoloto' >
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_BonolotoAJ_mobile_topaz.png' alt='bonoloto' >
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--bonoloto'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--bonoloto'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--bonoloto'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-ELGR' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--gordo' title='{{betTitle}}'>
+ 		<img class='c-cabecera-juego__imagen_topaz c-cabecera-juego__imagen-elGordo esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_ElGordoAJ_topaz.png' alt='{{altMsg}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_ElGordoAJ_mobile_topaz.png' alt='{{altMsg}}'>            
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--elgordo c-cabecera-juego__bote--gordo'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--gordo'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--gordo'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-LNAC' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--loteria-nacional' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LoteriaNacionalAJ_topaz.png' alt='Loteria Nacional'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LoteriaNacionalAJ_mobile_topaz.png' alt='Loteria Nacional'>
+		
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--lnac c-cabecera-juego__bote--loteria-nacional'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--loteria-nacional'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--loteria-nacional'>&#x20ac;</span>
+				{{/if}}
+				<span class="c-cabecera-juego__especial_topaz esta-oculto-pc" id="qa_cabecera_sorteos_tipo_premio_LNAC">
+					{{#if prize.isLnacSpecialPrize}}
+						Premio especial al d&eacute;cimo
+					{{else}}
+						1er premio a la serie
+					{{/if}}
+				</span>
+			{{/if}}
+			<span class='c-cabecera-juego__texto_topaz'>
+				{{#if prize}}
+					{{#if prize.isLnacSpecialPrize}}
+						Premio especial al d&eacute;cimo
+					{{else}}
+						1er premio a la serie
+					{{/if}}
+				{{/if}}
+			</span>
+		</p>
+	</a>
+</script><script id='header-template-topaz-LAQU' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--quiniela' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LaQuinielaAJ_topaz.png' alt='quiniela'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LaQuinielaAJ_mobile_topaz.png' alt='quiniela'>       
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--quiniela'>	
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--quiniela'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--quiniela'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-LOTU' type='text/html'>	
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--lototurf' title='{{betTitle}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LototurfAJ_topaz.png' alt='lototurf'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LototurfAJ_mobile_topaz.png' alt='lototurf'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--lototurf'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--lototurf'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--lototurf'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-QGOL' type='text/html'>	
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--quinigol' title='{{betTitle}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuinigolAJ_topaz.png' alt='quinigol'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuinigolAJ_mobile_topaz.png' alt='quinigol'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--quinigol'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--quinigol'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--quinigol'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-QUPL' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--quintuple' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz c-cabecera-juego__imagen-quintuple esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuintupleAJ_topaz.png' alt='quintuple'>
+        <img class='c-cabecera-juego__imagen_topaz c-cabecera-juego__imagen-quintuple esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuintupleAJ_mobile_topaz.png' alt='quintuple'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz-quintuple c-cabecera-juego__bote--quintuple'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--quintuple'>millones</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--quintuple'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-EDMS' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--eurodreams' title='{{betTitle}}'>
+  		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EurodreamsAJ_topaz.png' alt='eurodreams' >
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EurodreamsAJ_mobile_topaz.png' alt='eurodreams' >
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--eurodreams c-cabecera-juego__bote--eurodreams'>
+			{{#if open}}
+				{{#if prize includeZero=false}}
+					<img class=" c-cabecera-juego__icono--eurodreams" src="{{urlPathPrefix}}/loterias/estaticos/css/sass/img/icono-ed.png" alt="">
+					{{prize.formatedValue}}
+				{{else}}
+					20.000
+				{{/if}}
+				<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--eurodreams'>&#x20ac;</span>
+				<span class="c-cabecera-juego__especial_topaz c-cabecera-juego__texto_topaz--eurodreams esta-oculto-pc" id="qa_cabecera_sorteos_tipo_premio_EDMS">
+						Al mes durante 30 a&ntilde;os</span>
+				<span class='c-cabecera-juego__texto_topaz c-cabecera-juego__texto_topaz--eurodreams'>
+					Al mes durante 30 a&ntilde;os</span>
+			{{/if}}
+		</p>
+	</a>
+</script>
+<script type='text/javascript'>
+	var timeToGetJsonpSaga = "180000";
+	var hostReferrerSaga = "juegos.loteriasyapuestas.es";
+</script>
+
+<script type="text/javascript">var jqHeader = jQuery.noConflict();
+var urlPathPrefix;
+var drawsData;
+
+jqHeader(document).ready(function() {
+  var jsonServiceUrl = jqHeader('#header-main').data('json-service-url');
+  var currentLanguage = jQuery('#header-main').data('current-language');
+  urlPathPrefix = jqHeader('#header-main').data('url-path-prefix');
+  
+  jqHeader.getJSON('//' + window.location.host + jsonServiceUrl, function(data) {
+    if (data) {
+      drawsData = data;
+    } else {
+      console.debug('ERROR: no se han cargado los datos actualizados para los sorteos de la cabecera');
+    }
+  }).fail(function(jqxhr, textStatus, error) {
+    var err = textStatus + ', ' + error;
+    console.log('Request Failed: ' + err);
+  }).always(function(data){
+    buildHeader(currentLanguage);
+    hamburguerMenuToggle();
+  }); 
+});
+
+
+function hamburguerMenuToggle(){
+	dropDownMenu('qa_cabecera_menu__hamburguesa', 'qa_cabecera_sorteos_contenedor');
+	if(isMobileByWidth()){
+		jqHeader('#qa_cabecera_sorteos_contenedor').hide();
+		
+	}else{
+		jqHeader('#qa_cabecera_sorteos_contenedor > li[id*=header-link-]').show();
+		jqHeader('.c-cabecera-juego__boton-ahora--movil').show();
+		jqHeader('#qa_cabecera_sorteos_contenedor > li[id*=header-lang]').show();
+	}
+}
+
+function buildHeader(currentLanguage) {
+  jqHeader('[id^="header-link-"]').each(function() {
+    var gameCode = jqHeader(this).attr('id').split('header-link-')[1];
+    if (gameCode == 'EDMS')
+		buildHeaderEDMS(this, currentLanguage);
+    else
+		buildHeaderGeneric(this, currentLanguage, gameCode);
+  });
+}
+
+function buildHeaderGeneric(item, currentLanguage, gameCode) {
+    var betLink = jqHeader(item).data('bet-href');
+    var betTitle = jqHeader(item).data('bet-title');
+    var prize = extractPrize(gameCode, currentLanguage);
+    var context = {
+      urlPathPrefix:    urlPathPrefix,
+      betLink:          betLink,
+      betTitle:         betTitle,
+      prize:            prize
+    };
+
+    var template = Handlebars.compile(jqHeader('#header-template-topaz-' + gameCode).html());
+    jqHeader('#header-link-' + gameCode).html(template(context));
+}
+
+function extractPrize(gameCode, currentLanguage) {
+  var draws = [];
+  var prize;
+  if (drawsData !== undefined && drawsData !== null && drawsData.length > 0) {
+      for (var index = 0; index < drawsData.length; index++) {
+          if (drawsData[index].game_id === gameCode) {
+              draws.push(drawsData[index]);
+          }
+      }
+      var drawsLength = draws.length;
+      if (drawsLength > 0) {
+          if (drawsLength > 1) {
+              draws.sort(function(a, b) {
+                  return (new Date(a.fecha.replace(/-/g, '/'))).getTime() - (new Date(b.fecha.replace(/-/g, '/'))).getTime();
+              });
+          }
+          
+          if (draws[0].estado === 'abierto' && (draws[0].premio_bote !== undefined  && draws[0].premio_bote !== null && draws[0].premio_bote != "0") && (draws[0].fecha !== undefined && draws[0].fecha !== null) && gameCode !== 'LNAC') {
+              prize = formatHighlightedCurrency(gameCode, draws[0].premio_bote, currentLanguage, draws[0].id_sorteo);
+          } else if (draws[0].estado === 'abierto' && (draws[0].premio_especial !== undefined  && draws[0].premio_especial !== null) && (draws[0].fecha !== undefined && draws[0].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[0].premio_especial, currentLanguage, draws[0].id_sorteo);
+              prize.isLnacSpecialPrize = true;
+          } else if (draws[0].estado === 'abierto' && (draws[0].primer_premio !== undefined  && draws[0].primer_premio !== null) && (draws[0].fecha !== undefined && draws[0].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[0].primer_premio, currentLanguage, draws[0].id_sorteo);
+          } else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].premio_bote !== undefined && draws[1].premio_bote !== null && draws[1].premio_bote != "0") && (draws[1].fecha !== undefined && draws[1].fecha !== null) && gameCode !== 'LNAC') {
+              prize = formatHighlightedCurrency(gameCode, draws[1].premio_bote, currentLanguage, draws[1].id_sorteo);
+          } else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].premio_especial !== undefined && draws[1].premio_especial !== null) && (draws[1].fecha !== undefined && draws[1].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[1].premio_especial, currentLanguage, draws[1].id_sorteo);
+              prize.isLnacSpecialPrize = true;
+          } else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].primer_premio !== undefined && draws[1].primer_premio !== null) && (draws[1].fecha !== undefined && draws[1].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[1].primer_premio, currentLanguage, draws[1].id_sorteo);
+          }        
+      } 
+  }
+  
+  return prize;
+}
+
+function buildHeaderEDMS(item, currentLanguage) {
+    var gameCode = 'EDMS';
+    var betLink = jqHeader(item).data('bet-href');
+    var betTitle = jqHeader(item).data('bet-title');
+    var draw = extractEDMSDraw();
+    var open = draw !== undefined;
+    var prize;
+    if (open && (draw.premio_bote !== undefined  && draw.premio_bote !== null && draw.premio_bote != "0"))
+		prize = formatHighlightedCurrency(gameCode, draw.premio_bote, currentLanguage, draw.id_sorteo);
+
+    var context = {
+      urlPathPrefix:    urlPathPrefix,
+      betLink:          betLink,
+      betTitle:         betTitle,
+      prize:            prize,
+      open:             open
+    };
+
+    var template = Handlebars.compile(jqHeader('#header-template-topaz-' + gameCode).html());
+    jqHeader('#header-link-' + gameCode).html(template(context));
+}
+
+function extractEDMSDraw() {
+  var draws = [];
+  var draw;
+  if (drawsData !== undefined && drawsData !== null && drawsData.length > 0) {
+      for (var index = 0; index < drawsData.length; index++) {
+          if (drawsData[index].game_id === 'EDMS')
+              draws.push(drawsData[index]);
+      }
+
+      var drawsLength = draws.length;
+      if (drawsLength > 0) {
+          if (drawsLength > 1) {
+              draws.sort(function(a, b) {
+                  return (new Date(a.fecha.replace(/-/g, '/'))).getTime() - (new Date(b.fecha.replace(/-/g, '/'))).getTime();
+              });
+          }
+
+          if (draws[0].estado === 'abierto' && (draws[0].fecha !== undefined && draws[0].fecha !== null))
+              draw = draws[0];
+          else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].fecha !== undefined && draws[1].fecha !== null))
+              draw = draws[1];
+      }
+  }
+
+  return draw;
+}
+
+function formatHighlightedCurrency(gameCode, value, currentLanguage, drawId) {
+  var prize = {};
+  var isEnglish = 'EN' == currentLanguage || 'en' == currentLanguage; 
+  if (Math.abs(Number(value)) >= 1010000) {
+      var formatedValue = Number(value) / 1.0e+6;
+      var re = new RegExp('^-?\\d+(?:\.\\d{0,2})?');
+      formatedValue = formatedValue.toString().match(re)[0];
+      if(!isEnglish){
+          formatedValue = Number(formatedValue).toLocaleString("es-ES");
+      } else {
+        formatedValue = Number(formatedValue).toLocaleString("en-EN");
+      }
+      prize.formatedValue = formatedValue; 
+      prize.isMillionsValue = true;
+    } else {
+      prize.formatedValue = formatThousandsNumber(value, isEnglish);
+      prize.isMillionsValue = false;
+      if(value > 9999) {
+          prize.moreThanFourDigits = true;
+      } else {
+          prize.moreThanFourDigits = false;
+      }
+    }
+  
+    return prize;
+}
+
+function formatThousandsNumber(value, isEnglish) {
+  var number = parseFloat(value);
+  var roundNumber = null;
+  if (number != null && number != undefined && !isNaN(number)) {
+      if(!isEnglish){
+        roundNumber = parseFloat(number).toLocaleString("es-ES");
+      } else {
+        roundNumber = parseFloat(number).toLocaleString("en-EN");
+      }
+  }
+  return roundNumber;
+}
+
+function addCurrentURLParamsToLanguageLinks() {
+  jqHeader("div.language a").each(function() {
+    var _href = jqHeader(this).attr("href");
+    try {
+      var indexParam = _href.indexOf("?");
+      if (indexParam > -1) {
+        var urlSplit = _href.split("?");
+        jqHeader(this).attr("href", urlSplit[0] + document.location.search + "&" + urlSplit[1]);
+      } else {
+        jqHeader(this).attr("href", _href + document.location.search);
+      }
+    } catch (error) {
+      jqHeader(this).attr("href", _href + document.location.search);
+    }
+  });
+}
+
+
+function isMobileByWidth() {
+	return (getWidth() < 601);
+}
+
+function dropDownMenu(buttonId, menuId) {
+  jqHeader('#' + buttonId).click(function() {
+	  if(jqHeader('#'+ menuId).is(':visible')){
+		  jqHeader('#' + menuId + " > li").slideToggle("slow");
+		  jqHeader('#' + menuId ).slideToggle("slow");
+	  }else{
+		  jqHeader('#' + menuId ).slideToggle("slow");
+		  jqHeader('#' + menuId + " > li").slideToggle("slow");  
+	  }
+	  toogleMenu(menuId);
+  });
+}
+
+
+function toogleMenu(menuId){
+	if(jqHeader('#'+menuId).css('display') == 'block' && menuId ==='helloMenu'){
+		jqHeader('#lotobolsaMenu').hide();
+		if(isMobileByWidth()){
+			jqHeader('#qa_cabecera_sorteos_contenedor').children().hide();
+			jqHeader('#qa_cabecera_sorteos_contenedor').hide();
+		}
+	}else if(jqHeader('#'+menuId).css('display') == 'block' && menuId ==='lotobolsaMenu'){
+		jqHeader('#helloMenu').hide();
+		if(isMobileByWidth()){
+			jqHeader('#qa_cabecera_sorteos_contenedor').children().hide();
+			jqHeader('#qa_cabecera_sorteos_contenedor').hide();
+		}
+	}else if(jqHeader('#qa_cabecera_sorteos_contenedor').css('height') !== "0px" && menuId ==='qa_cabecera_sorteos_contenedor'){
+		jqHeader('#helloMenu').hide();
+		jqHeader('#lotobolsaMenu').hide();
+		jqHeader('#mobileForm').hide();
+	}
+}
+
+</script>
+<script type="text/javascript">	var jqHeader = jQuery.noConflict();
+var disableLoginSales = false;
+
+if(typeof console!="undefined" && typeof console.debug=="undefined"){
+  console.debug = console.log;
+}
+
+
+function bindEventJustOnce(elementIdentifier, eventName, eventFunction) {
+  jqHeader(elementIdentifier).unbind(eventName, eventFunction);
+  jqHeader(elementIdentifier).bind(eventName, eventFunction);
+}
+
+function esPageHomeAndLNAC() {
+	var fullpath = location.pathname;
+	if (fullpath.charAt(fullpath.length - 1) == '/')
+		fullpath = fullpath.slice(0, -1);
+
+	var pathUrl = fullpath.substr(1).split('/');
+	if (pathUrl.length == 0 || (currentLanguage != null && pathUrl[0] != currentLanguage))
+		return false;
+
+	if (pathUrl.length == 1)
+		return true;
+
+	if (pathUrl[1] == 'loteria-nacional') {
+		if (pathUrl.length == 2)
+			return true;
+
+		if (pathUrl[2] == 'mis-decimos')
+			return false;
+		else
+			return true;
+	} else
+		return false;
+}
+
+function formatPositiveQuantityOfMoney(numberWith2DecimalsString, lang) {
+  var decimalSeparator = (lang && lang === 'en') ? '.' : ',';
+  var milesSeparator = (lang && lang === 'en') ? ',' : '.';
+  if (numberWith2DecimalsString == null || numberWith2DecimalsString == undefined)
+    return '';
+  if (isNaN(numberWith2DecimalsString))
+    return '';
+  if (numberWith2DecimalsString.length < 3) {
+    for (var i = 0; i < 3 - numberWith2DecimalsString.length + 1; i++) {
+      numberWith2DecimalsString = '0' + numberWith2DecimalsString;
+    }
+  }
+  var integral = numberWith2DecimalsString.substr(0, numberWith2DecimalsString.length - 2);
+  integral = integral.replace(/\B(?=(\d{3})+(?!\d))/g, milesSeparator);
+  var decimal = numberWith2DecimalsString.substr(numberWith2DecimalsString.length - 2, numberWith2DecimalsString.length);
+  return integral + decimalSeparator + decimal;
+}
+
+
+/**
+ * Remove the <li> elements with banners out of date
+ */
+function removeBannersOutOfDate() {
+  var activation;
+  var deactivation;
+  var cont = 0;
+  var actualDate = new Date();
+  actualDate.setSeconds(0);
+  actualDate.setMilliseconds(0);
+
+  jqHeader('li.item-banner').each(function(i, e) {
+    var activationStr = jqHeader(e).attr('data-activation');
+    var deactivationStr = jqHeader(e).attr('data-deactivation');
+    var remove = false;
+
+    if (activationStr && !deactivationStr && !remove) {
+      activation = createDateFromString(activationStr);
+      if (activation > actualDate) {
+        jqHeader(e).remove();
+        console.debug('Element: ' + jqHeader(e).attr('id') + ' - REMOVE');
+        remove = true;
+      }
+    }
+    if (!activationStr && deactivationStr && !remove) {
+      deactivation = createDateFromString(deactivationStr);
+      if (deactivation < actualDate) {
+        jqHeader(e).remove();
+        console.debug('Element: ' + jqHeader(e).attr('id') + ' - REMOVE');
+        remove = true;
+      }
+    }
+    if (activationStr && deactivationStr && !remove) {
+      activation = createDateFromString(activationStr);
+      deactivation = createDateFromString(deactivationStr);
+      if (!(activation <= actualDate && deactivation >= actualDate)) {
+        jqHeader(e).remove();
+        console.debug('Element: ' + jqHeader(e).attr('id') + ' - REMOVE');
+        remove = true;
+      }
+    }
+    if (!remove) {
+      console.debug('Element: ' + jqHeader(e).attr('id') + ' - OK');
+      cont++;
+    }
+  });
+  return cont;
+}
+
+
+/**
+ * 
+ * @param str
+ * @returns {Date}
+ */
+function createDateFromString(str) {
+  try {
+    if (str) {
+      if (new Date(str).getTime()) {
+        return (new Date(str));
+      } else {
+        var dateSrt = str.split(' ')[0] + 'T' + str.split(' ')[1];
+        return (new Date(dateSrt));
+      }
+    } else {
+      return null;
+    }
+  } catch (err) {
+    console.error('ERROR en createDateFromString: ' + err);
+    return null;
+  }
+}
+
+
+/**
+ * Set up <b>src</b> in all elements indicated in 'selector' attribute
+ * It is necessary for the home banner carousel
+ * @param selector jQuery selector
+ */
+function setUpSrcImg(selector) {
+  jqHeader(selector).each(function(i, e) {
+    var srcPC = jqHeader(e).attr('data-src-pc');
+    var srcTablet = jqHeader(e).attr('data-src-tablet');
+    var srcMobile = jqHeader(e).attr('data-src-mobile');
+
+    if (!srcPC) {
+      console.debug('- No tenemos imagen de PC!!');
+      return false;
+    } else {
+      if (isPCForImg()) { // PC
+        jqHeader(e).attr('src', srcPC);
+        console.debug('--Elto: ' + i + ' --> actualizamos a srcPC');
+      } else {
+        if (isTabletForImg()) { // Tablet
+          if (srcTablet) {
+            jqHeader(e).attr('src', srcTablet);
+            console.debug('--Elto: ' + i + ' --> actualizamos a srcTablet');
+          } else {
+            jqHeader(e).attr('src', srcPC);
+            console.debug('--Elto: ' + i + ' --> actualizamos a srcPC');
+          }
+        } else { // Mobile
+          if (!srcMobile) {
+            if (srcTablet) {
+              jqHeader(e).attr('src', srcTablet);
+              console.debug('--Elto: ' + i + ' --> actualizamos a srcTablet');
+            } else {
+              jqHeader(e).attr('src', srcPC);
+              console.debug('--Elto: ' + i + ' --> actualizamos a srcPC');
+            }
+          } else {
+            jqHeader(e).attr('src', srcMobile);
+            console.debug('--Elto: ' + i + ' --> actualizamos a srcMolvil');
+          }
+        }
+      }
+    }
+  });
+}
+
+
+function jsonpCallback(data) {
+  //console.log("callback",data);
+  // do nothing
+}
+
+
+function successfulCallSagaMenuMessagesJSONService(data) {
+  var i;
+  if (data.avisos != null && data.avisos.length > 0){
+    for (i = 0; i < data.avisos.length; i++) {
+      var element = data.avisos[i];
+      var indiceMenu = element.indiceMenu;
+      var indiceSubmenu = element.indiceSubmenu;
+      var numAvisos = element.numAvisos;
+      if (numAvisos > 0) {
+        if (indiceMenu == 1 && indiceSubmenu == 0) {
+          jqHeader(".c-cabecera-menu__counter").show();
+          jqHeader(".c-cabecera-menu__counter").html(numAvisos);
+        } else {
+          var html = "<span class='c-cabecera-menu__notificaciones'>" + numAvisos + "</span>";
+          if ( jqHeader("#qa_cabecera_menu_usuario_" + indiceMenu + indiceSubmenu + " a").length ) {
+            jqHeader("#qa_cabecera_menu_usuario_" + indiceMenu + indiceSubmenu + " a").append(html);
+          } else {
+            jqHeader("#qa_cabecera_menu_usuario_" + indiceMenu + indiceSubmenu).append(html);
+          }
+          
+        }
+      }else{
+    	  if (indiceMenu == 1) {
+    		  jqHeader(".c-cabecera-menu__counter").hide();  
+    	  }
+    	  
+      }
+    }
+  }
+}
+
+
+function callSagaMenuMessagesJSONService(sagaMenuMsgsJsonSvcUrl) {
+  try {
+    var url = sagaMenuMsgsJsonSvcUrl.indexOf(":") == -1 ? "https://" + sagaMenuMsgsJsonSvcUrl : sagaMenuMsgsJsonSvcUrl;
+    jqHeader.jsonp({
+      url : url,
+      callback : "jsonpCallback",
+      success : function(data) {
+    	setJsonNotificationsInLocalStorage(JSON.stringify(data)); //set jsonP Notifications in localStorage
+        successfulCallSagaMenuMessagesJSONService(data);
+      },
+      error : function(d, msg) {
+        console.log("Saga menu messages service request failed. URL used was '" + sagaMenuJsonSvcUrl + "'.");
+      }
+    });
+  } catch (e) {
+    console.log('ERROR while calling Saga menu messages service and parsing its data: ' + e);
+  }
+}
+
+
+function getDateLastLogin(lastLogin){
+  var date = "";
+  if (lastLogin != null && lastLogin != undefined){
+    date= lastLogin.substring(0,lastLogin.lastIndexOf('-'));
+  }
+  return date;
+}
+
+
+function getHourLastLogin(lastLogin){
+  var hour = "";
+  if (lastLogin != null && lastLogin != undefined){
+    hour= lastLogin.substring(lastLogin.lastIndexOf('-')+1,lastLogin.lastIndexOf(':'));
+  }
+  return hour;
+}
+
+
+function setSimpleClock(horaPlataforma) {
+  try {
+    console.log("setSimpleClock > horaPlataforma = " + horaPlataforma);
+    var date = new Date(); // some mock date
+    var sec = date.getSeconds();
+    var ms = date.getMilliseconds();
+    var plataformDate = horaPlataforma.split(":");
+    var hour = parseInt(plataformDate[0]);
+    var min = parseInt(plataformDate[1]);
+
+    var datePlataform = new Date(date.getFullYear(), date.getMonth(), date.getDay(), hour, min, sec, ms);
+    var horaPlataformaMillis = datePlataform.getTime();
+
+    var clock = this;
+    var hour;
+    var minute;
+    var segundos = 0;
+
+    function getTime() {
+      horaPlataformaMillis = horaPlataformaMillis + 1;
+      var date = new Date(horaPlataformaMillis)
+      hour = date.getHours();
+      minute = date.getMinutes();
+      return {
+        date : date.getDate(),
+        hour : hour,
+        minute : date.getMinutes()
+      };
+    }
+
+    function appendZero(num) {
+      if (num < 10) {
+        return "0" + num;
+      }
+      return num;
+    }
+
+    function refreshTime() {
+      segundos++;
+      if (segundos == 60) {
+        segundos = 0;
+        if (minute == 59) {
+          minute = 0;
+          if (hour == 59)
+            hour = 0;
+          else
+            hour++;
+        } else {
+          minute++;
+        }
+
+        clock = jqHeader.find('#timePC');
+        jqHeader(clock).html(appendZero(hour) + ":" + appendZero(minute));
+      }
+    }
+    var now = getTime(horaPlataformaMillis);
+    clock = jqHeader.find('#timePC');
+    jqHeader(clock).html(appendZero(now.hour) + ":" + appendZero(now.minute));
+    setInterval(function() {
+      refreshTime()
+    }, 1000);
+
+  } catch (error) {
+    console.log("Error > header-saga.js > setSimpleClock " + error.message);
+  }
+}
+
+
+function setJsonNotificationsInLocalStorage(cachedNotificationsJSONp){
+	localStorage.setItem('cachedNotificationsJSONp', cachedNotificationsJSONp);	
+}
+
+
+function getJsonNotificationsFromLocalStorage(){
+	return JSON.parse(localStorage.getItem('cachedNotificationsJSONp'));	
+}
+
+
+function setCurrentTimeNotificationsInLocalStorage(){
+	var cachedTimeStampNotificationsLS = getCurrentTime();
+	localStorage.setItem('cachedTimeStampNotificationsLS', cachedTimeStampNotificationsLS);	
+}
+
+
+function getCurrentTimeNotificationsFromLocalStorage(){
+	return localStorage.getItem('cachedTimeStampNotificationsLS');
+}
+
+
+function loadLogedSagaMenu(data, sagaMenuMsgsJsonSvcUrl) {
+  if (data.loginPrevio != null) {
+	    jqHeader("#datePC").html(getDateLastLogin(data.loginPrevio));
+	    jqHeader("#hourPC").html(" - "+getHourLastLogin(data.loginPrevio)+"h.");
+	    jqHeader("#menuNoLoggedInSaga").css("display", "none");
+	    
+	  }
+	  if (data.saldoLotobolsa != null && data.saldoLotobolsa >= 0) {
+	    var balance = formatPositiveQuantityOfMoney('' + data.saldoLotobolsa)+'\u20AC';
+	      jqHeader("#balancePC").html(balance);
+	      jqHeader("#balanceMobile").html(balance);
+	  }
+	  if (/^(([01]?[0-9]|2[0-3]):[0-5][0-9])$/.test(data.horaPlataforma)) {
+	    jqHeader("#timePC").html(data.horaPlataforma);
+	    setSimpleClock(data.horaPlataforma);
+	  }
+	  if(data.nombreUsuario != null && data.nombreUsuario !=""){
+	    jqHeader("#lotobolsaName").html(data.nombreUsuario);
+	  }
+	  if(isActiveSagaMenuMessagesJsonService == "true"){
+		 var millisecondsCurrentTimeLS = getCurrentTimeNotificationsFromLocalStorage();
+	  	 var jsonNotificationsSaga = getJsonNotificationsFromLocalStorage();
+	  	 var millisecondsCurrentTime = getCurrentTime();
+	  	if ((isSagaJuegosReferrer() || (jsonNotificationsSaga === undefined) || (jsonNotificationsSaga === null) || (millisecondsCurrentTimeLS === undefined) ||
+	  			(millisecondsCurrentTimeLS === null) || (millisecondsCurrentTime !== null && (millisecondsCurrentTime - millisecondsCurrentTimeLS)) >= timeToGetJsonpSaga)){
+	  		  setCurrentTimeNotificationsInLocalStorage();
+	  		  callSagaMenuMessagesJSONService(sagaMenuMsgsJsonSvcUrl);
+	  	  }else{
+	  		var dataNotificationsLS = getJsonNotificationsFromLocalStorage(); //get json Avisos from localStorage
+	  		successfulCallSagaMenuMessagesJSONService(dataNotificationsLS);
+		  }
+	  } else {
+	    if (data.mensajesNoLeidos != null && data.mensajesNoLeidos > 0) {
+	      jqHeader(".c-cabecera-menu__counter").show();
+	      jqHeader(".c-cabecera-menu__counter").html(data.mensajesNoLeidos);
+	    }else{
+	      jqHeader(".c-cabecera-menu__counter").hide();
+	    }
+	  }
+}
+
+
+function disableElementsWhenSagaNeeds(){
+  jqHeader(".c-login-movil__datos").hide();
+  jqHeader(".c-login-movil__texto").hide();
+  jqHeader(".c-login-movil__enlace-solicita").hide();
+  jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+
+}
+
+function disableElementsWhenSagaIsClossed(){
+  jqHeader('#linkEnterButtonMobile').addClass('linkDisabled');
+  jqHeader('#linkEnterButton').addClass('linkDisabled');
+  jqHeader('#registerUserMobile').addClass('linkDisabled');
+  jqHeader('#registerUser').addClass('linkDisabled');
+  
+}
+
+function updateElementsWhenCaptchaIsTrue(){
+  jqHeader(".c-login-movil__datos").hide();
+  jqHeader(".c-login-movil__texto").hide();
+  jqHeader(".c-login-movil__enlace-solicita").hide();
+  jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+
+}
+
+
+function enableElementsWhenSagaNeeds(){
+  jqHeader(".c-login-movil__datos").show();
+  jqHeader(".c-login-movil__texto").show();
+  jqHeader(".c-login-movil__enlace-solicita").show();
+
+  jqHeader('#lotoBolsaPC').removeClass('esta-oculto');
+  
+
+}
+
+function updateElementsWhenSalesAreDisabled(){
+  jqHeader(".c-login-movil__datos").hide();
+  jqHeader(".c-login-movil__texto").hide();
+  jqHeader(".c-login-movil__enlace-solicita").hide();
+  jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+
+}
+
+
+
+
+
+function successfulCallSagaMenuJSONService(data, sagaMenuMsgsJsonSvcUrl, status) {
+    loadSagaMenu(data, sagaMenuMsgsJsonSvcUrl, status);
+}
+
+
+function getCurrentTime(){
+	var time=new Date();
+	return time.getTime();
+}
+
+
+function setCurrentTimeInLocalStorage(){
+	var cachedTimeStampLS = getCurrentTime();
+	localStorage.setItem('cachedTimeStampLS', cachedTimeStampLS);	
+}
+
+
+function getCurrentTimeFromLocalStorage(){
+	return localStorage.getItem('cachedTimeStampLS');
+}
+
+
+function setJsonPInLocalStorage(cachedJSONp){
+	localStorage.setItem('cachedJSONp', cachedJSONp);	
+}
+
+/**
+ * Removing objects from localStorage
+ */
+function clearLocalStorage(){
+  localStorage.removeItem('cachedJSONp');
+  localStorage.removeItem('cachedTimeStampLS');
+}
+
+function getJsonPFromLocalStorage(){
+	return JSON.parse(localStorage.getItem('cachedJSONp'));	
+}
+
+
+function isSagaJuegosReferrer(){
+	var sagaReferrer = document.referrer.split('/')[2];
+	if(sagaReferrer !== null && sagaReferrer !== undefined && hostReferrerSaga === sagaReferrer){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
+function callSagaJSONService(url,sagaMenuMsgsJsonSvcUrl,sagaMenuJsonSvcUrl,errorData, callbackFinished){
+    jqHeader.ajaxSetup({
+    	xhrFields: {
+    		withCredentials: true
+    	}
+    });
+	jqHeader.getJSON(url, function(data) {
+		setJsonPInLocalStorage(JSON.stringify(data)); //set jsonP in localStorage	
+		successfulCallSagaMenuJSONService(data, sagaMenuMsgsJsonSvcUrl, '200');
+		if (callbackFinished != null)
+			callbackFinished();
+	}).fail(function(jqxhr, textStatus, errorThrown) {
+		console.error("Saga menu service request failed. URL used was '" + sagaMenuJsonSvcUrl + "'.");
+    clearLocalStorage();
+		successfulCallSagaMenuJSONService(jqxhr.responseJSON, sagaMenuMsgsJsonSvcUrl, jqxhr.status);
+		if (callbackFinished != null)
+			callbackFinished();
+	});
+}
+
+function loadSagaMenu(data, sagaMenuMsgsJsonSvcUrl, status) {
+	
+	jqHeader('.c-cabecera').addClass('logado');
+	jqHeader('#linkEnterButtonMobile').removeClass('linkDisabled');
+    jqHeader('#linkEnterButton').removeClass('linkDisabled');
+    jqHeader('#registerUserMobile').removeClass('linkDisabled');
+    jqHeader('#registerUser').removeClass('linkDisabled');
+	enableElementsWhenSagaNeeds();
+
+	if (status != null && status == '200' && data != null) {
+		if (data.estadoPlataforma == 'CERRADA'){
+			jqHeader('.c-cabecera').removeClass('logado');
+	      	disableElementsWhenSagaNeeds();
+			disableElementsWhenSagaIsClossed();
+			jqHeader("#menuLoggedInSaga").css("display", "none");  
+			
+		} else if (data.estadoPlataforma == 'ABIERTA') {
+			if (data.participanteID != '' && data.loginPrevio != '-' && data.participanteID != 'ERROR' && data.loginPrevio != 'ERROR') {
+				loadLogedSagaMenu(data, sagaMenuMsgsJsonSvcUrl);
+			} else if (data.participanteID != 'ERROR' && data.loginPrevio != 'ERROR') {
+				jqHeader("#actualURL").attr('value', window.location.href);
+		      	jqHeader("#actualURLMobile").attr('value', window.location.href);
+		     	jqHeader('.c-cabecera').removeClass('logado');
+		      	enableElementsWhenSagaNeeds();
+		      	jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+		      	jqHeader("#menuLoggedInSaga").css("display", "none"); 
+						      	
+			} else {
+				jqHeader('.c-cabecera').removeClass('logado');
+		    	disableElementsWhenSagaNeeds();
+		   	
+			}
+		}
+	} else  {
+		if (status == '403' && data.filtroErrorNombre != null && data.filtroErrorNombre == 'plataformaCerrada') {
+			jqHeader('.c-cabecera').removeClass('logado');
+			disableElementsWhenSagaNeeds();
+			jqHeader("#menuLoggedInSaga").css("display", "none");  
+						
+		} else {
+			jqHeader('.c-cabecera').removeClass('logado');
+	    	disableElementsWhenSagaNeeds();
+			
+		}
+	}
+}
+
+function callSagaMenuJSONService(sagaMenuJsonSvcUrl, sagaMenuMsgsJsonSvcUrl, callbackFinished) {
+  if (sagaMenuJsonSvcUrl != null && sagaMenuJsonSvcUrl != undefined && sagaMenuJsonSvcUrl != "") {
+    var errorText = '{"estadoPlataforma":"ABIERTA","saldoLotobolsa":"ERROR","horaPlataforma":"null",' 
+    	+'"loginPrevio":"ERROR","participanteID":"ERROR","mostrarCaptcha":false,"mensajesNoLeidos":null}';
+    var errorData = JSON.parse(errorText);
+    try {
+	      var url = sagaMenuJsonSvcUrl.indexOf(":") == -1 ? "https://" + sagaMenuJsonSvcUrl : sagaMenuJsonSvcUrl;
+	      var millisecondsCurrentTimeLS = getCurrentTimeFromLocalStorage();
+	  	  var jsonPSaga = getJsonPFromLocalStorage();
+	  	  var millisecondsCurrentTime = getCurrentTime();
+	  	  if ((isSagaJuegosReferrer() || (jsonPSaga === undefined) || (jsonPSaga === null) || (millisecondsCurrentTimeLS === undefined) ||
+	  			(millisecondsCurrentTimeLS === null) || (millisecondsCurrentTime !== null && (millisecondsCurrentTime - millisecondsCurrentTimeLS)) >= timeToGetJsonpSaga)){
+	  		  setCurrentTimeInLocalStorage();
+	  		  callSagaJSONService(url,sagaMenuMsgsJsonSvcUrl,sagaMenuJsonSvcUrl,errorData, callbackFinished);
+	  	  }else{
+	  		var dataLS = getJsonPFromLocalStorage(); //get jsonP from localStorage
+	  		successfulCallSagaMenuJSONService(dataLS, sagaMenuMsgsJsonSvcUrl, '200');
+			if (callbackFinished != null)
+				callbackFinished();
+		  }
+    } catch (e) {
+      console.error('ERROR while calling Saga menu service and parsing its data: ' + e);
+      successfulCallSagaMenuJSONService(errorData, sagaMenuMsgsJsonSvcUrl);
+      jqHeader("#menuLoggedInSaga").css("display", "none");
+		if (callbackFinished != null)
+			callbackFinished();
+    }
+  }
+}
+
+
+function shouldLoadSagaMenu(sagaMenuJsonSvcUrl, sagaMenuMsgsJsonSvcUrl) {
+  jqHeader.when(isConfiguracionLNACGlobalJSON, isEstadoCelebracionLNACGlobalJSON).then(function() {
+    var fechaUsuario = new Date().getTime();
+    var desactivarLoginVentas = false;
+     var fechaIniciodesactivarLoginVentas = null;
+    var fechaFindesactivarLoginVentas = null;
+    if (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio != null) {
+      fechaIniciodesactivarLoginVentas = new Date(configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio).getTime();
+    }
+    if (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin != null) {
+      fechaFindesactivarLoginVentas = new Date(configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin).getTime();
+    }
+    if (!desactivarLoginVentas 
+        && (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio != null) 
+        && (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio != '') 
+        && (fechaUsuario >= fechaIniciodesactivarLoginVentas)) {
+      if ((configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin == null) 
+          || (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin == '') 
+          || (fechaFindesactivarLoginVentas >= fechaUsuario)) {
+        desactivarLoginVentas = true;
+      }
+    }
+    
+    // desactivar la cabecera siempre que se estÃ© en tramoI, antes solo si esCelebrationNavidadONinio()
+    // el tramoI en estadoCelebracion tiene en cuenta el priorTime, ya que la op de sync pone a true es.loterias.framework.stretch.one.prior.time.in.minutes minutos antes del sorteo
+    if (esPageHomeAndLNAC() && estadoCelebracionLNACGlobalJSON.estadoCelebracionLNAC) {
+        desactivarLoginVentas = true;
+    }
+    
+    if (desactivarLoginVentas) {
+        console.log('header-saga.js > desactivarLoginVentas only register button enabled');
+        updateElementsWhenSalesAreDisabled();
+	 }
+    if (fechaIniciodesactivarLoginVentas && !desactivarLoginVentas) {
+      callSagaMenuJSONService(sagaMenuJsonSvcUrl, sagaMenuMsgsJsonSvcUrl);
+    } else {
+      disableLoginSales = true;
+      jqHeader("#menuLoggedInSaga").css("display", "none");
+      
+    }
+  });
+}
+
+
+/**
+ * Get the with in pixels of the window
+ * 
+ * @returns Number of pixels
+ */
+function getWidth() {
+  try {
+    if (jqHeader(window).width()) {
+      return jqHeader(window).width();
+    }
+  } catch (err) {
+    console.error('ERROR in getWidth: ' + err);
+  }
+  if (self.innerHeight) {
+    return self.innerWidth;
+  }
+  if (document.documentElement && document.documentElement.clientHeight) {
+    return document.documentElement.clientWidth;
+  }
+  if (document.body) {
+    return document.body.clientWidth;
+  }
+}
+
+
+function dropdownMenuSaga(buttonId, menuId) {
+  jqHeader('#' + buttonId).click(function(event) {
+    event.preventDefault();
+    jqHeader('#' + menuId ).slideToggle("slow");
+    toogleMenu(menuId);
+  });
+}
+
+
+
+var allowSubmit = true;
+jqHeader(document).ready(function() {
+	dropdownMenuSaga('helloUser', 'helloMenu');
+	dropdownMenuSaga('balanceLotobolsa', 'lotobolsaMenu');
+	
+	try{
+	    jqHeader("#enterButton").click(function(e) {
+	       if (allowSubmit) {
+				
+	    	   allowSubmit = false;
+	           localStorage.removeItem('cachedJSONp');
+		       localStorage.removeItem('cachedTimeStampLS');
+		       localStorage.removeItem('cachedNotificationsJSONp');
+		       localStorage.removeItem('cachedTimeStampNotificationsLS');
+	       } else {
+	    	   return false;
+	       }
+	    });
+	    jqHeader('#toggleEnter').click(function(e) {
+		       if (allowSubmit) {
+					allowSubmit = false;
+		           localStorage.removeItem('cachedJSONp');
+			       localStorage.removeItem('cachedTimeStampLS');
+			       localStorage.removeItem('cachedNotificationsJSONp');
+			       localStorage.removeItem('cachedTimeStampNotificationsLS');
+		       } else {
+		    	   return false;
+		       }
+		    }); 
+	    jqHeader("a[href*='logout']").on( "click", function() {
+	    	   localStorage.removeItem('cachedJSONp');
+		       localStorage.removeItem('cachedTimeStampLS');
+		       localStorage.removeItem('cachedNotificationsJSONp');
+		       localStorage.removeItem('cachedTimeStampNotificationsLS');
+	    });
+	    
+	}catch(error){
+		console.log('Error al aplicar onclick en los botones "Entrar" de SAGA');
+	}
+});</script>
+
+<div class="r-cabecera" id="header-main" data-url-path-prefix="/f" data-json-service-url="/servicios/proximosv3?game_id=TODOS&num=2" data-current-language="es">
+	<div id="menuHeader" class="c-cabecera">
+		<div class="c-cabecera__fila-superior">
+			<a class="c-cabecera-menu__hamburguesa" id="qa_cabecera_menu__hamburguesa">
+                <img class="c-cabecera-menu__icon-hamburguesa" src="/f/loterias/estaticos/imagenes/sass//menu_hamburguesa.svg" alt="Juegos">
+                <span class="c-cabecera-menu__texto-hamburguesa">Juegos</span>
+            </a>
+			<div class="c-cabecera-logo">
+                <h1>
+                    <a href="https://www.loteriasyapuestas.es" title="Loter&iacute;as y apuestas">
+                        <img id="qa_cabecera_logo_loteriasyApuestas" class="c-cabecera-logo__logotipo" src="/f/loterias/estaticos/imagenes/sass/logo_loterias.svg" alt="Loter&iacute;as y apuestas">
+                        <span class="c-cabecera-logo__titulo">Loter&iacute;as y Apuestas</span>
+                    </a>
+                </h1>
+            </div>
+			<div id="menuHeaderSaga" class="c-cabecera-menu">
+				<!-- NEW DESIGN HEADER: Logged and not Logged -->
+
+<div class="c-cabecera-menu__item c-cabecera-menu__msg">
+	<a href="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/notificaciones?access=headercms&lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/notificaciones?access=headercms&lang=es" title="Mensajes">
+		<img class="c-cabecera-menu__icono-msg" src="/f/loterias/estaticos/imagenes/sass/icono_msg_header.svg" alt="Mensajes">
+		<span class="c-cabecera-menu__counter"></span>
+	</a>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__item--logado">
+	<div class="c-cabecera-menu__separador">|</div>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__registrate">
+	<div id="helloUser" class="c-hola-usuario">
+		<a class="c-hola-usuario__titulo" href="">
+			<img id="userDropDownMenuHeadIcon" src="/f/loterias/estaticos/imagenes/sass/icono_usuario.svg" alt="Usuario" class="c-hola-usuario__img--movil esta-oculto-pc">
+			<img src="/f/loterias/estaticos/imagenes/sass/icono_usuario.svg" alt="Usuario" class="c-hola-usuario__img esta-oculto-movil">
+			<span class="c-hola-usuario__titulo-saludo">Hola</span>
+			<span id="lotobolsaName" class="c-hola-usuario__titulo-nombre"></span>
+		</a>
+		<a id="userDropDownMenuIcon" href="">
+			<img class="c-hola-usuario__icono-mas" src="/f/loterias/estaticos/imagenes/sass/icono_mas.svg" alt="M&aacute;s"> 
+		</a>
+		<span class="c-hola-usuario__texto-movil">Men&uacute;</span> 
+	</div>
+	<ul style="display:none" class="c-menu-usuario" id="helloMenu">
+		<li class="c-menu-usuario__item c-menu-usuario__no_enlace" id="qa_cabecera_menu_usuario_20">
+									Mis apuestas</li>
+								<li>
+									<ul class="c-submenu-usuario">
+										<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_21">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/historicos?access=headercms&lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/historicos?access=headercms&lang=es" title="Apuestas">
+														Apuestas</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_22">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/suscripciones?access=headercms&lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/suscripciones?access=headercms&lang=es" title="Suscripciones">
+														Suscripciones</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_23">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/favoritas?access=headercms&lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/favoritas?access=headercms&lang=es" title="Favoritas">
+														Favoritas</a>
+												</li>
+											</ul>
+								</li>
+							<li class="c-menu-usuario__item c-menu-usuario__no_enlace" id="qa_cabecera_menu_usuario_30">
+									Mis Datos</li>
+								<li>
+									<ul class="c-submenu-usuario">
+										<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_31">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-usuario?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-usuario?lang=es" title="Datos personales">
+														Datos personales</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_34">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-cuenta/datos-cuenta-juegos?access=headercms&lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-cuenta/datos-cuenta-juegos?access=headercms&lang=es" title="Cuenta de juego">
+														Cuenta de juego</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_35">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/control-cuenta/autoexclusion" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/control-cuenta/autoexclusion" title="Autoexclusión">
+														Autoexclusión</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_36">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/intereses-participante?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/intereses-participante?lang=es" title="Notificaciones">
+														Notificaciones</a>
+												</li>
+											</ul>
+								</li>
+							</ul>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__item--logado">
+	<div class="c-cabecera-menu__separador">|</div>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__lotobolsa">
+	
+	<div class="c-cabecera-menu__item esta-oculto-movil">
+			<a id="linkEnterButton" href="https://juegos.loteriasyapuestas.es/acceder/login?lang=es">
+			<button id="enterButton"  class="c-cabecera-menu__enlace"  title="Entrar">
+				<img id="enterImage" class="c-cabecera-menu__imagen" src="/f/loterias/estaticos/imagenes/sass/boton_entrar.svg" alt="Entrar">
+				<p id="enterTxt" class="c-cabecera-menu__texto">Entrar</p>
+			</button>
+			</a>
+		</div>
+	<div id="balanceLotobolsa" class="c-saldo-lotobolsa">
+		<a class="c-saldo-lotobolsa__valor-p esta-oculto-movil" id="qa_cabecera_usuario_saldo_cantidad">  
+			<span class="c-saldo-lotobolsa__titulo">Saldo:</span>
+			<span class="c-saldo-lotobolsa__valor" id="balancePC"></span>
+			<img class="c-saldo-lotobolsa__icono-mas" src="/f/loterias/estaticos/imagenes/sass/icono_mas.svg" alt="M&aacute;s"> 
+		</a>
+		<!-- Mobile -->
+		<div class="c-saldo-lotobolsa__valor-p esta-oculto-pc" id="qa_cabecera_usuario_saldo_cantidad">
+			<a class="c-saldo-lotobolsa__titulo-enlace esta-oculto-pc" id="qa_cabecera_usuario_saldo_textoTuSaldo">
+				<p class="c-saldo-lotobolsa__valor" id="balanceMobile" ></p>
+				<p class="c-saldo-lotobolsa__titulo" id="qa_cabecera_usuario_saldo_textoTuSaldo">Saldo:</p>
+			</a>
+			<a id="lotobolsaDropDownMenuIconMobile" href="#" class="c-saldo-lotobolsa__enlace-mas-info">
+				<img class="c-saldo-lotobolsa__icono-mas" src="/f/loterias/estaticos/imagenes/sass/icono_mas.svg" alt="M&aacute;s" id="qa_cabecera_usuario_saldo_botonCargarSaldo">
+			</a>
+		</div>
+	</div>
+	
+	<ul style="display:none" class="c-menu-lotobolsa" id="lotobolsaMenu">
+		<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/carga/carga-lotobolsa?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/carga/carga-lotobolsa?lang=es" title="Cargar Lotobolsa">Cargar Lotobolsa</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/movimientos?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/movimientos?lang=es" title="Movimientos">Movimientos</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/descarga/descarga-lotobolsa?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/descarga/descarga-lotobolsa?lang=es" title="Descargar Lotobolsa">Descargar Lotobolsa</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/opciones-lotobolsa?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/opciones-lotobolsa?lang=es" title="Opciones">Opciones</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/juego-responsable" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/juego-responsable" title="Juego Responsable">Juego Responsable</a>
+				</li>
+			</ul>
+</div>
+<div class="c-cabecera-menu__item">
+	<div class="c-cabecera-menu__separador">|</div>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu-enlace__btn-entrar">
+	<a id="toggleEnter" class="c-cabecera-menu__enlace c-cabecera-menu__enlace--movil" title="Entrar"  href="https://juegos.loteriasyapuestas.es/acceder/login?lang=es">
+		<img class="c-cabecera-menu__imagen" src="/f/loterias/estaticos/imagenes/sass/boton_entrar.svg" alt="Entrar">
+		<p class="c-cabecera-menu__texto">Entrar</p>
+	</a>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__item--salir">
+	<a class="c-cabecera-menu__enlace c-cabecera-menu__enlace--salir" href="https://juegos.loteriasyapuestas.es/jugar/cas/logout?access=headercms&lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/logout?access=headercms&lang=es" title="SALIR">
+		<img class="c-cabecera-menu__imagen" src="/f/loterias/estaticos/imagenes/sass/icono_salir.svg" alt="Salir">
+		<p class="c-cabecera-menu__texto">Salir</p>
+	</a>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__boton-registrate-envoltorio">
+	<a id="registerUser" href="https://juegos.loteriasyapuestas.es/jugar/registro/verificacion?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/registro/verificacion?lang=es">
+	<button id="registerButton" class="c-cabecera-menu__boton-registrate">Registro</button> 
+	</a>	
+</div>
+
+<!-- NEW DESIGN HEADER: Logged and not Logged END-->
+
+<script type='text/javascript'>
+	var jqSagaMenu = jQuery.noConflict();
+	var loginEnterButtonUrl = "https://juegos.loteriasyapuestas.es/acceder/login?lang=es";
+	var literalEnter = "Entrar";
+	var saga_menu_json_service_url = 'https://juegos.loteriasyapuestas.es/jugar/servicios-rest/participante/sesion';
+	var isActiveSagaMenuMessagesJsonService = 'false';
+	var saga_menu_messages_json_service_url = 'https://juegos.loteriasyapuestas.es/jugar/cabecera/avisos';
+	var urlLoginSaga = 'https://juegos.loteriasyapuestas.es/acceder/login?lang=es'; 
+	jqSagaMenu(document).ready(function() {
+		try{
+			if(isActiveSagaMenuMessagesJsonService == "true"){
+				if(saga_menu_messages_json_service_url != null && saga_menu_messages_json_service_url != undefined && saga_menu_messages_json_service_url != ""){
+					shouldLoadSagaMenu(saga_menu_json_service_url, saga_menu_messages_json_service_url);
+				} else {
+					shouldLoadSagaMenu(saga_menu_json_service_url);
+					console.log('Error while updating SAGA menu: the saga menu messages json service is active but its URL is empty or null.');
+				}
+			} else {
+				shouldLoadSagaMenu(saga_menu_json_service_url);
+			}
+		}catch (e) {
+			console.log('Error while updating SAGA menu:' + e);
+		}
+		
+	});
+</script><div class="c-cabecera-menu__item c-cabecera-menu__item--movil600">
+           <div class="c-cabecera-menu__separador">|</div>
+       </div>
+       <div class="c-cabecera-menu__item c-cabecera__idioma">
+		<a id="link_es" class="esta-oculto" href="/es/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="es">Castellano</a>
+				<a id="link_ca" class="esta-oculto" href="/ca/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="ca">Català</a>
+				<a id="link_en" class="esta-oculto" href="/en/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="en">English</a>
+				<a id="link_eu" class="esta-oculto" href="/eu/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="eu">Euskera</a>
+				<a id="link_gl" class="esta-oculto" href="/gl/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="gl">Galego</a>
+				<a id="link_va" class="esta-oculto" href="/va/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="va">Valencià</a>
+				<span class="c-cabecera-menu__texto-idioma">Idioma      </span>
+		<select id="language" class="c-cabecera-menu__idioma">
+			<option selected="selected" id="ES" data-href-lang="es">Castellano</option>
+					<option id="CA" data-href-lang="ca">Català</option>
+					<option id="EN" data-href-lang="en">English</option>
+					<option id="EU" data-href-lang="eu">Euskera</option>
+					<option id="GL" data-href-lang="gl">Galego</option>
+					<option id="VA" data-href-lang="va">Valencià</option>
+					</select>
+	</div>
+<script type='text/javascript'>
+	var currentLanguage = "es";
+	var jqSagaLang = jQuery.noConflict();
+	addCurrentURLParamsToLanguageLinks();
+	jqSagaLang(document).ready(function() {
+		try {
+			jqSagaLang( "#language" ).change(function() {
+				var linkId = jqSagaLang( "#language option:selected" ).data("href-lang");
+				try{
+					usrLangCookie.createCookie(linkId);
+				} catch (error) {
+					console.error("file '/f/loterias/estaticos/js/cookie.js' has not been loaded or its version is lower than 3.8.X.");
+					console.error(error);
+				}
+				document.getElementById("link_"+linkId).click();
+			});
+		} catch (err) {
+			console.error("ERROR al asociar el evento del desplegable de idiomas: " + err);
+		}
+	});
+</script></div>
+	
+		</div>
+		<div class="cabecera-menu-juegos_topaz">
+				 <ul class="c-cabecera__juegos_topaz" id="qa_cabecera_sorteos_contenedor">
+				 	<li style="display: none;" class="c-cabecera-juego_topaz esta-oculto-pc  c-cabecera-idiomas-li-movil" id="header-lang" >
+								<a id="link_es" class="c-login-movil__enlace-idiomas" href="/es/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="es">Castellano</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_ca" class="c-login-movil__enlace-idiomas" href="/ca/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="ca">Català</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_en" class="c-login-movil__enlace-idiomas" href="/en/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="en">English</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_eu" class="c-login-movil__enlace-idiomas" href="/eu/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="eu">Euskera</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_gl" class="c-login-movil__enlace-idiomas" href="/gl/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="gl">Galego</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_va" class="c-login-movil__enlace-idiomas" href="/va/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" hreflang="va">Valencià</a>
+									</li>
+						<li style="display: none;" class="c-cabecera-juego_topaz c-cabecera-juego__titulo-botes--movil esta-oculto-pc esta-oculto-movil">
+		                <p class="c-cabecera-juego__titulo-botes">Botes en juego</p>
+		            </li>	            
+					<li style="display: none;" class="c-cabecera__juego--euromillones c-cabecera-juego_topaz" id="header-link-EMIL" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/euromillones/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--primitiva c-cabecera-juego_topaz" id="header-link-LAPR" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/la-primitiva/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--bonoloto c-cabecera-juego_topaz" id="header-link-BONO" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/bonoloto/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--gordo c-cabecera-juego_topaz" id="header-link-ELGR" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/gordo-primitiva/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--eurodreams c-cabecera-juego_topaz" id="header-link-EDMS" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/eurodreams/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--loteria-nacional c-cabecera-juego_topaz" id="header-link-LNAC" data-bet-href="/es/loteria-nacional" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--quiniela c-cabecera-juego_topaz" id="header-link-LAQU" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/la-quiniela/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--lototurf c-cabecera-juego_topaz" id="header-link-LOTU" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/lototurf/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--quinigol c-cabecera-juego_topaz" id="header-link-QGOL" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/quinigol/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					<li style="display: none;" class="c-cabecera__juego--quintuple c-cabecera-juego_topaz" id="header-link-QUPL" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/quintupleplus/apuesta?access=headercms&lang=es" data-bet-title="JUGAR"></li>
+					
+					<li style="display: none;" class="c-cabecera-juego c-cabecera-juego__boton-ahora--movil">
+		                <a class="c-cabecera-juego__boton-ahora" title="" href="https://www.loteriasyapuestas.es/es/apostar-online" id="qa_cabecera_hamburguer_boton_ahoraEnJuego">
+		                    <img class="c-cabecera-juego__imagen-boton" src="/f/loterias/estaticos/imagenes/sass/ahora_en_juego.svg" alt="Ahora en Juego">
+		                    <p class="c-cabecera-juego__texto-ahora">Ahora en Juego</p>
+		                </a>
+		            </li>	 
+				 </ul>
+			 </div>
+	</div>
+</div>
+<div id="lotoBolsaPC" class="r-ultimo-acceso esta-oculto">
+    <div class="c-ultimo-acceso" id="qa_cabecera_sesion_contenedor">
+        <p class="c-ultimo-acceso__texto">
+            <img class="c-ultimo-acceso__icono" src="/f/loterias/estaticos/imagenes/sass/ultimo_acceso.svg" alt="&Uacute;ltimo acceso:">
+            <span class="c-ultimo-acceso__texto-sesion" id="qa_cabecera_sesion_textoSesion">Sesi&oacute;n:</span>
+            <span id="timePC" class="c-ultimo-acceso__sesion"></span>
+            <span class="c-ultimo-acceso__sesion-separador">- </span>
+            <span class="c-ultimo-acceso__ultimo-acceso" id="qa_cabecera_sesion_textoUltimoAcceso">&Uacute;ltimo acceso:</span>
+            <span id="datePC" class="c-ultimo-acceso__fecha"></span>
+            <span id="hourPC" class="c-ultimo-acceso__hora"></span>
+        </p>
+    </div>
+</div>
+
+<script type='text/javascript'>
+var jqSagaMenu = jQuery.noConflict();
+var literalMobileEnter = "ENTRAR";
+var registerButtonURLMobile = "https://juegos.loteriasyapuestas.es/jugar/registro/verificacion?lang=es";
+var literalMobileRegister = "Reg&iacute;strate";
+var urlLoginSaga = 'https://juegos.loteriasyapuestas.es/acceder/login?lang=es'; 
+
+</script>
+
+<!--End Header-Horz Area --><!-- Fin Cabecera -->
+			<!-- Contenido -->
+			<div id="idContainerLoteriaNacional" class="contenedor contenedorPrincipal dosColumnas home fondoGrisClaro sinBullets textoTituloRegion textoMediano fondoGrisSinBorder bordeGrisSuperior fondoBlancoBordes">
+	<!-- begin horizontal nav area -->
+				<!-- end horizontal nav area -->
+				<!-- Start Page Controls - Horz Area -->
+
+<!-- End Page Controls - Horz Area -->
+<div class="contenedor contenedorSuperior subhome sinFondo textoResultados" >
+
+			    <div class="contenedor">
+				<div class="cpo">
+					<h2>
+						
+</h2>
+
+					<div class="cpo" style="margin: 0px 0px 0px 0px !Important; width: 85%; text-align: justify;">
+<h2 style="text-align: center; font-size: 17px; color: black; line-height: 1.3;">CONDICIONES GENERALES DE USO DE LOS SITIOS WEB Y APLICACIONES MÓVILES DE LA&nbsp;SOCIEDAD ESTATAL LOTERÍAS Y APUESTAS DEL ESTADO, S.M.E., S.A.&nbsp;(SELAE)</h2>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">1. Titular de los sitios web y aplicaciones móviles</h2>
+
+<p>El prestador de los servicios de la sociedad de la información y titular de los sitios web y aplicaciones móviles puestas a disposición de los usuarios es la Sociedad Estatal Loterías y Apuestas del Estado, S.M.E., S.A.&nbsp;(en adelante, “<b>SELAE</b>”), domiciliada en la c/ Poeta Joan Maragall 53, 28020 Madrid, NIF número A86171964, e inscrita en el Registro Mercantil de Madrid al tomo 28078, folio 202, sección 8ª, hoja M- 505970, inscripción 1ª.</p>
+
+<p>SELAE tiene por objeto la gestión, explotación y comercialización de la actividad del juego en sus distintas modalidades como, por ejemplo, los juegos propiamente dichos, loterías, apuestas, rifas y concursos, tanto los realizados a través de medios presenciales como a través de canales electrónicos, informáticos, telemáticos, interactivos, audiovisuales o cualesquiera otros que se pudiesen crear o establecer en el futuro.</p>
+
+<p>SELAE informa que no ha autorizado a ningún tercero la venta de ninguno de sus productos a través de Internet u otros medios electrónicos o audiovisuales. Éstos son accesibles únicamente a través de las webs oficiales a través de la que en cada momento se gestionen las actividades de juego de SELAE así como, en su caso, de las aplicaciones móviles que SELAE ponga a disposición de los usuarios. Por ello, SELAE no es ni será responsable de las actuaciones que puedan realizar las personas o entidades que gestionen o que participan de alguna manera en otras páginas web o aplicaciones distintas de las indicadas.</p>
+
+<p align="justify">SELAE se reserva el ejercicio de cuantas acciones estime oportunas para la defensa de sus legítimos derechos e intereses en caso de que la actuación de cualquier tercero pueda causarle algún tipo de daño o perjuicio.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">2. Objeto de los sitios web y móviles de SELAE</h2>
+
+<p>Los términos y condiciones que más adelante se indican regulan, con carácter general, el acceso y uso de los sitios web y aplicaciones móviles de SELAE así como de los servicios y contenidos asociados a dichos sitios y aplicaciones (en adelante, también “<b>el/los sitio/s</b>” o “<b>el/los sitio/s web y móviles</b>”), sin perjuicio de los términos y condiciones que puedan regular de manera específica determinados sitios web o móviles en atención al objeto de los mismos y a los que las presentes condiciones se aplicarán con carácter subsidiario y complementario en lo no previsto en aquéllos. Dentro de la expresión “sitio/s o sitio/s web y móviles” se comprenden -con carácter no limitativo- los datos, textos, gráficos, imágenes, animaciones, creaciones musicales, vídeos, sonidos, dibujos, obras plásticas, fotografías y otros incluidos en el mismo y, en general, todas las creaciones expresadas por cualquier medio o soporte, tangible o intangible, protegidas por las leyes sobre propiedad intelectual, propiedad industrial y otras normas del derecho.</p>
+
+<p>El usuario es consciente de que el acceso y utilización de los servicios y contenidos de los sitios web y móviles se realiza bajo su única y exclusiva responsabilidad.</p>
+
+<p>El acceso a los sitios web, y móviles y/o la visualización de los contenidos o utilización de los servicios contenidos en los mismos, implica que el usuario acepta expresamente las presentes condiciones generales de uso y por tanto adquiere una serie de derechos y obligaciones, con objeto de garantizar el adecuado disfrute de los servicios y contenidos que se encuentran en los mismos y que SELAE pone a disposición del usuario.</p>
+
+<p>Se adquiere la condición de usuario mediante el acceso a los sitios web o móviles. El usuario utilizará los servicios y contenidos exclusivamente para fines particulares con exclusión de cualquier modalidad de utilización posterior de los mismos con ánimo de lucro o reporte de algún beneficio, directo o indirecto.</p>
+
+<p>Si estas condiciones generales fueran sustituidas por otras, en todo o en parte, dichas nuevas condiciones generales se entenderán aceptadas de forma idéntica a la expuesta. No obstante, el usuario de los sitios web o móviles deberá acceder a estas condiciones generales de forma periódica para conocer las sucesivas versiones que se incluyan aquí, aunque se recomienda que el usuario acceda a las mismas cada vez que pretenda acceder o hacer uso de los servicios y contenidos de los sitios web o móviles.</p>
+
+<p>En caso de que el usuario no acepte estas condiciones generales y/o las condiciones particulares que regulen el uso de un determinado servicio y/o contenido, deberá abstenerse de acceder a los sitios web o móviles y/o abandonar la navegación a través de los mismos así como no utilizar los servicios ofrecidos.</p>
+
+<p>El usuario deberá establecer las medidas de seguridad de carácter técnico adecuadas para evitar acciones no deseadas en su sistema de información, archivos y equipos informáticos empleados para acceder a Internet y, especial, al sitio, siendo consciente de que Internet no es totalmente seguro.</p>
+
+<p>SELAE podrá modificar de forma unilateral y sin aviso previo, la prestación, configuración, contenido y servicios de los sitios web y móviles, así como sus condiciones de uso y el acceso a los servicios prestados.</p>
+
+<p align="justify">El coste del acceso telefónico u otro tipo de gasto por la conexión al acceso a los sitios web y móviles correrá a cargo exclusivamente del usuario.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">3. Registro de usuario</h2>
+
+<p>Las condiciones de uso de las<b> credenciales de acceso </b>del usuario son las siguientes:</p>
+
+<ul>
+	<li>Está prohibido el empleo de direcciones de correo electrónico o NIF/NIE diferentes de los propios, sea para registrarse o para acceder.</li>
+	<li>Toda credencial de acceso (por ejemplo, contraseña) elegida o asignada al usuario es secreta, personal e intransferible y su custodia es plena responsabilidad del usuario.</li>
+	<li>El usuario elegirá unas credenciales de acceso y preguntas de seguridad que no emplee en otros sistemas informáticos y que tengan la robustez requerida conforme a las directivas de seguridad de SELAE vigentes.</li>
+	<li>El usuario deberá prestar la diligencia debida para impedir el acceso y/o utilización de su Cuenta de Usuario por parte de terceros.</li>
+	<li>El usuario será el único responsable de la elección, pérdida, sustracción, divulgación, uso imprudente o utilización no autorizada de cualquier credencial de acceso o clave identificativa de la Plataforma y de las consecuencias que de ello se puedan derivar.</li>
+	<li>En caso de tener indicios de pérdida, sustracción, filtración o utilización no autorizada de sus credenciales de acceso, el usuario deberá comunicar a SELAE, a la mayor brevedad, la pérdida, sustracción, filtración o utilización no autorizada de sus credenciales de acceso. De este modo, SELAE procederá a la suspensión cautelar del acceso del usuario hasta su esclarecimiento.</li>
+</ul>
+
+<p>El acceso a la cuenta de usuario estará disponible mediante acceso telemático todos los días de la semana, incluidos festivos, en horario ininterrumpido, salvo por cuestiones de mantenimiento programado o fuerza mayor, averías o incidencias operativas o de seguridad (como es el Geobloqueo, superación de intentos fallidos de acceso o similares). Las tareas de mantenimiento se limitarán a las estrictamente imprescindibles y, salvo imperativo técnico, se concentrarán en las franjas horarias de menor actividad en la Plataforma. Se entienden como tareas de mantenimiento las derivadas diariamente de, entre otros, el cierre diario de actividad, incluyendo conciliaciones y chequeos de consistencia de datos, la determinación de ganadores, notificación y abono de sus premios, la regeneración de la Plataforma para el reinicio de las actividades de juego, más cualesquiera procedimientos internos de seguridad conducentes a asegurar la correcta prestación del servicio.</p>
+
+<p>La Plataforma tiene un diseño resiliente y las interrupciones por avería tienen una escasa probabilidad de ocurrencia. Sin embargo, SELAE no garantiza la disponibilidad absoluta del sistema en los horarios operativos programados.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">4. Derechos y obligaciones del usuario</h2>
+
+<p>El usuario podrá:</p>
+
+<ul align="justify">
+	<li>Acceder a los contenidos y servicios de los sitios web y móviles disponibles como tales, sin perjuicio de las condiciones técnicas, condiciones particulares, contrato que los regulen y/o la necesidad del previo registro según se determine.</li>
+	<li>Utilizar los servicios y contenidos disponibles para su uso exclusivamente particular.</li>
+	<li>Hacer un uso correcto y lícito de los sitios web y móviles de conformidad con la legislación vigente, la moral, las buenas costumbres y el orden público.</li>
+</ul>
+
+<p>En ningún caso el usuario podrá:</p>
+
+<ul align="justify">
+	<li>Acceder o utilizar los servicios y contenidos de los sitios web y móviles para la comisión de acciones ilícitas o contrarias a la legislación vigente, la moral, las buenas costumbres y el orden público, con fines lesivos de derechos y libertades de terceros, o que puedan perjudicar, dañar o impedir por cualquier forma, el acceso a los mismos, en perjuicio de SELAE o de terceros.</li>
+	<li>Utilizar los servicios, total o parcialmente, para promocionar, vender, contratar, divulgar publicidad o información propia o de terceras personas sin autorización previa y por escrito de SELAE.</li>
+	<li>Introducir información en los sitios web y móviles o emplear los servicios existentes en los mismos con la finalidad de atentar –directa o indirectamente– contra los derechos de otros usuarios o de SELAE y, muy especialmente, sus derechos fundamentales y libertades públicas.</li>
+	<li>Utilizar los servicios y contenidos ofrecidos de forma contraria a las condiciones generales de uso y/o las condiciones particulares que en su caso regulen el uso de un determinado servicio y/o contenido, y en perjuicio o con menoscabo de los derechos del resto de usuarios.</li>
+	<li>Realizar cualquier acción que impida o dificulte el acceso a los sitios por los usuarios, así como de los hipervínculos a los servicios y contenidos ofrecidos por SELAE o por terceros a través de los sitios web y móviles.</li>
+	<li>Emplear cualquier tipo de virus informático, código, software, programa informático, equipo informático o de telecomunicaciones, que puedan provocar daños o alteraciones no autorizadas de los contenidos, programas o sistemas accesibles a través de los servicios y contenidos prestados en los sitios web y móviles o en los sistemas de información, archivos y equipos informáticos de los usuarios de los mismos; o el acceso no autorizado a cualesquiera contenidos y/o servicios de los sitios web y móviles.</li>
+	<li>Eliminar o modificar de cualquier modo los dispositivos de protección o identificación de SELAE o sus legítimos titulares que puedan contener los contenidos alojados en los sitios web y móviles, o los símbolos que SELAE o los terceros legítimos titulares de los derechos incorporen a sus creaciones objeto de propiedad intelectual o industrial existentes en los mismos.</li>
+	<li>Incluir en sitios web de su responsabilidad o propiedad “metatags” correspondientes a marcas, nombres comerciales o signos distintivos propiedad de SELAE.</li>
+	<li>Reproducir total o parcialmente los sitios web y móviles en otro sitio web; no podrá realizar enmarcados al sitio o los sitios web accesibles a través del mismo que oculten o modifiquen –con carácter no limitativo- contenidos, espacios publicitarios y marcas de SELAE o de terceros, con independencia o no de que supongan actos de competencia desleal o de confusión.</li>
+	<li>Crear marcos dentro de un sitio web de su responsabilidad o propiedad que reproduzcan la página principal y/o las páginas accesibles a través de la misma, correspondientes a los sitios web y móviles sin la previa autorización de SELAE.</li>
+	<li>Incluir en un sitio web de su responsabilidad o propiedad un hiperenlace que genere una ventana o sesión del software de navegación empleado por un usuario de su sitio web, en que se incluyan marcas, nombres comerciales o signos distintivos de su SELAE y a través del cual se muestre la página web principal de o alguna de las páginas accesibles a través de la misma.</li>
+	<li>Utilizar la marca, nombres comerciales, así como cualquier otro signo identificativo u otros derechos que se encuentre sujeto a derechos de propiedad intelectual o industrial, sin la previa autorización expresa y por escrito de su propietario.</li>
+	<li>Realizar cualquier acción que suponga la reproducción, distribución, copia, alquiler, comunicación pública, transformación o cualquier otra acción similar que suponga la modificación o alteración, de todo o parte de los contenidos y servicios de los sitios web y móviles o la explotación económica de los mismos, sin la autorización previa y por escrito de SELAE o del tercero propietario de los derechos de propiedad intelectual e industrial que recaigan sobre los servicios o contenidos de los mismos, salvo que lo dispuesto en estas condiciones generales o, en su caso, condiciones particulares que regulen el uso de un servicio y/o contenido existente en aquéllos lo permitan.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">5. Derechos y obligaciones de SELAE</h2>
+
+<p>SELAE se reserva los siguientes derechos:</p>
+
+<ul align="justify">
+	<li>Modificar las condiciones de acceso a los sitios web y móviles, técnicas o no, de forma unilateral y sin preaviso a los usuarios, sin perjuicio de lo dispuesto en las condiciones particulares que regulen el uso de un determinado servicio y/o contenido destinado a los usuarios de los sitios.</li>
+	<li>Establecer condiciones particulares y, en su caso, la exigencia de un precio u otros requisitos para el acceso a determinados servicios y/o contenidos.</li>
+	<li>Limitar, excluir o condicionar el acceso de los usuarios cuando no se den todas las garantías de utilización correcta del sitio por los mismos conforme a las obligaciones y prohibiciones asumidas por los mismos.</li>
+	<li>Finalizar la prestación de un servicio o suministro de un contenido, sin generar derecho a indemnización alguno.</li>
+	<li>Modificar, suprimir o actualizar todo o parte de los contenidos o servicios ofrecidos a través de los sitios web y móviles, sin necesidad de preaviso.</li>
+	<li>Emprender cualquier acción legal o judicial que resulte conveniente para la protección de los derechos de SELAE como de terceros que presten sus servicios o contenidos a través de los sitios web y móviles, siempre que resulte procedente.</li>
+	<li>Exigir la indemnización que pudiera derivar por el uso indebido o ilícito de todo o parte de los servicios y contenidos prestados a través de los sitios web y móviles</li>
+</ul>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">6. Enlaces</h2>
+
+<p><b>Enlaces a otras páginas web de terceros</b></p>
+
+<p>En el caso de que en los sitios web y móviles se mostraran enlaces o hipervínculos a otras páginas web y móviles de terceros mediante diferentes botones, links, banners o contenidos embebidos, SELAE informa que éstos se encuentran directamente gestionados por terceros. En ningún caso, SELAE ejercerá algún tipo de control sobre dichos sitios o contenidos, no teniendo la disponibilidad técnica para conocer de forma previa y/o controlar y/o aprobar toda la información, contenidos, fiabilidad, exactitud, veracidad, calidad, productos o servicios facilitados por otras plataformas a las que se puedan establecer enlaces desde el sitio web.</p>
+
+<p>En consecuencia, SELAE no podrá asumir ningún tipo de responsabilidad por cualquier aspecto relativo a la plataforma, página web y móvil a la que se pudiera establecer un enlace desde los sitios web y móviles, en concreto, a título enunciativo y no limitativo, sobre su funcionamiento, acceso, datos, información, archivos, calidad y fiabilidad de sus productos y servicios, sus propios enlaces y/o cualquiera de sus contenidos, en general.</p>
+
+<p>En este sentido, si los usuarios tuvieran conocimiento efectivo de que las actividades desarrolladas a través de plataformas, móviles y páginas web de terceros son ilegales o contravienen la moral y/o el orden público, deberán comunicarlo inmediatamente a SELAE a los efectos de que se proceda a deshabilitar el enlace de acceso a las mismas, acción que se realizará en el menor tiempo posible.</p>
+
+<p>En todo caso, el establecimiento de cualquier tipo de enlace desde los sitios web y móviles de SELAE a otro site ajeno no implicará que exista algún tipo de relación, colaboración o dependencia entre SELAE y el responsable de dicho sitio web ajeno.</p>
+
+<p>&nbsp;</p>
+
+<p><b>Enlaces al canal de SELAE en otras plataformas y redes sociales</b></p>
+
+<p>SELAE pone a disposición de los usuarios, a través de diferentes herramientas y aplicaciones, medios de enlace que permiten a los usuarios acceder a los canales y páginas de los sitios web y móviles que SELAE mantiene en diferentes plataformas (Google play, App Store, etc.) y redes sociales pertenecientes y/o gestionadas por terceros (p.ej. Facebook, X (Twitter), Youtube, etc.). La inclusión de estos enlaces en los sitios web y móviles tiene por único objeto facilitar a los usuarios el acceso a dichos canales en las diferentes plataformas y redes sociales.</p>
+
+<p>El establecimiento de estos canales no implica la existencia de relación alguna entre SELAE y el titular, fabricante o distribuidor de la plataforma enlazada, como tampoco la aceptación y aprobación por parte de SELAE de sus contenidos y/o servicios; siendo su titular, fabricante o distribuidor el único responsable de los mismos.</p>
+
+<p>De ningún modo SELAE comparte con Facebook, X (Twitter), Youtube o cualquier otra red social que se incorpore en el futuro ningún tipo de información privada sobre sus usuarios, siendo su única finalidad la establecida en la presente Política de Uso de la Web y Sitios Móviles así como en la&nbsp;<b><a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/estipulaciones-proteccion-datos">Política de Protección de Datos</a></b>&nbsp; de los sitios web y aplicaciones móviles de SELAE. En este sentido, toda la información que el propio usuario desee proporcionar a estas plataformas será bajo su propia responsabilidad, no interviniendo el prestador en dicho proceso.</p>
+
+<p>La activación y uso de estas aplicaciones puede conllevar la identificación y autenticación del usuario (login/contraseña) en las plataformas correspondientes, completamente externas y fuera del control de SELAE. Al acceder a dichas redes externas, el usuario ingresa en un entorno no controlado por este SELAE, por lo que SELAE no asumirá ninguna responsabilidad sobre la configuración de seguridad de dichos entornos.</p>
+
+<p>Dado que SELAE no tiene control alguno sobre el contenido alojado en dichos canales, el usuario reconoce y acepta que el SELAE no asume responsabilidad alguna por el contenido ni por los servicios a los que el usuario pueda acceder en dichas páginas, ni por cualquier contenido, productos, servicios, publicidad, ni cualquier otro material disponible en los mismos. En consecuencia, el usuario debe extremar la prudencia en la valoración y utilización de la información, contenidos y servicios existentes en los canales enlazados, y sobre la información propia o de terceros que quiera compartir en dichos canales.</p>
+
+<div>
+<div id="_com_1" language="JavaScript">
+<p>&nbsp;</p>
+</div>
+</div>
+
+<p><b>Enlaces en otras páginas web con destino a SELAE</b></p>
+
+<p>El usuario que desee incluir hipervínculos en sus páginas web particulares o comerciales a los sitios web y móviles de SELAE que no se limiten única y exclusivamente al acceso a la página principal, deberá (i) comunicarlo por escrito a SELAE y (ii) comprometerse a cumplir cualquier la normativa relativa a publicidad en el sector del juego, en el caso de que resulte aplicable. SELAE no asume ninguna responsabilidad en relación a los enlaces facilitados por terceros a sus sitios web y móviles.</p>
+
+<p>Si los usuarios, entidades o sitios web deseasen establecer enlaces en sus respectivas páginas web o móviles que dirijan a SELAE podrán ser autorizados, debiendo no obstante cumplir al menos las siguientes condiciones: a) el enlace no podrá reproducir el contenido de SELAE o partes del mismo de ninguna forma; b) no está permitido crear un&nbsp;<i>browser</i>&nbsp;ni un&nbsp;<i>border environment</i>&nbsp;sobre las secciones de SELAE, ni de ninguna otra forma podrán modificarse los sitios web y móviles; c) no está permitido realizar manifestaciones o indicaciones falsas o inexactas o incorrectas sobre SELAE y/o, en particular, declarar o dar a entender que el prestador ha autorizado el enlace o que ha supervisado o asumido de cualquier forma los contenidos o servicios ofrecidos o puestos a disposición en el sitio en el que se establece dicho enlace; d) la página web, plataforma y/o móvil en la que se establezca el enlace a los sitios web y móviles no contendrá informaciones o contenidos ilícitos, contrarios a la moral y buenas costumbres generalmente aceptadas y al orden público, así como tampoco contendrá contenidos contrarios a cualesquiera derechos de terceros, incluidos los derechos de propiedad intelectual e industrial y/o el derecho al honor, a la intimidad personal o familiar o a la propia imagen o de cualquier otro derecho, o contenidos, contrarios a las normas reguladoras de la protección de datos de carácter personal.</p>
+
+<p>En ningún caso, SELAE autoriza el establecimiento de un enlace a los sitios web y móviles desde aquellos sitios que contengan materiales, información o contenidos ilícitos, ilegales, degradantes, obscenos y, en general, que contravengan las leyes, la moral o el orden público, o las normas sociales generalmente aceptadas.</p>
+
+<p>De cualquier forma, SELAE no tiene facultad ni medios humanos ni técnicos para conocer, controlar ni aprobar toda la información, contenidos, productos o servicios facilitados por otras páginas web o aplicaciones que tengan establecidos enlaces con destino a la plataforma. SELAE no asume ningún tipo de responsabilidad por cualquier aspecto relativo a la plataforma, móvil y/o página web de terceros que establece ese enlace con destino los sitios web y móviles, en concreto, a título enunciativo y no taxativo, sobre su funcionamiento, acceso, datos, información, archivos, calidad y fiabilidad de sus productos y servicios, sus propios enlaces y/o cualquiera de sus contenidos, en general.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">7.Exención y limitación de responsabilidad</h2>
+
+<p align="justify">SELAE queda exenta de cualquier tipo de responsabilidad por daños y perjuicios de toda naturaleza en los siguientes casos:</p>
+
+<ul align="justify">
+	<li>Por la imposibilidad o dificultades de conexión a la red de comunicaciones a través de la que resultan accesibles los sitios web y móviles, independientemente de la clase de conexión utilizada por el usuario.</li>
+	<li>Por la interrupción, suspensión o cancelación del acceso a los sitios web y móviles, así como por disponibilidad y continuidad del funcionamiento de los mismos o de sus servicios y/o contenidos, cuando ello se deba a una causa ajena al ámbito de control de SELAE.</li>
+	<li>SELAE no asume ninguna responsabilidad respecto de los servicios y contenidos, ni por la disponibilidad y condiciones, técnicas o no, de acceso a los mismos, que sean ofrecidos por terceros prestadores de servicios y, en especial, respecto de los prestadores de servicios de la sociedad de la información. Por prestadores de servicios de la sociedad de la información se entenderán aquellas personas físicas o jurídicas que presten los siguientes servicios al público: (i) transmisión por una red de comunicación de datos facilitados por el destinatario del servicio; (ii) servicios de acceso a la citada red; (iii) servicios de almacenamiento o alojamiento de datos; (iv) suministro de contenidos o información; (v) servicios de copia temporal de los datos solicitados por los usuarios; y (vi) la facilitación de enlaces a contenidos o instrumentos de búsqueda.</li>
+	<li>Del tratamiento y utilización posterior de datos personales realizados por terceros ajenos a SELAE, así como la pertinencia de la información solicitada por éstos.</li>
+	<li>De la calidad y velocidad de acceso a los sitios web y móviles y de las condiciones técnicas que debe reunir el usuario con el fin de poder acceder a los mismos y a sus servicios y/o contenidos.</li>
+	<li>SELAE no será responsable de los retrasos o fallos que se produjeran en el acceso y/o funcionamiento de los servicios y/o contenidos de los sitios web y móviles, debido a un caso de fuerza mayor.</li>
+</ul>
+
+<p>El usuario responderá personalmente de los daños y perjuicios de cualquier naturaleza causados a SELAE directa o indirectamente, por el incumplimiento de cualquiera de las obligaciones derivadas de estas condiciones generales u otras normas por las que se rija la utilización de los sitios web y móviles.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">8. Propiedad intelectual e industrial</h2>
+
+<p>El usuario reconoce que los contenidos y servicios ofrecidos a través de los sitios web y móviles así como las marcas, nombres comerciales o signos distintivos incluidos en los sitios web y móviles se encuentran protegidos por las leyes de propiedad intelectual e industrial. El derecho de autor y de explotación económica de los sitios web y móviles corresponde a SELAE y/o terceras entidades.</p>
+
+<p>La prestación de los servicios y publicación de los contenidos a través de los sitios web y móviles no implicará en ningún caso la cesión, renuncia o transmisión, total o parcial, de la titularidad de los correspondientes derechos de propiedad intelectual e industrial por SELAE y/o sus terceros legítimos titulares.</p>
+
+<p>Bajo ningún concepto podrá el usuario realizar un uso o utilización de los servicios y contenidos existentes en los sitios web y móviles que no sea exclusivamente personal.</p>
+
+<p>Ninguna parte de los sitios web y móviles puede ser reproducida, distribuida, transmitida, copiada, comunicada públicamente, transformada, en todo o en parte, mediante ningún sistema o método manual, electrónico o mecánico (incluyendo el fotocopiado, grabación o cualquier sistema de recuperación y almacenamiento de información) a través de cualquier soporte actualmente conocido o que se invente en el futuro, sin consentimiento de SELAE. La utilización, bajo cualquier modalidad, de todo o parte del contenido de los sitios web y móviles queda sujeta a la necesidad de solicitar autorización previa de SELAE y/o terceros titulares legítimos y la aceptación de la correspondiente licencia, en su caso, excepto para lo dispuesto respecto de los derechos reconocidos y concedidos al usuario en estas condiciones generales o lo que así se determine en las condiciones particulares que SELAE tenga a bien establecer para regular el uso de un determinado servicio y/o contenido ofrecido a través de los sitios web y móviles.</p>
+
+<p>Si la actuación u omisión, culpable o negligente, directa o indirectamente imputable al usuario que origine la infracción de los derechos de propiedad intelectual e industrial de SELAE o de terceros -exista o no beneficio para el mismo- originase a SELAE daños, pérdidas, obligaciones solidarias, gastos de cualquier naturaleza, sanciones, medidas coercitivas, multas y otras cantidades surgidas o derivadas de cualquier reclamación, demanda, acción, pleito o procedimiento, sea civil, penal o administrativo; SELAE tendrá derecho a dirigirse contra el usuario por todos los medios legales a su alcance y reclamar cualesquiera cantidades indemnizatorias, incluyendo – a título enunciativo y no limitativo- daños morales e imagen, daño emergente y lucro cesante, costes publicitarios o de cualquier otra índole que pudieran resultar para su reparación, el pago de importes de sanciones o sentencias condenatorias, intereses de demora, el coste de la financiación de todas las cantidades en que pudiera resultar perjudicada SELAE, las costas judiciales y el importe de la defensa en cualquier proceso en el que pudiera resultar demandada SELAE por las causas anteriormente expuesta y, en general, por los daños y perjuicios ocasionados por razón de su actuación u omisión, sin perjuicio de ejercer cualesquiera otras acciones que en derecho le corresponda.</p>
+
+<p>SELAE no adquiere obligación legal de ninguna clase por la descarga y uso de las aplicaciones móviles. SELAE únicamente concede al usuario una licencia de uso no exclusiva e intransferible sobre las aplicaciones para su uso personal y privado durante el período de tiempo por el que se mantenga activa y para su uso en todo el mundo, en las siguientes condiciones: (i) queda prohibido cualquier uso no privado así como la alteración de cualquiera de las partes de las aplicaciones incluida su funcionalidad, reprogramación e ingeniería inversa, para cualquier finalidad; (ii) queda prohibido transferir, traspasar, arrendar, o vender las aplicaciones o cualquier otro acto de disposición, distribución y comunicación pública temporal o permanente, gratuita u onerosamente; y (iii) queda prohibido alterar, modificar o suprimir cualesquiera símbolos y mecanismos de protección adoptados al objeto de preservar los derechos de propiedad de SELAE.</p>
+
+<p>El usuario acepta la utilización de las aplicaciones “tal cual son” sin ningún tipo de garantía ni responsabilidad de ningún tipo sobre mala instalación de la aplicación, uso de la misma, fallos de la aplicación o uso defectuoso.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">9. Protección de datos</h2>
+
+<p>SELAE llevará a cabo el tratamiento de los datos de carácter personal del usuario de acuerdo con la legislación vigente sobre protección de datos de carácter personal en España. Para más información consulte la&nbsp;<a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/estipulaciones-proteccion-datos">Política de Protección de Datos</a>.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">10. Uso de cookies y web beacons</h2>
+
+<p>Para obtener información acerca de los dispositivos de almacenamiento y recuperación de datos en equipos terminales de los usuarios de los sitios web y móviles de SELAE puede visitar nuestra&nbsp;<a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/politica-de-cookies">Política de Cookies</a>.</p>
+
+<h2 style="line-height: 1.2; font-size: 16px; text-align: left;">11. Miscelánea</h2>
+
+<p>El hecho de que SELAE no exija en un momento determinado el respeto de alguna de las condiciones establecidas en estas condiciones generales no puede ser interpretado por el usuario como la renuncia de SELAE a exigir ulteriormente su cumplimiento.</p>
+
+<p>En el supuesto de que cualquier cláusula de estas condiciones generales resulte anulable o nula, en su totalidad o en parte, esta nulidad o anulabilidad no afectará a la validez de otras cláusulas de las mismas condiciones, las cuales permanecerán con plena eficacia y validez, salvo que la parte que alegue su nulidad o anulabilidad pruebe que sin la cláusula que resultare nula o anulable no podrán cumplirse los fines perseguidos por las presentes condiciones.</p>
+
+<p>Las partes, con expresa renuncia a su propio fuero, se someten para la resolución de cuantos litigios pudieran derivarse a los Juzgados y Tribunales de Madrid capital.</p>
+
+<p align="justify">&nbsp;</p>
+
+<p align="justify">Última actualización: 31 de octubre de 2024</p>
+
+<p align="justify">&nbsp;</p>
+</div>
+
+
+</div>
+				<div class="pieListado">
+	
+	</div></div>
+		</div>
+<div class="contenedor contenedorInferior" >
+
+			    </div>
+</div>
+			<!-- Fin Contenido -->
+			<!-- Pie -->
+			<div class="contenedor pie subhome">
+    <div class="r-pie">
+		<div class="c-pie">
+			<div class="c-pie__content">
+				<div class="c-pie__item c-pie__item--descarga">
+					<!-- 
+					<p class="c-pie__texto" id="qa_pie_texto_descargaNuestraApp">
+						</p>
+					 -->
+					<div class="contenido-descargas">
+						<a href="https://www.loteriasyapuestas.es/es/appselae" class="c-pie__enlace-descarga" id="qa_pie_boton_disponibleEnAndroidAppStore1"> 
+								<img src="/f/loterias/estaticos/imagenes/sass/android.svg" class="c-pie__imagen-descarga" alt="App Android" title="App Android"><span class="c-pie__titulo-destacado">Disponible para</span><span class="c-pie__texto-destacado">Android</span></a>
+						<a href="https://itunes.apple.com/es/app/misloterias/id536094772?mt=8&ls=1" class="c-pie__enlace-descarga" id="qa_pie_boton_disponibleEnAndroidAppStore2"> 
+								<img src="/f/loterias/estaticos/imagenes/sass/app_store.svg" class="c-pie__imagen-descarga" alt="Apple Store" title="Apple Store"><span class="c-pie__titulo-destacado">Disponible en la</span><span class="c-pie__texto-destacado">App Store</span></a>
+						</div>
+				</div>
+				
+				<div class="c-pie__item c-pie__item--redes-sociales">
+					<div class="c-pie__separador"></div>
+
+					<a href="https://www.facebook.com/loteriasyapuestas.es" class="c-pie__enlace-redes-sociales" id="qa_pie_boton_redSocial1" target="_blank" rel="noopener noreferrer"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/facebook.svg" class="c-pie__imagen-redes-sociales" alt="Facebook" title="Facebook">
+						</a>
+					<a href="https://twitter.com/loterias_es" class="c-pie__enlace-redes-sociales" id="qa_pie_boton_redSocial2" target="_blank" rel="noopener noreferrer"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/twitter.svg" class="c-pie__imagen-redes-sociales" alt="Twitter" title="Twitter">
+						</a>
+					<a href="https://www.youtube.com/user/loteriasyap" class="c-pie__enlace-redes-sociales" id="qa_pie_boton_redSocial3" target="_blank" rel="noopener noreferrer"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/youtube.svg" class="c-pie__imagen-redes-sociales" alt="YouTube" title="YouTube">
+						</a>
+					<div class="c-pie__separador"></div>
+					
+					<a href="/es/contacto" class="c-pie__enlace-redes-sociales" id="qa_pie_enlace_contacto1"> 
+							<img src="/f/loterias/imagenes/contacto_pie.svg" class="c-pie__imagen-redes-sociales c-pie__imagen-redes-sociales--contactos" id="qa_pie_logo_contacto1" alt="Contacto" title="Contacto">
+							<span class="c-pie__enlace-text-redes-sociales" title="Contacto">Contacto</span>
+						</a>
+					<a href="/es/contacto" class="c-pie__enlace-redes-sociales" id="qa_pie_enlace_contacto2"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/headset.svg" class="c-pie__imagen-redes-sociales c-pie__imagen-redes-sociales--contactos" id="qa_pie_logo_contacto2" alt="Teléfono" title="Teléfono">
+							<span class="c-pie__enlace-text-redes-sociales" title="Teléfono">900 11 23 13 / 91 596 23 00</span>
+						</a>
+					<div class="c-pie__separador"></div>
+				</div>
+				
+				<div class="c-pie__item c-pie__item--formas-pago">
+					<a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/lotobolsa/pago-seguro-con-tarjeta-de-credito-debito" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/imagenes/estaticos/imagenes/topaz/visa.png" class="c-pie__logo-pago" id="qa_pie_formasDePago1" alt="Visa" title="Visa">
+						
+						</a><a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/lotobolsa/pago-seguro-con-tarjeta-de-credito-debito" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/imagenes/estaticos/imagenes/topaz/mastercard.png" class="c-pie__logo-pago" id="qa_pie_formasDePago2" alt="Mastercard" title="Mastercard">
+						
+						</a><a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/lotobolsa/pago-mediante-banca-electronica" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/imagenes/estaticos/imagenes/topaz/traspaso.png" class="c-pie__logo-pago" id="qa_pie_formasDePago3" alt="Traspaso rápido" title="Traspaso rápido">
+						
+						</a><a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/lotobolsa/pago-por-paypal" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/estaticos/imagenes/sass/paypal.svg" class="c-pie__logo-pago" id="qa_pie_formasDePago4" alt="Paypal" title="Paypal">
+						
+						</a></div>
+				
+				<div class="c-pie__item c-pie__item--menu">
+					<a href="/es/web-corporativa/quienes-somos" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes1" target="_blank" rel="noopener noreferrer">
+							Conócenos</a>
+						<div class="c-pie__separador"></div>
+						<a href="/es/centro-de-ayuda/centro-de-informacion-y-ayuda" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes2" target="_blank" rel="noopener noreferrer">
+							Ayuda</a>
+						<div class="c-pie__separador"></div>
+						<a href="/es/juego-mas-seguro" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes3" target="_blank" rel="noopener noreferrer">
+							Juego más seguro</a>
+						<div class="c-pie__separador"></div>
+						<a href="/es/centro-de-ayuda/informacion-pie/aviso-legal" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes4" target="_blank" rel="noopener noreferrer">
+							Aviso Legal</a>
+						<div class="c-pie__separador"></div>
+						<a href="/es/centro-de-ayuda/informacion-pie/estipulaciones-proteccion-datos" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes5" target="_blank" rel="noopener noreferrer">
+							Protección de datos</a>
+						<div class="c-pie__separador"></div>
+						<a href="/es/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes6" target="_blank" rel="noopener noreferrer">
+							Uso Web</a>
+						<div class="c-pie__separador"></div>
+						<a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/accesibilidad" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes7" target="_blank" rel="noopener noreferrer">
+							Accesibilidad</a>
+						<div class="c-pie__separador"></div>
+						<a href="https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/politica-de-cookies" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes8" target="_blank" rel="noopener noreferrer">
+							Gestión de cookies</a>
+						</div>
+				
+				<div class="c-pie__item c-pie__item--logos">
+					<a href="https://www.selae.es/es/web-corporativa/responsabilidad-social/gestion-responsable-del-juego/primera-regla-del-juego-18-anos/primera-regla-del-juego-18-anos" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados1" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/estaticos/imagenes/sass/major18.svg" class="c-pie__imagen-aviso" alt="+ 18 años" title="+ 18 años" >
+						
+						</a>
+						<a href="https://juegos.loteriasyapuestas.es/jugar/evidencias/6/6" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados2" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/estaticos/imagenes/sass/warning.svg" class="c-pie__imagen-aviso" alt="RGIAJ" title="RGIAJ" >
+						
+						</a>
+						<a href="https://www.ordenacionjuego.es/participantes-juego/juego-autorizado" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados3" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/t-juego_autorizado.svg" class="c-pie__imagen-aviso" alt="Juego autorizado" title="Juego autorizado" >
+						
+						</a>
+						<a href="https://www.ordenacionjuego.es/participantes-juego/juego-seguro" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados4" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/t-juego_seg.svg" class="c-pie__imagen-aviso" alt="Juego seguro" title="Juego seguro" >
+						
+						</a>
+						<a href="https://www.selae.es/es/paginas-informativas/certificados" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados5" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/estaticos/imagenes/sass/logo-certif.svg" class="c-pie__imagen-aviso" alt="Certificados SELAE" title="Certificados SELAE" >
+						
+						</a>
+						<a href="https://www.european-lotteries.org/" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados6" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/twebsegura.png" class="c-pie__imagen-aviso" alt="European Lotteries" title="European Lotteries" >
+						
+						</a>
+						<a href="https://cibelae.net/" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados7" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/lg-cibelae.png" class="c-pie__imagen-aviso" alt="Cibelae" title="Cibelae" >
+						
+						</a>
+						<a href="https://www.selae.es/es/web-corporativa/quienes-somos/la-empresa/asociacion-mundial-de-loterias-wla" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados8" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/estaticos/imagenes/bsi_wla1.svg" class="c-pie__imagen-aviso" alt="WLA" title="WLA" >
+						
+						</a>
+						</div>
+				
+				<div class="c-pie__item c-pie__item--copyright">
+					<p class="c-pie__texto-copyright" id="qa_pie_textoCopyright">
+                    	&#x00a9; SELAE<span class="c-pie__texto-legal" id="qa_pie_textoLegal">
+           					Todas las marcas de SELAE est&aacute;n registradas y est&aacute; prohibido el uso de estas por terceros sin autorizaci&oacute;n expresa de SELAE- Loter&iacute;as y Apuestas del Estado</span>
+                	</p>
+            	</div>
+            </div>
+		</div>
+	</div>
+</div><!-- Fin Pie -->
+		</div>
+	</body>
+	<script type="text/javascript">
+		try {
+			loadMenuOptionsResponsive();
+			loadResponsiveFooter();
+		} catch (err) {
+			console.error('ERROR en loadMenuOptionsResponsive: ' + err);
+		}
+	
+		/** Controlamos que al cambiar el ancho de la pantalla volvemos a cargar el menÃº de juegos de la cabecera. */
+		/** Esto es imprescindible para dispositivos donde se cambia la orientacion de la pantalla */
+		try {
+			var w = getWidth();
+			setInterval('checkWidth()', 700);
+			function checkWidth() {
+				if (w != getWidth()) {
+					loadMenuOptionsResponsive();
+					w = getWidth();
+				}
+			}
+		} catch (err) {
+			console.error('ERROR en orientationchange: ' + err);
+		}
+	</script>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "check": "Janela de dez",
+    "count": "10",
+    "url": "#/loterias/lotofacil/resumo?from=2026-09-21&to=2026-10-26&limit=10"
+  },
+  {
+    "check": "Janela vazia",
+    "evidence": "Nenhum sorteio neste recorte\n\nO período escolhido não encontra registros na amostra. Isso não significa que não houve sorteios fora dela.\n\nRestaurar período da amostra"
+  },
+  {
+    "check": "Restaurar recupera amostra e limpa query",
+    "count": "30",
+    "url": "#/loterias/lotofacil/resumo"
+  },
+  {
+    "check": "Intervalo invertido rejeitado",
+    "evidence": "A data inicial deve ser anterior ou igual à final."
+  }
+]
