@@ -1,0 +1,123 @@
+{
+  "baseline_comparisons": [
+    {
+      "expected": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+      "field": "source_sha256",
+      "matches": true,
+      "observed": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e"
+    },
+    {
+      "expected": 3571,
+      "field": "total_rows",
+      "matches": true,
+      "observed": 3571
+    },
+    {
+      "expected": 1,
+      "field": "first_contest",
+      "matches": true,
+      "observed": 1
+    },
+    {
+      "expected": 3571,
+      "field": "last_contest",
+      "matches": true,
+      "observed": 3571
+    },
+    {
+      "expected": "2003-09-29",
+      "field": "first_date",
+      "matches": true,
+      "observed": "2003-09-29"
+    },
+    {
+      "expected": "2025-12-24",
+      "field": "last_date",
+      "matches": true,
+      "observed": "2025-12-24"
+    },
+    {
+      "expected": 426,
+      "field": "missing_winner_locations",
+      "matches": true,
+      "observed": 426
+    },
+    {
+      "expected": 2791,
+      "field": "missing_observations",
+      "matches": true,
+      "observed": 2791
+    }
+  ],
+  "baseline_matches": true,
+  "canonical_content_sha256": "b74f5a227fec52c05a8151d6ac7465ada4d28bb07b28849e5630ec05eb70466b",
+  "duplicate_keys": {},
+  "issue_counts": {},
+  "issues": [],
+  "lottery_slug": "lotofacil",
+  "money_counts": {
+    "next_estimated_jackpot": {
+      "known": 3571,
+      "zero": 218
+    },
+    "prize_per_winner.hits_11": {
+      "known": 3571
+    },
+    "prize_per_winner.hits_12": {
+      "known": 3571
+    },
+    "prize_per_winner.hits_13": {
+      "known": 3571
+    },
+    "prize_per_winner.hits_14": {
+      "known": 3571
+    },
+    "prize_per_winner.hits_15": {
+      "known": 3571,
+      "zero": 426
+    },
+    "rollover_amount": {
+      "known": 3571,
+      "zero": 3005
+    },
+    "sales_total": {
+      "known": 3571,
+      "zero": 428
+    },
+    "special_draw_rollover": {
+      "known": 3571,
+      "zero": 893
+    }
+  },
+  "normalizer_version": "spec-0006",
+  "report_version": "1",
+  "source_sha256_after": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+  "source_sha256_before": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+  "source_unchanged": true,
+  "summary": {
+    "candidate_rows": 3571,
+    "duplicate_key_rows": 0,
+    "first_contest": 1,
+    "first_date": "2003-09-29",
+    "invalid_rows": 0,
+    "last_contest": 3571,
+    "last_date": "2025-12-24",
+    "main_max": 25,
+    "main_min": 1,
+    "main_values_count": 53565,
+    "missing_contests": [],
+    "missing_identity_rows": 0,
+    "missing_observations": 2791,
+    "missing_winner_locations": 426,
+    "total_rows": 3571,
+    "unique_keys": 3571,
+    "valid_rows": 3571
+  },
+  "winner_totals": {
+    "hits_11": 3665769365,
+    "hits_12": 699729621,
+    "hits_13": 60729210,
+    "hits_14": 1927044,
+    "hits_15": 11979
+  }
+}

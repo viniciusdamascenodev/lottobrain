@@ -1,0 +1,24 @@
+# Código/configuração com convenção estável; evidências e raws preservam bytes.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.xlsx binary
+*.xls binary
+*.zip binary
+*.png binary
+*.pdf binary
+data/** -text
+docs/data/** -text
+docs/design/** -text
+tests/fixtures/** -text
+migrations/** -text
+docs/design/prototipo/data.js -text
+docs/design/proveniencia-prototipo.json -text
+docs/design/evidencias/** -text

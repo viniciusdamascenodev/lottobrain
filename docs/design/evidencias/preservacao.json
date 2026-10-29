@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-28",
+  "baselineFiles": 336,
+  "unchangedFiles": 329,
+  "modifiedExistingFiles": [
+    "README.md",
+    "docs/architecture/contratos-produto.md",
+    "docs/architecture/roadmap.md",
+    "docs/engineering/learnings.md",
+    "docs/engineering/plano-entrega-quatro-dias.md",
+    "docs/specs/SPEC-0033-primeiro-fluxo-online-mega-sena.md",
+    "docs/specs/SPEC-0035-painel-analitico-previsoes-e-catalogo.md"
+  ],
+  "missingExistingFiles": [],
+  "unexpectedChanges": [],
+  "newFilesOutsideDesign": [],
+  "productionCodeUnchanged": true,
+  "previousDataReportsUnchanged": true,
+  "sourceIntegrityEvidence": "calculos-e-integridade.json"
+}

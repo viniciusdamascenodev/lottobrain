@@ -1,0 +1,126 @@
+{
+  "baseline_comparisons": [
+    {
+      "expected": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238",
+      "field": "source_sha256",
+      "matches": true,
+      "observed": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238"
+    },
+    {
+      "expected": 3742,
+      "field": "total_rows",
+      "matches": true,
+      "observed": 3742
+    },
+    {
+      "expected": null,
+      "field": "first_contest",
+      "matches": true,
+      "observed": null
+    },
+    {
+      "expected": null,
+      "field": "last_contest",
+      "matches": true,
+      "observed": null
+    },
+    {
+      "expected": "1992-04-22",
+      "field": "first_date",
+      "matches": true,
+      "observed": "1992-04-22"
+    },
+    {
+      "expected": "2025-12-24",
+      "field": "last_date",
+      "matches": true,
+      "observed": "2025-12-24"
+    },
+    {
+      "expected": 3742,
+      "field": "missing_winner_locations",
+      "matches": true,
+      "observed": 3742
+    },
+    {
+      "expected": 3742,
+      "field": "missing_observations",
+      "matches": true,
+      "observed": 3742
+    }
+  ],
+  "baseline_matches": true,
+  "canonical_content_sha256": "41afe9224564a803fdd624c07fb65eed4514528f7b8a2ba0701982960520fd83",
+  "duplicate_keys": {},
+  "issue_counts": {},
+  "issues": [],
+  "lottery_slug": "powerball",
+  "money_counts": {
+    "advertised_jackpot": {
+      "known": 3742
+    }
+  },
+  "normalizer_version": "spec-0010",
+  "power_play_multiplier_counts": {
+    "1": 30,
+    "10": 22,
+    "2": 1077,
+    "3": 717,
+    "4": 353,
+    "5": 407
+  },
+  "power_play_state_counts": {
+    "fixed_prize_no_multiplier": 210,
+    "not_applicable": 926,
+    "observed": 2606
+  },
+  "report_version": "1",
+  "rule_version_counts": {
+    "pb_1992_45x45": 578,
+    "pb_1997_49x42": 514,
+    "pb_2002_53x42": 302,
+    "pb_2005_55x42": 350,
+    "pb_2009_59x39": 316,
+    "pb_2012_59x35": 388,
+    "pb_2015_69x26": 1294
+  },
+  "source_sha256_after": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238",
+  "source_sha256_before": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238",
+  "source_unchanged": true,
+  "special_components": {
+    "double_play": {
+      "main_max": 69,
+      "main_min": 1,
+      "main_values_count": 3400,
+      "powerball_max": 26,
+      "powerball_min": 1,
+      "rows": 680
+    },
+    "primary_powerball": {
+      "max": 45,
+      "min": 1,
+      "values_count": 3742
+    }
+  },
+  "summary": {
+    "candidate_rows": 3742,
+    "duplicate_key_rows": 0,
+    "first_contest": null,
+    "first_date": "1992-04-22",
+    "invalid_rows": 0,
+    "last_contest": null,
+    "last_date": "2025-12-24",
+    "main_max": 69,
+    "main_min": 1,
+    "main_values_count": 18710,
+    "missing_contests": [],
+    "missing_identity_rows": 0,
+    "missing_observations": 3742,
+    "missing_winner_locations": 3742,
+    "total_rows": 3742,
+    "unique_keys": 3742,
+    "valid_rows": 3742
+  },
+  "winner_totals": {}
+}
+

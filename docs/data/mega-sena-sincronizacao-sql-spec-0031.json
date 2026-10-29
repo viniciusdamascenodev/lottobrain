@@ -1,0 +1,154 @@
+{
+  "evidence_version": "lottobrain.spec-0031-evidence.v1",
+  "spec": "SPEC-0031",
+  "verified_on": "2026-10-26",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed",
+  "scope": {
+    "environment": "disposable_postgresql_only",
+    "operational_database_created": false,
+    "external_lottery_requests": 0,
+    "scheduling_enabled": false,
+    "publication_enabled": false,
+    "historical_source": "caixa_mega_sena_xlsx",
+    "incremental_source": "caixa_mega_sena_json",
+    "migration_head": "0031_01"
+  },
+  "verification": {
+    "distinct_tests_passed": 375,
+    "common": {
+      "passed": 257,
+      "seconds": 81.92,
+      "exit_code": 0,
+      "command": ".venv\\Scripts\\python -m pytest tests --ignore=tests/database -q"
+    },
+    "full_isolated_runner": {
+      "passed": 118,
+      "real_postgresql_tests": 110,
+      "double_tests": 8,
+      "seconds": 7114.014,
+      "exit_code": 0,
+      "log": ".local-postgres/spec0031-integracao-20261026.log",
+      "cluster": ".local-postgres/runs/a9cf98d4ed6c44348a9b6bc64eac7d9f",
+      "shutdown_confirmed": true,
+      "shutdown_log_local": "2026-10-26 21:08:02.918 -03",
+      "postmaster_pid_absent": true,
+      "fixture": "Cloned consistent SQL approval from the real SPEC-0030 scenario in this same process/cluster; SPEC-0029 also independently reimported and audited 2954 records.",
+      "runtime_note": "Observed elapsed time of this execution, not a performance benchmark."
+    },
+    "focal": {
+      "passed": 15,
+      "seconds": 629.467,
+      "exit_code": 0,
+      "already_counted_in_full_suite": true,
+      "log": ".local-postgres/spec0031-focal-20261026.log",
+      "cluster": ".local-postgres/runs/cc485423e39d4b28ba75b799f22a864d",
+      "shutdown_confirmed": true,
+      "postmaster_pid_absent": true,
+      "note": "Executed the first 12 feature cases plus three smoke cases; later feature cases 13-16 passed in the complete runner."
+    },
+    "smoke": {
+      "passed": 3,
+      "seconds": 11.664,
+      "exit_code": 0,
+      "already_counted_in_full_suite": true,
+      "log": ".local-postgres/spec0031-smoke-20261026.log",
+      "cluster": ".local-postgres/runs/e6ded00f6ed6405fb3c8408fb5a9ffe0",
+      "shutdown_confirmed": true,
+      "postmaster_pid_absent": true
+    },
+    "final_cleanup_change": "Best-effort release was broadened to preserve the primary failure even if cleanup raises an unexpected exception; the final common suite includes a dedicated test. The running SQL suite may have loaded the earlier cleanup guard; no SQL path, schema, or business rule changed. The final protocol signature addition is annotation-only."
+  },
+  "preservation": {
+    "checked_existing_files": 76,
+    "all_unchanged": true,
+    "categories": {
+      "raw_files": 6,
+      "previous_data_documents": 31,
+      "previous_migration_sources": 12,
+      "existing_fixtures": 11,
+      "existing_mega_sena_collection_files": 16
+    },
+    "previous_file_audit": {
+      "status": "healthy",
+      "equals_previous_saved_report": true,
+      "reference": "docs/data/mega-sena-auditoria-ingestao.json"
+    },
+    "preexisting_postgresql_services_unchanged": [
+      "postgresql-x64-12",
+      "postgresql-x64-13"
+    ]
+  },
+  "migration_sources": [
+    {
+      "path": "migrations/sql/0031_01_sync_batches.sql",
+      "sha256": "15dd88ba20bcf07eeb03075af9e70a5dd979836e3f3cf4dd1ec58a30adc4fd08"
+    },
+    {
+      "path": "migrations/versions/0031_01_sync_batches.py",
+      "sha256": "fc506aaa60be62cde458dc7b114d36310c9882f08670e7d6af5ff2346bb68421"
+    }
+  ],
+  "historical_fixture": {
+    "records": 2954,
+    "first_contest": 1,
+    "last_contest": 2954,
+    "last_date": "2025-12-20",
+    "raw_sha256": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+    "records_manifest_sha256": "9c963b7f327ea52482a83d86433ad2e48c990838be1f1ebee6ffa1e175c298e5",
+    "baseline_approval_real": true
+  },
+  "positive_batch_report": {
+    "batch_id": "726864e9-68ce-4153-933e-aea0e0b48f20",
+    "cooldown_until": null,
+    "cursor_after": 2955,
+    "cursor_before": 2954,
+    "latest_observed": 2955,
+    "operations": [
+      {
+        "contest": null,
+        "http_status": 200,
+        "observation_id": "559778a0-fcc5-4f83-8368-ed1b2f560f02",
+        "observed": 2955,
+        "ordinal": 1,
+        "outcome": "new",
+        "phase": "discovery",
+        "receipt_id": "86839754-4a38-4f11-b166-4a4b6e3ee9ca",
+        "reused_discovery": false
+      },
+      {
+        "contest": 2955,
+        "http_status": 200,
+        "observation_id": "559778a0-fcc5-4f83-8368-ed1b2f560f02",
+        "observed": 2955,
+        "ordinal": 2,
+        "outcome": "replayed",
+        "phase": "forward",
+        "receipt_id": "86839754-4a38-4f11-b166-4a4b6e3ee9ca",
+        "reused_discovery": true
+      }
+    ],
+    "policy": {
+      "interval_seconds": 2,
+      "max_requests": 1,
+      "review_window": 0
+    },
+    "remaining": 0,
+    "report_version": "mega-sena-sql-sync-v1",
+    "request_slots_used": 1,
+    "review_next": 2955,
+    "status": "completed",
+    "stop_reason": "caught_up"
+  },
+  "proof_limits": {
+    "request_slots_used": "Conservative reserved capture intentions, not an exact count of requests delivered to a remote provider after a crash.",
+    "transport": "Test doubles using existing real archived bytes 2954, 2955 and 3071; negative responses/failures explicitly simulated.",
+    "review_429": "Direct real SQL T3 review boundary, not a fabricated successful intermediate draw to traverse backlog.",
+    "current_production_coverage_claimed": false
+  },
+  "next_task": {
+    "spec": "SPEC-0032",
+    "title": "Auditoria somente leitura da sincronização PostgreSQL Mega-Sena",
+    "executed": false
+  }
+}

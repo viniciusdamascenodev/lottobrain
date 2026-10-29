@@ -1,0 +1,2186 @@
+{
+  "report_version": "lottobrain.current-source-verification.v1",
+  "verified_on": "2026-10-27",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed_core_contract_verification",
+  "stage2": {
+    "core_result_contracts_verified": 6,
+    "close_for_core_v1": true,
+    "automation_approved": false,
+    "continuous_coverage_certified": false,
+    "historical_inventory_repeated": false,
+    "meaning": "Technical samples qualify retrieval and interpretation of primary results; bulk import, full recent reconciliation, scheduler qualification and provider license/SLA approval remain separate."
+  },
+  "scope": {
+    "source_probing_only": true,
+    "production_code_changed": false,
+    "database_created": false,
+    "new_collector_implemented": false,
+    "existing_raw_files_modified": false,
+    "operational_cursor_advanced": false,
+    "legacy_catalog_readiness_changed": false,
+    "network_body_limit_bytes": 2097152,
+    "zip_member_limit_bytes": 4194304,
+    "redirects_followed": false,
+    "tls_verification_disabled": false
+  },
+  "network_summary": {
+    "direct_probe_intentions": 18,
+    "http_200": 15,
+    "http_302": 1,
+    "no_http_response": 2,
+    "automatic_retries": 0,
+    "browser_research_counted_separately": true,
+    "body_bytes_retained_in_versioned_samples": 312412,
+    "note": "Intentions/observed responses are not an exact remote server GET count after transport errors. No contest range was requested individually; three small published CSV/ZIP exports were fetched once."
+  },
+  "samples": [
+    {
+      "name": "caixa_loto_3571",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_loto_3571.json",
+      "byte_count": 2549,
+      "sha256": "5701e8804333002c6effbd315dee2e5db71b181c04c52e6e3bba9b804485083e"
+    },
+    {
+      "name": "caixa_loto_latest",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_loto_latest.json",
+      "byte_count": 2544,
+      "sha256": "cafdd0a45cf153901197ebf01411028da713d1ed676670859a2e2267de0801a4"
+    },
+    {
+      "name": "caixa_mega_2954",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mega_2954.json",
+      "byte_count": 1750,
+      "sha256": "78242eed3eb7d9384721f8739e6c10f5e344f3a747619f3e9006dd55108921a1"
+    },
+    {
+      "name": "caixa_mega_latest",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mega_latest.json",
+      "byte_count": 1745,
+      "sha256": "6e7850886c79e135b7977869cc049b8d91cdd5864cd4c33fac65e829eeb6a42e"
+    },
+    {
+      "name": "caixa_mili_314",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mili_314.json",
+      "byte_count": 2769,
+      "sha256": "35676bd07fec753c04df2ed7464cb80aa31b6cb815dfd9b6a14c6ac60763250b"
+    },
+    {
+      "name": "caixa_mili_latest",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mili_latest.json",
+      "byte_count": 2784,
+      "sha256": "b573c57ba271c6c06603e2e92fd7b6567dbb916e4293e2d469e511ae07ec97f0"
+    },
+    {
+      "name": "fdj_recent_zip",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/fdj_recent_zip.zip",
+      "byte_count": 117493,
+      "sha256": "1536e755fdcb863864c33885ba53d96371a27bfe2f0f7da04edd447e2c948cf6"
+    },
+    {
+      "name": "texas_megamillions",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/texas_megamillions.csv",
+      "byte_count": 102380,
+      "sha256": "263420ef03a6df996bf5256504560f544d9d239033c8adebd8b6129e06186d56"
+    },
+    {
+      "name": "texas_powerball",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/texas_powerball.csv",
+      "byte_count": 78398,
+      "sha256": "7a4041a13bef7d7b699d93107228defa94baa4252c45caea0b596caf69519520"
+    }
+  ],
+  "direct_probes": [
+    {
+      "name": "caixa_calendar_html",
+      "url": "https://loterias.caixa.gov.br/Paginas/regras-sorteios.aspx",
+      "observed_at_utc": "2026-10-27T15:38:25.184412+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://loterias.caixa.gov.br/Paginas/regras-sorteios.aspx",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "98061",
+        "ETag": "\"KXNFBPICEPYPOKX\"",
+        "Date": "Tue, 27 Oct 2026 15:38:25 GMT"
+      },
+      "byte_count": 98061,
+      "sha256": "23af9f6c4e7ebd963a7ed9d0eee22c9a0afb0a2a5774b2dadcb7245b5b7a0c2d",
+      "within_size_limit": true
+    },
+    {
+      "name": "caixa_calendar_oct_pdf",
+      "url": "https://www.caixa.gov.br/Downloads/caixa-loterias/Cronograma_10_outubro_2026.pdf",
+      "observed_at_utc": "2026-10-27T15:38:28.121264+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 302,
+      "response_url": "https://www.caixa.gov.br/Downloads/caixa-loterias/Cronograma_10_outubro_2026.pdf",
+      "headers": {
+        "Date": "Tue, 27 Oct 2026 15:38:28 GMT",
+        "Location": "https://www.caixa.gov.br/Downloads/caixa-loterias/Cronograma_10_outubro_2026.pdf"
+      },
+      "byte_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "within_size_limit": true
+    },
+    {
+      "name": "caixa_loto_3571",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/3571",
+      "observed_at_utc": "2026-10-27T15:36:59.425547+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/3571",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2549",
+        "Date": "Tue, 27 Oct 2026 15:36:59 GMT"
+      },
+      "byte_count": 2549,
+      "sha256": "5701e8804333002c6effbd315dee2e5db71b181c04c52e6e3bba9b804485083e",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 3571,
+        "dataApuracao": "24/12/2025",
+        "tipoJogo": "LOTOFACIL",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "08",
+          "11",
+          "12",
+          "13",
+          "14",
+          "17",
+          "20",
+          "22",
+          "24",
+          "25"
+        ],
+        "trevosSorteados": null
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_loto_3814",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/3814",
+      "observed_at_utc": "2026-10-27T15:38:20.814833+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/3814",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2544",
+        "Date": "Tue, 27 Oct 2026 15:38:21 GMT"
+      },
+      "byte_count": 2544,
+      "sha256": "cafdd0a45cf153901197ebf01411028da713d1ed676670859a2e2267de0801a4",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 3814,
+        "dataApuracao": "26/10/2026",
+        "tipoJogo": "LOTOFACIL",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "01",
+          "04",
+          "06",
+          "08",
+          "09",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17",
+          "18",
+          "21",
+          "22",
+          "24",
+          "25"
+        ],
+        "trevosSorteados": null
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_loto_latest",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil",
+      "observed_at_utc": "2026-10-27T15:35:52.070641+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2544",
+        "Date": "Tue, 27 Oct 2026 15:35:52 GMT"
+      },
+      "byte_count": 2544,
+      "sha256": "cafdd0a45cf153901197ebf01411028da713d1ed676670859a2e2267de0801a4",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 3814,
+        "dataApuracao": "26/10/2026",
+        "tipoJogo": "LOTOFACIL",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "01",
+          "04",
+          "06",
+          "08",
+          "09",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17",
+          "18",
+          "21",
+          "22",
+          "24",
+          "25"
+        ],
+        "trevosSorteados": null
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_mega_2954",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/2954",
+      "observed_at_utc": "2026-10-27T15:36:57.159963+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/2954",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "1750",
+        "Date": "Tue, 27 Oct 2026 15:36:57 GMT"
+      },
+      "byte_count": 1750,
+      "sha256": "78242eed3eb7d9384721f8739e6c10f5e344f3a747619f3e9006dd55108921a1",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 2954,
+        "dataApuracao": "20/12/2025",
+        "tipoJogo": "MEGA_SENA",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "01",
+          "09",
+          "37",
+          "39",
+          "42",
+          "44"
+        ],
+        "trevosSorteados": null
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_mega_3075",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "observed_at_utc": "2026-10-27T15:38:18.568451+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "1745",
+        "Date": "Tue, 27 Oct 2026 15:38:18 GMT"
+      },
+      "byte_count": 1745,
+      "sha256": "6e7850886c79e135b7977869cc049b8d91cdd5864cd4c33fac65e829eeb6a42e",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 3075,
+        "dataApuracao": "26/10/2026",
+        "tipoJogo": "MEGA_SENA",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "07",
+          "10",
+          "14",
+          "27",
+          "36",
+          "55"
+        ],
+        "trevosSorteados": null
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_mega_latest",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena",
+      "observed_at_utc": "2026-10-27T15:35:49.333707+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "1745",
+        "Date": "Tue, 27 Oct 2026 15:35:50 GMT"
+      },
+      "byte_count": 1745,
+      "sha256": "6e7850886c79e135b7977869cc049b8d91cdd5864cd4c33fac65e829eeb6a42e",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 3075,
+        "dataApuracao": "26/10/2026",
+        "tipoJogo": "MEGA_SENA",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "07",
+          "10",
+          "14",
+          "27",
+          "36",
+          "55"
+        ],
+        "trevosSorteados": null
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_mili_314",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/maismilionaria/314",
+      "observed_at_utc": "2026-10-27T15:37:01.680299+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/maismilionaria/314",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2769",
+        "Date": "Tue, 27 Oct 2026 15:37:02 GMT"
+      },
+      "byte_count": 2769,
+      "sha256": "35676bd07fec753c04df2ed7464cb80aa31b6cb815dfd9b6a14c6ac60763250b",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 314,
+        "dataApuracao": "24/12/2025",
+        "tipoJogo": "MAIS_MILIONARIA",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "07",
+          "12",
+          "14",
+          "17",
+          "21",
+          "41"
+        ],
+        "trevosSorteados": [
+          "4",
+          "5"
+        ]
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "trevosSorteados",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_mili_401",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/maismilionaria/401",
+      "observed_at_utc": "2026-10-27T15:38:23.020882+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/maismilionaria/401",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2784",
+        "Date": "Tue, 27 Oct 2026 15:38:23 GMT"
+      },
+      "byte_count": 2784,
+      "sha256": "b573c57ba271c6c06603e2e92fd7b6567dbb916e4293e2d469e511ae07ec97f0",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 401,
+        "dataApuracao": "24/10/2026",
+        "tipoJogo": "MAIS_MILIONARIA",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "12",
+          "14",
+          "20",
+          "26",
+          "30",
+          "44"
+        ],
+        "trevosSorteados": [
+          "1",
+          "4"
+        ]
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "trevosSorteados",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "caixa_mili_latest",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/maismilionaria",
+      "observed_at_utc": "2026-10-27T15:35:54.322692+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/maismilionaria",
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2784",
+        "Date": "Tue, 27 Oct 2026 15:35:55 GMT"
+      },
+      "byte_count": 2784,
+      "sha256": "b573c57ba271c6c06603e2e92fd7b6567dbb916e4293e2d469e511ae07ec97f0",
+      "within_size_limit": true,
+      "summary": {
+        "numero": 401,
+        "dataApuracao": "24/10/2026",
+        "tipoJogo": "MAIS_MILIONARIA",
+        "tipoPublicacao": 3,
+        "listaDezenas": [
+          "12",
+          "14",
+          "20",
+          "26",
+          "30",
+          "44"
+        ],
+        "trevosSorteados": [
+          "1",
+          "4"
+        ]
+      },
+      "fields": [
+        "acumulado",
+        "dataApuracao",
+        "dataProximoConcurso",
+        "dezenasSorteadasOrdemSorteio",
+        "exibirDetalhamentoPorCidade",
+        "id",
+        "indicadorConcursoEspecial",
+        "listaDezenas",
+        "listaDezenasSegundoSorteio",
+        "listaMunicipioUFGanhadores",
+        "listaRateioPremio",
+        "listaResultadoEquipeEsportiva",
+        "localSorteio",
+        "nomeMunicipioUFSorteio",
+        "nomeTimeCoracaoMesSorte",
+        "numero",
+        "numeroConcursoAnterior",
+        "numeroConcursoFinal_0_5",
+        "numeroConcursoProximo",
+        "numeroJogo",
+        "observacao",
+        "premiacaoContingencia",
+        "tipoJogo",
+        "tipoPublicacao",
+        "trevosSorteados",
+        "ultimoConcurso",
+        "valorAcumuladoConcursoEspecial",
+        "valorAcumuladoConcurso_0_5",
+        "valorAcumuladoProximoConcurso",
+        "valorArrecadado",
+        "valorEstimadoProximoConcurso",
+        "valorSaldoReservaGarantidora",
+        "valorTotalPremioFaixaUm"
+      ]
+    },
+    {
+      "name": "fdj_recent_zip",
+      "url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afe6",
+      "observed_at_utc": "2026-10-27T15:36:02.687599+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://www.sto.api.fdj.fr/anonymous/service-draw-info/v3/documentations/1a2b3c4d-9876-4562-b3fc-2c963f66afe6",
+      "headers": {
+        "Content-Type": "application/zip",
+        "Content-Length": "117493",
+        "Date": "Tue, 27 Oct 2026 15:36:03 GMT"
+      },
+      "byte_count": 117493,
+      "sha256": "1536e755fdcb863864c33885ba53d96371a27bfe2f0f7da04edd447e2c948cf6",
+      "within_size_limit": true
+    },
+    {
+      "name": "fdj_results_page",
+      "url": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/resultats/vendredi-23-octobre-2026",
+      "observed_at_utc": "2026-10-27T15:38:37.521572+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/resultats/vendredi-23-octobre-2026",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 15:38:38 GMT"
+      },
+      "byte_count": 1349998,
+      "sha256": "8d8d4b410f9e2bba4aec86077acff01922aafe860850860051d83d0acd1a7081",
+      "within_size_limit": true
+    },
+    {
+      "name": "mega_millions_page",
+      "url": "https://www.texaslottery.com/export/sites/lottery/Games/Mega_Millions/Winning_Numbers/index.html",
+      "observed_at_utc": "2026-10-27T15:38:34.547174+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://www.texaslottery.com/export/sites/lottery/Games/Mega_Millions/Winning_Numbers/index.html",
+      "headers": {
+        "Content-Type": "text/html",
+        "Content-Length": "64297",
+        "Last-Modified": "Tue, 27 Oct 2026 15:13:12 GMT",
+        "ETag": "W/\"64297-1793113992877\"",
+        "Date": "Tue, 27 Oct 2026 15:38:35 GMT"
+      },
+      "byte_count": 64297,
+      "sha256": "92c38f92ba4cf326bdb0994d0104656595ac8591be396f85ee03bcc34bd0149c",
+      "within_size_limit": true
+    },
+    {
+      "name": "powerball_double_play_page",
+      "url": "https://www.powerball.com/double-play",
+      "observed_at_utc": "2026-10-27T15:38:32.470446+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "transport_error": "URLError"
+    },
+    {
+      "name": "powerball_page",
+      "url": "https://www.powerball.com/",
+      "observed_at_utc": "2026-10-27T15:38:30.308610+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "transport_error": "URLError"
+    },
+    {
+      "name": "texas_megamillions",
+      "url": "https://www.texaslottery.com/export/sites/lottery/Games/Mega_Millions/Winning_Numbers/megamillions.csv",
+      "observed_at_utc": "2026-10-27T15:35:59.786262+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://www.texaslottery.com/export/sites/lottery/Games/Mega_Millions/Winning_Numbers/megamillions.csv",
+      "headers": {
+        "Content-Type": "text/csv",
+        "Content-Length": "102380",
+        "Last-Modified": "Sat, 24 Oct 2026 03:10:53 GMT",
+        "ETag": "W/\"102380-1792811453211\"",
+        "Date": "Tue, 27 Oct 2026 15:36:00 GMT"
+      },
+      "byte_count": 102380,
+      "sha256": "263420ef03a6df996bf5256504560f544d9d239033c8adebd8b6129e06186d56",
+      "within_size_limit": true
+    },
+    {
+      "name": "texas_powerball",
+      "url": "https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/powerball.csv",
+      "observed_at_utc": "2026-10-27T15:35:56.968704+00:00",
+      "client_date": "2026-10-27",
+      "client_timezone": "America/Sao_Paulo",
+      "tls_verified": true,
+      "redirects_followed": false,
+      "request_budget": 1,
+      "http_status": 200,
+      "response_url": "https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/powerball.csv",
+      "headers": {
+        "Content-Type": "text/csv",
+        "Content-Length": "78398",
+        "Last-Modified": "Tue, 27 Oct 2026 03:06:53 GMT",
+        "ETag": "W/\"78398-1793070413518\"",
+        "Date": "Tue, 27 Oct 2026 15:35:57 GMT"
+      },
+      "byte_count": 78398,
+      "sha256": "7a4041a13bef7d7b699d93107228defa94baa4252c45caea0b596caf69519520",
+      "within_size_limit": true
+    }
+  ],
+  "verification": {
+    "sample_checks": 62,
+    "checks_passed": 62,
+    "checks_failed": [],
+    "offline_tests": {
+      "passed": 20,
+      "seconds": 0.49,
+      "exit_code": 0,
+      "command": ".venv\\Scripts\\python -m pytest tests/test_current_source_samples.py -q",
+      "network_access": false,
+      "full_sql_writer_suite_rerun": false
+    },
+    "checks": [
+      {
+        "name": "mega_sena.specific_identity",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.latest_matches_specific",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.latest.numbers",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.latest.date",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.latest.order",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.latest.tiers",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.latest.existing_normalizer",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "name": "mega_sena.overlap.numbers",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.overlap.date",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.overlap.order",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.overlap.tiers",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.overlap.existing_normalizer",
+        "passed": true,
+        "issues": []
+      },
+      {
+        "name": "mega_sena.overlap_identity_date_numbers",
+        "passed": true
+      },
+      {
+        "name": "mega_sena.overlap_tiers",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.specific_identity",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.latest_matches_specific",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.latest.numbers",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.latest.date",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.latest.order",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.latest.tiers",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.overlap.numbers",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.overlap.date",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.overlap.order",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.overlap.tiers",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.overlap_identity_date_numbers",
+        "passed": true
+      },
+      {
+        "name": "lotofacil.overlap_tiers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.specific_identity",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.latest_matches_specific",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.latest.numbers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.latest.date",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.latest.order",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.latest.clovers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.latest.tiers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap.numbers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap.date",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap.order",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap.clovers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap.tiers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap_identity_date_numbers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap_clovers",
+        "passed": true
+      },
+      {
+        "name": "mais_milionaria.overlap_tiers",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2012-01-14",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2012-01-18",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2014-01-18",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2014-01-22",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2025-12-24",
+        "passed": true
+      },
+      {
+        "name": "powerball.overlap_numbers",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2026-10-21",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2026-10-24",
+        "passed": true
+      },
+      {
+        "name": "powerball.sample_numbers.2026-10-26",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.sample_numbers.2025-04-04",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.sample_numbers.2025-04-08",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.sample_numbers.2025-12-23",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.overlap_numbers",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.sample_numbers.2026-10-16",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.sample_numbers.2026-10-20",
+        "passed": true
+      },
+      {
+        "name": "mega_millions.sample_numbers.2026-10-23",
+        "passed": true
+      },
+      {
+        "name": "euro_millions.sample_numbers.23/10/2026",
+        "passed": true
+      },
+      {
+        "name": "euro_millions.sample_numbers.20/10/2026",
+        "passed": true
+      },
+      {
+        "name": "euro_millions.sample_numbers.16/10/2026",
+        "passed": true
+      },
+      {
+        "name": "euro_millions.sample_numbers.26/12/2025",
+        "passed": true
+      },
+      {
+        "name": "euro_millions.overlap_numbers",
+        "passed": true
+      }
+    ]
+  },
+  "contracts": {
+    "caixa": [
+      {
+        "lottery": "mega_sena",
+        "latest_number": 3075,
+        "latest_date": "2026-10-26",
+        "main": [
+          7,
+          10,
+          14,
+          27,
+          36,
+          55
+        ],
+        "special": [],
+        "fields": [
+          "acumulado",
+          "dataApuracao",
+          "dataProximoConcurso",
+          "dezenasSorteadasOrdemSorteio",
+          "exibirDetalhamentoPorCidade",
+          "id",
+          "indicadorConcursoEspecial",
+          "listaDezenas",
+          "listaDezenasSegundoSorteio",
+          "listaMunicipioUFGanhadores",
+          "listaRateioPremio",
+          "listaResultadoEquipeEsportiva",
+          "localSorteio",
+          "nomeMunicipioUFSorteio",
+          "nomeTimeCoracaoMesSorte",
+          "numero",
+          "numeroConcursoAnterior",
+          "numeroConcursoFinal_0_5",
+          "numeroConcursoProximo",
+          "numeroJogo",
+          "observacao",
+          "premiacaoContingencia",
+          "tipoJogo",
+          "tipoPublicacao",
+          "ultimoConcurso",
+          "valorAcumuladoConcursoEspecial",
+          "valorAcumuladoConcurso_0_5",
+          "valorAcumuladoProximoConcurso",
+          "valorArrecadado",
+          "valorEstimadoProximoConcurso",
+          "valorSaldoReservaGarantidora",
+          "valorTotalPremioFaixaUm"
+        ],
+        "extra_fields_vs_mega": [],
+        "tier_descriptions": [
+          "6 acertos",
+          "5 acertos",
+          "4 acertos"
+        ],
+        "historical_end": 2954,
+        "new_sequence_slots_to_observed": 121,
+        "rows_not_downloaded_individually": 120,
+        "fields_absent_vs_previous": []
+      },
+      {
+        "lottery": "lotofacil",
+        "latest_number": 3814,
+        "latest_date": "2026-10-26",
+        "main": [
+          1,
+          4,
+          6,
+          8,
+          9,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          21,
+          22,
+          24,
+          25
+        ],
+        "special": [],
+        "fields": [
+          "acumulado",
+          "dataApuracao",
+          "dataProximoConcurso",
+          "dezenasSorteadasOrdemSorteio",
+          "exibirDetalhamentoPorCidade",
+          "id",
+          "indicadorConcursoEspecial",
+          "listaDezenas",
+          "listaDezenasSegundoSorteio",
+          "listaMunicipioUFGanhadores",
+          "listaRateioPremio",
+          "listaResultadoEquipeEsportiva",
+          "localSorteio",
+          "nomeMunicipioUFSorteio",
+          "nomeTimeCoracaoMesSorte",
+          "numero",
+          "numeroConcursoAnterior",
+          "numeroConcursoFinal_0_5",
+          "numeroConcursoProximo",
+          "numeroJogo",
+          "observacao",
+          "premiacaoContingencia",
+          "tipoJogo",
+          "tipoPublicacao",
+          "ultimoConcurso",
+          "valorAcumuladoConcursoEspecial",
+          "valorAcumuladoConcurso_0_5",
+          "valorAcumuladoProximoConcurso",
+          "valorArrecadado",
+          "valorEstimadoProximoConcurso",
+          "valorSaldoReservaGarantidora",
+          "valorTotalPremioFaixaUm"
+        ],
+        "extra_fields_vs_mega": [],
+        "tier_descriptions": [
+          "15 acertos",
+          "14 acertos",
+          "13 acertos",
+          "12 acertos",
+          "11 acertos"
+        ],
+        "historical_end": 3571,
+        "new_sequence_slots_to_observed": 243,
+        "rows_not_downloaded_individually": 242,
+        "fields_absent_vs_previous": []
+      },
+      {
+        "lottery": "mais_milionaria",
+        "latest_number": 401,
+        "latest_date": "2026-10-24",
+        "main": [
+          12,
+          14,
+          20,
+          26,
+          30,
+          44
+        ],
+        "special": [
+          1,
+          4
+        ],
+        "fields": [
+          "acumulado",
+          "dataApuracao",
+          "dataProximoConcurso",
+          "dezenasSorteadasOrdemSorteio",
+          "exibirDetalhamentoPorCidade",
+          "id",
+          "indicadorConcursoEspecial",
+          "listaDezenas",
+          "listaDezenasSegundoSorteio",
+          "listaMunicipioUFGanhadores",
+          "listaRateioPremio",
+          "listaResultadoEquipeEsportiva",
+          "localSorteio",
+          "nomeMunicipioUFSorteio",
+          "nomeTimeCoracaoMesSorte",
+          "numero",
+          "numeroConcursoAnterior",
+          "numeroConcursoFinal_0_5",
+          "numeroConcursoProximo",
+          "numeroJogo",
+          "observacao",
+          "premiacaoContingencia",
+          "tipoJogo",
+          "tipoPublicacao",
+          "trevosSorteados",
+          "ultimoConcurso",
+          "valorAcumuladoConcursoEspecial",
+          "valorAcumuladoConcurso_0_5",
+          "valorAcumuladoProximoConcurso",
+          "valorArrecadado",
+          "valorEstimadoProximoConcurso",
+          "valorSaldoReservaGarantidora",
+          "valorTotalPremioFaixaUm"
+        ],
+        "extra_fields_vs_mega": [
+          "trevosSorteados"
+        ],
+        "tier_descriptions": [
+          "6 acertos + 2 trevos",
+          "6 acertos + 1 ou nenhum trevo",
+          "5 acertos + 2 trevos",
+          "5 acertos + 1 ou nenhum trevo",
+          "4 acertos + 2 trevos",
+          "4 acertos + 1 ou nenhum trevo",
+          "3 acertos + 2 trevos",
+          "3 acertos + 1 trevo",
+          "2 acertos + 2 trevos",
+          "2 acertos + 1 trevo"
+        ],
+        "historical_end": 314,
+        "new_sequence_slots_to_observed": 87,
+        "rows_not_downloaded_individually": 86,
+        "fields_absent_vs_previous": []
+      }
+    ],
+    "texas": [
+      {
+        "lottery": "powerball",
+        "first_date_in_download": "2010-02-03",
+        "latest_date": "2026-10-26",
+        "latest_main": [
+          18,
+          26,
+          49,
+          50,
+          54
+        ],
+        "latest_special": 1,
+        "latest_columns": 11,
+        "latest_multiplier_cell": "3",
+        "recent_dates_after_baseline": 131,
+        "selected_rows": [
+          {
+            "date": "2012-01-14",
+            "raw_columns": [
+              "Powerball",
+              "1",
+              "14",
+              "2012",
+              "41",
+              "30",
+              "10",
+              "36",
+              "38",
+              "1",
+              "5"
+            ]
+          },
+          {
+            "date": "2012-01-18",
+            "raw_columns": [
+              "Powerball",
+              "1",
+              "18",
+              "2012",
+              "50",
+              "34",
+              "29",
+              "6",
+              "44",
+              "28",
+              ""
+            ]
+          },
+          {
+            "date": "2014-01-18",
+            "raw_columns": [
+              "Powerball",
+              "1",
+              "18",
+              "2014",
+              "38",
+              "14",
+              "13",
+              "19",
+              "31",
+              "25",
+              ""
+            ]
+          },
+          {
+            "date": "2014-01-22",
+            "raw_columns": [
+              "Powerball",
+              "1",
+              "22",
+              "2014",
+              "55",
+              "2",
+              "7",
+              "1",
+              "9",
+              "29",
+              "3"
+            ]
+          },
+          {
+            "date": "2025-12-24",
+            "raw_columns": [
+              "Powerball",
+              "12",
+              "24",
+              "2025",
+              "25",
+              "59",
+              "4",
+              "52",
+              "31",
+              "19",
+              "2"
+            ]
+          },
+          {
+            "date": "2026-10-21",
+            "raw_columns": [
+              "Powerball",
+              "10",
+              "21",
+              "2026",
+              "21",
+              "50",
+              "44",
+              "57",
+              "1",
+              "5",
+              "2"
+            ]
+          },
+          {
+            "date": "2026-10-24",
+            "raw_columns": [
+              "Powerball",
+              "10",
+              "24",
+              "2026",
+              "55",
+              "5",
+              "15",
+              "19",
+              "4",
+              "19",
+              "2"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "raw_columns": [
+              "Powerball",
+              "10",
+              "26",
+              "2026",
+              "18",
+              "49",
+              "50",
+              "26",
+              "54",
+              "1",
+              "3"
+            ]
+          }
+        ],
+        "raw_sample_lines": [
+          "Powerball,1,14,2012,41,30,10,36,38,1,5",
+          "Powerball,1,18,2012,50,34,29,6,44,28,",
+          "Powerball,1,18,2014,38,14,13,19,31,25,",
+          "Powerball,1,22,2014,55,2,7,1,9,29,3",
+          "Powerball,12,24,2025,25,59,4,52,31,19,2",
+          "Powerball,10,21,2026,21,50,44,57,1,5,2",
+          "Powerball,10,24,2026,55,5,15,19,4,19,2",
+          "Powerball,10,26,2026,18,49,50,26,54,1,3"
+        ]
+      },
+      {
+        "lottery": "mega_millions",
+        "first_date_in_download": "2003-12-05",
+        "latest_date": "2026-10-23",
+        "latest_main": [
+          3,
+          7,
+          46,
+          49,
+          51
+        ],
+        "latest_special": 5,
+        "latest_columns": 11,
+        "latest_multiplier_cell": "",
+        "recent_dates_after_baseline": 87,
+        "selected_rows": [
+          {
+            "date": "2025-04-04",
+            "raw_columns": [
+              "Mega Millions",
+              "4",
+              "4",
+              "2025",
+              "69",
+              "35",
+              "37",
+              "28",
+              "11",
+              "25",
+              "2"
+            ]
+          },
+          {
+            "date": "2025-04-08",
+            "raw_columns": [
+              "Mega Millions",
+              "4",
+              "8",
+              "2025",
+              "61",
+              "10",
+              "16",
+              "60",
+              "50",
+              "17",
+              ""
+            ]
+          },
+          {
+            "date": "2025-12-23",
+            "raw_columns": [
+              "Mega Millions",
+              "12",
+              "23",
+              "2025",
+              "38",
+              "41",
+              "37",
+              "15",
+              "64",
+              "21",
+              ""
+            ]
+          },
+          {
+            "date": "2026-10-16",
+            "raw_columns": [
+              "Mega Millions",
+              "10",
+              "16",
+              "2026",
+              "41",
+              "2",
+              "68",
+              "15",
+              "31",
+              "11",
+              ""
+            ]
+          },
+          {
+            "date": "2026-10-20",
+            "raw_columns": [
+              "Mega Millions",
+              "10",
+              "20",
+              "2026",
+              "35",
+              "13",
+              "48",
+              "33",
+              "28",
+              "3",
+              ""
+            ]
+          },
+          {
+            "date": "2026-10-23",
+            "raw_columns": [
+              "Mega Millions",
+              "10",
+              "23",
+              "2026",
+              "46",
+              "3",
+              "49",
+              "7",
+              "51",
+              "5",
+              ""
+            ]
+          }
+        ],
+        "raw_sample_lines": [
+          "Mega Millions,4,4,2025,69,35,37,28,11,25,2",
+          "Mega Millions,4,8,2025,61,10,16,60,50,17,",
+          "Mega Millions,12,23,2025,38,41,37,15,64,21,",
+          "Mega Millions,10,16,2026,41,2,68,15,31,11,",
+          "Mega Millions,10,20,2026,35,13,48,33,28,3,",
+          "Mega Millions,10,23,2026,46,3,49,7,51,5,"
+        ]
+      }
+    ],
+    "fdj": {
+      "lottery": "euro_millions",
+      "zip_member": "euromillions_202002.csv",
+      "uncompressed_bytes": 273909,
+      "csv_sha256": "0f5d571a11ebf0cfa9b62f4e860d7b3cff81b221681ea8c537129f05b5ac0ade",
+      "encoding": "utf-8-sig",
+      "delimiter": ";",
+      "fields": [
+        "annee_numero_de_tirage",
+        "jour_de_tirage",
+        "date_de_tirage",
+        "numéro_de_tirage_dans_le_cycle",
+        "date_de_forclusion",
+        "boule_1",
+        "boule_2",
+        "boule_3",
+        "boule_4",
+        "boule_5",
+        "etoile_1",
+        "etoile_2",
+        "boules_gagnantes_en_ordre_croissant",
+        "etoiles_gagnantes_en_ordre_croissant",
+        "nombre_de_gagnant_au_rang1_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang1_Euro_Millions_en_europe",
+        "rapport_du_rang1_Euro_Millions",
+        "nombre_de_gagnant_au_rang2_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang2_Euro_Millions_en_europe",
+        "rapport_du_rang2_Euro_Millions",
+        "nombre_de_gagnant_au_rang3_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang3_Euro_Millions_en_europe",
+        "rapport_du_rang3_Euro_Millions",
+        "nombre_de_gagnant_au_rang4_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang4_Euro_Millions_en_europe",
+        "rapport_du_rang4_Euro_Millions",
+        "nombre_de_gagnant_au_rang5_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang5_Euro_Millions_en_europe",
+        "rapport_du_rang5_Euro_Millions",
+        "nombre_de_gagnant_au_rang6_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang6_Euro_Millions_en_europe",
+        "rapport_du_rang6_Euro_Millions",
+        "nombre_de_gagnant_au_rang7_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang7_Euro_Millions_en_europe",
+        "rapport_du_rang7_Euro_Millions",
+        "nombre_de_gagnant_au_rang8_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang8_Euro_Millions_en_europe",
+        "rapport_du_rang8_Euro_Millions",
+        "nombre_de_gagnant_au_rang9_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang9_Euro_Millions_en_europe",
+        "rapport_du_rang9_Euro_Millions",
+        "nombre_de_gagnant_au_rang10_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang10_Euro_Millions_en_europe",
+        "rapport_du_rang10_Euro_Millions",
+        "nombre_de_gagnant_au_rang11_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang11_Euro_Millions_en_europe",
+        "rapport_du_rang11_Euro_Millions",
+        "nombre_de_gagnant_au_rang12_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang12_Euro_Millions_en_europe",
+        "rapport_du_rang12_Euro_Millions",
+        "nombre_de_gagnant_au_rang13_Euro_Millions_en_france",
+        "nombre_de_gagnant_au_rang13_Euro_Millions_en_europe",
+        "rapport_du_rang13_Euro_Millions",
+        "nombre_de_gagnant_au_rang1_Etoile+",
+        "rapport_du_rang1_Etoile+",
+        "nombre_de_gagnant_au_rang2_Etoile+",
+        "rapport_du_rang2_Etoile+",
+        "nombre_de_gagnant_au_rang3_Etoile+",
+        "rapport_du_rang3_Etoile+",
+        "nombre_de_gagnant_au_rang4_Etoile+",
+        "rapport_du_rang4_Etoile+",
+        "nombre_de_gagnant_au_rang5_Etoile+",
+        "rapport_du_rang5_Etoile+",
+        "nombre_de_gagnant_au_rang6_Etoile+",
+        "rapport_du_rang6_Etoile+",
+        "nombre_de_gagnant_au_rang7_Etoile+",
+        "rapport_du_rang7_Etoile+",
+        "nombre_de_gagnant_au_rang8_Etoile+",
+        "rapport_du_rang8_Etoile+",
+        "nombre_de_gagnant_au_rang9_Etoile+",
+        "rapport_du_rang9_Etoile+",
+        "nombre_de_gagnant_au_rang10_Etoile+",
+        "rapport_du_rang10_Etoile+",
+        "numero_My_Million",
+        "numero_Tirage_Exceptionnel_Euro_Million",
+        ""
+      ],
+      "first_date_in_partition": "2020-02-04",
+      "latest_date": "2026-10-23",
+      "latest_main": [
+        24,
+        33,
+        35,
+        44,
+        47
+      ],
+      "latest_special": [
+        7,
+        11
+      ],
+      "recent_dates_after_baseline": 86,
+      "selected_rows": [
+        {
+          "annee_numero_de_tirage": "26085",
+          "jour_de_tirage": "VENDREDI",
+          "date_de_tirage": "23/10/2026",
+          "numéro_de_tirage_dans_le_cycle": "6",
+          "date_de_forclusion": "22/01/2027",
+          "boule_1": "35",
+          "boule_2": "24",
+          "boule_3": "44",
+          "boule_4": "33",
+          "boule_5": "47",
+          "etoile_1": "11",
+          "etoile_2": "7",
+          "boules_gagnantes_en_ordre_croissant": "-24-33-35-44-47-",
+          "etoiles_gagnantes_en_ordre_croissant": "-7-11-",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_france": "0",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_europe": "0",
+          "rapport_du_rang1_Euro_Millions": "0",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_france": "3",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_europe": "4",
+          "rapport_du_rang2_Euro_Millions": "173226,90",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_france": "2",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_europe": "10",
+          "rapport_du_rang3_Euro_Millions": "16194,30",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_france": "4",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_europe": "32",
+          "rapport_du_rang4_Euro_Millions": "1576,20",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_france": "161",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_europe": "746",
+          "rapport_du_rang5_Euro_Millions": "124,50",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_france": "293",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_europe": "1601",
+          "rapport_du_rang6_Euro_Millions": "61,30",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_france": "311",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_europe": "1538",
+          "rapport_du_rang7_Euro_Millions": "44,80",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_france": "4310",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_europe": "23627",
+          "rapport_du_rang8_Euro_Millions": "14,60",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_france": "6238",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_europe": "31639",
+          "rapport_du_rang9_Euro_Millions": "12,10",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_france": "13286",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_europe": "68477",
+          "rapport_du_rang10_Euro_Millions": "10,40",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_france": "23235",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_europe": "125205",
+          "rapport_du_rang11_Euro_Millions": "6,90",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_france": "88536",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_europe": "458706",
+          "rapport_du_rang12_Euro_Millions": "5,90",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_france": "189860",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_europe": "1002789",
+          "rapport_du_rang13_Euro_Millions": "4,30",
+          "nombre_de_gagnant_au_rang1_Etoile+": "3",
+          "rapport_du_rang1_Etoile+": "482,80",
+          "nombre_de_gagnant_au_rang2_Etoile+": "1",
+          "rapport_du_rang2_Etoile+": "1158,80",
+          "nombre_de_gagnant_au_rang3_Etoile+": "79",
+          "rapport_du_rang3_Etoile+": "18,30",
+          "nombre_de_gagnant_au_rang4_Etoile+": "176",
+          "rapport_du_rang4_Etoile+": "8,20",
+          "nombre_de_gagnant_au_rang5_Etoile+": "2242",
+          "rapport_du_rang5_Etoile+": "1,60",
+          "nombre_de_gagnant_au_rang6_Etoile+": "3113",
+          "rapport_du_rang6_Etoile+": "3,10",
+          "nombre_de_gagnant_au_rang7_Etoile+": "11827",
+          "rapport_du_rang7_Etoile+": "3,80",
+          "nombre_de_gagnant_au_rang8_Etoile+": "21309",
+          "rapport_du_rang8_Etoile+": "9,90",
+          "nombre_de_gagnant_au_rang9_Etoile+": "44415",
+          "rapport_du_rang9_Etoile+": "2,60",
+          "nombre_de_gagnant_au_rang10_Etoile+": "454534",
+          "rapport_du_rang10_Etoile+": "2,30",
+          "numero_My_Million": "SW 049 0409",
+          "numero_Tirage_Exceptionnel_Euro_Million": "",
+          "": ""
+        },
+        {
+          "annee_numero_de_tirage": "26084",
+          "jour_de_tirage": "MARDI",
+          "date_de_tirage": "20/10/2026",
+          "numéro_de_tirage_dans_le_cycle": "5",
+          "date_de_forclusion": "19/01/2027",
+          "boule_1": "15",
+          "boule_2": "9",
+          "boule_3": "43",
+          "boule_4": "16",
+          "boule_5": "37",
+          "etoile_1": "7",
+          "etoile_2": "10",
+          "boules_gagnantes_en_ordre_croissant": "-9-15-16-37-43-",
+          "etoiles_gagnantes_en_ordre_croissant": "-7-10-",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_france": "0",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_europe": "0",
+          "rapport_du_rang1_Euro_Millions": "0",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_france": "0",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_europe": "1",
+          "rapport_du_rang2_Euro_Millions": "485756,60",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_france": "1",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_europe": "4",
+          "rapport_du_rang3_Euro_Millions": "28382,30",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_france": "5",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_europe": "22",
+          "rapport_du_rang4_Euro_Millions": "1607,30",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_france": "86",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_europe": "460",
+          "rapport_du_rang5_Euro_Millions": "141,60",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_france": "217",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_europe": "986",
+          "rapport_du_rang6_Euro_Millions": "69,80",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_france": "202",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_europe": "932",
+          "rapport_du_rang7_Euro_Millions": "51,90",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_france": "3624",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_europe": "15378",
+          "rapport_du_rang8_Euro_Millions": "15,70",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_france": "4472",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_europe": "21231",
+          "rapport_du_rang9_Euro_Millions": "12,70",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_france": "9514",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_europe": "46453",
+          "rapport_du_rang10_Euro_Millions": "10,80",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_france": "20039",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_europe": "85164",
+          "rapport_du_rang11_Euro_Millions": "7,10",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_france": "73546",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_europe": "332728",
+          "rapport_du_rang12_Euro_Millions": "5,70",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_france": "154027",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_europe": "732141",
+          "rapport_du_rang13_Euro_Millions": "4,20",
+          "nombre_de_gagnant_au_rang1_Etoile+": "0",
+          "rapport_du_rang1_Etoile+": "0",
+          "nombre_de_gagnant_au_rang2_Etoile+": "3",
+          "rapport_du_rang2_Etoile+": "649,40",
+          "nombre_de_gagnant_au_rang3_Etoile+": "54",
+          "rapport_du_rang3_Etoile+": "20,00",
+          "nombre_de_gagnant_au_rang4_Etoile+": "115",
+          "rapport_du_rang4_Etoile+": "9,40",
+          "nombre_de_gagnant_au_rang5_Etoile+": "1822",
+          "rapport_du_rang5_Etoile+": "1,40",
+          "nombre_de_gagnant_au_rang6_Etoile+": "2204",
+          "rapport_du_rang6_Etoile+": "3,20",
+          "nombre_de_gagnant_au_rang7_Etoile+": "10005",
+          "rapport_du_rang7_Etoile+": "3,40",
+          "nombre_de_gagnant_au_rang8_Etoile+": "17186",
+          "rapport_du_rang8_Etoile+": "9,10",
+          "nombre_de_gagnant_au_rang9_Etoile+": "36413",
+          "rapport_du_rang9_Etoile+": "2,40",
+          "nombre_de_gagnant_au_rang10_Etoile+": "333181",
+          "rapport_du_rang10_Etoile+": "2,30",
+          "numero_My_Million": "GB 742 6301",
+          "numero_Tirage_Exceptionnel_Euro_Million": "",
+          "": ""
+        },
+        {
+          "annee_numero_de_tirage": "26083",
+          "jour_de_tirage": "VENDREDI",
+          "date_de_tirage": "16/10/2026",
+          "numéro_de_tirage_dans_le_cycle": "4",
+          "date_de_forclusion": "15/01/2027",
+          "boule_1": "15",
+          "boule_2": "7",
+          "boule_3": "35",
+          "boule_4": "22",
+          "boule_5": "16",
+          "etoile_1": "6",
+          "etoile_2": "4",
+          "boules_gagnantes_en_ordre_croissant": "-7-15-16-22-35-",
+          "etoiles_gagnantes_en_ordre_croissant": "-4-6-",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_france": "0",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_europe": "0",
+          "rapport_du_rang1_Euro_Millions": "0",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_france": "0",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_europe": "0",
+          "rapport_du_rang2_Euro_Millions": "0",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_france": "1",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_europe": "5",
+          "rapport_du_rang3_Euro_Millions": "154533,00",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_france": "13",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_europe": "49",
+          "rapport_du_rang4_Euro_Millions": "930,40",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_france": "201",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_europe": "831",
+          "rapport_du_rang5_Euro_Millions": "101,00",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_france": "504",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_europe": "1949",
+          "rapport_du_rang6_Euro_Millions": "45,50",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_france": "446",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_europe": "1855",
+          "rapport_du_rang7_Euro_Millions": "33,60",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_france": "6737",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_europe": "26470",
+          "rapport_du_rang8_Euro_Millions": "11,70",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_france": "7894",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_europe": "35052",
+          "rapport_du_rang9_Euro_Millions": "9,90",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_france": "17599",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_europe": "79495",
+          "rapport_du_rang10_Euro_Millions": "8,10",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_france": "34121",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_europe": "132769",
+          "rapport_du_rang11_Euro_Millions": "5,90",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_france": "111617",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_europe": "486902",
+          "rapport_du_rang12_Euro_Millions": "5,00",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_france": "246221",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_europe": "1084418",
+          "rapport_du_rang13_Euro_Millions": "3,60",
+          "nombre_de_gagnant_au_rang1_Etoile+": "0",
+          "rapport_du_rang1_Etoile+": "0",
+          "nombre_de_gagnant_au_rang2_Etoile+": "7",
+          "rapport_du_rang2_Etoile+": "381,40",
+          "nombre_de_gagnant_au_rang3_Etoile+": "94",
+          "rapport_du_rang3_Etoile+": "15,70",
+          "nombre_de_gagnant_au_rang4_Etoile+": "234",
+          "rapport_du_rang4_Etoile+": "6,30",
+          "nombre_de_gagnant_au_rang5_Etoile+": "3206",
+          "rapport_du_rang5_Etoile+": "1,10",
+          "nombre_de_gagnant_au_rang6_Etoile+": "3942",
+          "rapport_du_rang6_Etoile+": "2,50",
+          "nombre_de_gagnant_au_rang7_Etoile+": "16095",
+          "rapport_du_rang7_Etoile+": "2,90",
+          "nombre_de_gagnant_au_rang8_Etoile+": "24954",
+          "rapport_du_rang8_Etoile+": "8,60",
+          "nombre_de_gagnant_au_rang9_Etoile+": "54907",
+          "rapport_du_rang9_Etoile+": "2,20",
+          "nombre_de_gagnant_au_rang10_Etoile+": "420242",
+          "rapport_du_rang10_Etoile+": "2,50",
+          "numero_My_Million": "VM 220 5192",
+          "numero_Tirage_Exceptionnel_Euro_Million": "",
+          "": ""
+        },
+        {
+          "annee_numero_de_tirage": "25103",
+          "jour_de_tirage": "VENDREDI",
+          "date_de_tirage": "26/12/2025",
+          "numéro_de_tirage_dans_le_cycle": "4",
+          "date_de_forclusion": "27/03/2026",
+          "boule_1": "22",
+          "boule_2": "32",
+          "boule_3": "48",
+          "boule_4": "12",
+          "boule_5": "36",
+          "etoile_1": "3",
+          "etoile_2": "4",
+          "boules_gagnantes_en_ordre_croissant": "-12-22-32-36-48-",
+          "etoiles_gagnantes_en_ordre_croissant": "-3-4-",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_france": "0",
+          "nombre_de_gagnant_au_rang1_Euro_Millions_en_europe": "1",
+          "rapport_du_rang1_Euro_Millions": "54026007,00",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_france": "2",
+          "nombre_de_gagnant_au_rang2_Euro_Millions_en_europe": "9",
+          "rapport_du_rang2_Euro_Millions": "73045,20",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_france": "2",
+          "nombre_de_gagnant_au_rang3_Euro_Millions_en_europe": "8",
+          "rapport_du_rang3_Euro_Millions": "19205,80",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_france": "6",
+          "nombre_de_gagnant_au_rang4_Euro_Millions_en_europe": "23",
+          "rapport_du_rang4_Euro_Millions": "2080,70",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_france": "172",
+          "nombre_de_gagnant_au_rang5_Euro_Millions_en_europe": "801",
+          "rapport_du_rang5_Euro_Millions": "110,00",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_france": "309",
+          "nombre_de_gagnant_au_rang6_Euro_Millions_en_europe": "1407",
+          "rapport_du_rang6_Euro_Millions": "66,20",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_france": "309",
+          "nombre_de_gagnant_au_rang7_Euro_Millions_en_europe": "1654",
+          "rapport_du_rang7_Euro_Millions": "39,50",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_france": "4142",
+          "nombre_de_gagnant_au_rang8_Euro_Millions_en_europe": "19713",
+          "rapport_du_rang8_Euro_Millions": "16,60",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_france": "6897",
+          "nombre_de_gagnant_au_rang9_Euro_Millions_en_europe": "32786",
+          "rapport_du_rang9_Euro_Millions": "11,10",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_france": "14146",
+          "nombre_de_gagnant_au_rang10_Euro_Millions_en_europe": "66857",
+          "rapport_du_rang10_Euro_Millions": "10,10",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_france": "23877",
+          "nombre_de_gagnant_au_rang11_Euro_Millions_en_europe": "110345",
+          "rapport_du_rang11_Euro_Millions": "7,40",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_france": "102259",
+          "nombre_de_gagnant_au_rang12_Euro_Millions_en_europe": "463404",
+          "rapport_du_rang12_Euro_Millions": "5,50",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_france": "205442",
+          "nombre_de_gagnant_au_rang13_Euro_Millions_en_europe": "939287",
+          "rapport_du_rang13_Euro_Millions": "4,40",
+          "nombre_de_gagnant_au_rang1_Etoile+": "0",
+          "rapport_du_rang1_Etoile+": "0",
+          "nombre_de_gagnant_au_rang2_Etoile+": "5",
+          "rapport_du_rang2_Etoile+": "540,70",
+          "nombre_de_gagnant_au_rang3_Etoile+": "91",
+          "rapport_du_rang3_Etoile+": "16,50",
+          "nombre_de_gagnant_au_rang4_Etoile+": "146",
+          "rapport_du_rang4_Etoile+": "10,20",
+          "nombre_de_gagnant_au_rang5_Etoile+": "2013",
+          "rapport_du_rang5_Etoile+": "1,80",
+          "nombre_de_gagnant_au_rang6_Etoile+": "3347",
+          "rapport_du_rang6_Etoile+": "3,00",
+          "nombre_de_gagnant_au_rang7_Etoile+": "11457",
+          "rapport_du_rang7_Etoile+": "4,10",
+          "nombre_de_gagnant_au_rang8_Etoile+": "19308",
+          "rapport_du_rang8_Etoile+": "11,30",
+          "nombre_de_gagnant_au_rang9_Etoile+": "48782",
+          "rapport_du_rang9_Etoile+": "2,50",
+          "nombre_de_gagnant_au_rang10_Etoile+": "480598",
+          "rapport_du_rang10_Etoile+": "2,20",
+          "numero_My_Million": "SF 344 7031",
+          "numero_Tirage_Exceptionnel_Euro_Million": "",
+          "": ""
+        }
+      ]
+    }
+  },
+  "corroboration": [
+    {
+      "source": "https://www.powerball.com/",
+      "channel": "web_research",
+      "date": "2026-10-26",
+      "main": [
+        18,
+        26,
+        49,
+        50,
+        54
+      ],
+      "powerball": 1,
+      "power_play": 3,
+      "comparison": "Matches Texas CSV after sorting main numbers; direct Python transport did not obtain an HTTP response."
+    },
+    {
+      "source": "https://www.powerball.com/double-play",
+      "channel": "web_research",
+      "date": "2026-10-26",
+      "main": [
+        5,
+        11,
+        14,
+        24,
+        59
+      ],
+      "powerball": 8,
+      "comparison": "Linked drawing shown separately; absent from the Texas Powerball CSV; automated transport remains unqualified."
+    },
+    {
+      "source": "https://www.texaslottery.com/export/sites/lottery/Games/Mega_Millions/Winning_Numbers/index.html",
+      "channel": "direct_html_and_web_research",
+      "date": "2026-10-23",
+      "main": [
+        3,
+        7,
+        46,
+        49,
+        51
+      ],
+      "mega_ball": 5,
+      "comparison": "Matches CSV; another representation by same operator, not an independent provider."
+    },
+    {
+      "source": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/resultats/vendredi-23-octobre-2026",
+      "channel": "direct_html_and_web_research",
+      "date": "2026-10-23",
+      "main": [
+        24,
+        33,
+        35,
+        44,
+        47
+      ],
+      "stars": [
+        7,
+        11
+      ],
+      "comparison": "Matches ZIP CSV; same operator. Announced jackpot EUR 71000000 differs from rank-one payout 0 when there is no winner."
+    }
+  ],
+  "operational_conditions": [
+    {
+      "code": "calendar_exception_not_resolved",
+      "blocking_scope": "fixed_calendar_only_scheduling",
+      "evidence": "CAIXA JSON dates Mega-Sena 26/10 Monday and +Milionaria 24/10 Saturday differ from published generic weekdays; monthly October PDF returned 302 to itself.",
+      "next_action": "Retain result dates, do not reject based on weekday alone, and qualify exceptions/fallback polling before enabling schedule."
+    },
+    {
+      "code": "double_play_transport_not_qualified",
+      "blocking_scope": "automatic_linked_drawing_collection",
+      "evidence": "Central site corroborated via browser; direct Python attempts failed without HTTP status. Texas CSV covers the main drawing and Power Play only.",
+      "next_action": "Qualify a reachable linked-drawing source or expose explicit missing-linked-result state; never reuse primary numbers as Double Play."
+    },
+    {
+      "code": "additional_financial_data_not_available_in_csv",
+      "blocking_scope": "US_financial_analytics",
+      "evidence": "Texas CSV exposes date and winning numbers, not national sales, winners/prize tiers or advertised jackpot.",
+      "next_action": "Keep unavailable values unknown; qualify scoped financial sources only for analytics that require them."
+    },
+    {
+      "code": "source_transport_not_production_adapter",
+      "blocking_scope": "operational_collection",
+      "evidence": "Lotofacil/+Milionaria JSON, Texas CSV and FDJ ZIP have no new production adapter in this task.",
+      "next_action": "Implement and test the observed profiles in SPEC-0033/0034, including bounded reads, cache/cooldown and schema drift."
+    },
+    {
+      "code": "public_access_does_not_imply_license_or_sla",
+      "blocking_scope": "unrestricted_automated_reuse_claim",
+      "evidence": "Samples and public export links do not establish an SLA, unlimited request allowance or unrestricted license.",
+      "next_action": "Keep conservative budgets and complete provider use-policy qualification for recurring activation; no MUSL paid/key feed was used."
+    }
+  ],
+  "preservation": {
+    "checked_existing_files": 80,
+    "all_unchanged": true
+  },
+  "next_task": {
+    "spec": "SPEC-0033",
+    "title": "Primeiro fluxo online Mega-Sena",
+    "note": "Source-discovery activity evidenced here; infrastructure, access, API and operational acceptance remain pending. Five additional ingestion profiles belong to SPEC-0034."
+  }
+}

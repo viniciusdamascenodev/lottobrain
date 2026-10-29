@@ -1,0 +1,439 @@
+{
+  "id" : "5xaw-6ayf",
+  "name" : "Lottery Mega Millions Winning Numbers: Beginning 2002",
+  "assetType" : "dataset",
+  "attribution" : "New York State Gaming Commission",
+  "attributionLink" : "http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresultsmega",
+  "averageRating" : 0,
+  "category" : "Government & Finance",
+  "createdAt" : 1362492565,
+  "description" : "Go to http://on.ny.gov/1J8tPSN on the New York Lottery website for past Mega Millions results and payouts.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1575384,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 37092402,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1619637590,
+  "publicationGroup" : 714877,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1792827178,
+  "rowsUpdatedBy" : "xzik-pf59",
+  "tableId" : 18264716,
+  "totalTimesRated" : 0,
+  "viewCount" : 610164,
+  "viewLastModified" : 1792827177,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1563962514,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 3566731,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1563962514,
+    "targetAudience" : "public",
+    "workflowId" : 2254,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "xzik-pf59",
+      "displayName" : "NY Open Data"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 538448110,
+    "name" : "Draw Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "Draw Date\n",
+    "fieldName" : "draw_date",
+    "position" : 1,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 8368515,
+    "width" : 140,
+    "cachedContents" : {
+      "non_null" : "2551",
+      "largest" : "2026-10-23T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2005-07-12T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2004-05-21T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2010-02-26T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-06-27T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-12-29T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2018-07-06T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2017-07-14T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2005-07-01T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-03-20T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2004-05-25T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2015-09-08T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2012-05-04T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2013-10-15T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2023-03-14T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2021-10-15T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2004-12-28T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2019-04-30T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2022-09-09T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2005-02-08T00:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2019-08-20T00:00:00.000",
+        "count" : "1"
+      } ],
+      "smallest" : "2002-05-17T00:00:00.000",
+      "count" : "2551",
+      "cardinality" : "2551"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "center"
+    }
+  }, {
+    "id" : 538448111,
+    "name" : "Winning Numbers",
+    "dataTypeName" : "text",
+    "description" : "Winning Numbers",
+    "fieldName" : "winning_numbers",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8368516,
+    "width" : 182,
+    "cachedContents" : {
+      "non_null" : "2551",
+      "largest" : "56 66 67 68 69",
+      "null" : "0",
+      "top" : [ {
+        "item" : "07 15 27 28 31",
+        "count" : "1"
+      }, {
+        "item" : "10 16 27 38 43",
+        "count" : "1"
+      }, {
+        "item" : "05 06 07 30 45",
+        "count" : "1"
+      }, {
+        "item" : "06 37 40 41 55",
+        "count" : "1"
+      }, {
+        "item" : "09 14 34 50 51",
+        "count" : "1"
+      }, {
+        "item" : "17 24 35 46 54",
+        "count" : "1"
+      }, {
+        "item" : "04 13 20 22 56",
+        "count" : "1"
+      }, {
+        "item" : "12 17 27 47 48",
+        "count" : "1"
+      }, {
+        "item" : "05 21 27 44 53",
+        "count" : "1"
+      }, {
+        "item" : "02 13 15 21 62",
+        "count" : "1"
+      }, {
+        "item" : "02 04 06 21 44",
+        "count" : "1"
+      }, {
+        "item" : "06 07 14 28 59",
+        "count" : "1"
+      }, {
+        "item" : "01 31 35 48 62",
+        "count" : "1"
+      }, {
+        "item" : "04 08 23 53 59",
+        "count" : "1"
+      }, {
+        "item" : "11 16 19 22 46",
+        "count" : "1"
+      }, {
+        "item" : "23 25 40 42 60",
+        "count" : "1"
+      }, {
+        "item" : "20 34 39 43 57",
+        "count" : "1"
+      }, {
+        "item" : "09 17 24 39 51",
+        "count" : "1"
+      }, {
+        "item" : "06 08 09 33 35",
+        "count" : "1"
+      }, {
+        "item" : "09 10 27 36 42",
+        "count" : "1"
+      } ],
+      "smallest" : "01 02 03 12 37",
+      "count" : "2551",
+      "cardinality" : "2551"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "center"
+    }
+  }, {
+    "id" : 538448112,
+    "name" : "Mega Ball",
+    "dataTypeName" : "text",
+    "description" : "Mega Ball",
+    "fieldName" : "mega_ball",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8368517,
+    "width" : 138,
+    "cachedContents" : {
+      "non_null" : "2551",
+      "largest" : "9",
+      "null" : "0",
+      "top" : [ {
+        "item" : "10",
+        "count" : "97"
+      }, {
+        "item" : "13",
+        "count" : "92"
+      }, {
+        "item" : "11",
+        "count" : "92"
+      }, {
+        "item" : "15",
+        "count" : "89"
+      }, {
+        "item" : "12",
+        "count" : "89"
+      }, {
+        "item" : "14",
+        "count" : "81"
+      }, {
+        "item" : "7",
+        "count" : "76"
+      }, {
+        "item" : "24",
+        "count" : "76"
+      }, {
+        "item" : "22",
+        "count" : "75"
+      }, {
+        "item" : "9",
+        "count" : "74"
+      }, {
+        "item" : "3",
+        "count" : "70"
+      }, {
+        "item" : "6",
+        "count" : "69"
+      }, {
+        "item" : "4",
+        "count" : "68"
+      }, {
+        "item" : "21",
+        "count" : "66"
+      }, {
+        "item" : "1",
+        "count" : "66"
+      }, {
+        "item" : "18",
+        "count" : "65"
+      }, {
+        "item" : "19",
+        "count" : "65"
+      }, {
+        "item" : "20",
+        "count" : "61"
+      }, {
+        "item" : "17",
+        "count" : "60"
+      }, {
+        "item" : "2",
+        "count" : "59"
+      } ],
+      "smallest" : "01",
+      "count" : "2551",
+      "cardinality" : "2551"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "center"
+    }
+  }, {
+    "id" : 538448113,
+    "name" : "Multiplier",
+    "dataTypeName" : "text",
+    "description" : "Multiplier (started 1/18/2011)",
+    "fieldName" : "multiplier",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 8368518,
+    "width" : 131,
+    "cachedContents" : {
+      "non_null" : "1484",
+      "largest" : "5",
+      "null" : "1067",
+      "top" : [ {
+        "item" : "4",
+        "count" : "308"
+      }, {
+        "item" : "3",
+        "count" : "308"
+      }, {
+        "item" : "2",
+        "count" : "218"
+      }, {
+        "item" : "03",
+        "count" : "192"
+      }, {
+        "item" : "5",
+        "count" : "177"
+      }, {
+        "item" : "02",
+        "count" : "158"
+      }, {
+        "item" : "04",
+        "count" : "102"
+      }, {
+        "item" : "05",
+        "count" : "21"
+      } ],
+      "smallest" : "02",
+      "count" : "2551",
+      "cardinality" : "2551"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "center"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "rdfSubject" : "0",
+    "jsonQuery" : {
+      "order" : [ {
+        "columnFieldName" : "draw_date",
+        "ascending" : false
+      } ]
+    },
+    "attachments" : [ {
+      "filename" : "NYSGAM_MegaWinningNumbers_Overview.pdf",
+      "assetId" : "77100176-fe6e-479a-b57c-e35d0fb4613d",
+      "name" : "NYSGAM_MegaWinningNumbers_Overview.pdf"
+    }, {
+      "filename" : "NYSGAM_MegaWinningNumbers_DataDictionary.pdf",
+      "assetId" : "b6122f91-6e6d-4753-a2eb-594bbb4fb04e",
+      "name" : "NYSGAM_MegaWinningNumbers_DataDictionary.pdf"
+    } ],
+    "custom_fields" : {
+      "Dataset Summary" : {
+        "Posting Frequency" : "Twice weekly",
+        "Organization" : "The New York Lottery",
+        "Contact Information" : "Info@gaming.ny.gov",
+        "Time Period" : "05/17/2002 to present",
+        "Coverage" : "Statewide",
+        "Granularity" : "Draw Date",
+        "Units" : "Drawings Unit",
+        "Dataset Owner" : "New York State Gaming Commission"
+      },
+      "Additional Resources" : {
+        "See Also " : "http://www.megamillions.com/",
+        "See Also" : "http://www.gaming.ny.gov/"
+      },
+      "Notes" : {
+        "Notes" : "The information contained on these pages is believed to be accurate. In the event of a discrepancy between the information displayed on this Web site concerning winning numbers and payouts and the information contained in the official and certified files maintained by the New York Lottery's Drawing Unit, those maintained by the Drawing Unit shall prevail."
+      },
+      "Dataset Information" : {
+        "Agency" : "Gaming Commission, New York State"
+      }
+    },
+    "rowIdentifier" : 538448114,
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "xzik-pf59",
+    "displayName" : "NY Open Data",
+    "profileImageUrlLarge" : "/api/users/xzik-pf59/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/xzik-pf59/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/xzik-pf59/profile_images/TINY",
+    "screenName" : "NY Open Data",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : {
+    "orderBys" : [ {
+      "ascending" : false,
+      "expression" : {
+        "columnId" : 538448110,
+        "type" : "column"
+      }
+    } ]
+  },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "xzik-pf59",
+    "displayName" : "NY Open Data",
+    "profileImageUrlLarge" : "/api/users/xzik-pf59/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/xzik-pf59/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/xzik-pf59/profile_images/TINY",
+    "screenName" : "NY Open Data",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "mega millions", "new york lottery", "winning", "results" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

@@ -1,0 +1,1667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link rel="shortcut icon" href="/f/loterias/favicon.ico" type="image/x-icon">
+				
+		<script type='text/javascript'>
+	var timeToGetJsonpSaga = "180000";
+	var hostReferrerSaga = "juegos.loteriasyapuestas.es";
+</script>
+<title>results of latest draws on your website - Loter&iacute;as y Apuestas del Estado</title>
+	<meta name="description" content="results of latest draws on your website - Loter&iacute;as y Apuestas del Estado">
+<meta name="copyright" content="2019 SELAE, Loter&iacute;as y Apuestas del Estado" />
+<link href="/f/loterias/estaticos/css/loterias.css?version=8.8.00" type="text/css" rel="stylesheet">
+<link href="/f/loterias/estaticos/css/loterias-rwd.css?version=8.8.00" type="text/css" rel="stylesheet">
+<link href="/f/loterias/estaticos/css/paginasLibresLoterias.css" type="text/css" rel="stylesheet">
+<link href="/f/loterias/estaticos/css/promociones.css" type="text/css" rel="stylesheet">
+<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.min.3.6.0.js"></script>
+<script src="/f/loterias/estaticos/js/cookie.js" type="text/javascript"></script>
+		
+		<script>loadStaticFiles= false</script>
+<script src="/f/loterias/estaticos/js/utils-json-lnac.js" type="text/javascript"></script>
+		<script>var urlPathPrefix="/f";</script>
+		<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.jsonp.min.2.4.0.js" type="text/javascript"></script>
+<script src="/f/loterias/estaticos/js/functionsfront.js" type="text/javascript"></script>
+		<script src="/f/loterias/estaticos/js/cabecera.js" type="text/javascript"></script>
+		<script src="/f/loterias/estaticos/js/owl.carousel.js" type="text/javascript"></script>
+		<script src="/f/loterias/estaticos/js/footer.js" type="text/javascript"></script>
+		<script async src="https://cds.loteriasyapuestas.es/push/sdk.min.js"></script>
+		<script async src="https://cds.loteriasyapuestas.es/push/hmac-sha256.js"></script>
+		<script async src="https://cds.loteriasyapuestas.es/push/saga_push.js"></script>
+		<script src="/f/loterias/estaticos/js/snippet.js" type="text/javascript"></script>
+		</head>
+	<body id="subhome">
+		<div class="contenedorGlobal subhome">
+			<!-- Cabecera -->
+			<!--Start Header-Horz Area -->
+<!-- CDN -->
+<link href="/f/loterias/estaticos/css/sass/loterias_sass.css?version=8.8.00" type="text/css" rel="stylesheet">
+
+<link href="/f/loterias/estaticos/css/sass/loterias_eurodream_sass.css?version=8.8.00" type="text/css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cds.loteriasyapuestas.es/cms/css/fontawesome.all.5.0.13.css" type="text/css">
+<link href="/f/loterias/estaticos/css/promociones.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+	if(typeof jQuery == 'undefined'){ document.write('<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.min.3.6.0.js"></'+'script>'); }
+</script>
+
+<script src="https://cds.loteriasyapuestas.es/cms/js/masonry.pkgd.min.4.2.2.js"></script>
+<script src="https://cds.loteriasyapuestas.es/cms/js/jquery.jsonp.min.2.4.0.js" type="text/javascript"></script>
+<script src="https://cds.loteriasyapuestas.es/cms/js/mustache.min.3.1.0.js"></script>
+<script src="https://cds.loteriasyapuestas.es/cms/js/handlebars.4.7.7.js" type="text/javascript"></script>
+
+<script id='header-template-topaz-EMIL' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--euromillones' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz  c-cabecera-juego__imagen-euromillones esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EuromillonesAJ_topaz.png' alt='Euromillones'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EuromillonesAJ_mobile_topaz.png' alt='Euromillones'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--euromillones c-cabecera-juego__bote--euromillones'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--euromillones'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--euromillones'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-LAPR' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--primitiva' title='{{betTitle}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_PrimitivaAJ_topaz.png' alt='primitiva'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_PrimitivaAJ_mobile_topaz.png' alt='primitiva'>     		
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--primitiva'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--primitiva'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--primitiva'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-BONO' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--bonoloto' title='{{betTitle}}'>
+  		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_BonolotoAJ_topaz.png' alt='bonoloto' >
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_BonolotoAJ_mobile_topaz.png' alt='bonoloto' >
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--bonoloto'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--bonoloto'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--bonoloto'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-ELGR' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--gordo' title='{{betTitle}}'>
+ 		<img class='c-cabecera-juego__imagen_topaz c-cabecera-juego__imagen-elGordo esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_ElGordoAJ_topaz.png' alt='{{altMsg}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_ElGordoAJ_mobile_topaz.png' alt='{{altMsg}}'>            
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--elgordo c-cabecera-juego__bote--gordo'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--gordo'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--gordo'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-LNAC' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--loteria-nacional' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LoteriaNacionalAJ_topaz.png' alt='Loteria Nacional'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LoteriaNacionalAJ_mobile_topaz.png' alt='Loteria Nacional'>
+		
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--lnac c-cabecera-juego__bote--loteria-nacional'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--loteria-nacional'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--loteria-nacional'>&#x20ac;</span>
+				{{/if}}
+				<span class="c-cabecera-juego__especial_topaz esta-oculto-pc" id="qa_cabecera_sorteos_tipo_premio_LNAC">
+					{{#if prize.isLnacSpecialPrize}}
+						Special prize for the tenth
+					{{else}}
+						1st prize for the series
+					{{/if}}
+				</span>
+			{{/if}}
+			<span class='c-cabecera-juego__texto_topaz'>
+				{{#if prize}}
+					{{#if prize.isLnacSpecialPrize}}
+						Special prize for the tenth
+					{{else}}
+						1st prize for the series
+					{{/if}}
+				{{/if}}
+			</span>
+		</p>
+	</a>
+</script><script id='header-template-topaz-LAQU' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--quiniela' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LaQuinielaAJ_topaz.png' alt='quiniela'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LaQuinielaAJ_mobile_topaz.png' alt='quiniela'>       
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--quiniela'>	
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--quiniela'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--quiniela'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-LOTU' type='text/html'>	
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--lototurf' title='{{betTitle}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LototurfAJ_topaz.png' alt='lototurf'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_LototurfAJ_mobile_topaz.png' alt='lototurf'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--lototurf'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--lototurf'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--lototurf'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-QGOL' type='text/html'>	
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--quinigol' title='{{betTitle}}'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuinigolAJ_topaz.png' alt='quinigol'>
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuinigolAJ_mobile_topaz.png' alt='quinigol'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote--quinigol'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--quinigol'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--quinigol'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-QUPL' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--quintuple' title='{{betTitle}}'>
+		<img class='c-cabecera-juego__imagen_topaz c-cabecera-juego__imagen-quintuple esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuintupleAJ_topaz.png' alt='quintuple'>
+        <img class='c-cabecera-juego__imagen_topaz c-cabecera-juego__imagen-quintuple esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_QuintupleAJ_mobile_topaz.png' alt='quintuple'>
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz-quintuple c-cabecera-juego__bote--quintuple'>
+			{{#if prize}}
+				{{#if prize.isMillionsValue}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--millones c-cabecera-juego__cantidad--quintuple'>million</span>
+				{{else}}
+					{{prize.formatedValue}}<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--quintuple'>&#x20ac;</span>
+				{{/if}}
+			{{/if}}
+		</p>
+	</a>
+</script><script id='header-template-topaz-EDMS' type='text/html'>
+	<a href='{{betLink}}' class='c-cabecera-juego__enlace_topaz c-cabecera-juego__enlace--eurodreams' title='{{betTitle}}'>
+  		<img class='c-cabecera-juego__imagen_topaz esta-oculto-movil' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EurodreamsAJ_topaz.png' alt='eurodreams' >
+        <img class='c-cabecera-juego__imagen_topaz esta-oculto-pc' src='{{urlPathPrefix}}/loterias/estaticos/imagenes/topaz/cabecera_EurodreamsAJ_mobile_topaz.png' alt='eurodreams' >
+		<p class='c-cabecera-juego__bote_topaz c-cabecera-juego__bote_topaz--eurodreams c-cabecera-juego__bote--eurodreams'>
+			{{#if open}}
+				{{#if prize includeZero=false}}
+					<img class=" c-cabecera-juego__icono--eurodreams" src="{{urlPathPrefix}}/loterias/estaticos/css/sass/img/icono-ed.png" alt="">
+					{{prize.formatedValue}}
+				{{else}}
+					20.000
+				{{/if}}
+				<span class='c-cabecera-juego__cantidad c-cabecera-juego__cantidad--eurodreams'>&#x20ac;</span>
+				<span class="c-cabecera-juego__especial_topaz c-cabecera-juego__texto_topaz--eurodreams esta-oculto-pc" id="qa_cabecera_sorteos_tipo_premio_EDMS">
+						per month for 30 years</span>
+				<span class='c-cabecera-juego__texto_topaz c-cabecera-juego__texto_topaz--eurodreams'>
+					per month for 30 years</span>
+			{{/if}}
+		</p>
+	</a>
+</script>
+<script type='text/javascript'>
+	var timeToGetJsonpSaga = "180000";
+	var hostReferrerSaga = "juegos.loteriasyapuestas.es";
+</script>
+
+<script type="text/javascript">var jqHeader = jQuery.noConflict();
+var urlPathPrefix;
+var drawsData;
+
+jqHeader(document).ready(function() {
+  var jsonServiceUrl = jqHeader('#header-main').data('json-service-url');
+  var currentLanguage = jQuery('#header-main').data('current-language');
+  urlPathPrefix = jqHeader('#header-main').data('url-path-prefix');
+  
+  jqHeader.getJSON('//' + window.location.host + jsonServiceUrl, function(data) {
+    if (data) {
+      drawsData = data;
+    } else {
+      console.debug('ERROR: no se han cargado los datos actualizados para los sorteos de la cabecera');
+    }
+  }).fail(function(jqxhr, textStatus, error) {
+    var err = textStatus + ', ' + error;
+    console.log('Request Failed: ' + err);
+  }).always(function(data){
+    buildHeader(currentLanguage);
+    hamburguerMenuToggle();
+  }); 
+});
+
+
+function hamburguerMenuToggle(){
+	dropDownMenu('qa_cabecera_menu__hamburguesa', 'qa_cabecera_sorteos_contenedor');
+	if(isMobileByWidth()){
+		jqHeader('#qa_cabecera_sorteos_contenedor').hide();
+		
+	}else{
+		jqHeader('#qa_cabecera_sorteos_contenedor > li[id*=header-link-]').show();
+		jqHeader('.c-cabecera-juego__boton-ahora--movil').show();
+		jqHeader('#qa_cabecera_sorteos_contenedor > li[id*=header-lang]').show();
+	}
+}
+
+function buildHeader(currentLanguage) {
+  jqHeader('[id^="header-link-"]').each(function() {
+    var gameCode = jqHeader(this).attr('id').split('header-link-')[1];
+    if (gameCode == 'EDMS')
+		buildHeaderEDMS(this, currentLanguage);
+    else
+		buildHeaderGeneric(this, currentLanguage, gameCode);
+  });
+}
+
+function buildHeaderGeneric(item, currentLanguage, gameCode) {
+    var betLink = jqHeader(item).data('bet-href');
+    var betTitle = jqHeader(item).data('bet-title');
+    var prize = extractPrize(gameCode, currentLanguage);
+    var context = {
+      urlPathPrefix:    urlPathPrefix,
+      betLink:          betLink,
+      betTitle:         betTitle,
+      prize:            prize
+    };
+
+    var template = Handlebars.compile(jqHeader('#header-template-topaz-' + gameCode).html());
+    jqHeader('#header-link-' + gameCode).html(template(context));
+}
+
+function extractPrize(gameCode, currentLanguage) {
+  var draws = [];
+  var prize;
+  if (drawsData !== undefined && drawsData !== null && drawsData.length > 0) {
+      for (var index = 0; index < drawsData.length; index++) {
+          if (drawsData[index].game_id === gameCode) {
+              draws.push(drawsData[index]);
+          }
+      }
+      var drawsLength = draws.length;
+      if (drawsLength > 0) {
+          if (drawsLength > 1) {
+              draws.sort(function(a, b) {
+                  return (new Date(a.fecha.replace(/-/g, '/'))).getTime() - (new Date(b.fecha.replace(/-/g, '/'))).getTime();
+              });
+          }
+          
+          if (draws[0].estado === 'abierto' && (draws[0].premio_bote !== undefined  && draws[0].premio_bote !== null && draws[0].premio_bote != "0") && (draws[0].fecha !== undefined && draws[0].fecha !== null) && gameCode !== 'LNAC') {
+              prize = formatHighlightedCurrency(gameCode, draws[0].premio_bote, currentLanguage, draws[0].id_sorteo);
+          } else if (draws[0].estado === 'abierto' && (draws[0].premio_especial !== undefined  && draws[0].premio_especial !== null) && (draws[0].fecha !== undefined && draws[0].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[0].premio_especial, currentLanguage, draws[0].id_sorteo);
+              prize.isLnacSpecialPrize = true;
+          } else if (draws[0].estado === 'abierto' && (draws[0].primer_premio !== undefined  && draws[0].primer_premio !== null) && (draws[0].fecha !== undefined && draws[0].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[0].primer_premio, currentLanguage, draws[0].id_sorteo);
+          } else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].premio_bote !== undefined && draws[1].premio_bote !== null && draws[1].premio_bote != "0") && (draws[1].fecha !== undefined && draws[1].fecha !== null) && gameCode !== 'LNAC') {
+              prize = formatHighlightedCurrency(gameCode, draws[1].premio_bote, currentLanguage, draws[1].id_sorteo);
+          } else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].premio_especial !== undefined && draws[1].premio_especial !== null) && (draws[1].fecha !== undefined && draws[1].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[1].premio_especial, currentLanguage, draws[1].id_sorteo);
+              prize.isLnacSpecialPrize = true;
+          } else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].primer_premio !== undefined && draws[1].primer_premio !== null) && (draws[1].fecha !== undefined && draws[1].fecha !== null)) {
+              prize = formatHighlightedCurrency(gameCode, draws[1].primer_premio, currentLanguage, draws[1].id_sorteo);
+          }        
+      } 
+  }
+  
+  return prize;
+}
+
+function buildHeaderEDMS(item, currentLanguage) {
+    var gameCode = 'EDMS';
+    var betLink = jqHeader(item).data('bet-href');
+    var betTitle = jqHeader(item).data('bet-title');
+    var draw = extractEDMSDraw();
+    var open = draw !== undefined;
+    var prize;
+    if (open && (draw.premio_bote !== undefined  && draw.premio_bote !== null && draw.premio_bote != "0"))
+		prize = formatHighlightedCurrency(gameCode, draw.premio_bote, currentLanguage, draw.id_sorteo);
+
+    var context = {
+      urlPathPrefix:    urlPathPrefix,
+      betLink:          betLink,
+      betTitle:         betTitle,
+      prize:            prize,
+      open:             open
+    };
+
+    var template = Handlebars.compile(jqHeader('#header-template-topaz-' + gameCode).html());
+    jqHeader('#header-link-' + gameCode).html(template(context));
+}
+
+function extractEDMSDraw() {
+  var draws = [];
+  var draw;
+  if (drawsData !== undefined && drawsData !== null && drawsData.length > 0) {
+      for (var index = 0; index < drawsData.length; index++) {
+          if (drawsData[index].game_id === 'EDMS')
+              draws.push(drawsData[index]);
+      }
+
+      var drawsLength = draws.length;
+      if (drawsLength > 0) {
+          if (drawsLength > 1) {
+              draws.sort(function(a, b) {
+                  return (new Date(a.fecha.replace(/-/g, '/'))).getTime() - (new Date(b.fecha.replace(/-/g, '/'))).getTime();
+              });
+          }
+
+          if (draws[0].estado === 'abierto' && (draws[0].fecha !== undefined && draws[0].fecha !== null))
+              draw = draws[0];
+          else if (drawsLength > 1 && draws[1].estado === 'abierto' && (draws[1].fecha !== undefined && draws[1].fecha !== null))
+              draw = draws[1];
+      }
+  }
+
+  return draw;
+}
+
+function formatHighlightedCurrency(gameCode, value, currentLanguage, drawId) {
+  var prize = {};
+  var isEnglish = 'EN' == currentLanguage || 'en' == currentLanguage; 
+  if (Math.abs(Number(value)) >= 1010000) {
+      var formatedValue = Number(value) / 1.0e+6;
+      var re = new RegExp('^-?\\d+(?:\.\\d{0,2})?');
+      formatedValue = formatedValue.toString().match(re)[0];
+      if(!isEnglish){
+          formatedValue = Number(formatedValue).toLocaleString("es-ES");
+      } else {
+        formatedValue = Number(formatedValue).toLocaleString("en-EN");
+      }
+      prize.formatedValue = formatedValue; 
+      prize.isMillionsValue = true;
+    } else {
+      prize.formatedValue = formatThousandsNumber(value, isEnglish);
+      prize.isMillionsValue = false;
+      if(value > 9999) {
+          prize.moreThanFourDigits = true;
+      } else {
+          prize.moreThanFourDigits = false;
+      }
+    }
+  
+    return prize;
+}
+
+function formatThousandsNumber(value, isEnglish) {
+  var number = parseFloat(value);
+  var roundNumber = null;
+  if (number != null && number != undefined && !isNaN(number)) {
+      if(!isEnglish){
+        roundNumber = parseFloat(number).toLocaleString("es-ES");
+      } else {
+        roundNumber = parseFloat(number).toLocaleString("en-EN");
+      }
+  }
+  return roundNumber;
+}
+
+function addCurrentURLParamsToLanguageLinks() {
+  jqHeader("div.language a").each(function() {
+    var _href = jqHeader(this).attr("href");
+    try {
+      var indexParam = _href.indexOf("?");
+      if (indexParam > -1) {
+        var urlSplit = _href.split("?");
+        jqHeader(this).attr("href", urlSplit[0] + document.location.search + "&" + urlSplit[1]);
+      } else {
+        jqHeader(this).attr("href", _href + document.location.search);
+      }
+    } catch (error) {
+      jqHeader(this).attr("href", _href + document.location.search);
+    }
+  });
+}
+
+
+function isMobileByWidth() {
+	return (getWidth() < 601);
+}
+
+function dropDownMenu(buttonId, menuId) {
+  jqHeader('#' + buttonId).click(function() {
+	  if(jqHeader('#'+ menuId).is(':visible')){
+		  jqHeader('#' + menuId + " > li").slideToggle("slow");
+		  jqHeader('#' + menuId ).slideToggle("slow");
+	  }else{
+		  jqHeader('#' + menuId ).slideToggle("slow");
+		  jqHeader('#' + menuId + " > li").slideToggle("slow");  
+	  }
+	  toogleMenu(menuId);
+  });
+}
+
+
+function toogleMenu(menuId){
+	if(jqHeader('#'+menuId).css('display') == 'block' && menuId ==='helloMenu'){
+		jqHeader('#lotobolsaMenu').hide();
+		if(isMobileByWidth()){
+			jqHeader('#qa_cabecera_sorteos_contenedor').children().hide();
+			jqHeader('#qa_cabecera_sorteos_contenedor').hide();
+		}
+	}else if(jqHeader('#'+menuId).css('display') == 'block' && menuId ==='lotobolsaMenu'){
+		jqHeader('#helloMenu').hide();
+		if(isMobileByWidth()){
+			jqHeader('#qa_cabecera_sorteos_contenedor').children().hide();
+			jqHeader('#qa_cabecera_sorteos_contenedor').hide();
+		}
+	}else if(jqHeader('#qa_cabecera_sorteos_contenedor').css('height') !== "0px" && menuId ==='qa_cabecera_sorteos_contenedor'){
+		jqHeader('#helloMenu').hide();
+		jqHeader('#lotobolsaMenu').hide();
+		jqHeader('#mobileForm').hide();
+	}
+}
+
+</script>
+<script type="text/javascript">	var jqHeader = jQuery.noConflict();
+var disableLoginSales = false;
+
+if(typeof console!="undefined" && typeof console.debug=="undefined"){
+  console.debug = console.log;
+}
+
+
+function bindEventJustOnce(elementIdentifier, eventName, eventFunction) {
+  jqHeader(elementIdentifier).unbind(eventName, eventFunction);
+  jqHeader(elementIdentifier).bind(eventName, eventFunction);
+}
+
+function esPageHomeAndLNAC() {
+	var fullpath = location.pathname;
+	if (fullpath.charAt(fullpath.length - 1) == '/')
+		fullpath = fullpath.slice(0, -1);
+
+	var pathUrl = fullpath.substr(1).split('/');
+	if (pathUrl.length == 0 || (currentLanguage != null && pathUrl[0] != currentLanguage))
+		return false;
+
+	if (pathUrl.length == 1)
+		return true;
+
+	if (pathUrl[1] == 'loteria-nacional') {
+		if (pathUrl.length == 2)
+			return true;
+
+		if (pathUrl[2] == 'mis-decimos')
+			return false;
+		else
+			return true;
+	} else
+		return false;
+}
+
+function formatPositiveQuantityOfMoney(numberWith2DecimalsString, lang) {
+  var decimalSeparator = (lang && lang === 'en') ? '.' : ',';
+  var milesSeparator = (lang && lang === 'en') ? ',' : '.';
+  if (numberWith2DecimalsString == null || numberWith2DecimalsString == undefined)
+    return '';
+  if (isNaN(numberWith2DecimalsString))
+    return '';
+  if (numberWith2DecimalsString.length < 3) {
+    for (var i = 0; i < 3 - numberWith2DecimalsString.length + 1; i++) {
+      numberWith2DecimalsString = '0' + numberWith2DecimalsString;
+    }
+  }
+  var integral = numberWith2DecimalsString.substr(0, numberWith2DecimalsString.length - 2);
+  integral = integral.replace(/\B(?=(\d{3})+(?!\d))/g, milesSeparator);
+  var decimal = numberWith2DecimalsString.substr(numberWith2DecimalsString.length - 2, numberWith2DecimalsString.length);
+  return integral + decimalSeparator + decimal;
+}
+
+
+/**
+ * Remove the <li> elements with banners out of date
+ */
+function removeBannersOutOfDate() {
+  var activation;
+  var deactivation;
+  var cont = 0;
+  var actualDate = new Date();
+  actualDate.setSeconds(0);
+  actualDate.setMilliseconds(0);
+
+  jqHeader('li.item-banner').each(function(i, e) {
+    var activationStr = jqHeader(e).attr('data-activation');
+    var deactivationStr = jqHeader(e).attr('data-deactivation');
+    var remove = false;
+
+    if (activationStr && !deactivationStr && !remove) {
+      activation = createDateFromString(activationStr);
+      if (activation > actualDate) {
+        jqHeader(e).remove();
+        console.debug('Element: ' + jqHeader(e).attr('id') + ' - REMOVE');
+        remove = true;
+      }
+    }
+    if (!activationStr && deactivationStr && !remove) {
+      deactivation = createDateFromString(deactivationStr);
+      if (deactivation < actualDate) {
+        jqHeader(e).remove();
+        console.debug('Element: ' + jqHeader(e).attr('id') + ' - REMOVE');
+        remove = true;
+      }
+    }
+    if (activationStr && deactivationStr && !remove) {
+      activation = createDateFromString(activationStr);
+      deactivation = createDateFromString(deactivationStr);
+      if (!(activation <= actualDate && deactivation >= actualDate)) {
+        jqHeader(e).remove();
+        console.debug('Element: ' + jqHeader(e).attr('id') + ' - REMOVE');
+        remove = true;
+      }
+    }
+    if (!remove) {
+      console.debug('Element: ' + jqHeader(e).attr('id') + ' - OK');
+      cont++;
+    }
+  });
+  return cont;
+}
+
+
+/**
+ * 
+ * @param str
+ * @returns {Date}
+ */
+function createDateFromString(str) {
+  try {
+    if (str) {
+      if (new Date(str).getTime()) {
+        return (new Date(str));
+      } else {
+        var dateSrt = str.split(' ')[0] + 'T' + str.split(' ')[1];
+        return (new Date(dateSrt));
+      }
+    } else {
+      return null;
+    }
+  } catch (err) {
+    console.error('ERROR en createDateFromString: ' + err);
+    return null;
+  }
+}
+
+
+/**
+ * Set up <b>src</b> in all elements indicated in 'selector' attribute
+ * It is necessary for the home banner carousel
+ * @param selector jQuery selector
+ */
+function setUpSrcImg(selector) {
+  jqHeader(selector).each(function(i, e) {
+    var srcPC = jqHeader(e).attr('data-src-pc');
+    var srcTablet = jqHeader(e).attr('data-src-tablet');
+    var srcMobile = jqHeader(e).attr('data-src-mobile');
+
+    if (!srcPC) {
+      console.debug('- No tenemos imagen de PC!!');
+      return false;
+    } else {
+      if (isPCForImg()) { // PC
+        jqHeader(e).attr('src', srcPC);
+        console.debug('--Elto: ' + i + ' --> actualizamos a srcPC');
+      } else {
+        if (isTabletForImg()) { // Tablet
+          if (srcTablet) {
+            jqHeader(e).attr('src', srcTablet);
+            console.debug('--Elto: ' + i + ' --> actualizamos a srcTablet');
+          } else {
+            jqHeader(e).attr('src', srcPC);
+            console.debug('--Elto: ' + i + ' --> actualizamos a srcPC');
+          }
+        } else { // Mobile
+          if (!srcMobile) {
+            if (srcTablet) {
+              jqHeader(e).attr('src', srcTablet);
+              console.debug('--Elto: ' + i + ' --> actualizamos a srcTablet');
+            } else {
+              jqHeader(e).attr('src', srcPC);
+              console.debug('--Elto: ' + i + ' --> actualizamos a srcPC');
+            }
+          } else {
+            jqHeader(e).attr('src', srcMobile);
+            console.debug('--Elto: ' + i + ' --> actualizamos a srcMolvil');
+          }
+        }
+      }
+    }
+  });
+}
+
+
+function jsonpCallback(data) {
+  //console.log("callback",data);
+  // do nothing
+}
+
+
+function successfulCallSagaMenuMessagesJSONService(data) {
+  var i;
+  if (data.avisos != null && data.avisos.length > 0){
+    for (i = 0; i < data.avisos.length; i++) {
+      var element = data.avisos[i];
+      var indiceMenu = element.indiceMenu;
+      var indiceSubmenu = element.indiceSubmenu;
+      var numAvisos = element.numAvisos;
+      if (numAvisos > 0) {
+        if (indiceMenu == 1 && indiceSubmenu == 0) {
+          jqHeader(".c-cabecera-menu__counter").show();
+          jqHeader(".c-cabecera-menu__counter").html(numAvisos);
+        } else {
+          var html = "<span class='c-cabecera-menu__notificaciones'>" + numAvisos + "</span>";
+          if ( jqHeader("#qa_cabecera_menu_usuario_" + indiceMenu + indiceSubmenu + " a").length ) {
+            jqHeader("#qa_cabecera_menu_usuario_" + indiceMenu + indiceSubmenu + " a").append(html);
+          } else {
+            jqHeader("#qa_cabecera_menu_usuario_" + indiceMenu + indiceSubmenu).append(html);
+          }
+          
+        }
+      }else{
+    	  if (indiceMenu == 1) {
+    		  jqHeader(".c-cabecera-menu__counter").hide();  
+    	  }
+    	  
+      }
+    }
+  }
+}
+
+
+function callSagaMenuMessagesJSONService(sagaMenuMsgsJsonSvcUrl) {
+  try {
+    var url = sagaMenuMsgsJsonSvcUrl.indexOf(":") == -1 ? "https://" + sagaMenuMsgsJsonSvcUrl : sagaMenuMsgsJsonSvcUrl;
+    jqHeader.jsonp({
+      url : url,
+      callback : "jsonpCallback",
+      success : function(data) {
+    	setJsonNotificationsInLocalStorage(JSON.stringify(data)); //set jsonP Notifications in localStorage
+        successfulCallSagaMenuMessagesJSONService(data);
+      },
+      error : function(d, msg) {
+        console.log("Saga menu messages service request failed. URL used was '" + sagaMenuJsonSvcUrl + "'.");
+      }
+    });
+  } catch (e) {
+    console.log('ERROR while calling Saga menu messages service and parsing its data: ' + e);
+  }
+}
+
+
+function getDateLastLogin(lastLogin){
+  var date = "";
+  if (lastLogin != null && lastLogin != undefined){
+    date= lastLogin.substring(0,lastLogin.lastIndexOf('-'));
+  }
+  return date;
+}
+
+
+function getHourLastLogin(lastLogin){
+  var hour = "";
+  if (lastLogin != null && lastLogin != undefined){
+    hour= lastLogin.substring(lastLogin.lastIndexOf('-')+1,lastLogin.lastIndexOf(':'));
+  }
+  return hour;
+}
+
+
+function setSimpleClock(horaPlataforma) {
+  try {
+    console.log("setSimpleClock > horaPlataforma = " + horaPlataforma);
+    var date = new Date(); // some mock date
+    var sec = date.getSeconds();
+    var ms = date.getMilliseconds();
+    var plataformDate = horaPlataforma.split(":");
+    var hour = parseInt(plataformDate[0]);
+    var min = parseInt(plataformDate[1]);
+
+    var datePlataform = new Date(date.getFullYear(), date.getMonth(), date.getDay(), hour, min, sec, ms);
+    var horaPlataformaMillis = datePlataform.getTime();
+
+    var clock = this;
+    var hour;
+    var minute;
+    var segundos = 0;
+
+    function getTime() {
+      horaPlataformaMillis = horaPlataformaMillis + 1;
+      var date = new Date(horaPlataformaMillis)
+      hour = date.getHours();
+      minute = date.getMinutes();
+      return {
+        date : date.getDate(),
+        hour : hour,
+        minute : date.getMinutes()
+      };
+    }
+
+    function appendZero(num) {
+      if (num < 10) {
+        return "0" + num;
+      }
+      return num;
+    }
+
+    function refreshTime() {
+      segundos++;
+      if (segundos == 60) {
+        segundos = 0;
+        if (minute == 59) {
+          minute = 0;
+          if (hour == 59)
+            hour = 0;
+          else
+            hour++;
+        } else {
+          minute++;
+        }
+
+        clock = jqHeader.find('#timePC');
+        jqHeader(clock).html(appendZero(hour) + ":" + appendZero(minute));
+      }
+    }
+    var now = getTime(horaPlataformaMillis);
+    clock = jqHeader.find('#timePC');
+    jqHeader(clock).html(appendZero(now.hour) + ":" + appendZero(now.minute));
+    setInterval(function() {
+      refreshTime()
+    }, 1000);
+
+  } catch (error) {
+    console.log("Error > header-saga.js > setSimpleClock " + error.message);
+  }
+}
+
+
+function setJsonNotificationsInLocalStorage(cachedNotificationsJSONp){
+	localStorage.setItem('cachedNotificationsJSONp', cachedNotificationsJSONp);	
+}
+
+
+function getJsonNotificationsFromLocalStorage(){
+	return JSON.parse(localStorage.getItem('cachedNotificationsJSONp'));	
+}
+
+
+function setCurrentTimeNotificationsInLocalStorage(){
+	var cachedTimeStampNotificationsLS = getCurrentTime();
+	localStorage.setItem('cachedTimeStampNotificationsLS', cachedTimeStampNotificationsLS);	
+}
+
+
+function getCurrentTimeNotificationsFromLocalStorage(){
+	return localStorage.getItem('cachedTimeStampNotificationsLS');
+}
+
+
+function loadLogedSagaMenu(data, sagaMenuMsgsJsonSvcUrl) {
+  if (data.loginPrevio != null) {
+	    jqHeader("#datePC").html(getDateLastLogin(data.loginPrevio));
+	    jqHeader("#hourPC").html(" - "+getHourLastLogin(data.loginPrevio)+"h.");
+	    jqHeader("#menuNoLoggedInSaga").css("display", "none");
+	    
+	  }
+	  if (data.saldoLotobolsa != null && data.saldoLotobolsa >= 0) {
+	    var balance = formatPositiveQuantityOfMoney('' + data.saldoLotobolsa)+'\u20AC';
+	      jqHeader("#balancePC").html(balance);
+	      jqHeader("#balanceMobile").html(balance);
+	  }
+	  if (/^(([01]?[0-9]|2[0-3]):[0-5][0-9])$/.test(data.horaPlataforma)) {
+	    jqHeader("#timePC").html(data.horaPlataforma);
+	    setSimpleClock(data.horaPlataforma);
+	  }
+	  if(data.nombreUsuario != null && data.nombreUsuario !=""){
+	    jqHeader("#lotobolsaName").html(data.nombreUsuario);
+	  }
+	  if(isActiveSagaMenuMessagesJsonService == "true"){
+		 var millisecondsCurrentTimeLS = getCurrentTimeNotificationsFromLocalStorage();
+	  	 var jsonNotificationsSaga = getJsonNotificationsFromLocalStorage();
+	  	 var millisecondsCurrentTime = getCurrentTime();
+	  	if ((isSagaJuegosReferrer() || (jsonNotificationsSaga === undefined) || (jsonNotificationsSaga === null) || (millisecondsCurrentTimeLS === undefined) ||
+	  			(millisecondsCurrentTimeLS === null) || (millisecondsCurrentTime !== null && (millisecondsCurrentTime - millisecondsCurrentTimeLS)) >= timeToGetJsonpSaga)){
+	  		  setCurrentTimeNotificationsInLocalStorage();
+	  		  callSagaMenuMessagesJSONService(sagaMenuMsgsJsonSvcUrl);
+	  	  }else{
+	  		var dataNotificationsLS = getJsonNotificationsFromLocalStorage(); //get json Avisos from localStorage
+	  		successfulCallSagaMenuMessagesJSONService(dataNotificationsLS);
+		  }
+	  } else {
+	    if (data.mensajesNoLeidos != null && data.mensajesNoLeidos > 0) {
+	      jqHeader(".c-cabecera-menu__counter").show();
+	      jqHeader(".c-cabecera-menu__counter").html(data.mensajesNoLeidos);
+	    }else{
+	      jqHeader(".c-cabecera-menu__counter").hide();
+	    }
+	  }
+}
+
+
+function disableElementsWhenSagaNeeds(){
+  jqHeader(".c-login-movil__datos").hide();
+  jqHeader(".c-login-movil__texto").hide();
+  jqHeader(".c-login-movil__enlace-solicita").hide();
+  jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+
+}
+
+function disableElementsWhenSagaIsClossed(){
+  jqHeader('#linkEnterButtonMobile').addClass('linkDisabled');
+  jqHeader('#linkEnterButton').addClass('linkDisabled');
+  jqHeader('#registerUserMobile').addClass('linkDisabled');
+  jqHeader('#registerUser').addClass('linkDisabled');
+  
+}
+
+function updateElementsWhenCaptchaIsTrue(){
+  jqHeader(".c-login-movil__datos").hide();
+  jqHeader(".c-login-movil__texto").hide();
+  jqHeader(".c-login-movil__enlace-solicita").hide();
+  jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+
+}
+
+
+function enableElementsWhenSagaNeeds(){
+  jqHeader(".c-login-movil__datos").show();
+  jqHeader(".c-login-movil__texto").show();
+  jqHeader(".c-login-movil__enlace-solicita").show();
+
+  jqHeader('#lotoBolsaPC').removeClass('esta-oculto');
+  
+
+}
+
+function updateElementsWhenSalesAreDisabled(){
+  jqHeader(".c-login-movil__datos").hide();
+  jqHeader(".c-login-movil__texto").hide();
+  jqHeader(".c-login-movil__enlace-solicita").hide();
+  jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+
+}
+
+
+
+
+
+function successfulCallSagaMenuJSONService(data, sagaMenuMsgsJsonSvcUrl, status) {
+    loadSagaMenu(data, sagaMenuMsgsJsonSvcUrl, status);
+}
+
+
+function getCurrentTime(){
+	var time=new Date();
+	return time.getTime();
+}
+
+
+function setCurrentTimeInLocalStorage(){
+	var cachedTimeStampLS = getCurrentTime();
+	localStorage.setItem('cachedTimeStampLS', cachedTimeStampLS);	
+}
+
+
+function getCurrentTimeFromLocalStorage(){
+	return localStorage.getItem('cachedTimeStampLS');
+}
+
+
+function setJsonPInLocalStorage(cachedJSONp){
+	localStorage.setItem('cachedJSONp', cachedJSONp);	
+}
+
+/**
+ * Removing objects from localStorage
+ */
+function clearLocalStorage(){
+  localStorage.removeItem('cachedJSONp');
+  localStorage.removeItem('cachedTimeStampLS');
+}
+
+function getJsonPFromLocalStorage(){
+	return JSON.parse(localStorage.getItem('cachedJSONp'));	
+}
+
+
+function isSagaJuegosReferrer(){
+	var sagaReferrer = document.referrer.split('/')[2];
+	if(sagaReferrer !== null && sagaReferrer !== undefined && hostReferrerSaga === sagaReferrer){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
+function callSagaJSONService(url,sagaMenuMsgsJsonSvcUrl,sagaMenuJsonSvcUrl,errorData, callbackFinished){
+    jqHeader.ajaxSetup({
+    	xhrFields: {
+    		withCredentials: true
+    	}
+    });
+	jqHeader.getJSON(url, function(data) {
+		setJsonPInLocalStorage(JSON.stringify(data)); //set jsonP in localStorage	
+		successfulCallSagaMenuJSONService(data, sagaMenuMsgsJsonSvcUrl, '200');
+		if (callbackFinished != null)
+			callbackFinished();
+	}).fail(function(jqxhr, textStatus, errorThrown) {
+		console.error("Saga menu service request failed. URL used was '" + sagaMenuJsonSvcUrl + "'.");
+    clearLocalStorage();
+		successfulCallSagaMenuJSONService(jqxhr.responseJSON, sagaMenuMsgsJsonSvcUrl, jqxhr.status);
+		if (callbackFinished != null)
+			callbackFinished();
+	});
+}
+
+function loadSagaMenu(data, sagaMenuMsgsJsonSvcUrl, status) {
+	
+	jqHeader('.c-cabecera').addClass('logado');
+	jqHeader('#linkEnterButtonMobile').removeClass('linkDisabled');
+    jqHeader('#linkEnterButton').removeClass('linkDisabled');
+    jqHeader('#registerUserMobile').removeClass('linkDisabled');
+    jqHeader('#registerUser').removeClass('linkDisabled');
+	enableElementsWhenSagaNeeds();
+
+	if (status != null && status == '200' && data != null) {
+		if (data.estadoPlataforma == 'CERRADA'){
+			jqHeader('.c-cabecera').removeClass('logado');
+	      	disableElementsWhenSagaNeeds();
+			disableElementsWhenSagaIsClossed();
+			jqHeader("#menuLoggedInSaga").css("display", "none");  
+			
+		} else if (data.estadoPlataforma == 'ABIERTA') {
+			if (data.participanteID != '' && data.loginPrevio != '-' && data.participanteID != 'ERROR' && data.loginPrevio != 'ERROR') {
+				loadLogedSagaMenu(data, sagaMenuMsgsJsonSvcUrl);
+			} else if (data.participanteID != 'ERROR' && data.loginPrevio != 'ERROR') {
+				jqHeader("#actualURL").attr('value', window.location.href);
+		      	jqHeader("#actualURLMobile").attr('value', window.location.href);
+		     	jqHeader('.c-cabecera').removeClass('logado');
+		      	enableElementsWhenSagaNeeds();
+		      	jqHeader('#lotoBolsaPC').addClass('esta-oculto');
+		      	jqHeader("#menuLoggedInSaga").css("display", "none"); 
+						      	
+			} else {
+				jqHeader('.c-cabecera').removeClass('logado');
+		    	disableElementsWhenSagaNeeds();
+		   	
+			}
+		}
+	} else  {
+		if (status == '403' && data.filtroErrorNombre != null && data.filtroErrorNombre == 'plataformaCerrada') {
+			jqHeader('.c-cabecera').removeClass('logado');
+			disableElementsWhenSagaNeeds();
+			jqHeader("#menuLoggedInSaga").css("display", "none");  
+						
+		} else {
+			jqHeader('.c-cabecera').removeClass('logado');
+	    	disableElementsWhenSagaNeeds();
+			
+		}
+	}
+}
+
+function callSagaMenuJSONService(sagaMenuJsonSvcUrl, sagaMenuMsgsJsonSvcUrl, callbackFinished) {
+  if (sagaMenuJsonSvcUrl != null && sagaMenuJsonSvcUrl != undefined && sagaMenuJsonSvcUrl != "") {
+    var errorText = '{"estadoPlataforma":"ABIERTA","saldoLotobolsa":"ERROR","horaPlataforma":"null",' 
+    	+'"loginPrevio":"ERROR","participanteID":"ERROR","mostrarCaptcha":false,"mensajesNoLeidos":null}';
+    var errorData = JSON.parse(errorText);
+    try {
+	      var url = sagaMenuJsonSvcUrl.indexOf(":") == -1 ? "https://" + sagaMenuJsonSvcUrl : sagaMenuJsonSvcUrl;
+	      var millisecondsCurrentTimeLS = getCurrentTimeFromLocalStorage();
+	  	  var jsonPSaga = getJsonPFromLocalStorage();
+	  	  var millisecondsCurrentTime = getCurrentTime();
+	  	  if ((isSagaJuegosReferrer() || (jsonPSaga === undefined) || (jsonPSaga === null) || (millisecondsCurrentTimeLS === undefined) ||
+	  			(millisecondsCurrentTimeLS === null) || (millisecondsCurrentTime !== null && (millisecondsCurrentTime - millisecondsCurrentTimeLS)) >= timeToGetJsonpSaga)){
+	  		  setCurrentTimeInLocalStorage();
+	  		  callSagaJSONService(url,sagaMenuMsgsJsonSvcUrl,sagaMenuJsonSvcUrl,errorData, callbackFinished);
+	  	  }else{
+	  		var dataLS = getJsonPFromLocalStorage(); //get jsonP from localStorage
+	  		successfulCallSagaMenuJSONService(dataLS, sagaMenuMsgsJsonSvcUrl, '200');
+			if (callbackFinished != null)
+				callbackFinished();
+		  }
+    } catch (e) {
+      console.error('ERROR while calling Saga menu service and parsing its data: ' + e);
+      successfulCallSagaMenuJSONService(errorData, sagaMenuMsgsJsonSvcUrl);
+      jqHeader("#menuLoggedInSaga").css("display", "none");
+		if (callbackFinished != null)
+			callbackFinished();
+    }
+  }
+}
+
+
+function shouldLoadSagaMenu(sagaMenuJsonSvcUrl, sagaMenuMsgsJsonSvcUrl) {
+  jqHeader.when(isConfiguracionLNACGlobalJSON, isEstadoCelebracionLNACGlobalJSON).then(function() {
+    var fechaUsuario = new Date().getTime();
+    var desactivarLoginVentas = false;
+     var fechaIniciodesactivarLoginVentas = null;
+    var fechaFindesactivarLoginVentas = null;
+    if (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio != null) {
+      fechaIniciodesactivarLoginVentas = new Date(configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio).getTime();
+    }
+    if (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin != null) {
+      fechaFindesactivarLoginVentas = new Date(configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin).getTime();
+    }
+    if (!desactivarLoginVentas 
+        && (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio != null) 
+        && (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaInicio != '') 
+        && (fechaUsuario >= fechaIniciodesactivarLoginVentas)) {
+      if ((configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin == null) 
+          || (configuracionLNACGlobalJSON.desactivacionLoginVentas.fechaFin == '') 
+          || (fechaFindesactivarLoginVentas >= fechaUsuario)) {
+        desactivarLoginVentas = true;
+      }
+    }
+    
+    // desactivar la cabecera siempre que se estÃ© en tramoI, antes solo si esCelebrationNavidadONinio()
+    // el tramoI en estadoCelebracion tiene en cuenta el priorTime, ya que la op de sync pone a true es.loterias.framework.stretch.one.prior.time.in.minutes minutos antes del sorteo
+    if (esPageHomeAndLNAC() && estadoCelebracionLNACGlobalJSON.estadoCelebracionLNAC) {
+        desactivarLoginVentas = true;
+    }
+    
+    if (desactivarLoginVentas) {
+        console.log('header-saga.js > desactivarLoginVentas only register button enabled');
+        updateElementsWhenSalesAreDisabled();
+	 }
+    if (fechaIniciodesactivarLoginVentas && !desactivarLoginVentas) {
+      callSagaMenuJSONService(sagaMenuJsonSvcUrl, sagaMenuMsgsJsonSvcUrl);
+    } else {
+      disableLoginSales = true;
+      jqHeader("#menuLoggedInSaga").css("display", "none");
+      
+    }
+  });
+}
+
+
+/**
+ * Get the with in pixels of the window
+ * 
+ * @returns Number of pixels
+ */
+function getWidth() {
+  try {
+    if (jqHeader(window).width()) {
+      return jqHeader(window).width();
+    }
+  } catch (err) {
+    console.error('ERROR in getWidth: ' + err);
+  }
+  if (self.innerHeight) {
+    return self.innerWidth;
+  }
+  if (document.documentElement && document.documentElement.clientHeight) {
+    return document.documentElement.clientWidth;
+  }
+  if (document.body) {
+    return document.body.clientWidth;
+  }
+}
+
+
+function dropdownMenuSaga(buttonId, menuId) {
+  jqHeader('#' + buttonId).click(function(event) {
+    event.preventDefault();
+    jqHeader('#' + menuId ).slideToggle("slow");
+    toogleMenu(menuId);
+  });
+}
+
+
+
+var allowSubmit = true;
+jqHeader(document).ready(function() {
+	dropdownMenuSaga('helloUser', 'helloMenu');
+	dropdownMenuSaga('balanceLotobolsa', 'lotobolsaMenu');
+	
+	try{
+	    jqHeader("#enterButton").click(function(e) {
+	       if (allowSubmit) {
+				
+	    	   allowSubmit = false;
+	           localStorage.removeItem('cachedJSONp');
+		       localStorage.removeItem('cachedTimeStampLS');
+		       localStorage.removeItem('cachedNotificationsJSONp');
+		       localStorage.removeItem('cachedTimeStampNotificationsLS');
+	       } else {
+	    	   return false;
+	       }
+	    });
+	    jqHeader('#toggleEnter').click(function(e) {
+		       if (allowSubmit) {
+					allowSubmit = false;
+		           localStorage.removeItem('cachedJSONp');
+			       localStorage.removeItem('cachedTimeStampLS');
+			       localStorage.removeItem('cachedNotificationsJSONp');
+			       localStorage.removeItem('cachedTimeStampNotificationsLS');
+		       } else {
+		    	   return false;
+		       }
+		    }); 
+	    jqHeader("a[href*='logout']").on( "click", function() {
+	    	   localStorage.removeItem('cachedJSONp');
+		       localStorage.removeItem('cachedTimeStampLS');
+		       localStorage.removeItem('cachedNotificationsJSONp');
+		       localStorage.removeItem('cachedTimeStampNotificationsLS');
+	    });
+	    
+	}catch(error){
+		console.log('Error al aplicar onclick en los botones "Entrar" de SAGA');
+	}
+});</script>
+
+<div class="r-cabecera" id="header-main" data-url-path-prefix="/f" data-json-service-url="/servicios/proximosv3?game_id=TODOS&num=2" data-current-language="en">
+	<div id="menuHeader" class="c-cabecera">
+		<div class="c-cabecera__fila-superior">
+			<a class="c-cabecera-menu__hamburguesa" id="qa_cabecera_menu__hamburguesa">
+                <img class="c-cabecera-menu__icon-hamburguesa" src="/f/loterias/estaticos/imagenes/sass//menu_hamburguesa.svg" alt="Games">
+                <span class="c-cabecera-menu__texto-hamburguesa">Games</span>
+            </a>
+			<div class="c-cabecera-logo">
+                <h1>
+                    <a href="https://www.loteriasyapuestas.es" title="Loter&iacute;as y apuestas">
+                        <img id="qa_cabecera_logo_loteriasyApuestas" class="c-cabecera-logo__logotipo" src="/f/loterias/estaticos/imagenes/sass/logo_loterias.svg" alt="Loter&iacute;as y apuestas">
+                        <span class="c-cabecera-logo__titulo">Loter&iacute;as y Apuestas</span>
+                    </a>
+                </h1>
+            </div>
+			<div id="menuHeaderSaga" class="c-cabecera-menu">
+				<!-- NEW DESIGN HEADER: Logged and not Logged -->
+
+<div class="c-cabecera-menu__item c-cabecera-menu__msg">
+	<a href="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/notificaciones?access=headercms&lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/notificaciones?access=headercms&lang=en" title="Messages">
+		<img class="c-cabecera-menu__icono-msg" src="/f/loterias/estaticos/imagenes/sass/icono_msg_header.svg" alt="Messages">
+		<span class="c-cabecera-menu__counter"></span>
+	</a>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__item--logado">
+	<div class="c-cabecera-menu__separador">|</div>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__registrate">
+	<div id="helloUser" class="c-hola-usuario">
+		<a class="c-hola-usuario__titulo" href="">
+			<img id="userDropDownMenuHeadIcon" src="/f/loterias/estaticos/imagenes/sass/icono_usuario.svg" alt="Usuario" class="c-hola-usuario__img--movil esta-oculto-pc">
+			<img src="/f/loterias/estaticos/imagenes/sass/icono_usuario.svg" alt="Usuario" class="c-hola-usuario__img esta-oculto-movil">
+			<span class="c-hola-usuario__titulo-saludo">Hello</span>
+			<span id="lotobolsaName" class="c-hola-usuario__titulo-nombre"></span>
+		</a>
+		<a id="userDropDownMenuIcon" href="">
+			<img class="c-hola-usuario__icono-mas" src="/f/loterias/estaticos/imagenes/sass/icono_mas.svg" alt="More"> 
+		</a>
+		<span class="c-hola-usuario__texto-movil">Menu</span> 
+	</div>
+	<ul style="display:none" class="c-menu-usuario" id="helloMenu">
+		<li class="c-menu-usuario__item c-menu-usuario__no_enlace" id="qa_cabecera_menu_usuario_20">
+									My bets</li>
+								<li>
+									<ul class="c-submenu-usuario">
+										<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_21">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/historicos?access=headercms&lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/historicos?access=headercms&lang=en" title="Bets">
+														Bets</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_22">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/suscripciones?access=headercms&lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/suscripciones?access=headercms&lang=en" title="Subscriptions">
+														Subscriptions</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_23">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/favoritas?access=headercms&lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/apuestas/favoritas?access=headercms&lang=en" title="Favourites">
+														Favourites</a>
+												</li>
+											</ul>
+								</li>
+							<li class="c-menu-usuario__item c-menu-usuario__no_enlace" id="qa_cabecera_menu_usuario_30">
+									My Details</li>
+								<li>
+									<ul class="c-submenu-usuario">
+										<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_31">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-usuario?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-usuario?lang=es" title="Datos personales">
+														Datos personales</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_34">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-cuenta/datos-cuenta-juegos?access=headercms&lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/datos-cuenta/datos-cuenta-juegos?access=headercms&lang=en" title="Game account">
+														Game account</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_35">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/control-cuenta/autoexclusion?lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/configuracion/control-cuenta/autoexclusion?lang=en" title="Self-exclusion">
+														Self-exclusion</a>
+												</li>
+											<li class="c-submenu-usuario__item" id="qa_cabecera_menu_usuario_36">
+													<a class="c-submenu-usuario__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/intereses-participante?lang=es" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/mensajes/intereses-participante?lang=es" title="Notificaciones">
+														Notificaciones</a>
+												</li>
+											</ul>
+								</li>
+							</ul>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__item--logado">
+	<div class="c-cabecera-menu__separador">|</div>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__lotobolsa">
+	
+	<div class="c-cabecera-menu__item esta-oculto-movil">
+			<a id="linkEnterButton" href="https://juegos.loteriasyapuestas.es/acceder/login?lang=en">
+			<button id="enterButton"  class="c-cabecera-menu__enlace"  title="Enter">
+				<img id="enterImage" class="c-cabecera-menu__imagen" src="/f/loterias/estaticos/imagenes/sass/boton_entrar.svg" alt="Enter">
+				<p id="enterTxt" class="c-cabecera-menu__texto">Enter</p>
+			</button>
+			</a>
+		</div>
+	<div id="balanceLotobolsa" class="c-saldo-lotobolsa">
+		<a class="c-saldo-lotobolsa__valor-p esta-oculto-movil" id="qa_cabecera_usuario_saldo_cantidad">  
+			<span class="c-saldo-lotobolsa__titulo">Balance:</span>
+			<span class="c-saldo-lotobolsa__valor" id="balancePC"></span>
+			<img class="c-saldo-lotobolsa__icono-mas" src="/f/loterias/estaticos/imagenes/sass/icono_mas.svg" alt="More"> 
+		</a>
+		<!-- Mobile -->
+		<div class="c-saldo-lotobolsa__valor-p esta-oculto-pc" id="qa_cabecera_usuario_saldo_cantidad">
+			<a class="c-saldo-lotobolsa__titulo-enlace esta-oculto-pc" id="qa_cabecera_usuario_saldo_textoTuSaldo">
+				<p class="c-saldo-lotobolsa__valor" id="balanceMobile" ></p>
+				<p class="c-saldo-lotobolsa__titulo" id="qa_cabecera_usuario_saldo_textoTuSaldo">Balance:</p>
+			</a>
+			<a id="lotobolsaDropDownMenuIconMobile" href="#" class="c-saldo-lotobolsa__enlace-mas-info">
+				<img class="c-saldo-lotobolsa__icono-mas" src="/f/loterias/estaticos/imagenes/sass/icono_mas.svg" alt="More" id="qa_cabecera_usuario_saldo_botonCargarSaldo">
+			</a>
+		</div>
+	</div>
+	
+	<ul style="display:none" class="c-menu-lotobolsa" id="lotobolsaMenu">
+		<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/carga/carga-lotobolsa?lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/carga/carga-lotobolsa?lang=en" title="Load Lotobolsa">Load Lotobolsa</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/movimientos?lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/movimientos?lang=en" title="Movements">Movements</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/descarga/descarga-lotobolsa?lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/descarga/descarga-lotobolsa?lang=en" title="Lotobolsa withdrawal">Lotobolsa withdrawal</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/opciones-lotobolsa?lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/lotobolsa/opciones-lotobolsa?lang=en" title="Options">Options</a>
+				</li>
+			<li class="c-menu-lotobolsa__item">
+					<a class="c-menu-lotobolsa__enlace" href="https://juegos.loteriasyapuestas.es/jugar/cas/juego-responsable" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/juego-responsable" title="Safer game">Safer game</a>
+				</li>
+			</ul>
+</div>
+<div class="c-cabecera-menu__item">
+	<div class="c-cabecera-menu__separador">|</div>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu-enlace__btn-entrar">
+	<a id="toggleEnter" class="c-cabecera-menu__enlace c-cabecera-menu__enlace--movil" title="Enter"  href="https://juegos.loteriasyapuestas.es/acceder/login?lang=en">
+		<img class="c-cabecera-menu__imagen" src="/f/loterias/estaticos/imagenes/sass/boton_entrar.svg" alt="Enter">
+		<p class="c-cabecera-menu__texto">Enter</p>
+	</a>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__item--salir">
+	<a class="c-cabecera-menu__enlace c-cabecera-menu__enlace--salir" href="https://juegos.loteriasyapuestas.es/jugar/cas/logout?access=headercms&lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/cas/logout?access=headercms&lang=en" title="Exit">
+		<img class="c-cabecera-menu__imagen" src="/f/loterias/estaticos/imagenes/sass/icono_salir.svg" alt="Exit">
+		<p class="c-cabecera-menu__texto">Exit</p>
+	</a>
+</div>
+<div class="c-cabecera-menu__item c-cabecera-menu__boton-registrate-envoltorio">
+	<a id="registerUser" href="https://juegos.loteriasyapuestas.es/jugar/registro/verificacion?lang=en" data-href-pc="https://juegos.loteriasyapuestas.es/jugar/registro/verificacion?lang=en">
+	<button id="registerButton" class="c-cabecera-menu__boton-registrate">Register</button> 
+	</a>	
+</div>
+
+<!-- NEW DESIGN HEADER: Logged and not Logged END-->
+
+<script type='text/javascript'>
+	var jqSagaMenu = jQuery.noConflict();
+	var loginEnterButtonUrl = "https://juegos.loteriasyapuestas.es/acceder/login?lang=en";
+	var literalEnter = "Enter";
+	var saga_menu_json_service_url = 'https://juegos.loteriasyapuestas.es/jugar/servicios-rest/participante/sesion';
+	var isActiveSagaMenuMessagesJsonService = 'false';
+	var saga_menu_messages_json_service_url = 'https://juegos.loteriasyapuestas.es/jugar/cabecera/avisos';
+	var urlLoginSaga = 'https://juegos.loteriasyapuestas.es/acceder/login?lang=en'; 
+	jqSagaMenu(document).ready(function() {
+		try{
+			if(isActiveSagaMenuMessagesJsonService == "true"){
+				if(saga_menu_messages_json_service_url != null && saga_menu_messages_json_service_url != undefined && saga_menu_messages_json_service_url != ""){
+					shouldLoadSagaMenu(saga_menu_json_service_url, saga_menu_messages_json_service_url);
+				} else {
+					shouldLoadSagaMenu(saga_menu_json_service_url);
+					console.log('Error while updating SAGA menu: the saga menu messages json service is active but its URL is empty or null.');
+				}
+			} else {
+				shouldLoadSagaMenu(saga_menu_json_service_url);
+			}
+		}catch (e) {
+			console.log('Error while updating SAGA menu:' + e);
+		}
+		
+	});
+</script><div class="c-cabecera-menu__item c-cabecera-menu__item--movil600">
+           <div class="c-cabecera-menu__separador">|</div>
+       </div>
+       <div class="c-cabecera-menu__item c-cabecera__idioma">
+		<a id="link_es" class="esta-oculto homeLanguageLink" href="/es/resultados-ultimos-sorteos" hreflang="es">Castellano</a>
+				<a id="link_ca" class="esta-oculto homeLanguageLink" href="/ca/resultados-ultimos-sorteos" hreflang="ca">Català</a>
+				<a id="link_en" class="esta-oculto homeLanguageLink" href="/en/resultados-ultimos-sorteos" hreflang="en">English</a>
+				<a id="link_eu" class="esta-oculto homeLanguageLink" href="/eu/resultados-ultimos-sorteos" hreflang="eu">Euskera</a>
+				<a id="link_gl" class="esta-oculto homeLanguageLink" href="/gl/resultados-ultimos-sorteos" hreflang="gl">Galego</a>
+				<a id="link_va" class="esta-oculto homeLanguageLink" href="/va/resultados-ultimos-sorteos" hreflang="va">Valencià</a>
+				<span class="c-cabecera-menu__texto-idioma">Language      </span>
+		<select id="language" class="c-cabecera-menu__idioma">
+			<option id="ES" data-href-lang="es">Castellano</option>
+					<option id="CA" data-href-lang="ca">Català</option>
+					<option selected="selected" id="EN" data-href-lang="en">English</option>
+					<option id="EU" data-href-lang="eu">Euskera</option>
+					<option id="GL" data-href-lang="gl">Galego</option>
+					<option id="VA" data-href-lang="va">Valencià</option>
+					</select>
+	</div>
+<script type='text/javascript'>
+	var currentLanguage = "en";
+	var jqSagaLang = jQuery.noConflict();
+	addCurrentURLParamsToLanguageLinks();
+	jqSagaLang(document).ready(function() {
+		try {
+			jqSagaLang( "#language" ).change(function() {
+				var linkId = jqSagaLang( "#language option:selected" ).data("href-lang");
+				try{
+					usrLangCookie.createCookie(linkId);
+				} catch (error) {
+					console.error("file '/f/loterias/estaticos/js/cookie.js' has not been loaded or its version is lower than 3.8.X.");
+					console.error(error);
+				}
+				document.getElementById("link_"+linkId).click();
+			});
+		} catch (err) {
+			console.error("ERROR al asociar el evento del desplegable de idiomas: " + err);
+		}
+	});
+</script></div>
+	
+		</div>
+		<div class="cabecera-menu-juegos_topaz">
+				 <ul class="c-cabecera__juegos_topaz" id="qa_cabecera_sorteos_contenedor">
+				 	<li style="display: none;" class="c-cabecera-juego_topaz esta-oculto-pc  c-cabecera-idiomas-li-movil" id="header-lang" >
+								<a id="link_es" class="c-login-movil__enlace-idiomas" href="/es/resultados-ultimos-sorteos" hreflang="es">Castellano</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_ca" class="c-login-movil__enlace-idiomas" href="/ca/resultados-ultimos-sorteos" hreflang="ca">Català</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_en" class="c-login-movil__enlace-idiomas" href="/en/resultados-ultimos-sorteos" hreflang="en">English</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_eu" class="c-login-movil__enlace-idiomas" href="/eu/resultados-ultimos-sorteos" hreflang="eu">Euskera</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_gl" class="c-login-movil__enlace-idiomas" href="/gl/resultados-ultimos-sorteos" hreflang="gl">Galego</a>
+									<div class="c-login-movil__separador">|</div>
+									<a id="link_va" class="c-login-movil__enlace-idiomas" href="/va/resultados-ultimos-sorteos" hreflang="va">Valencià</a>
+									</li>
+						<li style="display: none;" class="c-cabecera-juego_topaz c-cabecera-juego__titulo-botes--movil esta-oculto-pc esta-oculto-movil">
+		                <p class="c-cabecera-juego__titulo-botes">Jackpots in play</p>
+		            </li>	            
+					<li style="display: none;" class="c-cabecera__juego--euromillones c-cabecera-juego_topaz" id="header-link-EMIL" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/euromillones/apuesta?access=headercms&lang=en" data-bet-title="PLAY EUROMILLONES"></li>
+					<li style="display: none;" class="c-cabecera__juego--primitiva c-cabecera-juego_topaz" id="header-link-LAPR" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/la-primitiva/apuesta?access=headercms&lang=en" data-bet-title="PLAY LA PRIMITIVA"></li>
+					<li style="display: none;" class="c-cabecera__juego--bonoloto c-cabecera-juego_topaz" id="header-link-BONO" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/bonoloto/apuesta?access=headercms&lang=en" data-bet-title="PLAY BONOLOTO"></li>
+					<li style="display: none;" class="c-cabecera__juego--gordo c-cabecera-juego_topaz" id="header-link-ELGR" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/gordo-primitiva/apuesta?access=headercms&lang=en" data-bet-title="PLAY EL GORDO"></li>
+					<li style="display: none;" class="c-cabecera__juego--eurodreams c-cabecera-juego_topaz" id="header-link-EDMS" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/eurodreams/apuesta?access=headercms&lang=en" data-bet-title="PLAY EURODREAMS"></li>
+					<li style="display: none;" class="c-cabecera__juego--loteria-nacional c-cabecera-juego_topaz" id="header-link-LNAC" data-bet-href="/en/loteria-nacional" data-bet-title="PLAY"></li>
+					<li style="display: none;" class="c-cabecera__juego--quiniela c-cabecera-juego_topaz" id="header-link-LAQU" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/la-quiniela/apuesta?access=headercms&lang=en" data-bet-title="PLAY LA QUINIELA"></li>
+					<li style="display: none;" class="c-cabecera__juego--lototurf c-cabecera-juego_topaz" id="header-link-LOTU" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/lototurf/apuesta?access=headercms&lang=en" data-bet-title="PLAY LOTOTURF"></li>
+					<li style="display: none;" class="c-cabecera__juego--quinigol c-cabecera-juego_topaz" id="header-link-QGOL" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/quinigol/apuesta?access=headercms&lang=en" data-bet-title="PLAY QUINIGOL"></li>
+					<li style="display: none;" class="c-cabecera__juego--quintuple c-cabecera-juego_topaz" id="header-link-QUPL" data-bet-href="https://juegos.loteriasyapuestas.es/jugar/quintupleplus/apuesta?access=headercms&lang=en" data-bet-title="PLAY QUINTUPLE PLUS"></li>
+					
+					<li style="display: none;" class="c-cabecera-juego c-cabecera-juego__boton-ahora--movil">
+		                <a class="c-cabecera-juego__boton-ahora" title="now at stake" href="/en/apostar-online" id="qa_cabecera_hamburguer_boton_ahoraEnJuego">
+		                    <img class="c-cabecera-juego__imagen-boton" src="/f/loterias/estaticos/imagenes/sass/ahora_en_juego.svg" alt="Now in play">
+		                    <p class="c-cabecera-juego__texto-ahora">Now in play</p>
+		                </a>
+		            </li>	 
+				 </ul>
+			 </div>
+	</div>
+</div>
+<div id="lotoBolsaPC" class="r-ultimo-acceso esta-oculto">
+    <div class="c-ultimo-acceso" id="qa_cabecera_sesion_contenedor">
+        <p class="c-ultimo-acceso__texto">
+            <img class="c-ultimo-acceso__icono" src="/f/loterias/estaticos/imagenes/sass/ultimo_acceso.svg" alt="Last access:">
+            <span class="c-ultimo-acceso__texto-sesion" id="qa_cabecera_sesion_textoSesion">Session:</span>
+            <span id="timePC" class="c-ultimo-acceso__sesion"></span>
+            <span class="c-ultimo-acceso__sesion-separador">- </span>
+            <span class="c-ultimo-acceso__ultimo-acceso" id="qa_cabecera_sesion_textoUltimoAcceso">Last access:</span>
+            <span id="datePC" class="c-ultimo-acceso__fecha"></span>
+            <span id="hourPC" class="c-ultimo-acceso__hora"></span>
+        </p>
+    </div>
+</div>
+
+<script type='text/javascript'>
+var jqSagaMenu = jQuery.noConflict();
+var literalMobileEnter = "ENTER";
+var registerButtonURLMobile = "https://juegos.loteriasyapuestas.es/jugar/registro/verificacion?lang=en";
+var literalMobileRegister = "Register";
+var urlLoginSaga = 'https://juegos.loteriasyapuestas.es/acceder/login?lang=en'; 
+
+</script>
+
+<!--End Header-Horz Area --><!-- Fin Cabecera -->
+			<!-- Contenido -->
+			<div id="idContainerLoteriaNacional" class="contenedor contenedorPrincipal dosColumnas home fondoGrisClaro sinBullets textoTituloRegion textoMediano fondoGrisSinBorder bordeGrisSuperior fondoBlancoBordes">
+	<!-- begin horizontal nav area -->
+				<!-- end horizontal nav area -->
+				<!-- Start Page Controls - Horz Area -->
+
+<!-- End Page Controls - Horz Area -->
+<div class="contenedor contenedorSuperior subhome sinFondo textoResultados" >
+
+			    <div class="contenedor">
+				<div class="cpo">
+					<h2>
+						results of latest draws on your website
+</h2>
+
+					<div style="width: 92%; text-align: center; padding: 2%; margin-right: -10px;">
+<div class="pagina_promocional" style="text-align: center; border: 1px solid #007ac0; width: 99%; padding: 2%; border-radius: 20px; box-shadow: 9px 11px 9px -10px #2e2d2e;">
+<div class="t-es" style="font-size: 24px; line-height: 32px; color: #007ac0; display: inline-block; margin-left: 3%; margin-right: 3%;">RESULTS OF LATEST DRAWS ON YOUR WEBSITE<br />
+<p style="font-size: 15px; text-align: center; padding: 3%;">If you want to post information on the latest results of our games on your website, download the results file for each game and invoke it as explained below:</p>
+</div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/euromillones.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #153f69; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/EMIL.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">EUROMILLONES</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/primitiva.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #008547; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/PRIM.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">LA PRIMITIVA</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/bonoloto.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #7a8634; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/BONO.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">BONOLOTO</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/gordo.html?"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #dc3f47; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/ELGR.svg" width="36px" /> </span><span style="padding-top: 14px; float: left; color: white;">EL GORDO DE LA PRIMITIVA</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/eurodreams.html?"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #69358c; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/EUDR-.svg" width="36px" /> </span><span style="padding-top: 14px; float: left; color: white;">EURODREAMS</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/lnac.html?"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #007ac0; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/LNAC.svg" width="36px" /> </span><span style="padding-top: 14px; float: left; color: white;">LOTERIA NACIONAL</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/quiniela.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #cb1517; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/LAQU.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">LA QUINIELA</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/quinigol.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #74bccd; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/QNGOL.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">QUINIGOL</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/lototurf.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #d16929; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/LAQU.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">LOTOTURF</span> </span></a></div>
+<div style="margin-top: 13px;"><a href="/f/loterias/resultados/quintuple.html"><span style="font-size: 12px; color: #fff; display: inline-block; overflow: hidden; position: relative; height: 46px; border: none; width: 95%; max-width: 242px; border-radius: 32px; padding: 2px 27px; -moz-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -o-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; -webkit-transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s; background-color: #eab842; text-align: left; vertical-align: middle;"> <span style="float: left; margin-top: 3px;"><img src="/f/loterias/estaticos/imagenes/compruebaimg/QTPLE.svg" width="36px" /> </span><span style="padding-top: 15px; float: left; color: white;">QUINTUPLE PLUS</span> </span></a></div>
+</div>
+<p style="font-size: 15px; text-align: justify; padding-top: 3%;">&nbsp;Invoke it as follows:</p>
+<ul style="float: left; padding-left: 20px; width: 100%; text-align: center;">
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/euromillones.html?<span style="color: #007ac0;">game_id</span>=EMIL&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/primitiva.html?<span style="color: #007ac0;">game_id</span>=LAPR&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/bonoloto.html?<span style="color: #007ac0;">game_id</span>=BONO&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/gordo.html?<span style="color: #007ac0;">game_id</span>=ELGR&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/eurodreams.html?<span style="color: #007ac0;">game_id</span>=EUDR&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/lnac.html?<span style="color: #007ac0;">game_id</span>=LNAC&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/quiniela.html?<span style="color: #007ac0;">game_id</span>=LAQU&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/quinigol.html?<span style="color: #007ac0;">game_id</span>=QGOL&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/lototurf.html?<span style="color: #007ac0;">game_id</span>=LOTU&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd</li>
+<li style="font-size: 1.1em; margin: 0; list-style-type: none; text-align: left;">/f/loterias/resultados/quintuple.html?<span style="color: #007ac0;">game_id</span>=QUPL&amp;<span style="color: #007ac0;">fecha_sorteo</span>=aaaammdd<br /><br /></li>
+</ul>
+<div>
+<p style="font-size: 15px; text-align: justify; padding-top: 5%; margin-left: 14px;"><br /><br />Where <strong>game_id</strong> is the name of the game and <strong>draw_date</strong> is the date of the draw to be displayed.</p>
+</div>
+<div class="pieListado"></div>
+</div>
+
+
+</div>
+				<div class="pieListado">
+	
+	</div></div>
+		</div>
+<div class="contenedor contenedorInferior" >
+
+			    </div>
+</div>
+			<!-- Fin Contenido -->
+			<!-- Pie -->
+			<div class="contenedor pie subhome">
+    <div class="r-pie">
+		<div class="c-pie">
+			<div class="c-pie__content">
+				<div class="c-pie__item c-pie__item--descarga">
+					<!-- 
+					<p class="c-pie__texto" id="qa_pie_texto_descargaNuestraApp">
+						</p>
+					 -->
+					<div class="contenido-descargas">
+						<a href="https://www.loteriasyapuestas.es/en/appselae" class="c-pie__enlace-descarga" id="qa_pie_boton_disponibleEnAndroidAppStore1"> 
+								<img src="/f/loterias/estaticos/imagenes/sass/android.svg" class="c-pie__imagen-descarga" alt="App Android" title="App Android"><span class="c-pie__titulo-destacado">Available for </span><span class="c-pie__texto-destacado">Android</span></a>
+						<a href="https://itunes.apple.com/es/app/misloterias/id536094772?mt=8&ls=1" class="c-pie__enlace-descarga" id="qa_pie_boton_disponibleEnAndroidAppStore2"> 
+								<img src="/f/loterias/estaticos/imagenes/sass/app_store.svg" class="c-pie__imagen-descarga" alt="Apple Store" title="Apple Store"><span class="c-pie__titulo-destacado">Available on the </span><span class="c-pie__texto-destacado">App Store</span></a>
+						</div>
+				</div>
+				
+				<div class="c-pie__item c-pie__item--redes-sociales">
+					<div class="c-pie__separador"></div>
+
+					<a href="https://www.facebook.com/loteriasyapuestas.es" class="c-pie__enlace-redes-sociales" id="qa_pie_boton_redSocial1" target="_blank" rel="noopener noreferrer"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/facebook.svg" class="c-pie__imagen-redes-sociales" alt="Facebook" title="Facebook">
+						</a>
+					<a href="https://twitter.com/loterias_es" class="c-pie__enlace-redes-sociales" id="qa_pie_boton_redSocial2" target="_blank" rel="noopener noreferrer"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/twitter.svg" class="c-pie__imagen-redes-sociales" alt="Twitter" title="Twitter">
+						</a>
+					<a href="https://www.youtube.com/user/loteriasyap" class="c-pie__enlace-redes-sociales" id="qa_pie_boton_redSocial3" target="_blank" rel="noopener noreferrer"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/youtube.svg" class="c-pie__imagen-redes-sociales" alt="YouTube" title="YouTube">
+						</a>
+					<div class="c-pie__separador"></div>
+					
+					<a href="/en/contacto" class="c-pie__enlace-redes-sociales" id="qa_pie_enlace_contacto1"> 
+							<img src="/f/loterias/imagenes/contacto_pie.svg" class="c-pie__imagen-redes-sociales c-pie__imagen-redes-sociales--contactos" id="qa_pie_logo_contacto1" alt="Contact" title="Contact">
+							<span class="c-pie__enlace-text-redes-sociales" title="Contact">Contact</span>
+						</a>
+					<a href="/en/contacto" class="c-pie__enlace-redes-sociales" id="qa_pie_enlace_contacto2"> 
+							<img src="/f/loterias/estaticos/imagenes/sass/headset.svg" class="c-pie__imagen-redes-sociales c-pie__imagen-redes-sociales--contactos" id="qa_pie_logo_contacto2" alt="Telephone" title="Telephone">
+							<span class="c-pie__enlace-text-redes-sociales" title="Telephone">900 11 23 13 / 91 596 23 00</span>
+						</a>
+					<div class="c-pie__separador"></div>
+				</div>
+				
+				<div class="c-pie__item c-pie__item--formas-pago">
+					<a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/lotobolsa/pago-seguro-con-tarjeta-de-credito-debito" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/imagenes/estaticos/imagenes/topaz/visa.png" class="c-pie__logo-pago" id="qa_pie_formasDePago1" alt="Visa" title="Visa">
+						
+						</a><a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/lotobolsa/pago-seguro-con-tarjeta-de-credito-debito" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/imagenes/estaticos/imagenes/topaz/mastercard.png" class="c-pie__logo-pago" id="qa_pie_formasDePago2" alt="Mastercard" title="Mastercard">
+						
+						</a><a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/lotobolsa/pago-mediante-banca-electronica" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/imagenes/estaticos/imagenes/topaz/traspaso.png" class="c-pie__logo-pago" id="qa_pie_formasDePago3" alt="Quick Transfer" title="Quick Transfer">
+						
+						</a><a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/lotobolsa/pago-por-paypal" class="c-pie__enlace-pago" target="_blank" rel="noopener noreferrer"><img src="/f/loterias/estaticos/imagenes/sass/paypal.svg" class="c-pie__logo-pago" id="qa_pie_formasDePago4" alt="Paypal" title="Paypal">
+						
+						</a></div>
+				
+				<div class="c-pie__item c-pie__item--menu">
+					<a href="/en/web-corporativa/quienes-somos" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes1" target="_blank" rel="noopener noreferrer">
+							Who we are</a>
+						<div class="c-pie__separador"></div>
+						<a href="/en/centro-de-ayuda/centro-de-informacion-y-ayuda" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes2" target="_blank" rel="noopener noreferrer">
+							Help</a>
+						<div class="c-pie__separador"></div>
+						<a href="/en/juego-mas-seguro" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes3" target="_blank" rel="noopener noreferrer">
+							Safer game</a>
+						<div class="c-pie__separador"></div>
+						<a href="/en/centro-de-ayuda/informacion-pie/aviso-legal" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes4" target="_blank" rel="noopener noreferrer">
+							Legal Notice</a>
+						<div class="c-pie__separador"></div>
+						<a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/informacion-pie/estipulaciones-proteccion-datos" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes5" target="_blank" rel="noopener noreferrer">
+							Data Protection</a>
+						<div class="c-pie__separador"></div>
+						<a href="/en/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes6" target="_blank" rel="noopener noreferrer">
+							Website Usage</a>
+						<div class="c-pie__separador"></div>
+						<a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/informacion-pie/accesibilidad" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes7" target="_blank" rel="noopener noreferrer">
+							Accesibility</a>
+						<div class="c-pie__separador"></div>
+						<a href="https://www.loteriasyapuestas.es/en/centro-de-ayuda/informacion-pie/politica-de-cookies" class="c-pie__enlace-menu" id="qa_pie_enlaces_interes8" target="_blank" rel="noopener noreferrer">
+							Cookie management</a>
+						</div>
+				
+				<div class="c-pie__item c-pie__item--logos">
+					<a href="https://www.selae.es/en/web-corporativa/responsabilidad-social/gestion-responsable-del-juego/primera-regla-del-juego-18-anos/primera-regla-del-juego-18-anos" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados1" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/estaticos/imagenes/sass/major18.svg" class="c-pie__imagen-aviso" alt="+ 18 years" title="+ 18 years" >
+						
+						</a>
+						<a href="https://juegos.loteriasyapuestas.es/jugar/evidencias/6/6" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados2" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/estaticos/imagenes/sass/warning.svg" class="c-pie__imagen-aviso" alt="RGIAJ" title="RGIAJ" >
+						
+						</a>
+						<a href="https://www.ordenacionjuego.es/participantes-juego/juego-autorizado" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados3" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/t-juego_autorizado.svg" class="c-pie__imagen-aviso" alt="Juego autorizado" title="Juego autorizado" >
+						
+						</a>
+						<a href="https://www.ordenacionjuego.es/participantes-juego/juego-seguro" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados4" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/t-juego_seg.svg" class="c-pie__imagen-aviso" alt="Juego seguro" title="Juego seguro" >
+						
+						</a>
+						<a href="https://www.aenor.com/certificacion/buscador/resultados/?Em=LOTERIAS" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados5" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/estaticos/imagenes/sass/logo-certif.svg" class="c-pie__imagen-aviso" alt="ISO 9001" title="ISO 9001" >
+						
+						</a>
+						<a href="https://www.european-lotteries.org/" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados6" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/twebsegura.png" class="c-pie__imagen-aviso" alt="European Lotteries" title="European Lotteries" >
+						
+						</a>
+						<a href="https://cibelae.net/" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados7" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/Logos/lg-cibelae.png" class="c-pie__imagen-aviso" alt="Cibelae" title="Cibelae" >
+						
+						</a>
+						<a href="https://www.selae.es/es/web-corporativa/quienes-somos/la-empresa/asociacion-mundial-de-loterias-wla" class="c-pie__enlace-aviso" id="qa_pie_logos_certificados8" target="_blank" rel="noopener noreferrer">
+						<img src="/f/loterias/imagenes/estaticos/imagenes/bsi_wla1.svg" class="c-pie__imagen-aviso" alt="WLA" title="WLA" >
+						
+						</a>
+						</div>
+				
+				<div class="c-pie__item c-pie__item--copyright">
+					<p class="c-pie__texto-copyright" id="qa_pie_textoCopyright">
+                    	&#x00a9; SELAE<span class="c-pie__texto-legal" id="qa_pie_textoLegal">
+           					All SELAE brands are registered. Their use by third parties is forbidden without the express authorization of SELAE- Loter&iacute;as y Apuestas del Estado</span>
+                	</p>
+            	</div>
+            </div>
+		</div>
+	</div>
+</div><!-- Fin Pie -->
+		</div>
+	</body>
+	<script type="text/javascript">
+		try {
+			loadMenuOptionsResponsive();
+			loadResponsiveFooter();
+		} catch (err) {
+			console.error('ERROR en loadMenuOptionsResponsive: ' + err);
+		}
+	
+		/** Controlamos que al cambiar el ancho de la pantalla volvemos a cargar el menÃº de juegos de la cabecera. */
+		/** Esto es imprescindible para dispositivos donde se cambia la orientacion de la pantalla */
+		try {
+			var w = getWidth();
+			setInterval('checkWidth()', 700);
+			function checkWidth() {
+				if (w != getWidth()) {
+					loadMenuOptionsResponsive();
+					w = getWidth();
+				}
+			}
+		} catch (err) {
+			console.error('ERROR en orientationchange: ' + err);
+		}
+	</script>
+</html>

@@ -1,0 +1,2515 @@
+{
+  "report_version": "lottobrain.stage2-final-qualification.v1",
+  "date": "2026-10-27",
+  "timezone": "America/Sao_Paulo",
+  "status": "technical_qualification_completed_with_explicit_source_use_restrictions",
+  "all_sources_cleared_for_operation": false,
+  "all_sources_operational": false,
+  "operational_import_performed": false,
+  "inventory_repeated": false,
+  "production_changes": false,
+  "previous_evidence": [
+    "docs/data/fechamento-etapa-2.json",
+    "docs/data/reanalise-etapa-2-atualizacao-completa.json"
+  ],
+  "acceptance": [
+    {
+      "id": "QF-01",
+      "subject": "CAIXA automated GET downloads",
+      "status": "passed_locally",
+      "evidence": "three HTTP 200; exact bytes reused from qualified XLSX; actual existing Mega-Sena client also HTTP 200 and valid"
+    },
+    {
+      "id": "QF-02",
+      "subject": "tituloConcursoEspecial",
+      "status": "qualified_for_future_adapter",
+      "evidence": "real null at3075 and text at3010; precise field/type profile; existing production adapter remains unchanged"
+    },
+    {
+      "id": "QF-03",
+      "subject": "New York Python TLS",
+      "status": "passed_locally",
+      "evidence": "standard secure SSL context and native trust context both returned200 for PB/MM; no certificate verification disabled"
+    },
+    {
+      "id": "QF-04",
+      "subject": "68 Double Play missing dates",
+      "status": "technical_coverage_passed_use_restricted",
+      "evidence": "68/68 present in Colorado;63/63 overlapping DP agree;131 primary results and PowerPlay agree; no import"
+    },
+    {
+      "id": "QF-05",
+      "subject": "financial semantics",
+      "status": "qualified_with_explicit_unavailable_fields",
+      "evidence": "1118 Europe winner tiers agree;77 JP rows and10 transfers have distinct semantics; state/national and annuity/cash stay separate"
+    },
+    {
+      "id": "QF-06",
+      "subject": "six-lottery documentary acceptance",
+      "status": "completed_with_external_dependency",
+      "evidence": "consolidated per-source decisions; broad operational/reuse approval is not asserted"
+    }
+  ],
+  "coverage_reused_not_reaudited": [
+    {
+      "lottery": "mega_sena",
+      "source_records": 3075,
+      "latest_number": 3075,
+      "latest_date": "2026-10-26",
+      "recent_records": 121,
+      "baseline_number": 2954
+    },
+    {
+      "lottery": "lotofacil",
+      "source_records": 3814,
+      "latest_number": 3814,
+      "latest_date": "2026-10-26",
+      "recent_records": 243,
+      "baseline_number": 3571
+    },
+    {
+      "lottery": "mais_milionaria",
+      "source_records": 401,
+      "latest_number": 401,
+      "latest_date": "2026-10-24",
+      "recent_records": 87,
+      "baseline_number": 314
+    },
+    {
+      "lottery": "powerball",
+      "source_records": 2017,
+      "latest_date": "2026-10-26",
+      "recent_records": 131,
+      "baseline_date": "2025-12-24"
+    },
+    {
+      "lottery": "mega_millions",
+      "source_records": 2389,
+      "latest_date": "2026-10-23",
+      "recent_records": 87,
+      "baseline_date": "2025-12-23"
+    },
+    {
+      "lottery": "euro_millions",
+      "source_records": 703,
+      "latest_date": "2026-10-27",
+      "recent_records": 87,
+      "baseline_date": "2025-12-26"
+    }
+  ],
+  "samples": [
+    {
+      "name": "actual_existing_mega_client",
+      "path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mega_latest.json",
+      "sha256": "6e7850886c79e135b7977869cc049b8d91cdd5864cd4c33fac65e829eeb6a42e",
+      "byte_count": 1745,
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "observed_at_utc": "2026-10-27T22:48:02.755789+00:00",
+      "reused_existing_file": true
+    },
+    {
+      "name": "caixa_loto_download",
+      "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/lotofacil.xlsx",
+      "sha256": "b0d4421115b0966397b5c7b4a8e261964e5b254b5e69c5956ec73ec048a83be5",
+      "byte_count": 386611,
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Lotof%C3%A1cil",
+      "observed_at_utc": "2026-10-27T22:41:28.191464+00:00",
+      "reused_existing_file": true
+    },
+    {
+      "name": "caixa_mega_download",
+      "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mega_sena.xlsx",
+      "sha256": "a7d1e32136b545757343ac956d48a1d2787f7be6b9f3890c13ea0092966bc2f4",
+      "byte_count": 229988,
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Mega-Sena",
+      "observed_at_utc": "2026-10-27T22:41:25.040221+00:00",
+      "reused_existing_file": true
+    },
+    {
+      "name": "caixa_mega_json",
+      "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mega_sena_host_atual.json",
+      "sha256": "454a81b12c365e2d7ded35d9793cd3d03a3fae1fb8a25dfbaf42f5268439c682",
+      "byte_count": 1780,
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "observed_at_utc": "2026-10-27T22:41:34.281234+00:00",
+      "reused_existing_file": true
+    },
+    {
+      "name": "caixa_mega_special",
+      "path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/mega_sena_3010_titulo_especial.json",
+      "sha256": "6eb90ebef1fd4273935cb15a522797d13a3a684784de86c6598e1c0c8c5824ad",
+      "byte_count": 2108,
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/megasena/3010",
+      "observed_at_utc": "2026-10-27T22:41:36.530420+00:00",
+      "reused_existing_file": false
+    },
+    {
+      "name": "caixa_mili_download",
+      "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mais_milionaria.xlsx",
+      "sha256": "7a1c09d6b9c07589b731316ad8dc2252da071fc5747d1766bcb6d53922f9a315",
+      "byte_count": 55533,
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=%2BMilion%C3%A1ria",
+      "observed_at_utc": "2026-10-27T22:41:31.479973+00:00",
+      "reused_existing_file": true
+    },
+    {
+      "name": "colorado_all_xlsx",
+      "path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/colorado_powerball_export.xlsx",
+      "sha256": "a90876d830d02c97db901157fe182d1982e1a2898a7f6197dec6ed5fc8ce8d7d",
+      "byte_count": 609068,
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=powerball&timeframe=sincestart&queried_at=2026-10-27T22%3A41%3A42%2B00%3A00&xlsx=1",
+      "observed_at_utc": "2026-10-27T22:43:42.501781+00:00",
+      "reused_existing_file": false
+    },
+    {
+      "name": "control_ny_mm_direct",
+      "path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_mega_millions_3_recentes.json",
+      "sha256": "033a5a499f7e72514648ea08ea7ea0131ecd370aa04730fd7a5b7da4dbd89d98",
+      "byte_count": 280,
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:43:49.325436+00:00",
+      "reused_existing_file": false
+    },
+    {
+      "name": "control_ny_pb_direct",
+      "path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_powerball_3_recentes.json",
+      "sha256": "1c4d53026b2c730ab97e4420f339af57cd990cc39061184eb8efca9961bb060c",
+      "byte_count": 439,
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:42:41.339058+00:00",
+      "reused_existing_file": false
+    }
+  ],
+  "probes": [
+    {
+      "name": "actual_existing_mega_client",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "http_status": 200,
+      "content_type": "application/json",
+      "observed_at_utc": "2026-10-27T22:48:02.755789+00:00",
+      "byte_count": 1745,
+      "sha256": "6e7850886c79e135b7977869cc049b8d91cdd5864cd4c33fac65e829eeb6a42e",
+      "normalizer_is_valid": true,
+      "issue_codes": [],
+      "tls_verified": true,
+      "client": "app.infrastructure.caixa_http.CaixaMegaSenaHttp; unchanged",
+      "operational_ingestion_called": false,
+      "retained_body_path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mega_latest.json",
+      "method": "GET"
+    },
+    {
+      "name": "caixa_loto_download",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Lotof%C3%A1cil",
+      "observed_at_utc": "2026-10-27T22:41:28.191464+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/xlsx",
+        "Content-Disposition": "attachment; filename=LOTOFACIL.xlsx",
+        "Date": "Tue, 27 Oct 2026 22:41:29 GMT"
+      },
+      "byte_count": 386611,
+      "sha256": "b0d4421115b0966397b5c7b4a8e261964e5b254b5e69c5956ec73ec048a83be5",
+      "within_limit": true,
+      "retained_body_path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/lotofacil.xlsx",
+      "method": "GET"
+    },
+    {
+      "name": "caixa_mega_download",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Mega-Sena",
+      "observed_at_utc": "2026-10-27T22:41:25.040221+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/xlsx",
+        "Content-Disposition": "attachment; filename=MEGA_SENA.xlsx",
+        "Date": "Tue, 27 Oct 2026 22:41:26 GMT"
+      },
+      "byte_count": 229988,
+      "sha256": "a7d1e32136b545757343ac956d48a1d2787f7be6b9f3890c13ea0092966bc2f4",
+      "within_limit": true,
+      "retained_body_path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mega_sena.xlsx",
+      "method": "GET"
+    },
+    {
+      "name": "caixa_mega_existing_client",
+      "url": "https://servicebus2.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "observed_at_utc": "2026-10-27T22:41:38.789383+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "1745",
+        "Date": "Tue, 27 Oct 2026 22:41:40 GMT"
+      },
+      "byte_count": 1745,
+      "sha256": "6e7850886c79e135b7977869cc049b8d91cdd5864cd4c33fac65e829eeb6a42e",
+      "within_limit": true,
+      "retained_body_path": "docs/data/fontes-atuais-2026-10-27/amostras/caixa_mega_latest.json",
+      "method": "GET"
+    },
+    {
+      "name": "caixa_mega_json",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/megasena/3075",
+      "observed_at_utc": "2026-10-27T22:41:34.281234+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "1780",
+        "Date": "Tue, 27 Oct 2026 22:41:35 GMT"
+      },
+      "byte_count": 1780,
+      "sha256": "454a81b12c365e2d7ded35d9793cd3d03a3fae1fb8a25dfbaf42f5268439c682",
+      "within_limit": true,
+      "retained_body_path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mega_sena_host_atual.json",
+      "method": "GET"
+    },
+    {
+      "name": "caixa_mega_special",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/megasena/3010",
+      "observed_at_utc": "2026-10-27T22:41:36.530420+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "2108",
+        "Date": "Tue, 27 Oct 2026 22:41:37 GMT"
+      },
+      "byte_count": 2108,
+      "sha256": "6eb90ebef1fd4273935cb15a522797d13a3a684784de86c6598e1c0c8c5824ad",
+      "within_limit": true,
+      "retained_body_path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/mega_sena_3010_titulo_especial.json",
+      "method": "GET"
+    },
+    {
+      "name": "caixa_mili_download",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=%2BMilion%C3%A1ria",
+      "observed_at_utc": "2026-10-27T22:41:31.479973+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/xlsx",
+        "Content-Disposition": "attachment; filename=MAIS_MILIONARIA.xlsx",
+        "Date": "Tue, 27 Oct 2026 22:41:32 GMT"
+      },
+      "byte_count": 55533,
+      "sha256": "7a1c09d6b9c07589b731316ad8dc2252da071fc5747d1766bcb6d53922f9a315",
+      "within_limit": true,
+      "retained_body_path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mais_milionaria.xlsx",
+      "method": "GET"
+    },
+    {
+      "name": "colorado_all_page",
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=powerball&timeframe=sincestart",
+      "observed_at_utc": "2026-10-27T22:41:41.523405+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "704508",
+        "Date": "Tue, 27 Oct 2026 22:41:42 GMT"
+      },
+      "byte_count": 704508,
+      "sha256": "57db468b6e269a957831eb266701f899f1b7c9b1724b75ef6b3bb50cec8a00b7",
+      "within_limit": true,
+      "retained_body_path": null,
+      "method": "GET"
+    },
+    {
+      "name": "colorado_all_xlsx",
+      "url": "https://www.coloradolottery.com/en/player-tools/winning-history/?game=powerball&timeframe=sincestart&queried_at=2026-10-27T22%3A41%3A42%2B00%3A00&xlsx=1",
+      "observed_at_utc": "2026-10-27T22:43:42.501781+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Length": "609068",
+        "Content-Disposition": "attachment; filename=\"POWERBALL-from_game_start_to_2026-10-27.xlsx\"",
+        "Date": "Tue, 27 Oct 2026 22:43:47 GMT"
+      },
+      "byte_count": 609068,
+      "sha256": "a90876d830d02c97db901157fe182d1982e1a2898a7f6197dec6ed5fc8ce8d7d",
+      "within_limit": true,
+      "retained_body_path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/colorado_powerball_export.xlsx",
+      "method": "GET"
+    },
+    {
+      "name": "control_caixa_proxy",
+      "url": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=Mega-Sena",
+      "observed_at_utc": "2026-10-27T22:42:44.871275+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": "default configuration, not asserted",
+      "verify_mode": 2,
+      "check_hostname": true,
+      "proxy_configuration": "system/environment default; values not recorded",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/xlsx",
+        "Content-Disposition": "attachment; filename=MEGA_SENA.xlsx",
+        "Date": "Tue, 27 Oct 2026 22:42:45 GMT"
+      },
+      "byte_count": 229988,
+      "sha256": "a7d1e32136b545757343ac956d48a1d2787f7be6b9f3890c13ea0092966bc2f4",
+      "within_limit": true,
+      "retained_body_path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mega_sena.xlsx",
+      "method": "GET"
+    },
+    {
+      "name": "control_ny_mm_direct",
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:43:49.325436+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"Zm94dHJvdC42MDg2XzM3NV8yMDQ0TUFEaWVPb1RleDNfQ2M1QXk0RkFnTTlTNmZR---gzipyVHY2lglJ5otS4JFgxXn6YAYxuE--gzip--gzip\"",
+        "Last-Modified": "Sat, 24 Oct 2026 07:32:59 GMT",
+        "Date": "Tue, 27 Oct 2026 22:43:50 GMT"
+      },
+      "byte_count": 280,
+      "sha256": "033a5a499f7e72514648ea08ea7ea0131ecd370aa04730fd7a5b7da4dbd89d98",
+      "within_limit": true,
+      "retained_body_path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_mega_millions_3_recentes.json",
+      "method": "GET"
+    },
+    {
+      "name": "control_ny_pb_direct",
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:42:41.339058+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"Zm94dHJvdC42MDg0XzM3Nl8yMzIzUXpPaFBYQjdULURTUUFJenJKT1RRVDA5cVpF---gzipK4wVV-ySNbVzdLwYlcFZLE737GY--gzip--gzip\"",
+        "Last-Modified": "Tue, 27 Oct 2026 07:38:49 GMT",
+        "Date": "Tue, 27 Oct 2026 22:42:43 GMT"
+      },
+      "byte_count": 439,
+      "sha256": "1c4d53026b2c730ab97e4420f339af57cd990cc39061184eb8efca9961bb060c",
+      "within_limit": true,
+      "retained_body_path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_powerball_3_recentes.json",
+      "method": "GET"
+    },
+    {
+      "name": "ny_mm_python_native",
+      "url": "https://data.ny.gov/resource/5xaw-6ayf.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:42:04.034466+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "tls_implementation": "truststore native system trust",
+      "truststore_version": "0.10.5",
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"Zm94dHJvdC42MDg2XzM3NV8yMDQ0TUFEaWVPb1RleDNfQ2M1QXk0RkFnTTlTNmZR---gzipyVHY2lglJ5otS4JFgxXn6YAYxuE--gzip--gzip\"",
+        "Last-Modified": "Sat, 24 Oct 2026 07:32:59 GMT",
+        "Date": "Tue, 27 Oct 2026 22:42:05 GMT"
+      },
+      "byte_count": 280,
+      "sha256": "033a5a499f7e72514648ea08ea7ea0131ecd370aa04730fd7a5b7da4dbd89d98",
+      "within_limit": true,
+      "retained_body_path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_mega_millions_3_recentes.json",
+      "method": "GET"
+    },
+    {
+      "name": "ny_pb_python_native",
+      "url": "https://data.ny.gov/resource/d6yy-54nr.json?%24order=draw_date%20DESC&%24limit=3",
+      "observed_at_utc": "2026-10-27T22:42:00.895247+00:00",
+      "tls_verified": true,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "proxy_used": false,
+      "tls_implementation": "truststore native system trust",
+      "truststore_version": "0.10.5",
+      "verify_mode": 2,
+      "check_hostname": true,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=utf-8",
+        "ETag": "W/\"Zm94dHJvdC42MDg0XzM3Nl8yMzIzUXpPaFBYQjdULURTUUFJenJKT1RRVDA5cVpF---gzipK4wVV-ySNbVzdLwYlcFZLE737GY--gzip--gzip\"",
+        "Last-Modified": "Tue, 27 Oct 2026 07:38:49 GMT",
+        "Date": "Tue, 27 Oct 2026 22:42:02 GMT"
+      },
+      "byte_count": 439,
+      "sha256": "1c4d53026b2c730ab97e4420f339af57cd990cc39061184eb8efca9961bb060c",
+      "within_limit": true,
+      "retained_body_path": "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_powerball_3_recentes.json",
+      "method": "GET"
+    }
+  ],
+  "probe_policy": {
+    "timeout_seconds": 20,
+    "maximum_body_bytes": 4194304,
+    "automatic_retries": 0,
+    "pagination": false,
+    "calls": 14,
+    "tls_verification_disabled": false,
+    "production_ingestion_called": false,
+    "qualification_runtime": "Windows; repository Python3.12.0; urllib standard SSL; explicit no-proxy except one documented default-proxy control",
+    "temporary_native_trust_alternative": "truststore0.10.5 installed only under ignored temporary folder; not added to requirements",
+    "receipt_only_bodies": [
+      "colorado_all_page"
+    ],
+    "caveat": "14 bounded public GETs; one is a full offered export, only131-date window audited; not six historical reinventories; web research is separate"
+  },
+  "caixa_profile": {
+    "name": "caixa.mega_sena.json.title.v1",
+    "base_fields": "app.ingestion.mega_sena_api.EXPECTED_FIELDS",
+    "additional_fields": {
+      "tituloConcursoEspecial": {
+        "types": [
+          "null",
+          "string"
+        ],
+        "meaning": "source-provided descriptive title; preserve raw; no identity/rule inference"
+      }
+    },
+    "observed_examples": [
+      {
+        "contest": 3075,
+        "title": null
+      },
+      {
+        "contest": 3010,
+        "title": "Mega-Sena 30 anos",
+        "date": "2026-05-24",
+        "special_indicator": 2
+      }
+    ],
+    "unknown_fields_policy": "reject/quarantine until deliberately qualified; no generic ignore",
+    "production_adapter_accepts_new_profile": false,
+    "special_indicator_codebook_qualified": false
+  },
+  "double_play": {
+    "export_records": 2904,
+    "columns": 61,
+    "recent_records_checked": 131,
+    "unique_recent_dates": 131,
+    "ny_gap_count": 68,
+    "filled_ny_gaps": 68,
+    "remaining_missing_dates": [],
+    "ny_double_play_overlap_checked": 63,
+    "conflicts": [],
+    "recent_double_play": [
+      {
+        "date": "2025-12-27",
+        "main": [
+          13,
+          22,
+          33,
+          61,
+          62
+        ],
+        "powerball": 20,
+        "source_row": 132,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2025-12-29",
+        "main": [
+          5,
+          9,
+          38,
+          62,
+          64
+        ],
+        "powerball": 4,
+        "source_row": 131,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2025-12-31",
+        "main": [
+          24,
+          35,
+          42,
+          46,
+          68
+        ],
+        "powerball": 14,
+        "source_row": 130,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-03",
+        "main": [
+          28,
+          40,
+          52,
+          53,
+          54
+        ],
+        "powerball": 12,
+        "source_row": 129,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-05",
+        "main": [
+          15,
+          22,
+          39,
+          41,
+          62
+        ],
+        "powerball": 9,
+        "source_row": 128,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-07",
+        "main": [
+          28,
+          41,
+          50,
+          61,
+          68
+        ],
+        "powerball": 5,
+        "source_row": 127,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-10",
+        "main": [
+          10,
+          19,
+          39,
+          47,
+          67
+        ],
+        "powerball": 18,
+        "source_row": 126,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-12",
+        "main": [
+          11,
+          23,
+          24,
+          54,
+          56
+        ],
+        "powerball": 5,
+        "source_row": 125,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-14",
+        "main": [
+          6,
+          20,
+          28,
+          47,
+          48
+        ],
+        "powerball": 3,
+        "source_row": 124,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-17",
+        "main": [
+          1,
+          4,
+          6,
+          34,
+          56
+        ],
+        "powerball": 19,
+        "source_row": 123,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-19",
+        "main": [
+          2,
+          9,
+          25,
+          26,
+          63
+        ],
+        "powerball": 8,
+        "source_row": 122,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-21",
+        "main": [
+          16,
+          20,
+          28,
+          36,
+          52
+        ],
+        "powerball": 12,
+        "source_row": 121,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-24",
+        "main": [
+          8,
+          17,
+          29,
+          30,
+          62
+        ],
+        "powerball": 11,
+        "source_row": 120,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-26",
+        "main": [
+          8,
+          25,
+          27,
+          46,
+          67
+        ],
+        "powerball": 21,
+        "source_row": 119,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-28",
+        "main": [
+          3,
+          27,
+          34,
+          42,
+          47
+        ],
+        "powerball": 3,
+        "source_row": 118,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-01-31",
+        "main": [
+          14,
+          18,
+          19,
+          31,
+          59
+        ],
+        "powerball": 13,
+        "source_row": 117,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-02",
+        "main": [
+          4,
+          8,
+          22,
+          40,
+          61
+        ],
+        "powerball": 16,
+        "source_row": 116,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-04",
+        "main": [
+          10,
+          43,
+          49,
+          54,
+          55
+        ],
+        "powerball": 10,
+        "source_row": 115,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-07",
+        "main": [
+          28,
+          37,
+          38,
+          48,
+          63
+        ],
+        "powerball": 14,
+        "source_row": 114,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-09",
+        "main": [
+          2,
+          33,
+          49,
+          51,
+          64
+        ],
+        "powerball": 26,
+        "source_row": 113,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-11",
+        "main": [
+          5,
+          6,
+          19,
+          27,
+          57
+        ],
+        "powerball": 23,
+        "source_row": 112,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-14",
+        "main": [
+          13,
+          18,
+          21,
+          27,
+          45
+        ],
+        "powerball": 6,
+        "source_row": 111,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-16",
+        "main": [
+          14,
+          24,
+          32,
+          37,
+          49
+        ],
+        "powerball": 7,
+        "source_row": 110,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-18",
+        "main": [
+          6,
+          13,
+          14,
+          16,
+          47
+        ],
+        "powerball": 26,
+        "source_row": 109,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-21",
+        "main": [
+          3,
+          17,
+          21,
+          24,
+          35
+        ],
+        "powerball": 9,
+        "source_row": 108,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-23",
+        "main": [
+          15,
+          20,
+          27,
+          31,
+          58
+        ],
+        "powerball": 14,
+        "source_row": 107,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-25",
+        "main": [
+          11,
+          24,
+          47,
+          59,
+          63
+        ],
+        "powerball": 5,
+        "source_row": 106,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-02-28",
+        "main": [
+          10,
+          15,
+          23,
+          28,
+          38
+        ],
+        "powerball": 3,
+        "source_row": 105,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-02",
+        "main": [
+          21,
+          28,
+          58,
+          65,
+          67
+        ],
+        "powerball": 25,
+        "source_row": 104,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-04",
+        "main": [
+          5,
+          10,
+          26,
+          53,
+          59
+        ],
+        "powerball": 6,
+        "source_row": 103,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-07",
+        "main": [
+          21,
+          34,
+          46,
+          53,
+          56
+        ],
+        "powerball": 23,
+        "source_row": 102,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-09",
+        "main": [
+          24,
+          28,
+          32,
+          55,
+          62
+        ],
+        "powerball": 5,
+        "source_row": 101,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-11",
+        "main": [
+          6,
+          7,
+          42,
+          43,
+          59
+        ],
+        "powerball": 21,
+        "source_row": 100,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-14",
+        "main": [
+          24,
+          30,
+          50,
+          53,
+          61
+        ],
+        "powerball": 17,
+        "source_row": 99,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-16",
+        "main": [
+          9,
+          11,
+          34,
+          41,
+          51
+        ],
+        "powerball": 4,
+        "source_row": 98,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-18",
+        "main": [
+          9,
+          13,
+          25,
+          26,
+          46
+        ],
+        "powerball": 23,
+        "source_row": 97,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-21",
+        "main": [
+          9,
+          29,
+          34,
+          48,
+          58
+        ],
+        "powerball": 4,
+        "source_row": 96,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-23",
+        "main": [
+          1,
+          2,
+          7,
+          30,
+          64
+        ],
+        "powerball": 19,
+        "source_row": 95,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-25",
+        "main": [
+          35,
+          38,
+          41,
+          43,
+          62
+        ],
+        "powerball": 8,
+        "source_row": 94,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-28",
+        "main": [
+          8,
+          37,
+          56,
+          57,
+          68
+        ],
+        "powerball": 21,
+        "source_row": 93,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-03-30",
+        "main": [
+          7,
+          29,
+          42,
+          67,
+          68
+        ],
+        "powerball": 8,
+        "source_row": 92,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-01",
+        "main": [
+          27,
+          31,
+          47,
+          56,
+          68
+        ],
+        "powerball": 14,
+        "source_row": 91,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-04",
+        "main": [
+          20,
+          38,
+          45,
+          58,
+          63
+        ],
+        "powerball": 5,
+        "source_row": 90,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-06",
+        "main": [
+          3,
+          17,
+          48,
+          56,
+          64
+        ],
+        "powerball": 20,
+        "source_row": 89,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-08",
+        "main": [
+          4,
+          15,
+          36,
+          45,
+          56
+        ],
+        "powerball": 18,
+        "source_row": 88,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-11",
+        "main": [
+          1,
+          4,
+          22,
+          36,
+          48
+        ],
+        "powerball": 17,
+        "source_row": 87,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-13",
+        "main": [
+          25,
+          30,
+          39,
+          47,
+          56
+        ],
+        "powerball": 16,
+        "source_row": 86,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-15",
+        "main": [
+          8,
+          11,
+          41,
+          44,
+          53
+        ],
+        "powerball": 3,
+        "source_row": 85,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-18",
+        "main": [
+          2,
+          38,
+          45,
+          53,
+          63
+        ],
+        "powerball": 21,
+        "source_row": 84,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-20",
+        "main": [
+          4,
+          29,
+          35,
+          40,
+          43
+        ],
+        "powerball": 21,
+        "source_row": 83,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-22",
+        "main": [
+          3,
+          9,
+          15,
+          35,
+          57
+        ],
+        "powerball": 19,
+        "source_row": 82,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-25",
+        "main": [
+          3,
+          6,
+          9,
+          51,
+          65
+        ],
+        "powerball": 12,
+        "source_row": 81,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-27",
+        "main": [
+          20,
+          31,
+          33,
+          44,
+          65
+        ],
+        "powerball": 19,
+        "source_row": 80,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-04-29",
+        "main": [
+          7,
+          52,
+          56,
+          67,
+          69
+        ],
+        "powerball": 3,
+        "source_row": 79,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-02",
+        "main": [
+          5,
+          13,
+          35,
+          53,
+          54
+        ],
+        "powerball": 7,
+        "source_row": 78,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-04",
+        "main": [
+          20,
+          32,
+          35,
+          51,
+          60
+        ],
+        "powerball": 7,
+        "source_row": 77,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-06",
+        "main": [
+          4,
+          21,
+          36,
+          48,
+          69
+        ],
+        "powerball": 5,
+        "source_row": 76,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-09",
+        "main": [
+          6,
+          27,
+          58,
+          61,
+          65
+        ],
+        "powerball": 14,
+        "source_row": 75,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-11",
+        "main": [
+          9,
+          13,
+          34,
+          42,
+          59
+        ],
+        "powerball": 1,
+        "source_row": 74,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-13",
+        "main": [
+          8,
+          13,
+          39,
+          63,
+          66
+        ],
+        "powerball": 2,
+        "source_row": 73,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-16",
+        "main": [
+          11,
+          21,
+          27,
+          41,
+          59
+        ],
+        "powerball": 18,
+        "source_row": 72,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-18",
+        "main": [
+          3,
+          13,
+          18,
+          40,
+          63
+        ],
+        "powerball": 23,
+        "source_row": 71,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-20",
+        "main": [
+          12,
+          27,
+          37,
+          40,
+          66
+        ],
+        "powerball": 17,
+        "source_row": 70,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-23",
+        "main": [
+          36,
+          42,
+          53,
+          57,
+          63
+        ],
+        "powerball": 17,
+        "source_row": 69,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-25",
+        "main": [
+          2,
+          20,
+          31,
+          33,
+          38
+        ],
+        "powerball": 18,
+        "source_row": 68,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-27",
+        "main": [
+          4,
+          9,
+          43,
+          62,
+          68
+        ],
+        "powerball": 3,
+        "source_row": 67,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-05-30",
+        "main": [
+          4,
+          27,
+          65,
+          66,
+          69
+        ],
+        "powerball": 4,
+        "source_row": 66,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-06-01",
+        "main": [
+          2,
+          7,
+          35,
+          44,
+          57
+        ],
+        "powerball": 25,
+        "source_row": 65,
+        "filled_ny_gap": true
+      },
+      {
+        "date": "2026-06-03",
+        "main": [
+          26,
+          28,
+          31,
+          56,
+          64
+        ],
+        "powerball": 13,
+        "source_row": 64,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-06",
+        "main": [
+          3,
+          18,
+          26,
+          52,
+          54
+        ],
+        "powerball": 8,
+        "source_row": 63,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-08",
+        "main": [
+          1,
+          16,
+          20,
+          21,
+          49
+        ],
+        "powerball": 10,
+        "source_row": 62,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-10",
+        "main": [
+          8,
+          35,
+          41,
+          42,
+          67
+        ],
+        "powerball": 11,
+        "source_row": 61,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-13",
+        "main": [
+          24,
+          55,
+          56,
+          57,
+          67
+        ],
+        "powerball": 15,
+        "source_row": 60,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-15",
+        "main": [
+          22,
+          23,
+          28,
+          32,
+          68
+        ],
+        "powerball": 21,
+        "source_row": 59,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-17",
+        "main": [
+          10,
+          17,
+          44,
+          63,
+          67
+        ],
+        "powerball": 24,
+        "source_row": 58,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-20",
+        "main": [
+          11,
+          12,
+          25,
+          42,
+          57
+        ],
+        "powerball": 20,
+        "source_row": 57,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-22",
+        "main": [
+          18,
+          41,
+          43,
+          64,
+          65
+        ],
+        "powerball": 25,
+        "source_row": 56,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-24",
+        "main": [
+          3,
+          11,
+          20,
+          31,
+          65
+        ],
+        "powerball": 5,
+        "source_row": 55,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-27",
+        "main": [
+          2,
+          26,
+          34,
+          43,
+          45
+        ],
+        "powerball": 15,
+        "source_row": 54,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-06-29",
+        "main": [
+          2,
+          9,
+          24,
+          25,
+          39
+        ],
+        "powerball": 14,
+        "source_row": 53,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-01",
+        "main": [
+          10,
+          20,
+          30,
+          60,
+          64
+        ],
+        "powerball": 7,
+        "source_row": 52,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-04",
+        "main": [
+          4,
+          19,
+          24,
+          25,
+          41
+        ],
+        "powerball": 9,
+        "source_row": 51,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-06",
+        "main": [
+          22,
+          25,
+          27,
+          47,
+          50
+        ],
+        "powerball": 21,
+        "source_row": 50,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-08",
+        "main": [
+          6,
+          27,
+          33,
+          44,
+          69
+        ],
+        "powerball": 23,
+        "source_row": 49,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-11",
+        "main": [
+          5,
+          7,
+          17,
+          26,
+          28
+        ],
+        "powerball": 5,
+        "source_row": 48,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-13",
+        "main": [
+          1,
+          17,
+          31,
+          39,
+          43
+        ],
+        "powerball": 22,
+        "source_row": 47,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-15",
+        "main": [
+          14,
+          15,
+          23,
+          33,
+          42
+        ],
+        "powerball": 16,
+        "source_row": 46,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-18",
+        "main": [
+          5,
+          11,
+          25,
+          26,
+          64
+        ],
+        "powerball": 11,
+        "source_row": 45,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-20",
+        "main": [
+          15,
+          21,
+          39,
+          54,
+          67
+        ],
+        "powerball": 7,
+        "source_row": 44,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-22",
+        "main": [
+          9,
+          51,
+          54,
+          60,
+          61
+        ],
+        "powerball": 15,
+        "source_row": 43,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-25",
+        "main": [
+          20,
+          21,
+          26,
+          28,
+          32
+        ],
+        "powerball": 10,
+        "source_row": 42,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-27",
+        "main": [
+          17,
+          25,
+          59,
+          61,
+          69
+        ],
+        "powerball": 14,
+        "source_row": 41,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-07-29",
+        "main": [
+          24,
+          37,
+          40,
+          51,
+          55
+        ],
+        "powerball": 5,
+        "source_row": 40,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-01",
+        "main": [
+          10,
+          32,
+          33,
+          54,
+          64
+        ],
+        "powerball": 1,
+        "source_row": 39,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-03",
+        "main": [
+          11,
+          15,
+          21,
+          28,
+          33
+        ],
+        "powerball": 6,
+        "source_row": 38,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-05",
+        "main": [
+          6,
+          33,
+          54,
+          63,
+          66
+        ],
+        "powerball": 18,
+        "source_row": 37,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-08",
+        "main": [
+          14,
+          29,
+          46,
+          55,
+          59
+        ],
+        "powerball": 16,
+        "source_row": 36,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-10",
+        "main": [
+          4,
+          23,
+          31,
+          32,
+          57
+        ],
+        "powerball": 23,
+        "source_row": 35,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-12",
+        "main": [
+          3,
+          4,
+          19,
+          21,
+          58
+        ],
+        "powerball": 8,
+        "source_row": 34,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-15",
+        "main": [
+          19,
+          21,
+          45,
+          46,
+          65
+        ],
+        "powerball": 20,
+        "source_row": 33,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-17",
+        "main": [
+          13,
+          34,
+          39,
+          45,
+          56
+        ],
+        "powerball": 2,
+        "source_row": 32,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-19",
+        "main": [
+          5,
+          18,
+          38,
+          56,
+          67
+        ],
+        "powerball": 7,
+        "source_row": 31,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-22",
+        "main": [
+          4,
+          18,
+          29,
+          47,
+          53
+        ],
+        "powerball": 16,
+        "source_row": 30,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-24",
+        "main": [
+          5,
+          6,
+          34,
+          38,
+          39
+        ],
+        "powerball": 7,
+        "source_row": 29,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-26",
+        "main": [
+          6,
+          11,
+          15,
+          32,
+          58
+        ],
+        "powerball": 18,
+        "source_row": 28,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-29",
+        "main": [
+          16,
+          27,
+          57,
+          58,
+          59
+        ],
+        "powerball": 7,
+        "source_row": 27,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-08-31",
+        "main": [
+          4,
+          26,
+          28,
+          44,
+          67
+        ],
+        "powerball": 20,
+        "source_row": 26,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-02",
+        "main": [
+          5,
+          6,
+          15,
+          26,
+          33
+        ],
+        "powerball": 20,
+        "source_row": 25,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-05",
+        "main": [
+          21,
+          24,
+          30,
+          47,
+          60
+        ],
+        "powerball": 5,
+        "source_row": 24,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-07",
+        "main": [
+          20,
+          26,
+          49,
+          56,
+          65
+        ],
+        "powerball": 5,
+        "source_row": 23,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-09",
+        "main": [
+          32,
+          33,
+          58,
+          62,
+          69
+        ],
+        "powerball": 18,
+        "source_row": 22,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-12",
+        "main": [
+          21,
+          24,
+          32,
+          48,
+          51
+        ],
+        "powerball": 12,
+        "source_row": 21,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-14",
+        "main": [
+          12,
+          23,
+          48,
+          61,
+          67
+        ],
+        "powerball": 8,
+        "source_row": 20,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-16",
+        "main": [
+          16,
+          30,
+          44,
+          64,
+          67
+        ],
+        "powerball": 3,
+        "source_row": 19,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-19",
+        "main": [
+          13,
+          30,
+          33,
+          49,
+          53
+        ],
+        "powerball": 7,
+        "source_row": 18,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-21",
+        "main": [
+          3,
+          9,
+          16,
+          26,
+          32
+        ],
+        "powerball": 2,
+        "source_row": 17,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-23",
+        "main": [
+          10,
+          17,
+          19,
+          21,
+          40
+        ],
+        "powerball": 6,
+        "source_row": 16,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-26",
+        "main": [
+          9,
+          23,
+          31,
+          59,
+          69
+        ],
+        "powerball": 12,
+        "source_row": 15,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-28",
+        "main": [
+          11,
+          20,
+          26,
+          43,
+          46
+        ],
+        "powerball": 18,
+        "source_row": 14,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-09-30",
+        "main": [
+          10,
+          16,
+          27,
+          42,
+          57
+        ],
+        "powerball": 14,
+        "source_row": 13,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-03",
+        "main": [
+          1,
+          7,
+          26,
+          37,
+          52
+        ],
+        "powerball": 1,
+        "source_row": 12,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-05",
+        "main": [
+          7,
+          22,
+          29,
+          35,
+          51
+        ],
+        "powerball": 20,
+        "source_row": 11,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-07",
+        "main": [
+          17,
+          18,
+          23,
+          66,
+          69
+        ],
+        "powerball": 1,
+        "source_row": 10,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-10",
+        "main": [
+          1,
+          29,
+          34,
+          39,
+          62
+        ],
+        "powerball": 14,
+        "source_row": 9,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-12",
+        "main": [
+          23,
+          25,
+          51,
+          53,
+          54
+        ],
+        "powerball": 16,
+        "source_row": 8,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-14",
+        "main": [
+          11,
+          17,
+          37,
+          58,
+          69
+        ],
+        "powerball": 9,
+        "source_row": 7,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-17",
+        "main": [
+          13,
+          14,
+          30,
+          52,
+          60
+        ],
+        "powerball": 15,
+        "source_row": 6,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-19",
+        "main": [
+          11,
+          23,
+          24,
+          47,
+          49
+        ],
+        "powerball": 11,
+        "source_row": 5,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-21",
+        "main": [
+          7,
+          23,
+          31,
+          45,
+          59
+        ],
+        "powerball": 8,
+        "source_row": 4,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-24",
+        "main": [
+          3,
+          30,
+          44,
+          50,
+          56
+        ],
+        "powerball": 23,
+        "source_row": 3,
+        "filled_ny_gap": false
+      },
+      {
+        "date": "2026-10-26",
+        "main": [
+          5,
+          11,
+          14,
+          24,
+          59
+        ],
+        "powerball": 8,
+        "source_row": 2,
+        "filled_ny_gap": false
+      }
+    ],
+    "all_history_not_audited": true,
+    "operational_import_performed": false
+  },
+  "euro_millions_financial_comparison": {
+    "draws_checked": 86,
+    "tier_winner_comparisons": 1118,
+    "winner_conflicts": [],
+    "jp_rows_with_fdj_zero_winners": 77,
+    "numeric_quotas": 1108,
+    "transfers": [
+      {
+        "date": "2026-01-06",
+        "rank": 2,
+        "row": 16,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-01-27",
+        "rank": 2,
+        "row": 94,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-02-10",
+        "rank": 2,
+        "row": 146,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-05-12",
+        "rank": 2,
+        "row": 484,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-06-16",
+        "rank": 2,
+        "row": 614,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-06-19",
+        "rank": 2,
+        "row": 627,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-07-17",
+        "rank": 2,
+        "row": 731,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-08-14",
+        "rank": 2,
+        "row": 835,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-10-16",
+        "rank": 2,
+        "row": 1069,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      },
+      {
+        "date": "2026-10-27",
+        "rank": 2,
+        "row": 1108,
+        "winners_europe": 0,
+        "raw": "wird dem Rang 5+0 zugeschlagen"
+      }
+    ],
+    "last_draw": {
+      "date": "2026-10-27",
+      "rank1_raw": [
+        "JP",
+        "JP",
+        "  78.415.028,30"
+      ],
+      "rank2_raw": [
+        "           0",
+        "           0",
+        "wird dem Rang 5+0 zugeschlagen"
+      ]
+    },
+    "currency": "EUR",
+    "austria_scope": "quota published by Austrian operator; Europe and Austria winner counts distinct",
+    "jp_interpretation": "jackpot/carryover marker; FDJ confirms zero winners for these observed rank1 rows only",
+    "transferred_amount": null,
+    "actual_paid_amount_proven": false,
+    "quota_difference_count": 77,
+    "all_quota_differences_are_rank1_jp": true
+  },
+  "financial_contract": {
+    "required_context": [
+      "source_key",
+      "source_draw_reference",
+      "draw_date_local",
+      "captured_at",
+      "currency",
+      "territory",
+      "series",
+      "tier_or_measure",
+      "amount_kind",
+      "value_status",
+      "raw_value"
+    ],
+    "number_representation": "Decimal from locale-aware text or decimal JSON; never binary float as canonical money",
+    "null_policy": "null with reason != numeric zero; retain raw marker and applicability",
+    "caixa": {
+      "currency": "BRL",
+      "territory": "BR",
+      "sales": "valorArrecadado = published sales; not revenue inferred from number of winners",
+      "per_winner": "listaRateioPremio[].valorPremio; count in numeroDeGanhadores",
+      "next_estimate": "valorEstimadoProximoConcurso; refers to next announced contest, not payout of current draw",
+      "rollovers": "valorAcumuladoProximoConcurso, valorAcumuladoConcursoEspecial, valorAcumuladoConcurso_0_5 are separate measures; not extra hit tiers",
+      "validity": "ordinary Mega-Sena allocation since3073 separate from6/60 numerical matrix; do not apply to previous draws"
+    },
+    "us": {
+      "currency": "USD",
+      "colorado_jackpot": "annuity estimate advertised by source at capture; not actual amount paid",
+      "colorado_cash": "separate advertised cash option; do not derive by fixed ratio",
+      "colorado_winners": "CO Winners = Colorado, not national total; group base, PowerPlay, DoublePlay or ticket multiplier separately",
+      "difference_2026_10_26": {
+        "colorado": "687000000",
+        "earlier_central_observation": "691000000",
+        "decision": "keep distinct source/time observations; no overwrite or assertion of equal estimates"
+      },
+      "unavailable": "audited national sales and all actual paid amounts not qualified"
+    },
+    "euro_millions": {
+      "currency": "EUR for FDJ/Austria observations; do not infer all participating countries useEUR",
+      "counts": "FDJ France/Europe and Austria Austria/Europe separate;1118 Europe counts agree for86draws",
+      "quota": "per-winner payout when numeric with positive winners; retain country/provider context",
+      "jp": "Austria JP marker: carryover/jackpot state;77 observed rank1 rows have FDJ0 winners and payout0; Austrian quota is not per-winner payout in those rows",
+      "transfer": "10 textual reallocations: amount null(reason=transferred); keep target5+0 and winner_count0, not amount0",
+      "unavailable": "pan-European consolidated sales, actual historical draw timestamps and universal historical financial rulebook are not qualified"
+    }
+  },
+  "source_use": [
+    {
+      "provider": "OPEN-NY",
+      "status": "reuse_supported_by_published_general_terms",
+      "datasets": [
+        "d6yy-54nr",
+        "5xaw-6ayf"
+      ],
+      "url": "https://data.ny.gov/api/views/77gx-ii52/files/ef0c1840-ad54-4240-92fd-6397c49fde46?filename=OPEN-NY_20Terms_20of_20Use.pdf",
+      "decision": "prefer for recent primary US numbers; null dataset license field alone is not prohibition; terms do not guarantee SLA or missing DP"
+    },
+    {
+      "provider": "Colorado Lottery",
+      "status": "automated_use_restricted",
+      "url": "https://www.coloradolottery.com/en/terms-of-service/",
+      "section": "3.11",
+      "decision": "do not activate export scraping; provider permission or qualified permitted alternative required; no further Colorado request after identifying restriction"
+    },
+    {
+      "provider": "CAIXA",
+      "status": "applicable_reuse_scope_not_confirmed",
+      "url": "https://www.caixa.gov.br/termos-de-uso/Paginas/default.aspx",
+      "decision": "previous qualified contract retained; no new license inferred; repeat term retrieval redirected; settle covered product use before activation"
+    },
+    {
+      "provider": "FDJ",
+      "status": "protected_elements_require_prior_written_permission",
+      "url": "https://www.fdj.fr/informations/reglements",
+      "decision": "existing ZIP qualified; no unrestricted permission asserted"
+    },
+    {
+      "provider": "Austria win2day",
+      "status": "technical_alternative_not_a_reuse_clearance",
+      "url": "https://www.lotterien.at/spiele/lotteriespiele/euromillionen",
+      "decision": "86draw comparison and financial semantics qualified; no production-feed permission obtained"
+    },
+    {
+      "provider": "Texas/MUSL/Ireland",
+      "status": "previous_restrictions_preserved",
+      "evidence": "docs/data/fechamento-etapa-2.md",
+      "decision": "reference/overlap evidence, not silently enabled operational alternatives"
+    }
+  ],
+  "external_dependencies": [
+    {
+      "id": "EXT-01",
+      "scope": "CAIXA product reuse/recurring access",
+      "resolution": "confirm applicable permission for planned use or obtain authorized channel"
+    },
+    {
+      "id": "EXT-02",
+      "scope": "DoublePlay and optional Colorado financial enrichment",
+      "resolution": "provider-approved channel or another source with confirmed use terms, transport and coverage; NY alone misses68 dates"
+    },
+    {
+      "id": "EXT-03",
+      "scope": "EuroMillions recurring source",
+      "resolution": "confirm FDJ or alternative provider usage conditions for product; Austrian technical comparison is not clearance"
+    }
+  ],
+  "operational_handoff": [
+    "adapt exact CAIXA profile inSPEC0033 with regression tests; no new source research needed for title",
+    "secure transport smoke test in chosen deployment executor; local Windows proof is not Linux deployment proof",
+    "source-specific usage dependency must be resolved before affected recurring collector/display activation",
+    "preserve and reconcile all historical baselines; recent qualified samples are not a DB import"
+  ],
+  "validation": {
+    "state": "passed",
+    "tests": {
+      "command": ".venv/Scripts/python -m pytest tests/test_catalog.py tests/test_current_source_samples.py tests/test_stage2_source_qualification.py tests/test_source_enrichment_samples.py tests/test_final_source_qualification.py -q",
+      "passed": 80,
+      "failed": 0,
+      "duration_seconds": 4.59,
+      "new_tests": 15,
+      "network_used_by_tests": false
+    },
+    "preservation": {
+      "baseline_files": 315,
+      "unchanged_files": 310,
+      "intentionally_changed_docs": [
+        "README.md",
+        "docs/engineering/learnings.md",
+        "docs/engineering/plano-entrega-quatro-dias.md",
+        "docs/specs/SPEC-0033-primeiro-fluxo-online-mega-sena.md",
+        "docs/specs/SPEC-0034-seis-loterias-atualizadas-e-agendamento.md"
+      ],
+      "unexpected_changes": [],
+      "missing_files": [],
+      "new_files": [
+        "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/colorado_powerball_export.xlsx",
+        "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/mega_sena_3010_titulo_especial.json",
+        "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_mega_millions_3_recentes.json",
+        "docs/data/qualificacao-final-etapa-2-2026-10-27/amostras/ny_powerball_3_recentes.json",
+        "docs/data/qualificacao-final-etapa-2.json",
+        "docs/data/qualificacao-final-etapa-2.md",
+        "tests/test_final_source_qualification.py"
+      ],
+      "all_original_raw_unchanged": true,
+      "all_previous_reports_unchanged": true,
+      "production_code_dependencies_migrations_and_prior_tests_unchanged": true
+    },
+    "markdown_files_checked": 6,
+    "broken_links_or_whitespace": []
+  },
+  "original_raw_sha256": {
+    "data/raw/euro_millions/euro_millions_resultados.json": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914",
+    "data/raw/lotofacil/lotofacil_resultados.xlsx": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+    "data/raw/mais_milionaria/mais_milionaria_resultados.xlsx": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+    "data/raw/mega_millions/mega_millions_resultados.html": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+    "data/raw/mega_sena/mega_sena_resultados.xlsx": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+    "data/raw/powerball/powerball_resultados.html": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238"
+  }
+}

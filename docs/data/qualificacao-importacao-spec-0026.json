@@ -1,0 +1,337 @@
+{
+  "canonicalization_version": "lottobrain.historical.result.v1",
+  "histories": [
+    {
+      "attribute_counts": {},
+      "baseline_matches": true,
+      "duplicate_external_references": [],
+      "duplicate_identities": [],
+      "errors": [],
+      "first_date": "1996-03-11",
+      "first_official_draw_number": "1",
+      "last_date": "2025-12-20",
+      "last_official_draw_number": "2954",
+      "lottery": "mega_sena",
+      "mapping_manifest_sha256": "6d0b593005d1fb348e18decb792f4fe46a53f269bd6a51573ba72920e27a3065",
+      "money_status_counts": {
+        "next_estimated_jackpot:known": 2954,
+        "rollover_amount:known": 2954,
+        "sales_total:known": 2954,
+        "special_draw_rollover:known": 2954,
+        "tier.quadra:known": 2954,
+        "tier.quina:known": 2954,
+        "tier.sena:known": 2954
+      },
+      "raw_sha256_after": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+      "raw_sha256_before": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+      "recipe": {
+        "canonicalization_version": "lottobrain.historical.result.v1",
+        "catalog_fingerprint": "f449dfc92a87294beb7f389bb0559cf984dfcca4b4d69ec233f87a7857de8547",
+        "code_version": "spec-0026-v1",
+        "normalizer_version": "spec-0004",
+        "policy_version": "spec-0026-observed-sources-v1",
+        "source_key": "caixa_mega_sena_xlsx"
+      },
+      "representable_records": 2954,
+      "rule_counts": {
+        "baseline_1996": 2954
+      },
+      "semantic_state_counts": {},
+      "series_counts": {
+        "primary": 2954
+      },
+      "source": "data/raw/mega_sena/mega_sena_resultados.xlsx",
+      "source_unchanged": true,
+      "total_records": 2954,
+      "vector_count": 2
+    },
+    {
+      "attribute_counts": {},
+      "baseline_matches": true,
+      "duplicate_external_references": [],
+      "duplicate_identities": [],
+      "errors": [],
+      "first_date": "2003-09-29",
+      "first_official_draw_number": "1",
+      "last_date": "2025-12-24",
+      "last_official_draw_number": "3571",
+      "lottery": "lotofacil",
+      "mapping_manifest_sha256": "4755f3ec88b508985e67094d42f0788da8e5e3b0748d1eb9c2ebbf6896681eda",
+      "money_status_counts": {
+        "next_estimated_jackpot:known": 3571,
+        "rollover_amount:known": 3571,
+        "sales_total:known": 3571,
+        "special_draw_rollover:known": 3571,
+        "tier.hits_11:known": 3571,
+        "tier.hits_12:known": 3571,
+        "tier.hits_13:known": 3571,
+        "tier.hits_14:known": 3571,
+        "tier.hits_15:known": 3571
+      },
+      "raw_sha256_after": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+      "raw_sha256_before": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+      "recipe": {
+        "canonicalization_version": "lottobrain.historical.result.v1",
+        "catalog_fingerprint": "d25f676a0c970a2681ce0943d4edcaa649ea210cd1f41b56d9e1f5775bde00b4",
+        "code_version": "spec-0026-v1",
+        "normalizer_version": "spec-0006",
+        "policy_version": "spec-0026-observed-sources-v1",
+        "source_key": "caixa_lotofacil_xlsx"
+      },
+      "representable_records": 3571,
+      "rule_counts": {
+        "baseline_2003": 3571
+      },
+      "semantic_state_counts": {},
+      "series_counts": {
+        "primary": 3571
+      },
+      "source": "data/raw/lotofacil/lotofacil_resultados.xlsx",
+      "source_unchanged": true,
+      "total_records": 3571,
+      "vector_count": 2
+    },
+    {
+      "attribute_counts": {
+        "primary.rolled_over:false": 2,
+        "primary.rolled_over:true": 312
+      },
+      "baseline_matches": true,
+      "duplicate_external_references": [],
+      "duplicate_identities": [],
+      "errors": [],
+      "first_date": "2022-05-28",
+      "first_official_draw_number": "1",
+      "last_date": "2025-12-24",
+      "last_official_draw_number": "314",
+      "lottery": "mais_milionaria",
+      "mapping_manifest_sha256": "96469ba34e0df8254d527e6d1e5b7ad17151ec650402cde68cb4973680366089",
+      "money_status_counts": {
+        "next_estimated_jackpot:known": 314,
+        "sales_total:known": 314,
+        "tier.hits_2_clovers_1:known": 314,
+        "tier.hits_2_clovers_2:known": 314,
+        "tier.hits_3_clovers_1:known": 314,
+        "tier.hits_3_clovers_2:known": 314,
+        "tier.hits_4_clovers_0_or_1:known": 314,
+        "tier.hits_4_clovers_2:known": 314,
+        "tier.hits_5_clovers_0_or_1:known": 314,
+        "tier.hits_5_clovers_2:known": 314,
+        "tier.hits_6_clovers_0_or_1:known": 314,
+        "tier.hits_6_clovers_2:known": 314
+      },
+      "raw_sha256_after": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+      "raw_sha256_before": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+      "recipe": {
+        "canonicalization_version": "lottobrain.historical.result.v1",
+        "catalog_fingerprint": "255e59b9a8a24c312552e9875b21e8ed44f158f1693f443e8801b33c9f6220b9",
+        "code_version": "spec-0026-v1",
+        "normalizer_version": "spec-0007",
+        "policy_version": "spec-0026-observed-sources-v1",
+        "source_key": "caixa_mais_milionaria_xlsx"
+      },
+      "representable_records": 314,
+      "rule_counts": {
+        "baseline_2022": 314
+      },
+      "semantic_state_counts": {},
+      "series_counts": {
+        "primary": 314
+      },
+      "source": "data/raw/mais_milionaria/mais_milionaria_resultados.xlsx",
+      "source_unchanged": true,
+      "total_records": 314,
+      "vector_count": 3
+    },
+    {
+      "attribute_counts": {
+        "primary.power_play:1": 30,
+        "primary.power_play:10": 22,
+        "primary.power_play:2": 1077,
+        "primary.power_play:3": 717,
+        "primary.power_play:4": 353,
+        "primary.power_play:5": 407
+      },
+      "baseline_matches": true,
+      "duplicate_external_references": [],
+      "duplicate_identities": [],
+      "errors": [],
+      "first_date": "1992-04-22",
+      "first_official_draw_number": null,
+      "last_date": "2025-12-24",
+      "last_official_draw_number": null,
+      "lottery": "powerball",
+      "mapping_manifest_sha256": "993c963ed9e4ad1066a48478843a0477e05f9aa538c0888b01a733eb4d06b65d",
+      "money_status_counts": {
+        "advertised_jackpot:known": 3742
+      },
+      "raw_sha256_after": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238",
+      "raw_sha256_before": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238",
+      "recipe": {
+        "canonicalization_version": "lottobrain.historical.result.v1",
+        "catalog_fingerprint": "f9d3ed7c2ea61379ee553a198ed84fd580cc366d9ea1a6517f33ad03cb346607",
+        "code_version": "spec-0026-v1",
+        "normalizer_version": "spec-0010",
+        "policy_version": "spec-0026-observed-sources-v1",
+        "source_key": "usamega_powerball_html"
+      },
+      "representable_records": 3742,
+      "rule_counts": {
+        "pb_1992_45x45": 578,
+        "pb_1997_49x42": 514,
+        "pb_2002_53x42": 302,
+        "pb_2005_55x42": 350,
+        "pb_2009_59x39": 316,
+        "pb_2012_59x35": 388,
+        "pb_2015_69x26": 1294
+      },
+      "semantic_state_counts": {
+        "power_play_state:fixed_prize_no_multiplier": 210,
+        "power_play_state:not_applicable": 926,
+        "power_play_state:observed": 2606
+      },
+      "series_counts": {
+        "double_play": 680,
+        "primary": 3742
+      },
+      "source": "data/raw/powerball/powerball_resultados.html",
+      "source_unchanged": true,
+      "total_records": 3742,
+      "vector_count": 15
+    },
+    {
+      "attribute_counts": {
+        "primary.megaplier:2": 446,
+        "primary.megaplier:3": 745,
+        "primary.megaplier:4": 838,
+        "primary.megaplier:5": 198
+      },
+      "baseline_matches": true,
+      "duplicate_external_references": [],
+      "duplicate_identities": [],
+      "errors": [],
+      "first_date": "1996-09-06",
+      "first_official_draw_number": null,
+      "last_date": "2025-12-23",
+      "last_official_draw_number": null,
+      "lottery": "mega_millions",
+      "mapping_manifest_sha256": "39c792bb4b08c4a8d95d8559b803639c6b971f010b921b987d5799fd8a1ed212",
+      "money_status_counts": {
+        "advertised_jackpot:known": 2984
+      },
+      "raw_sha256_after": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+      "raw_sha256_before": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+      "recipe": {
+        "canonicalization_version": "lottobrain.historical.result.v1",
+        "catalog_fingerprint": "0c942a3924555b8b438656a3751f1cc965d6906a25bb621a88c8233c705071b2",
+        "code_version": "spec-0026-v1",
+        "normalizer_version": "spec-0013",
+        "policy_version": "spec-0026-observed-sources-v1",
+        "source_key": "usamega_mega_millions_html"
+      },
+      "representable_records": 2984,
+      "rule_counts": {
+        "mm_1996_50x25": 172,
+        "mm_1999_50x36": 348,
+        "mm_2002_52x52": 324,
+        "mm_2005_56x46": 869,
+        "mm_2013_75x15": 420,
+        "mm_2017_70x25": 776,
+        "mm_2025_70x24": 75
+      },
+      "semantic_state_counts": {
+        "multiplier_state:drawn_optional_megaplier": 2227,
+        "multiplier_state:not_applicable": 682,
+        "multiplier_state:ticket_assigned_multiplier": 75
+      },
+      "series_counts": {
+        "primary": 2984
+      },
+      "source": "data/raw/mega_millions/mega_millions_resultados.html",
+      "source_unchanged": true,
+      "total_records": 2984,
+      "vector_count": 15
+    },
+    {
+      "attribute_counts": {
+        "primary.has_jackpot_winner:false": 1466,
+        "primary.has_jackpot_winner:true": 440
+      },
+      "baseline_matches": true,
+      "duplicate_external_references": [],
+      "duplicate_identities": [],
+      "errors": [],
+      "first_date": "2004-02-13",
+      "first_official_draw_number": null,
+      "last_date": "2025-12-26",
+      "last_official_draw_number": null,
+      "lottery": "euro_millions",
+      "mapping_manifest_sha256": "78caa744aaf684877e72d854eb1a67dd4d2a973ecd2b76b44ce7afdec1518277",
+      "money_status_counts": {
+        "top_tier_prize_per_winner:known": 1897,
+        "top_tier_prize_per_winner:unknown": 9
+      },
+      "raw_sha256_after": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914",
+      "raw_sha256_before": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914",
+      "recipe": {
+        "canonicalization_version": "lottobrain.historical.result.v1",
+        "catalog_fingerprint": "a8a402457f74306cb275a4a882f13a499b6c25e0e25429cf0c35b7cfa281873f",
+        "code_version": "spec-0026-v1",
+        "normalizer_version": "spec-0016",
+        "policy_version": "spec-0026-observed-sources-v1",
+        "source_key": "pedromealha_euromillions_api_json"
+      },
+      "representable_records": 1906,
+      "rule_counts": {
+        "em_2004_50x9": 378,
+        "em_2011_50x11": 562,
+        "em_2016_50x12": 966
+      },
+      "semantic_state_counts": {},
+      "series_counts": {
+        "primary": 1906
+      },
+      "source": "data/raw/euro_millions/euro_millions_resultados.json",
+      "source_unchanged": true,
+      "total_records": 1906,
+      "vector_count": 8
+    }
+  ],
+  "mega_sena_overlap": {
+    "comparison": {
+      "different": [],
+      "equal": [
+        "draw_date",
+        "identity",
+        "lottery",
+        "money.next_estimated_jackpot.common_result.unspecified",
+        "money.rollover_amount.common_result.unspecified",
+        "money.sales_total.common_result.unspecified",
+        "money.special_draw_rollover.common_result.unspecified",
+        "rule_version",
+        "series.primary.main",
+        "tier.quadra.common_result.base",
+        "tier.quina.common_result.base",
+        "tier.sena.common_result.base"
+      ],
+      "only_left": [],
+      "only_right": [
+        "metadata.draw_city",
+        "metadata.draw_location",
+        "metadata.rollover",
+        "money.ending_zero_five_rollover.common_result.unspecified",
+        "series.primary.main.extraction"
+      ]
+    },
+    "contest": "2954",
+    "historical_json_sha256": "52f1934a2707b46a29dc55572ce82438fb32d371aceb2bdbd327ad2dadec7a41",
+    "historical_xlsx_sha256": "62b57bf0ba64c0e65431a5078dd8c85e4ceb8dc59556e27b03daad1435b6a0f8",
+    "json_fixture_is_original_wire": false,
+    "json_fixture_sha256": "b248665f1736f655b190f1ce143371108781aaf90bd2150ea7832522f072ec85",
+    "json_input": "tests/fixtures/mega_sena_api_2954.json",
+    "legacy_json_v1_sha256": "62755ae7c8057839aa4fcb97c2840afbc6e0a296844f7b02fb6d66f81bbe6477"
+  },
+  "mode": "offline_mapping_only_no_sql",
+  "qualified": true,
+  "report_version": "spec-0026-v1"
+}

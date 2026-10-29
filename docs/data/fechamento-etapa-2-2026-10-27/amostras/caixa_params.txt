@@ -1,0 +1,3 @@
+{
+  "urlapiloterias": "https://servicebus3.caixa.gov.br/portaldeloterias"
+}

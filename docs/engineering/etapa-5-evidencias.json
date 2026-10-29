@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-28",
+  "status": "completed_in_review_branch",
+  "acceptance": {
+    "E5-01": "passed",
+    "E5-02": "passed",
+    "E5-03": "passed_current_locked_environment",
+    "E5-04": "passed_full_postgresql_suite_and_cluster_stopped",
+    "E5-05": "passed_runtime_audit_and_basic_secret_check",
+    "E5-06": "passed",
+    "E5-07": "passed_real_github_actions_and_main_protection_verified",
+    "E5-08": "documented_with_local_and_remote_evidence"
+  },
+  "runtimes": {
+    "pythonLocal": "3.12.0",
+    "pythonCI": "3.12.15",
+    "node": "24.19.0",
+    "npm": "12.2.1",
+    "uv": "0.13.6",
+    "postgresqlLocal": "17.11",
+    "postgresqlCI": "17.11 (Ubuntu 17.11-1.pgdg24.04+2)"
+  },
+  "tests": {
+    "frontendConfigurationTests": 3,
+    "frontendCleanInstallAndBuild": "passed",
+    "httpSmoke": {
+      "checks": [
+        {
+          "check": "api-live",
+          "status": 200,
+          "result": "passed"
+        },
+        {
+          "check": "api-not-ready",
+          "status": 503,
+          "result": "passed"
+        },
+        {
+          "check": "web-shell",
+          "status": 200,
+          "result": "passed"
+        },
+        {
+          "check": "web-api-proxy",
+          "status": 503,
+          "result": "passed"
+        }
+      ],
+      "ownedProcessesStopped": true
+    },
+    "currentFullPythonSuite": {
+      "passed": 401,
+      "warnings": 0,
+      "seconds": 107.5
+    },
+    "postgresql": {
+      "passed": 137,
+      "seconds": 2085.218,
+      "version": "17.11",
+      "clusterStopped": true,
+      "externalSourceRequests": false
+    },
+    "python": {
+      "passed": 401,
+      "failures": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "lastAffectedSettingsTests": {
+      "passed": 18,
+      "warnings": 0,
+      "reason": "Origem local alinhada ao hostname utilizado pelo frontend."
+    },
+    "nextTypegenWithoutExistingNextEnv": "passed",
+    "portablePostgresqlStartupSmoke": {
+      "passed": 5,
+      "seconds": 28.665,
+      "clusterStopped": true,
+      "platform": "Windows",
+      "unixSocketsDisabled": true
+    },
+    "remote": {
+      "os": "ubuntu-24.04",
+      "pythonPassed": 401,
+      "pythonSeconds": 44.66,
+      "postgresqlPassed": 137,
+      "postgresqlSeconds": 381.451,
+      "postgresqlClusterStopped": true,
+      "frontendConfigurationPassed": 3,
+      "frontendCleanInstallLintTypecheckBuild": "passed",
+      "audits": "passed",
+      "qualityGate": "success"
+    }
+  },
+  "quality": {
+    "ruff": "passed",
+    "mypy": "passed_four_source_files",
+    "npmDependencyTreeProblems": [],
+    "pythonRuntimeKnownVulnerabilities": 0,
+    "npmAuditReportedVulnerabilities": 0,
+    "intentionalFailureProbe": {
+      "intentionalUndefinedNameExitCode": 1,
+      "correctedFileExitCode": 0,
+      "result": "passed"
+    },
+    "frontendToolingPeers": "valid_without_forcing_overrides",
+    "httpClientDeprecation": "resolved_using_framework_recommended_test_client",
+    "remoteFailureGateProbe": {
+      "runUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40805681558",
+      "headSha": "af0bd8ce718f2aa689738ff73fa4cd882f2b322a",
+      "frontend": "success",
+      "python": "success",
+      "postgresql": "failure_bootstrap",
+      "qualityGate": "failure",
+      "result": "failed_dependency_does_not_pass_gate"
+    }
+  },
+  "apiProfile": {
+    "installedPackages": 14,
+    "excluded": [
+      "selenium",
+      "pandas",
+      "sklearn",
+      "pytest",
+      "sqlalchemy"
+    ]
+  },
+  "preservation": {
+    "baselineFiles": 362,
+    "protectedFiles": 149,
+    "protectedFilesChanged": [],
+    "modifiedExistingFiles": [
+      "app/application/persist_mega_sena.py",
+      "docs/architecture/entrega-e-infraestrutura.md",
+      "docs/architecture/roadmap.md",
+      "docs/engineering/learnings.md",
+      "docs/engineering/plano-entrega-quatro-dias.md",
+      "docs/specs/SPEC-0033-primeiro-fluxo-online-mega-sena.md",
+      ".gitignore",
+      "README.md",
+      "requirements.txt",
+      "runtime.txt",
+      "scripts/database/run_integration.py"
+    ],
+    "rawAndEvidenceGitAttribute": "-text",
+    "unchangedExistingFiles": 351,
+    "committedProtectedFilesChanged": [],
+    "verifiedAtCommit": "7c9b84175e377551a1078b52860b23ca7f53b538"
+  },
+  "github": {
+    "repository": "viniciusdamascenodev/lottobrain",
+    "writePermissionVerified": true,
+    "workflowFile": ".github/workflows/ci.yml",
+    "actionsRunUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40806839794",
+    "branchProtectionChangedByThisTask": true,
+    "existingBranchProtection": "not_enabled_at_start",
+    "workflowUploaded": true,
+    "connectedAccountMatchesOwner": true,
+    "verifiedPermission": "ADMIN",
+    "authenticationChannel": "local_github_cli",
+    "authenticatedAccount": "viniciusdamascenodev",
+    "mainBaseSha": "6e1d231b05a358daefba31853634debabc8fea57",
+    "actionsEnabled": true,
+    "defaultWorkflowPermission": "read",
+    "pullRequestUrl": "https://github.com/viniciusdamascenodev/lottobrain/pull/1",
+    "validationHeadSha": "7c9b84175e377551a1078b52860b23ca7f53b538",
+    "mainUnchanged": true,
+    "requiredStatusChecks": [
+      {
+        "context": "Quality gate",
+        "appId": 15368
+      }
+    ],
+    "strictStatusChecks": true,
+    "enforceAdmins": true,
+    "pullRequestRequired": true,
+    "requiredApprovingReviews": 0,
+    "requiredConversationResolution": true,
+    "allowForcePushes": false,
+    "allowDeletions": false,
+    "conclusion": "success",
+    "mergePerformed": false,
+    "reviewIntegrationPending": true,
+    "remoteRunCompletedAtUTC": "2026-10-29T02:38:17Z",
+    "remoteJobs": [
+      {
+        "jobId": 123227710504,
+        "result": "success",
+        "startedAtUTC": "2026-10-29T02:31:19Z",
+        "completedAtUTC": "2026-10-29T02:31:49Z"
+      },
+      {
+        "jobId": 123227710748,
+        "result": "success",
+        "startedAtUTC": "2026-10-29T02:31:19Z",
+        "completedAtUTC": "2026-10-29T02:38:12Z"
+      },
+      {
+        "jobId": 123227710833,
+        "result": "success",
+        "startedAtUTC": "2026-10-29T02:31:18Z",
+        "completedAtUTC": "2026-10-29T02:32:19Z"
+      },
+      {
+        "jobId": 123229911426,
+        "result": "success",
+        "startedAtUTC": "2026-10-29T02:38:13Z",
+        "completedAtUTC": "2026-10-29T02:38:16Z"
+      }
+    ]
+  },
+  "operationalServicesProvisioned": false,
+  "productionCredentialsCreated": false,
+  "implementationHashes": {
+    "pyproject.toml": "39116d4b354eea71729db391187a97c6b134cd8ccb96e1cf6afe099330d511d5",
+    "uv.lock": "3fc5ca1cc26f4d0c3e519093e735e3c20e685afd8504994535be9d938d8f1168",
+    ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+    ".node-version": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc",
+    ".gitattributes": "40c04d5797f69974f5d56cf1f344bdd14c769d81a2c6b261529f1560a287cd7a",
+    ".editorconfig": "85bccbd23a9070becfe1dc0dbb9ad7305fb2bb98f92f54cb9856d7d6eca4ebfe",
+    ".github/workflows/ci.yml": "6a97621760a2a96aae9fdc5dc2d37e5bc2b96ed083b03afd2f337adea9e866f5",
+    ".github/dependabot.yml": "3145516261b94eb0a950bafc28298611570ccafe3c4fa9c94e8fcb5494fea236",
+    "app/infrastructure/settings.py": "7b8bff28e44892da4f3bb0c1828f6fe05e243fe56f45294c10ee6473366d4995",
+    "app/interfaces/http/main.py": "5c4ddaa150658f9d1fc299a5cac13859308b5cb0975fcfdd452ddac586c9c06a",
+    "scripts/engineering/check.py": "cd1ce03e48adddd00792f8d4bf4939dd2a17f331c93e284c9d8e8bb845918a86",
+    "tests/conftest.py": "df7ae101f49e5a00b25d1e9d43bb837aa1efdcb703cc082ada847e654a94b6a2",
+    "tests/test_platform_foundation.py": "10d1ae9cfaeb421f0bdf212c421ddf5a24632c2059631309bead14aeaffc1589",
+    "frontend/package.json": "202a11e7ece7fdc6eea1d436c283faab4004d2819e38c01dffe598c1d7350bf0",
+    "frontend/package-lock.json": "6cd65254d4895d376d02f2c86cdba63a6193222569ab96f5441b9934ebc410de",
+    "frontend/next.config.mjs": "27b634c6accbd2a7888207eaafd25affc46e94ad4dcc40e0d541edc57f4fdc8f",
+    "frontend/eslint.config.mjs": "02a92e7d68e49f043e655c751df4dfc32b75fc9360ccbd67ac49595b1f841400",
+    "frontend/config/api-origin.mjs": "b597ad009b9eb189e54248534478393d0a78ddbfd1ccb2bffe739be59f4020dc",
+    "frontend/tests/api-origin.test.mjs": "323bdecd51292b785f014bc825ccd9a90883a18b9494c03994dd7efb88f1c4c4",
+    "scripts/database/run_integration.py": "4a8860b71c184e63872833a0f8d9d5f46a5549a14e3867c7b941a800a9cfa526"
+  },
+  "limitations": [
+    "Serviços de preview/staging/produção, OAuth e produto privado continuam na SPEC-0033.",
+    "Scanner básico de credenciais e auditorias cobrem os recortes descritos; não equivalem a auditoria integral de segurança."
+  ],
+  "implementationHashBasis": "git_blob_at_github.validationHeadSha"
+}

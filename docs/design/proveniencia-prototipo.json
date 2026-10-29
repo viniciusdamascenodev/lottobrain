@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "referenceDate": "2026-10-27",
+    "preparedDate": "2026-10-28",
+    "purpose": "Local UX prototype, not approved production datasets",
+    "sampleSizePerLottery": 30,
+    "noNewDownload": true,
+    "noOperationalImport": true,
+    "sources": [
+      {
+        "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mega_sena.xlsx",
+        "sha256": "a7d1e32136b545757343ac956d48a1d2787f7be6b9f3890c13ea0092966bc2f4",
+        "bytes": 229988
+      },
+      {
+        "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/lotofacil.xlsx",
+        "sha256": "b0d4421115b0966397b5c7b4a8e261964e5b254b5e69c5956ec73ec048a83be5",
+        "bytes": 386611
+      },
+      {
+        "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/mais_milionaria.xlsx",
+        "sha256": "7a1c09d6b9c07589b731316ad8dc2252da071fc5747d1766bcb6d53922f9a315",
+        "bytes": 55533
+      },
+      {
+        "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_powerball_recentes.json",
+        "sha256": "05934e917ae1a4d27a1d3a86268f3c72a293b68587c484b5cd12d8e1bf837346",
+        "bytes": 15730
+      },
+      {
+        "path": "docs/data/reanalise-etapa-2-2026-10-27/amostras/ny_mega_millions_recentes.json",
+        "sha256": "0b96399ada39b95c9826279e0449e823e7e15ad89ce0032522d154d4c1aa5138",
+        "bytes": 8092
+      },
+      {
+        "path": "docs/data/fechamento-etapa-2-2026-10-27/amostras/fdj_recente.zip",
+        "sha256": "3c1749dcec597562690d13e6844b7d05c5b6a7d4f87b702d5d0522b916db32c0",
+        "bytes": 117653
+      }
+    ]
+  },
+  "lotteries": [
+    {
+      "slug": "mega_sena",
+      "draws": 30,
+      "from": "2026-08-18",
+      "to": "2026-10-26"
+    },
+    {
+      "slug": "lotofacil",
+      "draws": 30,
+      "from": "2026-09-21",
+      "to": "2026-10-26"
+    },
+    {
+      "slug": "mais_milionaria",
+      "draws": 30,
+      "from": "2026-07-15",
+      "to": "2026-10-24"
+    },
+    {
+      "slug": "powerball",
+      "draws": 30,
+      "from": "2026-08-19",
+      "to": "2026-10-26"
+    },
+    {
+      "slug": "mega_millions",
+      "draws": 30,
+      "from": "2026-07-14",
+      "to": "2026-10-23"
+    },
+    {
+      "slug": "euro_millions",
+      "draws": 30,
+      "from": "2026-07-17",
+      "to": "2026-10-27"
+    }
+  ]
+}

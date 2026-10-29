@@ -1,0 +1,25 @@
+[
+  {
+    "check": "Componente Powerball separado",
+    "numbers": 26,
+    "pressed": "Powerball"
+  },
+  {
+    "check": "Paginação",
+    "evidence": "7–12 de 30 sorteios da janela\nAnterior\nPróxima"
+  },
+  {
+    "check": "Double Play e ausência de faixas",
+    "evidence": "Powerball · Sorteio de 12 de out.\n\n12 de outubro de 2026 · fonte OPEN-NY\n\nNúmeros principais\n22\n28\n38\n51\n69\nPowerball\n09\n\nPower Play publicado: 3×\n\nDouble Play · série vinculada\n23\n25\n51\n53\n54\n16\n\nCampo presente nesta amostra OPEN-NY. Não representa coletor adicional habilitado.\n\nPremiação publicada\n\nAs faixas financeiras não estão incluídas neste recorte da fonte OPEN-NY. Ausência não é prêmio zero.\n\nFechar detalhes"
+  },
+  {
+    "check": "Tab circula ao primeiro controle",
+    "focused": "Fechar diálogo",
+    "inside": true
+  },
+  {
+    "check": "Shift Tab circula ao último controle",
+    "focused": "Fechar detalhes",
+    "inside": true
+  }
+]

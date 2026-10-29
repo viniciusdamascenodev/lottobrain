@@ -1,0 +1,146 @@
+{
+  "baseline_comparisons": [
+    {
+      "expected": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+      "field": "source_sha256",
+      "matches": true,
+      "observed": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa"
+    },
+    {
+      "expected": 314,
+      "field": "total_rows",
+      "matches": true,
+      "observed": 314
+    },
+    {
+      "expected": 1,
+      "field": "first_contest",
+      "matches": true,
+      "observed": 1
+    },
+    {
+      "expected": 314,
+      "field": "last_contest",
+      "matches": true,
+      "observed": 314
+    },
+    {
+      "expected": "2022-05-28",
+      "field": "first_date",
+      "matches": true,
+      "observed": "2022-05-28"
+    },
+    {
+      "expected": "2025-12-24",
+      "field": "last_date",
+      "matches": true,
+      "observed": "2025-12-24"
+    },
+    {
+      "expected": 312,
+      "field": "missing_winner_locations",
+      "matches": true,
+      "observed": 312
+    },
+    {
+      "expected": 314,
+      "field": "missing_observations",
+      "matches": true,
+      "observed": 314
+    }
+  ],
+  "baseline_matches": true,
+  "canonical_content_sha256": "c4b0ef8afb0cd20eb76ff0d398176d7abebb1010f2970d07e9661987ad3d9c7b",
+  "duplicate_keys": {},
+  "issue_counts": {},
+  "issues": [],
+  "lottery_slug": "mais_milionaria",
+  "money_counts": {
+    "next_estimated_jackpot": {
+      "known": 314
+    },
+    "prize_per_winner.hits_2_clovers_1": {
+      "known": 314
+    },
+    "prize_per_winner.hits_2_clovers_2": {
+      "known": 314
+    },
+    "prize_per_winner.hits_3_clovers_1": {
+      "known": 314
+    },
+    "prize_per_winner.hits_3_clovers_2": {
+      "known": 314
+    },
+    "prize_per_winner.hits_4_clovers_0_or_1": {
+      "known": 314
+    },
+    "prize_per_winner.hits_4_clovers_2": {
+      "known": 314
+    },
+    "prize_per_winner.hits_5_clovers_0_or_1": {
+      "known": 314
+    },
+    "prize_per_winner.hits_5_clovers_2": {
+      "known": 314,
+      "zero": 89
+    },
+    "prize_per_winner.hits_6_clovers_0_or_1": {
+      "known": 314,
+      "zero": 293
+    },
+    "prize_per_winner.hits_6_clovers_2": {
+      "known": 314,
+      "zero": 312
+    },
+    "sales_total": {
+      "known": 314
+    }
+  },
+  "normalizer_version": "spec-0007",
+  "report_version": "1",
+  "rollover_flag_counts": {
+    "no": 2,
+    "yes": 312
+  },
+  "source_sha256_after": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+  "source_sha256_before": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+  "source_unchanged": true,
+  "special_components": {
+    "clovers": {
+      "max": 6,
+      "min": 1,
+      "values_count": 628
+    }
+  },
+  "summary": {
+    "candidate_rows": 314,
+    "duplicate_key_rows": 0,
+    "first_contest": 1,
+    "first_date": "2022-05-28",
+    "invalid_rows": 0,
+    "last_contest": 314,
+    "last_date": "2025-12-24",
+    "main_max": 50,
+    "main_min": 1,
+    "main_values_count": 1884,
+    "missing_contests": [],
+    "missing_identity_rows": 0,
+    "missing_observations": 314,
+    "missing_winner_locations": 312,
+    "total_rows": 314,
+    "unique_keys": 314,
+    "valid_rows": 314
+  },
+  "winner_totals": {
+    "hits_2_clovers_1": 36376771,
+    "hits_2_clovers_2": 4593947,
+    "hits_3_clovers_1": 4703684,
+    "hits_3_clovers_2": 593831,
+    "hits_4_clovers_0_or_1": 437544,
+    "hits_4_clovers_2": 31895,
+    "hits_5_clovers_0_or_1": 8121,
+    "hits_5_clovers_2": 609,
+    "hits_6_clovers_0_or_1": 27,
+    "hits_6_clovers_2": 3
+  }
+}

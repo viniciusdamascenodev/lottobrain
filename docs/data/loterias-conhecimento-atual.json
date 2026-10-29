@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-10-20",
+  "purpose": "Registro documental de fatos oficiais atuais; não é configuração de produção.",
+  "lotteries": [
+    {
+      "key": "mega_sena",
+      "jurisdiction": "BR",
+      "operator": "CAIXA",
+      "currency": "BRL",
+      "main_pool": {"draw_count": 6, "min": 1, "max": 60},
+      "special_pools": [],
+      "simple_bet_price": "6.00",
+      "jackpot_odds_one_in": "50063860",
+      "schedule_text": "terça e quinta a partir das 21h; domingo a partir das 11h",
+      "source": "https://loterias.caixa.gov.br/Paginas/mega-sena.aspx"
+    },
+    {
+      "key": "lotofacil",
+      "jurisdiction": "BR",
+      "operator": "CAIXA",
+      "currency": "BRL",
+      "main_pool": {"draw_count": 15, "min": 1, "max": 25},
+      "special_pools": [],
+      "simple_bet_price": "3.50",
+      "jackpot_odds_one_in": "3268760",
+      "schedule_text": "segunda a sexta a partir das 21h; domingo a partir das 11h",
+      "source": "https://loterias.caixa.gov.br/Paginas/LOTOFACIL.aspx"
+    },
+    {
+      "key": "mais_milionaria",
+      "jurisdiction": "BR",
+      "operator": "CAIXA",
+      "currency": "BRL",
+      "main_pool": {"draw_count": 6, "min": 1, "max": 50},
+      "special_pools": [{"key": "trevos", "draw_count": 2, "min": 1, "max": 6}],
+      "simple_bet_price": "6.00",
+      "jackpot_odds_one_in": "238360500",
+      "schedule_text": "quarta a partir das 21h; domingo a partir das 11h",
+      "source": "https://loterias.caixa.gov.br/paginas/mais-Milionaria.aspx"
+    },
+    {
+      "key": "powerball",
+      "jurisdiction": "US_MULTI_AND_UK_JACKPOT",
+      "operator": "MUSL and participating lotteries",
+      "currency": "USD",
+      "main_pool": {"draw_count": 5, "min": 1, "max": 69},
+      "special_pools": [{"key": "powerball", "draw_count": 1, "min": 1, "max": 26}],
+      "simple_bet_price": "2.00",
+      "jackpot_odds_one_in": "292201338",
+      "schedule_text": "Monday, Wednesday and Saturday at 10:59 p.m. ET",
+      "extensions": ["Power Play", "Double Play"],
+      "source": "https://www.powerball.com/"
+    },
+    {
+      "key": "mega_millions",
+      "jurisdiction": "US_MULTI",
+      "operator": "Mega Millions Consortium and participating lotteries",
+      "currency": "USD",
+      "main_pool": {"draw_count": 5, "min": 1, "max": 70},
+      "special_pools": [{"key": "mega_ball", "draw_count": 1, "min": 1, "max": 24}],
+      "simple_bet_price": "5.00",
+      "jackpot_odds_one_in": "290472336",
+      "schedule_text": "Tuesday and Friday at 11 p.m. ET",
+      "rule_version_valid_from": "2025-04-08",
+      "extensions": ["embedded multiplier 2x/3x/4x/5x/10x"],
+      "source": "https://www.megamillions.com/How-To-Play.aspx"
+    },
+    {
+      "key": "euromillions",
+      "jurisdiction": "EU_MULTI_WITH_FR_PRODUCT_CONTEXT",
+      "operator": "participating national lotteries",
+      "currency": "EUR",
+      "main_pool": {"draw_count": 5, "min": 1, "max": 50},
+      "special_pools": [{"key": "lucky_stars", "draw_count": 2, "min": 1, "max": 12}],
+      "simple_bet_price": "2.50",
+      "price_scope": "France, including My Million",
+      "jackpot_odds_one_in": "139838160",
+      "schedule_text": "Tuesday and Friday; approximately 21:05 metropolitan France time",
+      "extensions": ["My Million (France/Monaco)", "Ireland Only Raffle (Ireland)"],
+      "source": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/comment-jouer"
+    }
+  ]
+}

@@ -1,0 +1,1120 @@
+{
+  "report_version": "lottobrain.stage2-closure.v1",
+  "date": "2026-10-27",
+  "timezone": "America/Sao_Paulo",
+  "status": "completed_data_discovery_and_source_qualification",
+  "authoritative_current_decision": true,
+  "scope": "six-lottery discovery, formats, coverage, source selection and implementation contracts; not operational imports/deployment",
+  "all_sources_operational": false,
+  "all_sources_unrestricted_licensed": false,
+  "inventory_repeated": false,
+  "production_changes": false,
+  "operational_import_performed": false,
+  "scheduled_collectors_enabled": false,
+  "previous_evidence": [
+    "docs/data/qualificacao-final-etapa-2.json",
+    "docs/data/reanalise-etapa-2-atualizacao-completa.json",
+    "docs/data/fechamento-etapa-2.json"
+  ],
+  "acceptance": [
+    {
+      "id": "S2-01",
+      "subject": "six existing historical datasets and quality",
+      "status": "passed_reused",
+      "evidence": "original six-lottery inventory and qualification;15471rawrecords;20numerical rule versions"
+    },
+    {
+      "id": "S2-02",
+      "subject": "current transport and profiles",
+      "status": "passed_reused",
+      "evidence": "prior80offline tests;CAIXA GETs and actual client;secure NY Python transport;nullable/text title"
+    },
+    {
+      "id": "S2-03",
+      "subject": "recent continuity",
+      "status": "passed_reused",
+      "evidence": "756post-baseline primary draws from official snapshots;coverage known per field;no SQL import claimed"
+    },
+    {
+      "id": "S2-04",
+      "subject": "EuroMillions chosen complete route",
+      "status": "passed_for_declared_contract",
+      "evidence": "SELAE official date-based service,first draw2004 and2011/2016rule boundaries plus2026samples;FDJ official batch archives for historical reconciliation; full SELAE history not individually audited"
+    },
+    {
+      "id": "S2-05",
+      "subject": "fields,missing values,financial scope",
+      "status": "passed_with_explicit_semantics",
+      "evidence": "field decisions below;26recent Euro winner tiers agree;legacy financial ambiguity quarantined,not manufactured"
+    },
+    {
+      "id": "S2-06",
+      "subject": "source use selection",
+      "status": "decided_for_current_private_factual_product",
+      "evidence": "CAIXA official public downloads selected per user;SELAE official result-sharing channel and personal-use policy;no universal license asserted;Colorado restricted channel excluded from activation"
+    },
+    {
+      "id": "S2-07",
+      "subject": "preservation and handoff",
+      "status": "passed",
+      "evidence": "checksum and offline test results finalized below"
+    }
+  ],
+  "decisions": {
+    "caixa": {
+      "status": "selected_official_public_source",
+      "covers": [
+        "mega_sena",
+        "lotofacil",
+        "mais_milionaria"
+      ],
+      "download_base": "https://servicebus3.caixa.gov.br/portaldeloterias/api/resultados/download",
+      "modalidades": [
+        "Mega-Sena",
+        "Lotofácil",
+        "+Milionária"
+      ],
+      "encode_plus_as": "%2B",
+      "prior_EXT_01": "closed_as_unjustified_generic_stage2_gate; absence of a specific API license alone did not establish requirement for individual permission",
+      "scope": "factual lottery data from offered public downloads/API; no cloning of sites or reuse of logos/marketing materials",
+      "user_decision": "use official public links supplied by project owner; no further user permission needed for this development scope",
+      "transport": "reuse proved receipts; no fresh six-lottery inventory"
+    },
+    "euro_millions": {
+      "primary": "SELAE official result-sharing channel",
+      "data_url_template": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=YYYYMMDD",
+      "public_wrapper_template": "https://www.loteriasyapuestas.es/f/loterias/resultados/euromillones.html?game_id=EMIL&fecha_sorteo=YYYYMMDD",
+      "discovery_chain": "official sharing instructions -> offered euromillones.html -> iniciarEstadisticas -> servicios/fechav3",
+      "cost_of_observed_public_access": "no signup,key,payment or account used;no SLA inferred",
+      "historical_batch_and_cross_check": "official FDJ archives since2004 already located/qualified, not redownloaded",
+      "reference_for_prize_transfer_semantics": "preserved Austrian2026sample;do not merge country payouts",
+      "prior_EXT_03": "source-selection decision closed for private factual integration; no dependency on commercial API or blanket FDJ content reproduction",
+      "use_basis": {
+        "official_instructions": "https://www.loteriasyapuestas.es/en/resultados-ultimos-sorteos",
+        "policy": "https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa",
+        "scope": "official channel expressly offers latest-result display;general policy allows personal use and retains other rights;chosen for current private factual analysis",
+        "not_asserted": [
+          "open-data or public-domain license",
+          "unlimited bulk redistribution of full financial database",
+          "rights to operator branding or website cloning",
+          "commercial resale permission",
+          "contractual uptime or publication latency"
+        ]
+      },
+      "profile_version": "qualification.selae.emil.fechav3.v1",
+      "production_adapter_implemented": false,
+      "historical_range_evidence": "five real sample dates, including first draw2004; not individual audit of every SELAE record"
+    },
+    "powerball_primary": "OPEN-NY recent results;original historical coverage retained;Texas overlap reused",
+    "mega_millions_primary": "OPEN-NY recent results;historical ticket multipliers/rules retained",
+    "double_play": {
+      "technical_coverage_evidence": "docs/data/qualificacao-final-etapa-2.json#/double_play",
+      "state": "68gaps located and63overlap checked;Colorado automation remains restricted",
+      "prior_EXT_02": "not falsely resolved;operational source-channel dependency retained inSPEC0034 for DoublePlay/Colorado enrichment;does not reopen primary six-lottery inventory",
+      "no_silent_reduction": "core Powerball and linked DoublePlay must have distinct availability statuses;do not claim automatic DoublePlay delivered"
+    }
+  },
+  "selae_fields": [
+    {
+      "fields": [
+        "game_id",
+        "id_sorteo"
+      ],
+      "decision": "require EMIL;preserve provider ID as string/external reference;do not decode or replace canonical identity with inferred ordinal"
+    },
+    {
+      "fields": [
+        "fecha_sorteo",
+        "dia_semana",
+        "anyo"
+      ],
+      "decision": "use date portion as draw date;time has no offset and is not qualified as actual UTC instant;captured_at separate"
+    },
+    {
+      "fields": [
+        "combinacion"
+      ],
+      "decision": "seven integers;first5main then2stars;separate components and validate historical matrix"
+    },
+    {
+      "fields": [
+        "escrutinio[].tipo"
+      ],
+      "decision": "retain source label;parse matched main/stars;historical source rank order changes;do not equate ordinal with universal category"
+    },
+    {
+      "fields": [
+        "escrutinio[].premio"
+      ],
+      "decision": "published tier payout EUR,decimal comma strings;not actual paid/rescued amount;do not replace country payout by France/Austria value"
+    },
+    {
+      "fields": [
+        "escrutinio[].ganadores_eu"
+      ],
+      "decision": "observed Europe-wide counts on recent samples;null in2004retained as unknown,not0"
+    },
+    {
+      "fields": [
+        "escrutinio[].ganadores"
+      ],
+      "decision": "country/operator column on recent observations;legacy2004scope not established;no universal Spain tag retroactively"
+    },
+    {
+      "fields": [
+        "premio_bote",
+        "fondo_bote"
+      ],
+      "decision": "preserve separately as source observations;advertised pot/fund are not per-winner payout;not proven next-draw estimate;2004premio_bote0does not mean no jackpot"
+    },
+    {
+      "fields": [
+        "apuestas",
+        "recaudacion",
+        "recaudacion_europea",
+        "premios"
+      ],
+      "decision": "fields exist;preserve raw source-scoped values;dash unknown;legacy territory,basis and audit status not fully qualified;do not publish as audited national/pan-European gross sales"
+    },
+    {
+      "fields": [
+        "millon",
+        "escrutinio_millon"
+      ],
+      "decision": "Spanish linked raffle;code,provider reference,published amount and own tiers separate;null in2004not error"
+    },
+    {
+      "fields": [
+        "lluvia",
+        "escrutinio_lluvia",
+        "mw_categoria_inicial",
+        "mw_categoria_final",
+        "mw_multiplicador"
+      ],
+      "decision": "nullable extensions;keep raw;non-null semantics require specific qualification before analytical use"
+    },
+    {
+      "fields": [
+        "cdc"
+      ],
+      "decision": "provider metadata;not assumed official sequence or universal draw identity"
+    }
+  ],
+  "unavailable_or_unqualified": [
+    {
+      "item": "universal actual draw timestamp with timezone",
+      "decision": "date qualified;do not turn source clock into event UTC"
+    },
+    {
+      "item": "audited historical financial completeness across all countries",
+      "decision": "not claimed;preserve country/provider measures and raw legacy states"
+    },
+    {
+      "item": "unambiguous next jackpot fromfechav3",
+      "decision": "not mapped frompremio_bote without further semantic evidence;field unavailable in this selected core contract"
+    },
+    {
+      "item": "actual prize redemption",
+      "decision": "not provided;do not infer from winners multiplied by published payout"
+    },
+    {
+      "item": "all country-specific extensions",
+      "decision": "Spanish ElMillón observed;French/Austrian extensions stay separate;no global completeness claim"
+    }
+  ],
+  "selae_analysis": {
+    "draw_samples": [
+      {
+        "sample": "selae_20040213",
+        "date": "2004-02-13",
+        "source_id": "497602001",
+        "main": [
+          16,
+          29,
+          32,
+          36,
+          41
+        ],
+        "stars": [
+          7,
+          9
+        ],
+        "star_limit": 9,
+        "tier_count": 12,
+        "categories": [
+          {
+            "source_rank": 1,
+            "main_hits": 5,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 2,
+            "main_hits": 5,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 3,
+            "main_hits": 5,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 4,
+            "main_hits": 4,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 5,
+            "main_hits": 4,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 6,
+            "main_hits": 4,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 7,
+            "main_hits": 3,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 8,
+            "main_hits": 3,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 9,
+            "main_hits": 2,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 10,
+            "main_hits": 3,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 11,
+            "main_hits": 1,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 12,
+            "main_hits": 2,
+            "star_hits": 1
+          }
+        ],
+        "numbers_match": "legacy qualified snapshot",
+        "europe_winners_match_fdj": false,
+        "has_recaudacion_europea_numeric": false,
+        "millon_present": false
+      },
+      {
+        "sample": "selae_20110510",
+        "date": "2011-05-10",
+        "source_id": "761902019",
+        "main": [
+          3,
+          10,
+          15,
+          28,
+          45
+        ],
+        "stars": [
+          5,
+          7
+        ],
+        "star_limit": 11,
+        "tier_count": 13,
+        "categories": [
+          {
+            "source_rank": 1,
+            "main_hits": 5,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 2,
+            "main_hits": 5,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 3,
+            "main_hits": 5,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 4,
+            "main_hits": 4,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 5,
+            "main_hits": 4,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 6,
+            "main_hits": 4,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 7,
+            "main_hits": 3,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 8,
+            "main_hits": 2,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 9,
+            "main_hits": 3,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 10,
+            "main_hits": 3,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 11,
+            "main_hits": 1,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 12,
+            "main_hits": 2,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 13,
+            "main_hits": 2,
+            "star_hits": 0
+          }
+        ],
+        "numbers_match": "legacy qualified snapshot",
+        "europe_winners_match_fdj": false,
+        "has_recaudacion_europea_numeric": true,
+        "millon_present": false
+      },
+      {
+        "sample": "selae_20160927",
+        "date": "2016-09-27",
+        "source_id": "958602078",
+        "main": [
+          6,
+          9,
+          13,
+          39,
+          41
+        ],
+        "stars": [
+          2,
+          12
+        ],
+        "star_limit": 12,
+        "tier_count": 13,
+        "categories": [
+          {
+            "source_rank": 1,
+            "main_hits": 5,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 2,
+            "main_hits": 5,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 3,
+            "main_hits": 5,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 4,
+            "main_hits": 4,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 5,
+            "main_hits": 4,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 6,
+            "main_hits": 3,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 7,
+            "main_hits": 4,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 8,
+            "main_hits": 2,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 9,
+            "main_hits": 3,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 10,
+            "main_hits": 3,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 11,
+            "main_hits": 1,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 12,
+            "main_hits": 2,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 13,
+            "main_hits": 2,
+            "star_hits": 0
+          }
+        ],
+        "numbers_match": "legacy qualified snapshot",
+        "europe_winners_match_fdj": false,
+        "has_recaudacion_europea_numeric": true,
+        "millon_present": false
+      },
+      {
+        "sample": "selae_20261023",
+        "date": "2026-10-23",
+        "source_id": "1326402085",
+        "main": [
+          24,
+          33,
+          35,
+          44,
+          47
+        ],
+        "stars": [
+          7,
+          11
+        ],
+        "star_limit": 12,
+        "tier_count": 13,
+        "categories": [
+          {
+            "source_rank": 1,
+            "main_hits": 5,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 2,
+            "main_hits": 5,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 3,
+            "main_hits": 5,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 4,
+            "main_hits": 4,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 5,
+            "main_hits": 4,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 6,
+            "main_hits": 3,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 7,
+            "main_hits": 4,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 8,
+            "main_hits": 2,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 9,
+            "main_hits": 3,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 10,
+            "main_hits": 3,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 11,
+            "main_hits": 1,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 12,
+            "main_hits": 2,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 13,
+            "main_hits": 2,
+            "star_hits": 0
+          }
+        ],
+        "numbers_match": "preserved FDJ snapshot",
+        "europe_winners_match_fdj": true,
+        "has_recaudacion_europea_numeric": true,
+        "millon_present": true
+      },
+      {
+        "sample": "selae_20261027",
+        "date": "2026-10-27",
+        "source_id": "1326802086",
+        "main": [
+          21,
+          30,
+          32,
+          42,
+          48
+        ],
+        "stars": [
+          3,
+          6
+        ],
+        "star_limit": 12,
+        "tier_count": 13,
+        "categories": [
+          {
+            "source_rank": 1,
+            "main_hits": 5,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 2,
+            "main_hits": 5,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 3,
+            "main_hits": 5,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 4,
+            "main_hits": 4,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 5,
+            "main_hits": 4,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 6,
+            "main_hits": 3,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 7,
+            "main_hits": 4,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 8,
+            "main_hits": 2,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 9,
+            "main_hits": 3,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 10,
+            "main_hits": 3,
+            "star_hits": 0
+          },
+          {
+            "source_rank": 11,
+            "main_hits": 1,
+            "star_hits": 2
+          },
+          {
+            "source_rank": 12,
+            "main_hits": 2,
+            "star_hits": 1
+          },
+          {
+            "source_rank": 13,
+            "main_hits": 2,
+            "star_hits": 0
+          }
+        ],
+        "numbers_match": "preserved FDJ snapshot",
+        "europe_winners_match_fdj": true,
+        "has_recaudacion_europea_numeric": true,
+        "millon_present": true
+      }
+    ],
+    "samples_checked": 5,
+    "recent_europe_winner_tiers_compared": 26,
+    "conflicts": [],
+    "no_draw_response": {
+      "http_status": 200,
+      "json_type": "string",
+      "meaning": "no record; not valid draw and not transport failure",
+      "text": "No se ha encontrado ningún registro para los parámetros introducidos."
+    },
+    "historical_tier_order_varies": true,
+    "entire_selae_history_audited": false,
+    "latest_sample_date": "2026-10-27",
+    "full_operational_import_performed": false
+  },
+  "samples": [
+    {
+      "name": "selae_20040213",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20040213.json",
+      "byte_count": 1764,
+      "sha256": "54fdcbb4927529d634c1c05499e4477a614a7dcc3c6133d160e6f86a9a37fc97",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20040213",
+      "observed_at_utc": "2026-10-27T23:13:33.184678+00:00"
+    },
+    {
+      "name": "selae_20110510",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20110510.json",
+      "byte_count": 2057,
+      "sha256": "835c6a1a172cf808afd0cccd7532f863ca30ac203bee4e90f32c85ddfc5a8447",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20110510",
+      "observed_at_utc": "2026-10-27T23:13:35.583741+00:00"
+    },
+    {
+      "name": "selae_20160927",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20160927.json",
+      "byte_count": 2042,
+      "sha256": "d345aeeb9ba7949ca009cde5354cbea8c5769469789306361a9520e5f5bbdb31",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20160927",
+      "observed_at_utc": "2026-10-27T23:14:26.942868+00:00"
+    },
+    {
+      "name": "selae_20261023",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20261023.json",
+      "byte_count": 2594,
+      "sha256": "5ab07724746d5c0bc6757645ab81428bf04860f49c9cecc19aa6f0b152c9a898",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20261023",
+      "observed_at_utc": "2026-10-27T23:13:28.533975+00:00"
+    },
+    {
+      "name": "selae_20261027",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20261027.json",
+      "byte_count": 2582,
+      "sha256": "0c1dfd1dc1ac9c6e5a1215aeb3a3e10ae70c11b91478b49d3ec3e09e1e20d882",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20261027",
+      "observed_at_utc": "2026-10-27T23:13:30.862767+00:00"
+    },
+    {
+      "name": "selae_embed_latest",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_embed_latest.html",
+      "byte_count": 2898,
+      "sha256": "8a64efd91a0a772353ca5564037d3fa03da7d1ba7ca3be49c3e6bdadf3884e6e",
+      "url": "https://www.loteriasyapuestas.es/f/loterias/resultados/euromillones.html?game_id=EMIL&fecha_sorteo=20261023",
+      "observed_at_utc": "2026-10-27T23:13:01.491704+00:00"
+    },
+    {
+      "name": "selae_no_draw",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_no_draw.json",
+      "byte_count": 81,
+      "sha256": "bd2c9a2aba00a5dd9b79b936aa4e712371c0df0841b8822916292c2e2771dc32",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20261026",
+      "observed_at_utc": "2026-10-27T23:14:29.351126+00:00"
+    },
+    {
+      "name": "selae_sharing",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_sharing.html",
+      "byte_count": 90917,
+      "sha256": "dec0ef1bae53b6e38c12b8bbf797daea89bf0a826b2c5530ac9c46e316d0ffc8",
+      "url": "https://www.loteriasyapuestas.es/en/resultados-ultimos-sorteos",
+      "observed_at_utc": "2026-10-27T23:13:03.830638+00:00"
+    },
+    {
+      "name": "selae_use_policy",
+      "path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_use_policy.html",
+      "byte_count": 112783,
+      "sha256": "a451aa5271904fba6497a8899ab48c9a193d19899f053679e7fa9307c1786475",
+      "url": "https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa",
+      "observed_at_utc": "2026-10-27T23:15:38.353877+00:00"
+    }
+  ],
+  "probes": [
+    {
+      "name": "fdj_history",
+      "method": "GET",
+      "url": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/historique",
+      "observed_at_utc": "2026-10-27T23:13:07.169324+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Tue, 27 Oct 2026 23:13:08 GMT"
+      },
+      "byte_count": 764451,
+      "sha256": "8c5f0f20fae0559f66df5cfb95750f66ee9e95636dbee099c702936d53418144",
+      "within_limit": true,
+      "retained_body_path": null
+    },
+    {
+      "name": "selae_20040213",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20040213",
+      "observed_at_utc": "2026-10-27T23:13:33.184678+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "1764",
+        "Date": "Tue, 27 Oct 2026 23:13:34 GMT"
+      },
+      "byte_count": 1764,
+      "sha256": "54fdcbb4927529d634c1c05499e4477a614a7dcc3c6133d160e6f86a9a37fc97",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20040213.json"
+    },
+    {
+      "name": "selae_20110510",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20110510",
+      "observed_at_utc": "2026-10-27T23:13:35.583741+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "2057",
+        "Date": "Tue, 27 Oct 2026 23:13:36 GMT"
+      },
+      "byte_count": 2057,
+      "sha256": "835c6a1a172cf808afd0cccd7532f863ca30ac203bee4e90f32c85ddfc5a8447",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20110510.json"
+    },
+    {
+      "name": "selae_20160927",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20160927",
+      "observed_at_utc": "2026-10-27T23:14:26.942868+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "2042",
+        "Date": "Tue, 27 Oct 2026 23:14:28 GMT"
+      },
+      "byte_count": 2042,
+      "sha256": "d345aeeb9ba7949ca009cde5354cbea8c5769469789306361a9520e5f5bbdb31",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20160927.json"
+    },
+    {
+      "name": "selae_20261023",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20261023",
+      "observed_at_utc": "2026-10-27T23:13:28.533975+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "2594",
+        "Date": "Tue, 27 Oct 2026 23:13:29 GMT"
+      },
+      "byte_count": 2594,
+      "sha256": "5ab07724746d5c0bc6757645ab81428bf04860f49c9cecc19aa6f0b152c9a898",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20261023.json"
+    },
+    {
+      "name": "selae_20261027",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20261027",
+      "observed_at_utc": "2026-10-27T23:13:30.862767+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "2582",
+        "Date": "Tue, 27 Oct 2026 23:13:31 GMT"
+      },
+      "byte_count": 2582,
+      "sha256": "0c1dfd1dc1ac9c6e5a1215aeb3a3e10ae70c11b91478b49d3ec3e09e1e20d882",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20261027.json"
+    },
+    {
+      "name": "selae_embed_latest",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/f/loterias/resultados/euromillones.html?game_id=EMIL&fecha_sorteo=20261023",
+      "observed_at_utc": "2026-10-27T23:13:01.491704+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "2898",
+        "Date": "Tue, 27 Oct 2026 23:13:02 GMT"
+      },
+      "byte_count": 2898,
+      "sha256": "8a64efd91a0a772353ca5564037d3fa03da7d1ba7ca3be49c3e6bdadf3884e6e",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_embed_latest.html"
+    },
+    {
+      "name": "selae_no_draw",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/servicios/fechav3?game_id=EMIL&fecha_sorteo=20261026",
+      "observed_at_utc": "2026-10-27T23:14:29.351126+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "81",
+        "Date": "Tue, 27 Oct 2026 23:14:30 GMT"
+      },
+      "byte_count": 81,
+      "sha256": "bd2c9a2aba00a5dd9b79b936aa4e712371c0df0841b8822916292c2e2771dc32",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_no_draw.json"
+    },
+    {
+      "name": "selae_sharing",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/en/resultados-ultimos-sorteos",
+      "observed_at_utc": "2026-10-27T23:13:03.830638+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Tue, 27 Oct 2026 23:13:05 GMT"
+      },
+      "byte_count": 90917,
+      "sha256": "dec0ef1bae53b6e38c12b8bbf797daea89bf0a826b2c5530ac9c46e316d0ffc8",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_sharing.html"
+    },
+    {
+      "name": "selae_use_policy",
+      "method": "GET",
+      "url": "https://www.loteriasyapuestas.es/es/centro-de-ayuda/informacion-pie/politica-de-uso-de-la-web-y-sitios-moviles-webs-juego-y-corporativa",
+      "observed_at_utc": "2026-10-27T23:15:38.353877+00:00",
+      "tls_verified": true,
+      "check_hostname": true,
+      "verify_mode": 2,
+      "timeout_seconds": 20,
+      "max_body_bytes": 4194304,
+      "proxy_used": false,
+      "automatic_retries": 0,
+      "redirects_followed": false,
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Tue, 27 Oct 2026 23:15:40 GMT"
+      },
+      "byte_count": 112783,
+      "sha256": "a451aa5271904fba6497a8899ab48c9a193d19899f053679e7fa9307c1786475",
+      "within_limit": true,
+      "retained_body_path": "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_use_policy.html"
+    }
+  ],
+  "new_sample_bytes": 217718,
+  "alternatives_reviewed": [
+    {
+      "name": "FDJ official archives",
+      "decision": "retain historical batch/reference role;public invitation to download and create own statistics;not blanket permission to reproduce protected website",
+      "url": "https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/historique"
+    },
+    {
+      "name": "Loteria API",
+      "decision": "not selected for zero-cost continuous use;marketing free1000/month contradicts pricing and FAQ50lifetime;no key registered;examples not treated as captured data",
+      "urls": [
+        "https://loteriasapi.com/planes",
+        "https://loteriasapi.com/en/faq",
+        "https://loteriasapi.com/en/free-spanish-lottery-api"
+      ]
+    },
+    {
+      "name": "Belgium official statistics",
+      "decision": "not selected as operational channel;previous405 and no new working export proof;no claim of full usable replacement",
+      "url": "https://www.loterie-nationale.be/nos-jeux/euromillions/resultats-tirage/statistiques"
+    },
+    {
+      "name": "third-party GitHub APIs",
+      "decision": "code license does not establish rights/coverage of upstream datasets;no substitution for primary operator"
+    }
+  ],
+  "prior_coverage_reused": [
+    {
+      "lottery": "mega_sena",
+      "source_records": 3075,
+      "latest_number": 3075,
+      "latest_date": "2026-10-26",
+      "recent_records": 121,
+      "baseline_number": 2954
+    },
+    {
+      "lottery": "lotofacil",
+      "source_records": 3814,
+      "latest_number": 3814,
+      "latest_date": "2026-10-26",
+      "recent_records": 243,
+      "baseline_number": 3571
+    },
+    {
+      "lottery": "mais_milionaria",
+      "source_records": 401,
+      "latest_number": 401,
+      "latest_date": "2026-10-24",
+      "recent_records": 87,
+      "baseline_number": 314
+    },
+    {
+      "lottery": "powerball",
+      "source_records": 2017,
+      "latest_date": "2026-10-26",
+      "recent_records": 131,
+      "baseline_date": "2025-12-24"
+    },
+    {
+      "lottery": "mega_millions",
+      "source_records": 2389,
+      "latest_date": "2026-10-23",
+      "recent_records": 87,
+      "baseline_date": "2025-12-23"
+    },
+    {
+      "lottery": "euro_millions",
+      "source_records": 703,
+      "latest_date": "2026-10-27",
+      "recent_records": 87,
+      "baseline_date": "2025-12-26"
+    }
+  ],
+  "original_raw_sha256": {
+    "data/raw/euro_millions/euro_millions_resultados.json": "e4e7f97102c868569e33d54e34e258671cfca98f6872cf21fc0f86b171e57914",
+    "data/raw/lotofacil/lotofacil_resultados.xlsx": "0ab2c742f0ae6e3b567af2f99744b6d4071c08427c08941a94087e6bde36918e",
+    "data/raw/mais_milionaria/mais_milionaria_resultados.xlsx": "69e9050a3528c7e8d8b944ca904044013e00a66648372183ce4dc5e4531a41fa",
+    "data/raw/mega_millions/mega_millions_resultados.html": "c154cb21ae6381efe53f9735b5704d148156ba9737266de54e8badbf1d92c35c",
+    "data/raw/mega_sena/mega_sena_resultados.xlsx": "0e1936e3ac94a35a89c13ef31d705d3fb363239779ad6224b5e41171a3238686",
+    "data/raw/powerball/powerball_resultados.html": "12b1197b080bdf06cd8c944a66167732bb73850e8591b163faf985a3744b4238"
+  },
+  "next_task": "SPEC-0033 first online Mega-Sena slice;not executed by closure",
+  "validation": {
+    "state": "passed",
+    "tests": {
+      "command": ".venv/Scripts/python -m pytest tests/test_catalog.py tests/test_current_source_samples.py tests/test_stage2_source_qualification.py tests/test_source_enrichment_samples.py tests/test_final_source_qualification.py tests/test_stage2_closure_samples.py -q",
+      "passed": 98,
+      "failed": 0,
+      "duration_seconds": 4.12,
+      "new_tests": 18,
+      "network_used_by_tests": false
+    },
+    "preservation": {
+      "baseline_files": 322,
+      "unchanged_files": 317,
+      "intentionally_changed_docs": [
+        "README.md",
+        "docs/engineering/learnings.md",
+        "docs/engineering/plano-entrega-quatro-dias.md",
+        "docs/specs/SPEC-0033-primeiro-fluxo-online-mega-sena.md",
+        "docs/specs/SPEC-0034-seis-loterias-atualizadas-e-agendamento.md"
+      ],
+      "new_files": [
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20040213.json",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20110510.json",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20160927.json",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20261023.json",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_20261027.json",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_embed_latest.html",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_no_draw.json",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_sharing.html",
+        "docs/data/encerramento-etapa-2-2026-10-27/amostras/selae_use_policy.html",
+        "docs/data/encerramento-etapa-2.json",
+        "docs/data/encerramento-etapa-2.md",
+        "tests/test_stage2_closure_samples.py"
+      ],
+      "missing_files": [],
+      "unexpected_changes": [],
+      "all_original_raw_unchanged": true,
+      "all_previous_reports_unchanged": true,
+      "production_code_dependencies_migrations_and_prior_tests_unchanged": true
+    },
+    "markdown_files_checked": 6,
+    "broken_links_or_whitespace": []
+  }
+}
