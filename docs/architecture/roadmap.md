@@ -1,12 +1,12 @@
 # Mapa de evolução arquitetural
 
-## Posição atual em 28/10/2026
+## Posição atual em 29/10/2026
 
-**Etapa 5 concluída na branch de revisão:** [ambientes, dependências resolvidas, testes e CI](../engineering/etapa-5-desenvolvimento-ci.md), como fundação da SPEC-0033. CI real aprovado com 401 testes Python, 137 PostgreSQL, frontend e auditorias; `main` protegida por PR/Quality gate. [PR #1](https://github.com/viniciusdamascenodev/lottobrain/pull/1) aberta, sem merge ou deploy. A fundação HTTP recusa os dados e o frontend é somente um shell, preservando o protótipo visual da etapa 4.
+**Etapa 5 concluída e integrada à `main`:** [ambientes, dependências resolvidas, testes e CI](../engineering/etapa-5-desenvolvimento-ci.md), como fundação da SPEC-0033. CI real aprovado com 401 testes Python, 137 PostgreSQL, frontend e auditorias; `main` protegida por PR/Quality gate. [PR #1](https://github.com/viniciusdamascenodev/lottobrain/pull/1) integrada em 29/10/2026, commit `fd2088e`; [CI após o merge aprovado](https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40964245312). Fechamento documental registrado, sem pendência de aceite desta etapa. Não houve deploy. A fundação HTTP recusa os dados e o frontend é somente um shell, preservando o protótipo visual da etapa 4.
 
 **Etapa 4 concluída:** [experiência visual](../design/etapa-4-experiencia-visual.md), [sistema visual](../design/sistema-visual.md) e [protótipo navegável](../design/prototipo/index.html) para computador/celular, seis loterias e administração. A [validação](../design/validacao-etapa-4.md) registra dados reais do recorte, comportamento, estados, teclado e limites. São 180 registros de referência; autenticação, permissões e operações administrativas são demonstrações locais, sem implantação ou ativação operacional.
 
-Próxima capacidade funcional continua a **SPEC-0033**, com acesso privado e consulta real das seis; sua fundação da etapa 5 está validada na branch de revisão. Reaproveitar o desenho, os textos e os cenários; implementar os componentes e serviços previstos na arquitetura. SPECs 0034–0036 permanecem planejadas. As fotografias datadas abaixo conservam seu contexto histórico.
+Próxima capacidade funcional continua a **SPEC-0033**, com acesso privado e consulta real das seis; sua fundação da etapa 5 está validada e integrada à `main`. Esta atualização encerra somente a documentação da etapa 5; não inicia a próxima etapa. Reaproveitar o desenho, os textos e os cenários; implementar os componentes e serviços previstos na arquitetura. SPECs 0034–0036 permanecem planejadas. As fotografias datadas abaixo conservam seu contexto histórico.
 
 ## Decisão vigente em 27/10/2026
 

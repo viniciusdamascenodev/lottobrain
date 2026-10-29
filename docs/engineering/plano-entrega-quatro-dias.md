@@ -20,7 +20,7 @@ Essas decisões fecham público/acesso, atualidade e orçamento. A escolha técn
 
 ## Base que será aproveitada
 
-Fundação da etapa 5 concluída e validada em branch de revisão em 28/10/2026: [ambiente, dependências, testes e workflow](etapa-5-desenvolvimento-ci.md). CI real aprovado no GitHub e `main` protegida; PR aberta sem merge. Não equivale à entrega funcional da SPEC-0033 nem reinicia o prazo original.
+Fundação da etapa 5 validada em 28/10/2026 e integrada à `main` em 29/10/2026: [ambiente, dependências, testes e workflow](etapa-5-desenvolvimento-ci.md). [PR #1](https://github.com/viniciusdamascenodev/lottobrain/pull/1) integrada, [CI pós-merge aprovado](https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40964245312), `main` protegida e fechamento documental concluído. Esta atualização não inicia a próxima etapa. Não equivale à entrega funcional da SPEC-0033 nem reinicia o prazo original.
 
 Em 28/10/2026, a [etapa 4 de experiência visual](../design/etapa-4-experiencia-visual.md) foi concluída com protótipo desktop/celular para as seis loterias e administração. Reutilizar desenho, textos, componentes e cenários nas SPECs 0033/0035. Trata-se de UX local com dados de referência e operações simuladas; não altera o estado planejado das quatro entregas nem reinicia o prazo original.
 
