@@ -1838,6 +1838,14 @@ Compor uma entrada manual opt-in de sincronização SQL com conexão/checkpoint 
 
 **Ação futura:** verificar identidade/permissões, publicar numa branch de trabalho somente quando autorizado e disponível, registrar SHA/run/resultado e tratar a proteção da branch explicitamente. Não pedir senhas/tokens no chat, ampliar permissões por suposição ou recriar o repositório.
 
+### L-205 — Portabilidade inclui o bootstrap do banco e os bytes da evidência
+
+**Evidência:** o primeiro CI passou em Python/frontend, mas falhou ao iniciar o cluster PostgreSQL Linux. O executor passou a usar somente TCP em loopback e emitir diagnóstico de bootstrap com senha removida; a inicialização corrigida passou também em cinco testes Windows. Na publicação inicial, o Git normalizou CRLF de dois arquivos do protótipo; as regras de atributos foram ampliadas e os bytes originais restaurados. O commit `7c9b841` foi comparado com os 149 hashes protegidos, sem divergência.
+
+**Impacto:** testes locais não comprovam a inicialização do serviço no runner Linux. Conteúdo visualmente idêntico também pode ter hash diferente após o checkout. Repetir a bateria inteira no Windows sem mudança de comportamento não resolveria a diferença do ambiente remoto.
+
+**Ação futura:** executar a suíte real em ambas as plataformas quando bootstrap for alterado; manter diagnóstico limitado ao cluster recém-criado e remover credenciais. Para ajustes apenas de inicialização, usar smoke local dirigido e bateria completa no CI. Verificar blobs publicados além dos arquivos locais quando existir evidência hashada; preservar byte a byte raws e artefatos anteriores.
+
 ## Próximo aprendizado esperado no plano de quatro dias
 
 Comprovar o primeiro fluxo online reutilizando o núcleo existente, medir o custo de integrar os perfis restantes e registrar quais decisões/fixtures reduziram retrabalho sem enfraquecer as invariantes. Estado atual e sequência vigente: [roadmap](../architecture/roadmap.md).

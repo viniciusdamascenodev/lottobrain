@@ -4,9 +4,9 @@
 
 Tarefa única autorizada em 28/10/2026, dentro da SPEC-0033. Reaproveita domínio, ingestão, fixtures, migrations, executor PostgreSQL e desenho da etapa 4. Entrega ambiente local, dependências resolvidas, fundações HTTP/frontend, verificações e workflow no mesmo repositório `viniciusdamascenodev/lottobrain`.
 
-**Estado: preparação local validada; validação remota em execução.** Resultados locais e execução remota estão registrados separadamente em [evidências](etapa-5-evidencias.json). A conta proprietária foi autenticada no GitHub CLI do computador, com acesso administrativo e escopo de workflows. Essa autenticação é independente da conta do plugin. Criar YAML não comprova execução no GitHub; o aceite depende do run e da proteção de branch. Nenhum token ou senha deve entrar no chat.
+**Estado: etapa 5 concluída e validada na branch de revisão; integração na `main` depende da decisão do proprietário.** Resultados locais e remotos estão registrados separadamente em [evidências](etapa-5-evidencias.json). A conta proprietária foi autenticada no GitHub CLI do computador, com acesso administrativo e escopo de workflows. Essa autenticação é independente da conta do plugin. O CI real foi aprovado e a proteção da branch foi configurada/conferida. Nenhum token ou senha foi versionado.
 
-Validação local: 401 testes comuns aprovados sem avisos, 137 testes PostgreSQL aprovados em cluster descartável desligado, instalação limpa/frontend com três testes e build, quatro verificações HTTP e auditorias sem vulnerabilidades conhecidas no recorte ativo. Os 149 arquivos anteriores protegidos de dados, fixtures, protótipo e migrations permaneceram idênticos. A fundação recusa dados, inclusive pelo proxy do frontend. A suíte SQL completa levou cerca de 35 minutos neste Windows; o tempo no runner Linux ainda será medido, com limite de 60 minutos no job para não mascarar timeout como aprovação.
+Validação local: 401 testes comuns aprovados sem avisos, 137 testes PostgreSQL aprovados em cluster descartável desligado, instalação limpa/frontend com três testes e build, quatro verificações HTTP e auditorias sem vulnerabilidades conhecidas no recorte ativo. Os 149 arquivos anteriores protegidos de dados, fixtures, protótipo e migrations permaneceram idênticos. A fundação recusa dados, inclusive pelo proxy do frontend. A suíte SQL completa levou 2.085,218 s neste Windows e 381,451 s no runner Ubuntu; o job remoto completo levou 6 min 53 s, incluindo instalação, com limite de 60 minutos. Esses tempos são desta execução, não promessa de desempenho futuro.
 
 Esta entrega não implementa autenticação/aprovação, consulta operacional das seis, carga histórica adicional, atualização, modelos ou publicação. A fundação recusa acesso aos dados enquanto esses recursos não existem. Concluir esta etapa não encerra a SPEC-0033.
 
@@ -43,7 +43,7 @@ O ambiente de desenvolvimento padrão reúne `test` e `quality`. Instalação m�
 
 `requirements.txt`, `requirements-test.txt`, `requirements-database.txt`, Flask e o `vercel.json` antigo são compatibilidade legada; não são o manifesto do frontend/API novos. A correção Requests 2.33.0 também foi aplicada ao requirements legado. Não iniciar o produto novo pelo Flask nem promover essa configuração antiga como deploy da SPEC-0033. Substituir o alvo de publicação na entrega de acesso real, preservando este histórico e usando o perfil mínimo da API.
 
-`.editorconfig` define convenções para edição nova. `.gitattributes` impede normalização de finais de linha em raws, fixtures e evidências hashadas; o Git precisa conservar os bytes entre Windows e Linux. Nenhum raw foi reescrito ou renormalizado por esta tarefa.
+`.editorconfig` define convenções para edição nova. `.gitattributes` impede normalização de finais de linha em raws, fixtures e evidências hashadas; o Git precisa conservar os bytes entre Windows e Linux. Nenhum raw foi reescrito ou renormalizado por esta tarefa. A verificação do commit `7c9b841` confirmou os 149 blobs protegidos contra o SHA-256 anterior à tarefa; os dois arquivos de código do protótipo que o Git havia normalizado foram restaurados aos bytes originais, sem alteração textual.
 
 ## Preparação local
 
@@ -109,7 +109,7 @@ O frontend encaminha `/api/v1/*` para `LOTTOBRAIN_API_ORIGIN`, configurada no se
 python scripts/database/run_integration.py --pg-bin CAMINHO_POSTGRESQL_17_BIN
 ```
 
-O executor cria cluster/credenciais/porta novos, confere identidade do diretório, aplica migrations e testa privilégios, transações, concorrência, idempotência e recuperação. Os artefatos ficam em `.local-postgres/runs`, ignorado pelo Git. O bloco `finally` desliga o cluster. Nunca apontar esses testes a Supabase ou banco existente. No Windows local, a execução precisou da permissão para iniciar processos/conexões do cluster isolado; a tentativa restrita falhou e não contou como teste aprovado.
+O executor cria cluster/credenciais/porta novos, confere identidade do diretório, aplica migrations e testa privilégios, transações, concorrência, idempotência e recuperação. Os artefatos ficam em `.local-postgres/runs`, ignorado pelo Git. A comunicação dos testes é TCP em loopback; sockets Unix foram desativados explicitamente para evitar dependência do diretório de sockets do pacote Linux. O teste de inicialização também passou no Windows (cinco casos). Falhas de bootstrap mostram o final dos logs do cluster próprio, com a senha gerada removida. O bloco `finally` desliga o cluster. Nunca apontar esses testes a Supabase ou banco existente. No Windows local, a execução precisou da permissão para iniciar processos/conexões do cluster isolado; a tentativa restrita falhou e não contou como teste aprovado.
 
 A auditoria Python exporta os perfis API/jobs resolvidos do lock e consulta pip-audit; o frontend usa `npm audit --audit-level=high`. Uma falha de consulta não equivale a ausência de vulnerabilidades. O scanner local de credenciais reconhece um conjunto limitado de padrões; não substitui revisão, gerenciamento de segredos ou mecanismos do provedor.
 
@@ -124,7 +124,9 @@ O [workflow](../../.github/workflows/ci.yml) executa em push na `main`, pull req
 
 Actions oficiais estão fixadas por SHA completo. O token tem apenas leitura de conteúdo, checkout não persiste credencial, não há `pull_request_target`, segredo de produção ou deploy. Resultados de testes têm retenção de sete dias; clusters, dumps, `.env` e logs com credenciais não são enviados como artefatos. Dependabot propõe atualizações semanais de uv, npm e Actions; atualizar grafo exige CI aprovado.
 
-O status `Quality gate` deve ser exigido na política de integração da branch principal, com as proteções disponíveis na conta. Não alterar visibilidade para obter recursos. Configurar/exercitar proteção no GitHub é diferente de escrever YAML; registrar explicitamente a situação real.
+A proteção da `main` foi configurada e relida pela API: exige PR, branch atualizada e `Quality gate` do app GitHub Actions (ID 15368), aplica-se também ao administrador, exige conversas resolvidas e bloqueia force push/exclusão. Como há um único responsável, não exige aprovação independente de outra conta. Nenhum merge foi feito; a `main` permanece em `6e1d231b05a358daefba31853634debabc8fea57`. Visibilidade pública preexistente preservada.
+
+PR de revisão: [#1](https://github.com/viniciusdamascenodev/lottobrain/pull/1). Execução remota do ajuste de portabilidade: [CI 40806839794](https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40806839794). O primeiro run encontrou falha no bootstrap PostgreSQL e reprovou corretamente o Quality gate. O run de validação `40806839794`, no commit `7c9b84175e377551a1078b52860b23ca7f53b538`, aprovou os quatro jobs: Python (401 testes/44,66 s), PostgreSQL (137/381,451 s), frontend (três testes, tipos/build/auditoria) e Quality gate. Runtimes remotos observados: Python 3.12.15, PostgreSQL 17.11 e Node 24.19.0. O commit de fechamento altera apenas documentação; sua execução aparece na mesma PR e não é confundida com esta medição do código.
 
 ## Ambientes e segredos
 
@@ -146,8 +148,8 @@ Chaves Auth/Storage/OAuth e sessões serão acrescentadas quando os respectivos 
 
 ## Preservação e passagem
 
-Dados brutos, amostras, relatórios de qualificação, protótipo visual, migrations e invariantes anteriores devem continuar intactos. O único ajuste de lógica legada nesta tarefa captura a mensagem da exceção antes de utilizá-la no callback de persistência, corrigindo o erro apontado pelo lint sem mudar o fluxo.
+Dados brutos, amostras, relatórios de qualificação, protótipo visual, migrations e invariantes anteriores devem continuar intactos. No código de ingestão, o único ajuste de lógica legada nesta tarefa captura a mensagem da exceção antes de utilizá-la no callback de persistência, corrigindo o erro apontado pelo lint sem mudar o fluxo.
 
-Não reiniciar inventário, reescrever domínio ou criar um coletor/modelo por ferramenta. Próximo incremento funcional da SPEC-0033: autenticação/aprovação/MFA e consulta persistente real das seis modalidades, usando esta base. A etapa 5 só recebe estado concluído após as evidências locais **e** remotas de E5-01–E5-08, com pendências externas declaradas.
+Não reiniciar inventário, reescrever domínio ou criar um coletor/modelo por ferramenta. Próximo incremento funcional da SPEC-0033: autenticação/aprovação/MFA e consulta persistente real das seis modalidades, usando esta base. Os critérios E5-01–E5-08 foram comprovados nesta branch. O aceite de engenharia não representa merge na `main`, deploy ou aprovação da capacidade funcional da SPEC-0033.
 
 Referências consultadas: [Next CLI e typegen](https://nextjs.org/docs/app/api-reference/cli/next), [segurança de Actions](https://docs.github.com/en/actions/reference/security/secure-use), [PostgreSQL no Ubuntu](https://www.postgresql.org/download/linux/ubuntu/). Os SHAs das Actions foram conferidos no repositório oficial via Git com certificados do Windows; não houve desativação de TLS.

@@ -2,7 +2,7 @@
 
 ## Estado e objetivo
 
-Planejada em 26/10/2026; escopo ampliado em 27/10 pela etapa 3. **Em execução na fundação da etapa 5, sem aceite da capacidade funcional.** Ambiente, testes, HTTP/frontend mínimos e CI estão sendo preparados conforme a [entrega de engenharia](../engineering/etapa-5-desenvolvimento-ci.md); não há autenticação ou consulta operacional das seis comprovada por esse avanço. O nome histórico deste arquivo é preservado para manter referências. A primeira entrega deixa de encerrar com somente Mega-Sena: usuário aprovado deve consultar dados reais aprovados de Mega-Sena, Lotofácil, +Milionária, Powerball, Mega Millions e EuroMillions online.
+Planejada em 26/10/2026; escopo ampliado em 27/10 pela etapa 3. **Em execução, com fundação da etapa 5 validada na branch de revisão, sem aceite da capacidade funcional.** Ambiente, testes, HTTP/frontend mínimos, CI real aprovado e proteção da `main` estão documentados na [entrega de engenharia](../engineering/etapa-5-desenvolvimento-ci.md); não há autenticação ou consulta operacional das seis comprovada por esse avanço. O nome histórico deste arquivo é preservado para manter referências. A primeira entrega deixa de encerrar com somente Mega-Sena: usuário aprovado deve consultar dados reais aprovados de Mega-Sena, Lotofácil, +Milionária, Powerball, Mega Millions e EuroMillions online.
 
 Esta é a primeira capacidade funcional do [plano de entrega](../engineering/plano-entrega-quatro-dias.md), agora maior pelo requisito explícito das seis. As datas anteriores são metas originais, não prova de execução ou promessa nova de duração. Atualização recorrente e cobertura recente completa pertencem à SPEC-0034; painel analítico completo à SPEC-0035.
 

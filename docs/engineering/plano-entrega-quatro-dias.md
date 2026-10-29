@@ -6,7 +6,7 @@ Planejamento reorganizado em 26/10/2026, America/Sao_Paulo, após a SPEC-0032. M
 
 O lançamento reúne as seis loterias, dados atuais auditados, atualização recorrente, acesso controlado, painel explicativo, previsões iniciais avaliadas, cadastro administrativo e operação reproduzível. A amplitude do laboratório de modelos e os refinamentos posteriores ficam no backlog; os requisitos essenciais abaixo não desaparecem por causa do prazo.
 
-Esta revisão conclui o planejamento. SPECs 0033–0036 estão planejadas, sem implementação iniciada. A [consolidação da etapa 3](../architecture/visao-geral.md) em 27/10 define arquitetura privada, atualização +1h/D+1 e consulta básica das seis já na 0033. Nenhuma contratação, coleta ou publicação decorre desta documentação; a ampliação da primeira entrega aumenta o risco do prazo original, que não foi reiniciado.
+Esta revisão conclui o planejamento. A SPEC-0033 está em execução na fundação da etapa 5; sua capacidade funcional e as SPECs 0034–0036 ainda não foram entregues. A [consolidação da etapa 3](../architecture/visao-geral.md) em 27/10 define arquitetura privada, atualização +1h/D+1 e consulta básica das seis já na 0033. Nenhuma contratação, coleta ou publicação decorre desta documentação; a ampliação da primeira entrega aumenta o risco do prazo original, que não foi reiniciado.
 
 ## Decisões de produto confirmadas em 27/10/2026
 
@@ -20,7 +20,7 @@ Essas decisões fecham público/acesso, atualidade e orçamento. A escolha técn
 
 ## Base que será aproveitada
 
-Fundação da etapa 5 preparada e validada localmente em 28/10/2026: [ambiente, dependências, testes e workflow](etapa-5-desenvolvimento-ci.md). A conclusão dessa etapa depende ainda da publicação e execução real do CI com acesso de escrita no repositório; não equivale à entrega funcional da SPEC-0033 nem reinicia o prazo original.
+Fundação da etapa 5 concluída e validada em branch de revisão em 28/10/2026: [ambiente, dependências, testes e workflow](etapa-5-desenvolvimento-ci.md). CI real aprovado no GitHub e `main` protegida; PR aberta sem merge. Não equivale à entrega funcional da SPEC-0033 nem reinicia o prazo original.
 
 Em 28/10/2026, a [etapa 4 de experiência visual](../design/etapa-4-experiencia-visual.md) foi concluída com protótipo desktop/celular para as seis loterias e administração. Reutilizar desenho, textos, componentes e cenários nas SPECs 0033/0035. Trata-se de UX local com dados de referência e operações simuladas; não altera o estado planejado das quatro entregas nem reinicia o prazo original.
 
