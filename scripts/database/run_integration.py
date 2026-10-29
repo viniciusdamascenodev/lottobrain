@@ -52,7 +52,7 @@ def main():
         with (run_dir / "control.log").open("wb") as control_log:
             start_attempted = True
             subprocess.run([pg_ctl, "-D", data_dir, "-l", run_dir / "server.log", "-w", "-t", "30",
-                            "-o", f"-h 127.0.0.1 -p {port} -c shared_buffers=32MB -c max_connections=20", "start"], check=True,
+                            "-o", f"-h 127.0.0.1 -p {port} -c unix_socket_directories= -c shared_buffers=32MB -c max_connections=20", "start"], check=True,
                            stdout=control_log, stderr=subprocess.STDOUT, timeout=40)
         started = True
         import psycopg
@@ -83,6 +83,13 @@ def main():
         if isinstance(details, bytes):
             details = details.decode("utf-8",errors="replace")
         print(details.replace(password,"<redacted>"), file=sys.stderr)
+        # Diagnóstico de bootstrap: arquivos do cluster recém-criado, sem expor a senha.
+        # Em Linux, o diretório padrão de sockets do pacote pode pertencer a outro usuário.
+        for name in ("control.log", "server.log"):
+            log = run_dir / name
+            if log.exists():
+                tail = log.read_text(encoding="utf-8", errors="replace")[-8000:]
+                print(f"{name}:\n{tail.replace(password, '<redacted>')}", file=sys.stderr)
         return 1
     finally:
         if password_file.exists():

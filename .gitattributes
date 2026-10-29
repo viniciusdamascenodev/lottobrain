@@ -16,7 +16,9 @@
 *.pdf binary
 data/** -text
 docs/data/** -text
+docs/design/** -text
 tests/fixtures/** -text
+migrations/** -text
 docs/design/prototipo/data.js -text
 docs/design/proveniencia-prototipo.json -text
 docs/design/evidencias/** -text
