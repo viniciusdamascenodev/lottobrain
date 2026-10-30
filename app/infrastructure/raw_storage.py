@@ -10,11 +10,14 @@ from app.application.persistence import PersistenceError
 
 
 class LocalRawStorage:
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, *, max_bytes: int = MAX_RESPONSE_BYTES):
+        if type(max_bytes) is not int or not 1 <= max_bytes <= 8 * 1024 * 1024:
+            raise ValueError("Limite de artefato entre 1 byte e 8 MiB.")
         self.root = Path(root).resolve()
+        self.max_bytes = max_bytes
 
     def put(self, body: bytes) -> tuple[str, str]:
-        if not isinstance(body, bytes) or len(body) > MAX_RESPONSE_BYTES:
+        if not isinstance(body, bytes) or len(body) > self.max_bytes:
             raise PersistenceError("invalid_artifact")
         sha = hashlib.sha256(body).hexdigest()
         key = f"{sha[:2]}/{sha}.bin"
@@ -41,14 +44,14 @@ class LocalRawStorage:
                 temporary.unlink(missing_ok=True)
 
     def read(self, key: str, sha256: str, byte_count: int) -> bytes:
-        if not re.fullmatch(r"[0-9a-f]{64}", sha256) or key != f"{sha256[:2]}/{sha256}.bin" or not 0 <= byte_count <= MAX_RESPONSE_BYTES:
+        if not re.fullmatch(r"[0-9a-f]{64}", sha256) or key != f"{sha256[:2]}/{sha256}.bin" or not 0 <= byte_count <= self.max_bytes:
             raise PersistenceError("invalid_artifact")
         target = self.root / key
         if target.is_symlink() or target.parent.is_symlink() or target.parent.resolve() != target.parent:
             raise PersistenceError("unsafe_artifact_path")
         try:
             with target.open("rb") as source:
-                body = source.read(MAX_RESPONSE_BYTES + 1)
+                body = source.read(self.max_bytes + 1)
         except FileNotFoundError:
             raise PersistenceError("evidence_missing") from None
         except OSError:

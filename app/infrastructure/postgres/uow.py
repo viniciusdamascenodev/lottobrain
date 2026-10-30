@@ -13,6 +13,9 @@ from app.infrastructure.postgres.historical_pilot import PgHistoricalPilotReposi
 from app.infrastructure.postgres.historical_import import PgHistoricalImportRepository
 from app.infrastructure.postgres.baselines import PgBaselineRepository
 from app.infrastructure.postgres.sync_batches import PgSyncBatchRepository
+from app.infrastructure.postgres.results import PgResultRepository
+from app.infrastructure.postgres.datasets import PgDatasetRepository
+from app.infrastructure.postgres.profile_catalog import PgCatalogAdministration
 
 
 class PgUnitOfWork:
@@ -36,6 +39,9 @@ class PgUnitOfWork:
             self.history = PgHistoricalImportRepository(db,self.checkpoint)
             self.baselines = PgBaselineRepository(db,self.checkpoint)
             self.batches = PgSyncBatchRepository(db,self.checkpoint)
+            self.results = PgResultRepository(db,self.checkpoint)
+            self.datasets = PgDatasetRepository(db,self.checkpoint)
+            self.admin = PgCatalogAdministration(db)
             return self
         except Exception as error:
             if self.connection is not None:

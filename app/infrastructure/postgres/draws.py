@@ -12,6 +12,7 @@ from app.application.persistence import PersistenceError
 from app.infrastructure.postgres.catalog import PgCatalogRepository
 from app.infrastructure.postgres.common import insert
 from app.infrastructure.postgres.content_reader import read_contents
+from app.infrastructure.postgres.relational_content import append_series
 
 
 class PgDrawRepository:
@@ -123,11 +124,7 @@ class PgDrawRepository:
         if (qualify or PgCatalogRepository(self.db).qualify)().fingerprint != binding.fingerprint:
             raise PersistenceError("catalog_changed")
         self.observe("after_revision")
-        series = insert(self.db,"result_series",id=uuid4(),revision_id=revision,rule_version_id=binding.rule_id,
-                        lottery_id=binding.lottery_id,series_definition_id=binding.series_id)
-        for value in content["series"][0]["components"][0]["values"]:
-            insert(self.db,"component_value",result_series_id=series,revision_id=revision,
-                series_definition_id=binding.series_id,component_definition_id=binding.component_id,**value)
+        append_series(self.db,binding,revision,content)
         for tier in content["prize_tiers"]:
             tier_id = insert(self.db,"prize_tier_result",id=uuid4(),revision_id=revision,rule_version_id=binding.rule_id,
                 lottery_id=binding.lottery_id,tier_definition_id=dict(binding.tiers)[tier["key"]],scope_id=binding.scope_id,

@@ -107,3 +107,9 @@ Reaplicar `scripts/database/roles.sql` explicitamente após o upgrade para provi
 O head passa a `0031_01`, com `sync_batch` e `sync_batch_operation`, índices/guardas de orçamento e testemunho diferível de lease no COMMIT. [Relações, atomicidade e privilégios](lotes-sincronizacao.md) e [operação/recuperação](../engineering/sincronizacao-sql-mega-sena.md).
 
 Reaplicar os privilégios explicitamente após o upgrade. Ingestor ganha apenas as escritas necessárias nos novos registros; bootstrap não passa a executar lotes. Downgrade com lote presente é recusado. Não há scheduler ou migration automática em banco operacional.
+
+## Evolução da etapa 6 na SPEC-0033
+
+A revisão 0033_01 acrescenta política, conjuntos aprovados, membros, decisões e ponteiro ativo, além das views privadas de leitura. As revisões 0024–0031 permanecem intactas. [Contrato das seis](persistencia-seis-loterias.md), [operação](../engineering/etapa-6-operacao.md) e [estado/evidência](../engineering/etapa-6-persistencia.md).
+
+Reaplicar scripts/database/roles.sql explicitamente após upgrade. Ingestão não recebe aprovação; leitor não recebe tabelas de candidatos/raw. Downgrade com políticas ou datasets preenchidos é recusado. A migration não carrega históricos, cria logins, consulta fontes nem configura Supabase automaticamente.

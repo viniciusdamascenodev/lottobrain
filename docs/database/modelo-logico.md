@@ -224,3 +224,7 @@ Evolução na SPEC-0031: [lotes e operações de sincronização](lotes-sincroni
 Evolução na SPEC-0030: a baseline histórica e o checkpoint de destino podem ter fontes diferentes somente por um vínculo explícito e auditado (`baseline_activation`). A origem XLSX não é reatribuída ao JSON. O recorte físico, as FKs diferíveis, a aprovação e os privilégios estão em [Baseline auditada e passagem entre fontes](baseline-auditada.md); o modelo original não autoriza remover a integridade de fonte/loteria.
 
 Unicidade com NULL, FKs e índices parciais devem seguir a [documentação de constraints PostgreSQL 17](https://www.postgresql.org/docs/17/ddl-constraints.html). Não se presume que um CHECK consiga consultar outras linhas ou tabelas. A versão 17 foi usada como referência técnica; o ambiente provisionado será fixado e testado na próxima etapa.
+
+## Implementação do recorte de persistência da etapa 6
+
+A revisão 0033_01 implementa dataset_policy, approved_dataset, dataset_member, dataset_decision e active_dataset, conforme o [contrato físico das seis](persistencia-seis-loterias.md). O estado físico inicial do conjunto é building/approved; versões anteriores permanecem aprovadas para paginação e retorno controlado. Retenção/retirada, quality_event, identidade de usuários, jobs e análises continuam nos respectivos incrementos funcionais, sem tabelas vazias antecipadas nesta entrega. A aprovação de CLI é restrita a credenciais SQL administrativas e não implementa login ou autorização HTTP. [Aceite e dependência Supabase](../engineering/etapa-6-persistencia.md).

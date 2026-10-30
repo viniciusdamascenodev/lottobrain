@@ -34,5 +34,5 @@ class SyncBatchSmokeTests(BaselineCase):
         url=make_url(os.environ["LOTTOBRAIN_DATABASE_URL"]).set(database=self.database).render_as_string(hide_password=False)
         migrate(url,"0030_01",down=True)
         migrate(url)
-        self.assertEqual([("0031_01",)],self.query("SELECT version_num FROM alembic_version"))
+        self.assertEqual([("0033_01",)],self.query("SELECT version_num FROM alembic_version"))
         self.assertEqual(0,self.count("sync_batch"))

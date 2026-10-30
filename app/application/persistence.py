@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     from app.application.activate_mega_sena_baseline import BaselineRequest
     from app.application.historical_import import HistoricalImportPlan
     from app.application.sync_postgres import SyncBatchRequest
+    from app.application.result_persistence import PreparedResult
 
 
 class PersistenceError(RuntimeError):
@@ -171,9 +172,28 @@ class UnitOfWork(Protocol):
     sync: SyncRepository
     baselines: BaselineRepository
     batches: SyncBatchRepository
+    results: ResultRepository
+    datasets: DatasetRepository
+    admin: CatalogAdministration
     def __enter__(self) -> UnitOfWork: ...
     def __exit__(self, exc_type, exc, traceback): ...
     def checkpoint(self, stage: str) -> None: ...
+
+
+class ResultRepository(Protocol):
+    def store(self, prepared: PreparedResult, key: str, object_key: str, *, allow_correction: bool = False) -> dict: ...
+
+
+class CatalogAdministration(Protocol):
+    def bootstrap(self) -> dict: ...
+    def inspect(self) -> dict: ...
+
+
+class DatasetRepository(Protocol):
+    def policy(self, lottery: str, version: str, sources: tuple[str, ...], actor: str) -> UUID: ...
+    def approve(self, policy_id: UUID, revision_ids: list[UUID], actor: str, key: str) -> UUID: ...
+    def activate(self, dataset: UUID, expected_version: int, actor: str, key: str) -> dict: ...
+    def read(self, lottery: str, dataset_id: UUID | None, offset: int, limit: int) -> dict: ...
 
 
 T = TypeVar("T")
