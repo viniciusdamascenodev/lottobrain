@@ -41,8 +41,8 @@ configuração documentada com implantação executada.
 
 ## Estado
 
-Implementação e validação local executadas; regressão completa no GitHub e instalação
-Supabase têm aceite separado. A etapa permanece em execução enquanto E6-07 estiver pendente.
+Implementação, validação local e regressão completa no GitHub executadas. A instalação
+Supabase tem aceite separado. A etapa permanece em execução enquanto E6-07 estiver pendente.
 Não iniciar a etapa 7 para contornar essa pendência.
 
 ## Entrega implementada
@@ -68,7 +68,7 @@ bootstrap em banco vazio com papel restrito. Testa também a CLI, compatibilidad
 Mega-Sena, concorrência, rollback, permissões e reutilização de manifestos.
 As medições e o estado do CI são mantidos na evidência estruturada.
 
-Não foi repetido o inventário nem feita carga histórica completa. A CLI aceita um
+Não foi repetido o inventário nem feita carga histórica completa operacional. A regressão anterior de carga Mega-Sena continua executada somente em bancos descartáveis. A CLI aceita um
 registro por chamada e até 100 revisões numa aprovação controlada; não é o importador
 em lote da próxima etapa. O backend HTTP continua recusando os dados.
 
@@ -76,3 +76,9 @@ O próximo passo desta mesma tarefa é disponibilizar o projeto Supabase e execu
 procedimento já preparado, com acesso seguro, registrando versão, TLS, migrations,
 permissões e leitura dos seis conjuntos por conexões novas. Um CI verde não substitui
 essa evidência persistente.
+
+## Regressão remota aprovada
+
+A [PR #11](https://github.com/viniciusdamascenodev/lottobrain/pull/11) permanece em rascunho enquanto falta a prova persistente. O [CI 40975784677](https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40975784677), no commit fe312cfd1d87c11dc53a61424a070255055d120d, aprovou os quatro jobs: 413 testes Python, 162 testes PostgreSQL (137 anteriores e 25 novos), frontend e Quality gate. Foram usadas somente credenciais temporárias dos testes. As auditorias do recorte ativo não reportaram vulnerabilidades conhecidas nesse run.
+
+E6-01 a E6-06 estão comprovados na implementação; E6-08 registra a entrega e os limites. E6-07 permanece pendente porque o projeto Supabase e o acesso seguro ainda não foram disponibilizados. Não houve merge, instalação persistente, carga integral ou início da próxima etapa.

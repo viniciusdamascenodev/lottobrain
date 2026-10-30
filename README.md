@@ -29,7 +29,7 @@ Ao utilizar este repositório, você concorda que o faz por conta própria e ris
 
 ## Desenvolvimento e documentação
 
-- [Etapa 6 — persistência das seis loterias](docs/engineering/etapa-6-persistencia.md), [contrato SQL](docs/database/persistencia-seis-loterias.md) e [operação controlada](docs/engineering/etapa-6-operacao.md). Implementação em validação; instalação Supabase ainda pendente.
+- [Etapa 6 — persistência das seis loterias](docs/engineering/etapa-6-persistencia.md), [contrato SQL](docs/database/persistencia-seis-loterias.md) e [operação controlada](docs/engineering/etapa-6-operacao.md). Implementação validada em testes locais e CI; instalação Supabase ainda pendente.
 
 - [Etapa 5 — ambiente, dependências, testes e GitHub Actions](docs/engineering/etapa-5-desenvolvimento-ci.md). Use os lockfiles e comandos dessa referência para a plataforma nova; o Flask/configuração Vercel antigos continuam legados.
 - [Etapa 4 — experiência visual e jornadas](docs/design/etapa-4-experiencia-visual.md), [protótipo navegável](docs/design/prototipo/index.html), [como explorar](docs/design/prototipo/README.md) e [validação](docs/design/validacao-etapa-4.md). Protótipo local para as seis loterias e administração; login e operações são demonstrativos.

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "status": "implementation_validated_locally_pending_ci_and_supabase",
+  "status": "implementation_validated_pending_supabase",
   "specification": "SPEC-0033 persistence scope / etapa-6-persistencia.md",
   "acceptance": {
     "E6-01": "passed_local_operational_bootstrap",
@@ -8,9 +8,9 @@
     "E6-03": "passed_local_idempotency_quarantine_revision_rollback_concurrency",
     "E6-04": "passed_local_approved_immutable_manifests_and_optimistic_activation",
     "E6-05": "passed_local_separate_database_roles",
-    "E6-06": "pending_full_github_actions_regression",
+    "E6-06": "passed_full_github_actions_regression_162_postgresql_and_413_python",
     "E6-07": "pending_supabase_project_and_safe_connection_configuration",
-    "E6-08": "documented_pending_final_acceptance"
+    "E6-08": "documented_with_explicit_remaining_managed_database_acceptance"
   },
   "localTests": {
     "pythonPassed": 413,
@@ -39,10 +39,43 @@
   },
   "github": {
     "branch": "codex/etapa-6-persistencia-seis-loterias",
-    "pullRequestUrl": null,
-    "actionsRunUrl": null,
-    "headSha": null,
-    "merged": false
+    "pullRequestUrl": "https://github.com/viniciusdamascenodev/lottobrain/pull/11",
+    "actionsRunUrl": "https://github.com/viniciusdamascenodev/lottobrain/actions/runs/40975784677",
+    "headSha": "fe312cfd1d87c11dc53a61424a070255055d120d",
+    "merged": false,
+    "conclusion": "success",
+    "draft": true,
+    "completedAtUTC": "2026-10-29T23:56:43Z",
+    "jobs": [
+      {
+        "id": 123803347482,
+        "name": "PostgreSQL 17 — migrations e integridade",
+        "conclusion": "success",
+        "startedAtUTC": "2026-10-29T23:50:14Z",
+        "completedAtUTC": "2026-10-29T23:56:38Z"
+      },
+      {
+        "id": 123803347843,
+        "name": "Python — qualidade, testes e dependências",
+        "conclusion": "success",
+        "startedAtUTC": "2026-10-29T23:50:14Z",
+        "completedAtUTC": "2026-10-29T23:50:54Z"
+      },
+      {
+        "id": 123803347904,
+        "name": "Frontend — tipos, testes, build e dependências",
+        "conclusion": "success",
+        "startedAtUTC": "2026-10-29T23:50:15Z",
+        "completedAtUTC": "2026-10-29T23:50:46Z"
+      },
+      {
+        "id": 123805630787,
+        "name": "Quality gate",
+        "conclusion": "success",
+        "startedAtUTC": "2026-10-29T23:56:39Z",
+        "completedAtUTC": "2026-10-29T23:56:42Z"
+      }
+    ]
   },
   "preservation": {
     "baselineFiles": 391,
@@ -80,7 +113,8 @@
     "schedulerImplemented": false,
     "nextStageStarted": false,
     "productionDeploymentPerformed": false,
-    "rawObjectAdapterVerified": "dedicated_local_storage; Supabase Storage not configured"
+    "rawObjectAdapterVerified": "dedicated_local_storage; Supabase Storage not configured",
+    "fullHistoricalLoadMeaning": "No operational historical load; existing complete Mega-Sena regression rerun only in isolated test databases."
   },
   "implementationHashes": {
     "app/application/persistence.py": "9ccb7b3f717585db836469fe2e5dcb49b1438f252905da07e9f725d4f417d9eb",
@@ -101,5 +135,20 @@
     "scripts/database/roles.sql": "ec7291a3a42b380824c05f09e85f6f4268eaf1123405e7ceda6bebb399e332e6",
     "scripts/engineering/check.py": "dfc667ef750f0c5823ac56d8e17adef4b43d2084325dc799ed1f50354ba48926"
   },
-  "implementationHashBasis": "git_blob_of_implementation_files; GitHub validation head recorded after CI"
+  "implementationHashBasis": "git_blob_at_github.headSha",
+  "remoteTests": {
+    "os": "ubuntu-24.04",
+    "python": "3.12.15",
+    "postgresql": "17.11",
+    "pythonPassed": 413,
+    "pythonSeconds": 25.21,
+    "postgresqlPassed": 162,
+    "postgresqlSeconds": 350.127,
+    "frontendConfigurationTests": 3,
+    "frontendCleanInstallBuild": "passed",
+    "runtimeDependencyAudits": "passed_no_known_findings",
+    "sqlResourceWarningsObserved": false,
+    "individualPublicationGate": "unchanged",
+    "operationalCredentialsUsed": false
+  }
 }
